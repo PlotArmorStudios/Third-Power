@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,24 +18,31 @@ namespace ScriptStandardization //Namespace to separate this class from the rest
 {
     public class ScriptStandards
     {
-        //Serialized Fields
+        //1. Events
+        public event Action OnEventCall;
+        
+        //2. Serialized Fields
         [SerializeField] private int _serializedInt;
         
-        //Serialized Properties
+        //3. Serialized Properties
         [field: SerializeField] private int SerializedProperty { get; } //can be set in inspector
         
-        //Class member fields
+        //4. Object fields
+        private ScriptStandards _scriptStandards;
+        
+        //5. Class member fields
         public int PublicIntField;
         private int _privateIntField;
         
-        //Properties
+        //6. Properties
         public int Property { get; set; }
         private int PrivateProperty { get; set; }
         
-        //Methods
+        //7. Methods
         public void FirstMethod()
         {
-            
+            //Local variables
+            int localVariable = 0;
         }
 
         private void SecondMethod()
