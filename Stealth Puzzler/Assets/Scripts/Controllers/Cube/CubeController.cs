@@ -12,13 +12,14 @@ public class CubeController : MonoBehaviour
     public Transform PlayerCalibratorTransform;
 
     private Rigidbody _rigidbody;
+    private List<Vector3> _directions = new List<Vector3>();
+    private Vector3 _newdirection;
+    private Camera _cam;
+    
     private float _horizontal;
     private float _vertical;
     private bool _isMoving;
 
-    private List<Vector3> _directions = new List<Vector3>();
-    private Camera _cam;
-    private Vector3 _newdirection;
 
     private void OnEnable()
     {
