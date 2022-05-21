@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public float radius;
+    public float Radius;
     [Range(0, 360)]
-    public float angle;
+    public float Angle;
 
-    public GameObject playerRef;
+    public GameObject PlayerRef;
 
-    public LayerMask targetMask;
-    public LayerMask obstructionMask;
+    public LayerMask TargetMask;
+    public LayerMask ObstructionMask;
 
-    public bool canSeePlayer;
+    public bool CanSeePlayer;
 
     private void Start()
     {
-        playerRef = GameObject.FindGameObjectWithTag("Player");
+        PlayerRef = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVRoutine());
     }
 
@@ -35,26 +35,26 @@ public class FieldOfView : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, Radius, TargetMask);
 
         if (rangeChecks.Length != 0)
         {
             Transform target = rangeChecks[0].transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            if (Vector3.Angle(transform.forward, directionToTarget) < Angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
-                    canSeePlayer = true;
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, ObstructionMask))
+                    CanSeePlayer = true;
                 else
-                    canSeePlayer = false;
+                    CanSeePlayer = false;
             }
             else
-                canSeePlayer = false;
+                CanSeePlayer = false;
         }
-        else if (canSeePlayer)
-            canSeePlayer = false;
+        else if (CanSeePlayer)
+            CanSeePlayer = false;
     }
 }
