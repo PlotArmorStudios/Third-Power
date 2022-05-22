@@ -8,6 +8,9 @@ public class CubeController : MonoBehaviour
 {
     [SerializeField] private InputActionReference _move;
     [SerializeField] private float _rollSpeed = 5;
+    
+    [Header("Grid Snapping")]
+    [SerializeField] private float _snapSpeed = .3f;
 
     public Transform PlayerCalibratorTransform;
 
@@ -15,15 +18,16 @@ public class CubeController : MonoBehaviour
     private List<Vector3> _directions = new List<Vector3>();
     private Vector3 _newdirection;
     private Camera _cam;
-    
+    private Grid _grid;
+
     private float _horizontal;
     private float _vertical;
     private bool _isMoving;
 
-
     private void OnEnable()
     {
         _move.action.Enable();
+        SnapToGrid();
     }
 
     private void OnValidate()
@@ -33,8 +37,11 @@ public class CubeController : MonoBehaviour
 
     void Start()
     {
+        _grid = FindObjectOfType<Grid>();
         _cam = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
+        
+        //Initialize directions to snap to
         _directions.Add(Vector3.forward);
         _directions.Add(Vector3.back);
         _directions.Add(Vector3.right);
@@ -88,7 +95,15 @@ public class CubeController : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
+        SnapToGrid();
         _isMoving = false;
+    }
+
+    private void SnapToGrid()
+    {
+        Vector3 snappedPostion = _grid.GetNearestPointOnGrid(transform.position);
+        snappedPostion.y = transform.position.y;
+        transform.position = Vector3.Lerp(transform.position, snappedPostion, _snapSpeed);
     }
 
     private void OnDrawGizmos()
