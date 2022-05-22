@@ -35,9 +35,13 @@ public class CubeController : MonoBehaviour
         _cam = Camera.main;
     }
 
-    void Start()
+    private void Awake()
     {
         _grid = FindObjectOfType<Grid>();
+    }
+
+    private void Start()
+    {
         _cam = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         
@@ -48,7 +52,7 @@ public class CubeController : MonoBehaviour
         _directions.Add(Vector3.left);
     }
 
-    void Update()
+    private void Update()
     {
         ReadInput();
         if (_isMoving) return;
@@ -59,7 +63,7 @@ public class CubeController : MonoBehaviour
         else if (_vertical <= -0.1f) Tumble(-_cam.transform.forward);
     }
 
-    void Tumble(Vector3 dir)
+    private void Tumble(Vector3 dir)
     {
         float largestDot = 0;
         int closestAxis = 0;
