@@ -90,48 +90,19 @@ public class CubeController : MonoBehaviour
         _vertical = _move.action.ReadValue<Vector2>().y;
     }
 
-    // private IEnumerator Roll(Vector3 anchor, Vector3 axis)
-    // {
-    // #if UNITY_EDITOR 
-    //     float currTime = Time.time; 
-    // #endif
-    //     _isMoving = true;
-    //     float deltaTime = Time.deltaTime;
-    //     for (var i = 0; i < 90 / (_rollSpeed * Time.deltaTime); i++)
-    //     {
-    //         transform.RotateAround(anchor, axis, _rollSpeed * Time.deltaTime);
-    //         yield return new WaitForSeconds(0.01f);
-    //     }
-
-    //     SnapToGrid();
-    //     _isMoving = false;
-    // #if UNITY_EDITOR 
-    //     Debug.Log("Roll took " + (Time.time - currTime) + "seconds");
-    // #endif
-    // }
-
     private IEnumerator Roll(Vector3 anchor, Vector3 axis)
     {
     #if UNITY_EDITOR 
         float currTime = Time.time; 
     #endif
         _isMoving = true;
-        
-        Quaternion currRotation = transform.rotation;
-        Vector3 currPosition = transform.position;
-        transform.RotateAround(anchor, axis, 90);
-        Quaternion targetRotation = transform.rotation;
-        Vector3 targetPosition = transform.position;
-        transform.position = currPosition;
-        transform.rotation = currRotation;
-        float lerpTime = 0.0f;
+        float rotationRemaining = 90;
 
-        while (transform.rotation != targetRotation)
+        while (rotationRemaining > 0)
         {
-            transform.rotation = Quaternion.Lerp(currRotation, targetRotation, lerpTime * _rollSpeed);
-            transform.position = Vector3.Lerp(currPosition, targetPosition, lerpTime * _rollSpeed);
-            lerpTime += Time.deltaTime;
-            Debug.Log("Cheese gromit");
+            float rotateAmount = Mathf.Min(Time.deltaTime * _rollSpeed, rotationRemaining);
+            transform.RotateAround(anchor, axis, rotateAmount);
+            rotationRemaining -= rotateAmount;
             yield return null;
         }
 
