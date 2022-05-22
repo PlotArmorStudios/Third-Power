@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -192,7 +192,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583985665}
-  m_LocalRotation: {x: 0.09998329, y: 0.0000000042825667, z: -4.3034157e-10, w: 0.99498916}
+  m_LocalRotation: {x: 0.09998329, y: -0.00000000428004, z: 4.300876e-10, w: 0.99498916}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0706521, y: 1}
+    m_SensorSize: {x: 1.1437037, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0706521, y: 1}
+    m_SensorSize: {x: 1.1437037, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0706521, y: 1}
+    m_SensorSize: {x: 1.1437037, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -794,6 +794,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &929947204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929947206}
+  - component: {fileID: 929947205}
+  m_Layer: 0
+  m_Name: EditorTools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &929947205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929947204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30399a84f5c41c1418aba610f1a6a37a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frameRate: 60
+--- !u!4 &929947206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929947204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951030733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,7 +1434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573299223}
-  m_LocalRotation: {x: 0.11801737, y: -2.3933067e-10, z: -2.8451139e-11, w: 0.99301153}
+  m_LocalRotation: {x: 0.11801737, y: 2.3933067e-10, z: 2.8451115e-11, w: 0.99301153}
   m_LocalPosition: {x: 0, y: 3.8730001, z: -8.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1575,7 +1620,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116038598}
-  m_LocalRotation: {x: 0.13606024, y: -1.8181457e-29, z: 2.3866476e-31, w: 0.9907006}
+  m_LocalRotation: {x: 0.13606024, y: 1e-45, z: -0, w: 0.9907006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1620,7 +1665,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0706521, y: 1}
+    m_SensorSize: {x: 1.1437037, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1641,6 +1686,11 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1573299225}
+    - target: {fileID: 2397874377432550287, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: _rollSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2397874377860063776, guid: a57a28a26dcba354283509b38fba6b3b,
         type: 3}
       propertyPath: m_Name
