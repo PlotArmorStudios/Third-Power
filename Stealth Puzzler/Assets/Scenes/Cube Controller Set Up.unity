@@ -192,7 +192,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583985665}
-  m_LocalRotation: {x: 0.09998329, y: -0.000000004280041, z: 4.3008774e-10, w: 0.99498916}
+  m_LocalRotation: {x: 0.09998329, y: -0.00000000428004, z: 4.300876e-10, w: 0.99498916}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -486,7 +486,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680695547}
-  m_LocalRotation: {x: 0.11801739, y: -0, z: -0, w: 0.99301153}
+  m_LocalRotation: {x: 0.11801739, y: 1e-45, z: -0, w: 0.99301153}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573299223}
-  m_LocalRotation: {x: 0.11801737, y: 2.3933067e-10, z: 2.8451156e-11, w: 0.99301153}
+  m_LocalRotation: {x: 0.11801737, y: 2.3933067e-10, z: 2.8451115e-11, w: 0.99301153}
   m_LocalPosition: {x: 0, y: 3.8730001, z: -8.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1620,7 +1620,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116038598}
-  m_LocalRotation: {x: 0.13606024, y: 8.793198e-37, z: -6.4386363e-38, w: 0.9907006}
+  m_LocalRotation: {x: 0.13606024, y: -1e-45, z: -0, w: 0.9907006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1686,16 +1686,6 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1573299225}
-    - target: {fileID: 2397874377432550287, guid: a57a28a26dcba354283509b38fba6b3b,
-        type: 3}
-      propertyPath: _rollSpeed
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2397874377432550287, guid: a57a28a26dcba354283509b38fba6b3b,
-        type: 3}
-      propertyPath: _snapSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2397874377860063776, guid: a57a28a26dcba354283509b38fba6b3b,
         type: 3}
       propertyPath: m_Name
@@ -1756,6 +1746,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8423157028768803557, guid: a57a28a26dcba354283509b38fba6b3b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57a28a26dcba354283509b38fba6b3b, type: 3}
