@@ -92,15 +92,25 @@ public class CubeController : MonoBehaviour
 
     private IEnumerator Roll(Vector3 anchor, Vector3 axis)
     {
+    #if UNITY_EDITOR 
+        float currTime = Time.time; 
+    #endif
         _isMoving = true;
-        for (var i = 0; i < 90 / _rollSpeed; i++)
+        float rotationRemaining = 90;
+
+        while (rotationRemaining > 0)
         {
-            transform.RotateAround(anchor, axis, _rollSpeed);
-            yield return new WaitForSeconds(0.01f);
+            float rotateAmount = Mathf.Min(Time.deltaTime * _rollSpeed, rotationRemaining);
+            transform.RotateAround(anchor, axis, rotateAmount);
+            rotationRemaining -= rotateAmount;
+            yield return null;
         }
 
         SnapToGrid();
         _isMoving = false;
+    #if UNITY_EDITOR 
+        Debug.Log("Roll took " + (Time.time - currTime) + "seconds");
+    #endif
     }
 
     private void SnapToGrid()
@@ -108,6 +118,7 @@ public class CubeController : MonoBehaviour
         Vector3 snappedPostion = _grid.GetNearestPointOnGrid(transform.position);
         snappedPostion.y = transform.position.y;
         transform.position = Vector3.Lerp(transform.position, snappedPostion, _snapSpeed);
+        Debug.Log("Snapped to " + _grid.GetNearestPointOnGrid(transform.position));
     }
 
     private void OnDrawGizmos()
