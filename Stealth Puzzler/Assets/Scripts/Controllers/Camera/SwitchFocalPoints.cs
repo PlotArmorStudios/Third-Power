@@ -13,7 +13,7 @@ public class SwitchFocalPoints : MonoBehaviour
     private void OnEnable() => ControllerManager.OnSwitchFocalPoints += HandleSwitchFocalPoint;
     private void OnDisable() => ControllerManager.OnSwitchFocalPoints -= HandleSwitchFocalPoint;
 
-    private void Start()
+    private void Awake()
     {
         _vCam = GetComponent<CinemachineFreeLook>();
     }
