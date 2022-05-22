@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public bool IsFalling { get; set; }
 
     //Camera for calculation movement direction
-    public Transform CamTransform;
+    private Transform CamTransform;
     public Animator Animator => _animator;
 
     private Rigidbody _rigidbody;
@@ -68,15 +68,15 @@ public class PlayerController : MonoBehaviour
     {
         ReadInput();
         //ApplyMovementInputToAnimator();
-        //if (PlayerJumpedFromGround()) _triggerJump = true;
+        if (PlayerJumpedFromGround()) _triggerJump = true;
     }
 
     private void FixedUpdate()
     {
-        //ApplyGravity();
-        //UpDateJump();
-        //HandleJumpAnimation();
         RotateInDirectionOfMovement();
+        ApplyGravity();
+        UpDateJump();
+        HandleJump();
     }
 
     private void ReadInput()
@@ -159,7 +159,6 @@ public class PlayerController : MonoBehaviour
         //how to have character face direction you are moving
         if (!IsJumping)
         {
-            _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, 5f);
             _rigidbody.velocity = new Vector3(moving.x, _rigidbody.velocity.y, moving.z);
         }
         else if (IsJumping)
@@ -174,7 +173,7 @@ public class PlayerController : MonoBehaviour
         return Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg + CamTransform.eulerAngles.y;
     }
 
-    private void HandleJumpAnimation()
+    private void HandleJump()
     {
         if (_triggerJump)
         {
@@ -182,8 +181,8 @@ public class PlayerController : MonoBehaviour
                                                                           | RigidbodyConstraints.FreezeRotationZ;
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpHeight, _rigidbody.velocity.z);
             IsJumping = true; //for landing
-            _animator.SetBool("Land", false);
-            _animator.SetTrigger("Jump");
+            //_animator.SetBool("Land", false);
+            //_animator.SetTrigger("Jump");
             _triggerJump = false;
         }
     }
