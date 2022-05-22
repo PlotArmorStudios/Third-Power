@@ -20,10 +20,7 @@ public class SwitchFocalPoints : MonoBehaviour
 
     private void HandleSwitchFocalPoint(int focalPoint)
     {
-        if (_vCam)
-        {
-            _vCam.Follow = _focalPoints[focalPoint - 1];
-            _vCam.LookAt = _focalPoints[focalPoint - 1];
-        }
+        _vCam.Follow = _focalPoints[focalPoint - 1];
+        _vCam.LookAt = _focalPoints[focalPoint - 1];
     }
 }
