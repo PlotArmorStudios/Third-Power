@@ -9,7 +9,6 @@ public class GroundCheck : MonoBehaviour
 
     private Animator _animator;
     bool _isGrounded;
-    public bool IsGrounded => _isGrounded;
 
     private void Start()
     {
@@ -17,10 +16,10 @@ public class GroundCheck : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        UpdateIsGrounded();
+        IsGrounded();
     }
 
-    public bool UpdateIsGrounded()
+    public bool IsGrounded()
     {
         _isGrounded = Physics.CheckSphere(_feet.position, 1f, _groundLayerMask);
         return _isGrounded;

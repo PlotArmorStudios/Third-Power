@@ -93,10 +93,10 @@ public class PlayerController : MonoBehaviour
 
     private void UpDateJump()
     {
-        if (_groundCheck.UpdateIsGrounded())
+        if (_groundCheck.IsGrounded())
             IsJumping = false;
 
-        if (_groundCheck.UpdateIsGrounded() && FallTimer > 0)
+        if (_groundCheck.IsGrounded() && FallTimer > 0)
         {
             FallTimer = 0;
             //_animator.SetBool("Airborne", false);
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     private bool PlayerJumpedFromGround()
     {
-        return _jump.action.triggered && _groundCheck.IsGrounded;
+        return _jump.action.triggered && _groundCheck.IsGrounded();
     }
 
     private void RotateInDirectionOfMovement()
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
             //let character jump while stopping sliding
             //character only stops completely when grounded
             //set airborne false whenever grounded
-            if (_groundCheck.IsGrounded)
+            if (_groundCheck.IsGrounded())
             {
                 _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
             }
@@ -195,25 +195,25 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (!_groundCheck.IsGrounded)
-        {
-            FallTimer += Time.deltaTime;
-            var downForce = _weight * FallTimer * FallTimer;
-
-            if (downForce > 3f)
-                downForce = 3f;
-
-            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y - downForce,
-                _rigidbody.velocity.z);
-
-            if (_rigidbody.velocity.y < 0)
-                IsFalling = true;
-            _animator.SetBool("Airborne", true);
-        }
-        else
-        {
-            FallTimer = 0;
-            IsFalling = false;
-        }
+        if (!_groundCheck.IsGrounded())
+                 {
+                     FallTimer += Time.deltaTime;
+                     var downForce = _weight * FallTimer * FallTimer;
+         
+                     if (downForce > 3f)
+                         downForce = 3f;
+         
+                     _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y - downForce,
+                         _rigidbody.velocity.z);
+         
+                     if (_rigidbody.velocity.y < 0)
+                         IsFalling = true;
+                     _animator.SetBool("Airborne", true);
+                 }
+                 else
+                 {
+                     FallTimer = 0;
+                     IsFalling = false;
+                 }
     }
 }
