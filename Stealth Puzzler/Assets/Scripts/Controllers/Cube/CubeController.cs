@@ -12,12 +12,15 @@ public class CubeController : MonoBehaviour
     [Header("Grid Snapping")]
     [SerializeField] private float _snapSpeed = .3f;
 
+    [Tooltip("Transform for syncing cube and player position on switch.")]
     public Transform PlayerCalibratorTransform;
 
-    private Rigidbody _rigidbody;
     private List<Vector3> _directions = new List<Vector3>();
+    private Rigidbody _rigidbody;
     private Vector3 _newdirection;
     private Camera _cam;
+
+    private GroundCheck _groundCheck { get; set; }
     private Grid _grid;
 
     private float _horizontal;
