@@ -9,12 +9,11 @@ public class Trap : MonoBehaviour
     [SerializeField] private TrapState _trapState = TrapState.Waiting;
     [SerializeField] private float _graceTimeBeforeAttack = 2f;
     [SerializeField] private float _timeBeforeRetractWhenAway = 1f;
-    private float _timeToStayAttacking = 1f;
     [SerializeField] private float _timeBeforeDamageReoccursWhenAttacked = 3f;
     private float _timeAfterAttackToDamage = 0.3f;
     [SerializeField] private float _damageAmount = 1f;
     public static event Action<float> OnDamageTaken;
-    private bool isInTriggerZone;
+    private bool _isInTriggerZone;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +62,7 @@ public class Trap : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _trapState = TrapState.PrepToAttack;
-            isInTriggerZone = true;
+            _isInTriggerZone = true;
         }
     }
 
@@ -73,7 +72,7 @@ public class Trap : MonoBehaviour
         yield return new WaitForSeconds(_graceTimeBeforeAttack);
         _trapState = TrapState.Attacking;
         yield return new WaitForSeconds(_timeBeforeRetractWhenAway);
-        if (!isInTriggerZone) _trapState = TrapState.Waiting;
+        if (!_isInTriggerZone) _trapState = TrapState.Waiting;
     }
 
     private void OnTriggerExit(Collider other)
@@ -81,7 +80,7 @@ public class Trap : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(OnTriggerExited());
-            isInTriggerZone = false;
+            _isInTriggerZone = false;
             _timeAfterAttackToDamage = 0.3f;
         }
     }
