@@ -7,29 +7,34 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public Transform CubeCalibratorTransform;
 
+    [Header("Input")]
     [SerializeField] private InputActionReference _move;
     [SerializeField] private InputActionReference _jump;
     [SerializeField] private InputActionReference _look;
-    [SerializeField] private float _jumpHeight = 10f;
-
+    
+    [Header("Movement")]
     [SerializeField] private float _movementSpeed = 5.0f;
+    [SerializeField] private float _jumpHeight = 10f;
     [SerializeField] private float _weight = 2f;
+
+    [Header("Movement/Cam Rotation Sync")]
+    [SerializeField] private Camera _camera;
     [SerializeField] private float _turnSmoothTime = 2f;
     [SerializeField] private float _turnSmoothVelocity = 2f;
-
-    [SerializeField] private Camera _camera;
+    
+    [Tooltip("Transform for syncing player and cube position on switch.")]
+    public Transform CubeCalibratorTransform;
+    
     [field: SerializeField] public bool IsFalling { get; set; }
 
-    //Camera for calculation movement direction
+    //Camera for calculating movement direction
     private Transform CamTransform;
-    public Animator Animator => _animator;
 
     private Rigidbody _rigidbody;
     private Animator _animator;
 
-    public GroundCheck GroundCheck { get; private set; }
+    private GroundCheck _groundCheck { get; set; }
     public float FallTimer { get; set; }
 
     //Movement
@@ -57,9 +62,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        _camera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
-        GroundCheck = GetComponent<GroundCheck>();
+        _groundCheck = GetComponent<GroundCheck>();
 
         CamTransform = _camera.transform;
     }
@@ -87,10 +93,10 @@ public class PlayerController : MonoBehaviour
 
     private void UpDateJump()
     {
-        if (GroundCheck.UpdateIsGrounded())
+        if (_groundCheck.UpdateIsGrounded())
             IsJumping = false;
 
-        if (GroundCheck.UpdateIsGrounded() && FallTimer > 0)
+        if (_groundCheck.UpdateIsGrounded() && FallTimer > 0)
         {
             FallTimer = 0;
             //_animator.SetBool("Airborne", false);
@@ -107,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     private bool PlayerJumpedFromGround()
     {
-        return _jump.action.triggered && GroundCheck.IsGrounded;
+        return _jump.action.triggered && _groundCheck.IsGrounded;
     }
 
     private void RotateInDirectionOfMovement()
@@ -123,7 +129,7 @@ public class PlayerController : MonoBehaviour
             //let character jump while stopping sliding
             //character only stops completely when grounded
             //set airborne false whenever grounded
-            if (GroundCheck.IsGrounded)
+            if (_groundCheck.IsGrounded)
             {
                 _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
             }
@@ -189,7 +195,7 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (!GroundCheck.IsGrounded)
+        if (!_groundCheck.IsGrounded)
         {
             FallTimer += Time.deltaTime;
             var downForce = _weight * FallTimer * FallTimer;
