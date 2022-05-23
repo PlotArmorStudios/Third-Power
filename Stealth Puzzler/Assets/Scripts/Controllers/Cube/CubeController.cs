@@ -23,9 +23,12 @@ public class CubeController : MonoBehaviour
     private GroundCheck _groundCheck { get; set; }
     private Grid _grid;
 
+    public float FallTimer { get; set; }
+    public bool IsFalling { get; set; }
     private float _horizontal;
     private float _vertical;
     private bool _isMoving;
+    private float _weight;
 
     private void OnEnable()
     {
