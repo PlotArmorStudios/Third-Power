@@ -34,7 +34,7 @@ public class CrushEnemies : MonoBehaviour
 
     private void Update()
     {
-        if (_cubeController.IsTouchingGround())
+        if (!_cubeController.IsTouchingGround())
             if (_drop.action.triggered)
                 _dropping = true;
 
@@ -50,10 +50,10 @@ public class CrushEnemies : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!_dropping) return;
+        _dropping = false;
         var crushableObject = collision.gameObject.GetComponent<Crushable>();
         if (!crushableObject) return;
-        if (!_dropping) return;
-        Debug.Log("Dropped on object!");
-        _dropping = false;
+        crushableObject.Crush();
     }
 }
