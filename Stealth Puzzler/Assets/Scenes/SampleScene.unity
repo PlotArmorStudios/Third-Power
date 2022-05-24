@@ -465,7 +465,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &695778634
 Animator:
@@ -847,7 +847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991798513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.51, y: 0.514, z: 2.716}
+  m_LocalPosition: {x: -1.51, y: 0.514, z: 2.22}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1075,14 +1075,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982191078}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -3.854, y: 1.048, z: 0}
+  m_LocalPosition: {x: -3.854, y: 0.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1981889016}
   - {fileID: 1981889018}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &1981889016
 Transform:
@@ -1158,9 +1158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb0e59917e8c244d8590a93a50d671e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _graceTimeBeforeReattack: 0
+  _graceTimeBeforeReattack: 2
   _graceTimeBeforeReattackReset: 2
-  _timeBeforeRetract: 1
+  _reloadTime: 1
 --- !u!1 &1982191128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1191,7 @@ GameObject:
   - component: {fileID: 1981086232}
   - component: {fileID: 1979992024}
   - component: {fileID: 205351244}
+  - component: {fileID: 1982191131}
   m_Layer: 0
   m_Name: Spear
   m_TagString: Untagged
@@ -1198,6 +1199,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1982191131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982191130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f171e87b256284dba6ca5451b203b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 1
 --- !u!1 &1008217376345422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1242,7 @@ GameObject:
   - component: {fileID: 33605890682187454}
   - component: {fileID: 23771607534486400}
   - component: {fileID: 33605890682187456}
-  - component: {fileID: 33605890682187455}
+  - component: {fileID: 33605890682187457}
   m_Layer: 0
   m_Name: SpearD (4)
   m_TagString: Untagged
@@ -2002,19 +2016,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311724319355222}
   m_Mesh: {fileID: 4300000, guid: 5395c56e03889384398da83042f0b46e, type: 3}
---- !u!114 &33605890682187455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311724319355222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f171e87b256284dba6ca5451b203b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damageAmount: 1
 --- !u!65 &33605890682187456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2028,6 +2029,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 2.38, z: 1.4}
   m_Center: {x: 0, y: 0.2322381, z: -0.000000055879354}
+--- !u!114 &33605890682187457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311724319355222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f171e87b256284dba6ca5451b203b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 1
 --- !u!33 &33628234051502038
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2115,4 +2129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _graceTimeBeforeReattack: 2
   _graceTimeBeforeReattackReset: 2
-  _timeBeforeRetract: 1
+  _reloadTime: 1
