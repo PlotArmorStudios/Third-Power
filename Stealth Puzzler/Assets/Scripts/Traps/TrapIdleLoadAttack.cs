@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrapSpike : MonoBehaviour
+public class TrapIdleLoadAttack : MonoBehaviour
 {
     private Animator _spikeAnim;
     [SerializeField] private float _graceTimeBeforeReattack;
     [SerializeField] private float _graceTimeBeforeReattackReset = 2f;
-    [SerializeField] private float _timeBeforeRetract = 1f;
+    [SerializeField] private float _reloadTime = 1f;
     void Start()
     {
         _spikeAnim = GetComponent<Animator>();
@@ -26,7 +26,7 @@ public class TrapSpike : MonoBehaviour
     {
         _spikeAnim.SetTrigger("load");
         _spikeAnim.SetTrigger("attack");
-        yield return new WaitForSeconds(_timeBeforeRetract);
+        yield return new WaitForSeconds(_reloadTime);
         _spikeAnim.SetTrigger("idle");
     }
 

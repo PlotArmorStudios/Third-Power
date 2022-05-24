@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class OnTrapHit : MonoBehaviour
+public class OnPlayerHit : MonoBehaviour
 {
     [SerializeField] private float _damageAmount = 1f;
     public static event Action<float> OnDamageTaken;
