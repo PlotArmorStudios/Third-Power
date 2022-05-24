@@ -666,15 +666,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabc3600c76a07f4886b6a566b377c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 0
-  Angle: 0
+  Radius: 5
+  Angle: 70
   PlayerRef: {fileID: 0}
   TargetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   ObstructionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   CanSeePlayer: 0
 --- !u!136 &863623400
 CapsuleCollider:
@@ -748,7 +748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863623398}
   m_LocalRotation: {x: -0, y: -0.75582206, z: -0, w: 0.6547771}
-  m_LocalPosition: {x: 1.53, y: 1.35, z: 0.56}
+  m_LocalPosition: {x: 2.51, y: 0.57, z: -2.66}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 991798515}
   - component: {fileID: 991798514}
   - component: {fileID: 991798518}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991798513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.51, y: 0.514, z: 2.22}
+  m_LocalPosition: {x: -1.51, y: 0.514, z: -2.77}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 1709715576}
   - component: {fileID: 1709715575}
   - component: {fileID: 1709715574}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709715573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.35, z: 0}
+  m_LocalPosition: {x: 0, y: 0.84, z: -2.66}
   m_LocalScale: {x: 0.21123, y: 0.95, z: 1.22}
   m_ConstrainProportionsScale: 0
   m_Children: []
