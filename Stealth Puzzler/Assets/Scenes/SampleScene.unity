@@ -902,8 +902,8 @@ GameObject:
   - component: {fileID: 33776584678053298}
   - component: {fileID: 23248803376016876}
   - component: {fileID: 95846520666195114}
-  - component: {fileID: 95846520666195115}
   - component: {fileID: 95846520666195116}
+  - component: {fileID: 95846520666195117}
   m_Layer: 0
   m_Name: SpikeTrapD
   m_TagString: Untagged
@@ -1102,7 +1102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498793174284072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.7}
+  m_LocalPosition: {x: 0.713, y: 0, z: 2.7}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1698,23 +1698,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &95846520666195115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498793174284072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644b320fc2e3b5345858f9a104531b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _trapState: 0
-  _graceTimeBeforeAttack: 2
-  _timeBeforeRetractWhenAway: 1
-  _timeBeforeDamageReoccursWhenAttacked: 3
-  _damageAmount: 1
 --- !u!65 &95846520666195116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1728,3 +1711,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000005, y: 0.40470895, z: 2.0000007}
   m_Center: {x: 0.000000074505806, y: 0.1456877, z: 0.00000014901161}
+--- !u!114 &95846520666195117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498793174284072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb0e59917e8c244d8590a93a50d671e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _graceTimeBeforeFirstAttack: 0.1
+  _graceTimeBeforeReattack: 2
+  _graceTimeBeforeReattackReset: 2
+  _timeBeforeRetract: 1
+  _damageAmount: 1
