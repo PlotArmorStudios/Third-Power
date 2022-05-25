@@ -7,13 +7,11 @@ using Vector3 = UnityEngine.Vector3;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private float _maxRayDistance = 1f;
     public float Speed;
     private Rigidbody _rigidbody;
 
-    public int _maxReflectionCount = 5;
-    public float _maxStepDistance = 200;
     private LayerMask _reflectLayerMask;
-    [SerializeField] private float _maxRayDistance = 1f;
     private Vector3 _inputDirection;
     private Ray _ray;
 
