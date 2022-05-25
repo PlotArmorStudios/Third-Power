@@ -62,7 +62,7 @@ public class EnemyAi : MonoBehaviour
     void Idle()
     {
         _timeToStayIdle -= Time.deltaTime;
-        agent.SetDestination(transform.position);
+        agent.ResetPath();
         //play idle animation
         if (_timeToStayIdle < 0)
         {
@@ -130,12 +130,12 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _windUpTime = 1f;
     void WindUp()
     {
-        agent.SetDestination(transform.position);
+        agent.ResetPath();
+        Quaternion.LookRotation(target.transform.position - transform.position);
         _windUpTime -= Time.deltaTime;
         if (FieldOfView.CanSeePlayer && _windUpTime<0)
         {
             _windUpTime = 1f;
-            Quaternion.LookRotation(target.transform.position - transform.position);
             _currentState = State.Chase;
         }
         else
