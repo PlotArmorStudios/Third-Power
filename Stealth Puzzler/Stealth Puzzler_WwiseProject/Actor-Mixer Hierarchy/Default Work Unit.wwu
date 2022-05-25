@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6C7A9308-B485-47BA-88F7-8D166A8ED669}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{6C7A9308-B485-47BA-88F7-8D166A8ED669}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6C7A9308-B485-47BA-88F7-8D166A8ED669}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="CSG Urei Click" ID="{DBBF24BC-0D87-4D2C-8DDE-71B86C9748E5}" ShortID="46141188">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F970A8ED-40D6-4338-B721-25856E10E440}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AC10AD38-CD61-4EA4-A3AA-B3B8B6FA791D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="CSG Urei Click" ID="{7F70F05F-33A3-4B74-8E87-B11DB2944901}">
+							<Language>SFX</Language>
+							<AudioFile>CSG Urei Click.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="79227504"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="CSG Urei Click" ID="{7F70F05F-33A3-4B74-8E87-B11DB2944901}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
