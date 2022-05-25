@@ -3,5 +3,6 @@
     Idle,
     Patrol,
     Chase,
-    Attack
+    Attack,
+    WindUp
 }

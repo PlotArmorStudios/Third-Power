@@ -29,14 +29,16 @@ public class EnemyAi : MonoBehaviour
         {
             case State.Idle:
                 Idle();
-                ChaseIfCanSeePlayer();
+                WindUpIfCanSeePlayer();
                 break;
             case State.Patrol:
                 Patrol();
-                ChaseIfCanSeePlayer();
+                WindUpIfCanSeePlayer();
+                break;
+            case State.WindUp:
+                WindUp();
                 break;
             case State.Chase:
-                Chase(target.transform.position);
                 Chase(target.transform.position);
                 break;
             case State.Attack:
@@ -46,11 +48,11 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-    private void ChaseIfCanSeePlayer()
+    private void WindUpIfCanSeePlayer()
     {
         if (FieldOfView.CanSeePlayer)
         {
-            _currentState = State.Chase;
+            _currentState = State.WindUp;
         }
     }
 
@@ -117,7 +119,7 @@ public class EnemyAi : MonoBehaviour
         if (FieldOfView.CanSeePlayer)
         {
             agent.SetDestination(location);
-            transform.LookAt(target.transform);
+            Quaternion.LookRotation(target.transform.position - transform.position);
         }
         else
         {
@@ -125,7 +127,22 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-
+    [SerializeField] private float _windUpTime = 1f;
+    void WindUp()
+    {
+        agent.SetDestination(transform.position);
+        _windUpTime -= Time.deltaTime;
+        if (FieldOfView.CanSeePlayer && _windUpTime<0)
+        {
+            _windUpTime = 1f;
+            Quaternion.LookRotation(target.transform.position - transform.position);
+            _currentState = State.Chase;
+        }
+        else
+        {
+            _currentState = State.Idle;
+        }
+    }
 
     //void Flee(Vector3 location)
     //{
