@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour
     private LayerMask _reflectLayerMask;
     private Vector3 _inputDirection;
     private Ray _ray;
+    private bool _isBouncing;
 
     private void OnValidate()
     {
@@ -44,9 +45,19 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        var reflector = other.gameObject.GetComponentInChildren<Reflector>();
+        Debug.Log(reflector);
         var wallNormal = other.contacts[0].normal;
         var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
-        _rigidbody.velocity = bounceDirection * Speed;
-        _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
+
+        if (reflector)
+        {
+            _rigidbody.velocity = bounceDirection * Speed;
+            _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
