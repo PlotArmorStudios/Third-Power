@@ -47,6 +47,13 @@ public class PlayerController : MonoBehaviour
     private bool _triggerJump;
     public bool IsJumping { get; set; }
 
+    //Wall Climbing
+    [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private Transform _climbCheckPoint;
+    [SerializeField] private bool _isClimbing = false;
+    [SerializeField] private float _climbSpeed = 2.5f;
+
+
     private void OnEnable()
     {
         _move.action.Enable();
@@ -75,10 +82,16 @@ public class PlayerController : MonoBehaviour
         ReadInput();
         //ApplyMovementInputToAnimator();
         if (PlayerJumpedFromGround()) _triggerJump = true;
+        CheckIfClimbing();
     }
 
     private void FixedUpdate()
     {
+        if (_isClimbing) 
+        {
+            HandleWallClimbing();
+            return;
+        }
         RotateInDirectionOfMovement();
         ApplyGravity();
         UpDateJump();
@@ -193,27 +206,44 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void CheckIfClimbing()
+    {
+        _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, 1f, _groundMask);
+        _rigidbody.useGravity = !_isClimbing;
+    }
+
+    private void HandleWallClimbing()
+    {
+        if (!_isClimbing) return;
+        if (_vertical < 0 && _groundCheck.IsGrounded())
+        {
+            RotateInDirectionOfMovement();
+        }
+        Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
+        _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+    }
+
     private void ApplyGravity()
     {
         if (!_groundCheck.IsGrounded())
-                 {
-                     FallTimer += Time.deltaTime;
-                     var downForce = _weight * FallTimer * FallTimer;
-         
-                     if (downForce > 3f)
-                         downForce = 3f;
-         
-                     _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y - downForce,
-                         _rigidbody.velocity.z);
-         
-                     if (_rigidbody.velocity.y < 0)
-                         IsFalling = true;
-                     _animator.SetBool("Airborne", true);
-                 }
-                 else
-                 {
-                     FallTimer = 0;
-                     IsFalling = false;
-                 }
+        {
+            FallTimer += Time.deltaTime;
+            var downForce = _weight * FallTimer * FallTimer;
+
+            if (downForce > 3f)
+                downForce = 3f;
+
+            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y - downForce,
+                _rigidbody.velocity.z);
+
+            if (_rigidbody.velocity.y < 0)
+                IsFalling = true;
+            _animator.SetBool("Airborne", true);
+        }
+        else
+        {
+            FallTimer = 0;
+            IsFalling = false;
+        }
     }
 }
