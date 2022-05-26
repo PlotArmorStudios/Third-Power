@@ -80,8 +80,12 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _maxTimeToPatrol;
     private float _timeToStayPatrolling;
     Vector3 wanderTarget = Vector3.zero;
+    [SerializeField] private float _patrolSpeed = 3f;
+    [SerializeField] private float _patrolAcceleration = 8f;
     void Patrol()
     {
+        agent.acceleration = _patrolAcceleration;
+        agent.speed = _patrolSpeed;
         _timeToStayPatrolling -= Time.deltaTime;
         float wanderRadius = 10;
         float wanderDistance = 10;
@@ -114,12 +118,16 @@ public class EnemyAi : MonoBehaviour
         agent.SetDestination(location);
     }
 
+    [SerializeField] private float _chaseSpeed = 5f;
+    [SerializeField] private float _chaseAcceleration = 12f;
     void Chase(Vector3 location)
     {
         if (FieldOfView.CanSeePlayer)
         {
             agent.SetDestination(location);
             Quaternion.LookRotation(target.transform.position - transform.position);
+            agent.speed = _chaseSpeed;
+            agent.acceleration = _chaseAcceleration;
         }
         else
         {
@@ -127,7 +135,8 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-    [SerializeField] private float _windUpTime = 1f;
+    [SerializeField] private float _resetWindUpTime = .5f;
+    [SerializeField] private float _windUpTime = .5f;
     void WindUp()
     {
         agent.ResetPath();
@@ -135,7 +144,7 @@ public class EnemyAi : MonoBehaviour
         _windUpTime -= Time.deltaTime;
         if (FieldOfView.CanSeePlayer && _windUpTime<0)
         {
-            _windUpTime = 1f;
+            _windUpTime = _resetWindUpTime;
             _currentState = State.Chase;
         }
         else
