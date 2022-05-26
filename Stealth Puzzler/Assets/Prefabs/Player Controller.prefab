@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 7789406006588094455}
   - component: {fileID: 7789406006588094454}
   - component: {fileID: 7789406006588094449}
+  - component: {fileID: 1637140718}
   m_Layer: 0
   m_Name: Player Controller
   m_TagString: Untagged
@@ -174,18 +175,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb70db2f88ece3489bf5d9cf6007df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeCalibratorTransform: {fileID: 7789406006338413189}
   _move: {fileID: 8569720206534178987, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _jump: {fileID: -816710980706335620, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _look: {fileID: -9193725717127629328, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
-  _jumpHeight: 10
   _movementSpeed: 5
+  _jumpHeight: 10
   _weight: 2
+  _camera: {fileID: 0}
   _turnSmoothTime: 2
   _turnSmoothVelocity: 2
-  _camera: {fileID: 0}
+  CubeCalibratorTransform: {fileID: 7789406006338413189}
   <IsFalling>k__BackingField: 0
-  CamTransform: {fileID: 0}
 --- !u!114 &7789406006588094449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +202,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _feet: {fileID: 7789406006541125851}
+--- !u!114 &1637140718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789406006588094453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9260915438cd943ab169a238f55123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelRestartDelay: 2
 --- !u!1 &7789406006700636454
 GameObject:
   m_ObjectHideFlags: 0
