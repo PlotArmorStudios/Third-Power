@@ -7,15 +7,14 @@ using Vector3 = UnityEngine.Vector3;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private float _maxRayDistance = 1f;
     public float Speed;
     private Rigidbody _rigidbody;
 
-    public int _maxReflectionCount = 5;
-    public float _maxStepDistance = 200;
     private LayerMask _reflectLayerMask;
-    [SerializeField] private float _maxRayDistance = 1f;
     private Vector3 _inputDirection;
     private Ray _ray;
+    private bool _isBouncing;
 
     private void OnValidate()
     {
@@ -46,47 +45,19 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        var reflector = other.gameObject.GetComponentInChildren<Reflector>();
+        Debug.Log(reflector);
         var wallNormal = other.contacts[0].normal;
         var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
-        _rigidbody.velocity = bounceDirection * Speed;
-        _rigidbody.transform.rotation = Quaternion.Inverse(_rigidbody.transform.rotation);
-        //_rigidbody.velocity = _rigidbody.transform.forward * Speed;
-    }
 
-    void OnDrawGizmos()
-    {
-        Handles.color = Color.red;
-        Handles.ArrowHandleCap(0, _rigidbody.transform.position + _rigidbody.transform.forward * 0.25f, _rigidbody.transform.rotation, 0.5f, EventType.Repaint);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(_rigidbody.transform.position, 0.25f);
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawRay(_rigidbody.transform.position, _rigidbody.transform.forward * _maxRayDistance);
-        DrawPredictedReflectionPattern(_rigidbody.transform.position + _rigidbody.transform.forward * 0.75f, _rigidbody.transform.forward, _maxReflectionCount);
-    }
-
-    private void DrawPredictedReflectionPattern(Vector3 position, Vector3 direction, int reflectionsRemaining)
-    {
-        if (reflectionsRemaining == 0) return;
-
-        Vector3 startingPosition = position;
-
-        Ray ray = new Ray(position, direction);
-        RaycastHit hit;
-        
-        if (Physics.Raycast(ray, out hit, _maxStepDistance))
+        if (reflector)
         {
-            direction = Vector3.Reflect(direction, hit.normal);
-            position = hit.point;
+            _rigidbody.velocity = bounceDirection * Speed;
+            _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
         }
         else
         {
-            position += direction * _maxStepDistance;
+            gameObject.SetActive(false);
         }
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(startingPosition, position);
-
-        DrawPredictedReflectionPattern(position, direction, reflectionsRemaining - 1);
     }
 }
