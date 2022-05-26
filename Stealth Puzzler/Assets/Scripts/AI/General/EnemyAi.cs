@@ -5,18 +5,20 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyAi : MonoBehaviour
 {
-    NavMeshAgent agent;
-    public GameObject target;
-    [SerializeField] private FieldOfView FieldOfView;
+    private NavMeshAgent _navAgent;
+    public GameObject Player;
+    [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
+    private Rigidbody _rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        agent = this.GetComponent<NavMeshAgent>();
+        _navAgent = this.GetComponent<NavMeshAgent>();
         _currentState = State.Idle;
         _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
         _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
+        _rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
@@ -39,7 +41,7 @@ public class EnemyAi : MonoBehaviour
                 WindUp();
                 break;
             case State.Chase:
-                Chase(target.transform.position);
+                Chase(Player.transform.position);
                 break;
             case State.Attack:
                 break;
@@ -50,7 +52,7 @@ public class EnemyAi : MonoBehaviour
 
     private void WindUpIfCanSeePlayer()
     {
-        if (FieldOfView.CanSeePlayer)
+        if (_fieldOfView.CanSeePlayer)
         {
             _currentState = State.WindUp;
         }
@@ -62,7 +64,9 @@ public class EnemyAi : MonoBehaviour
     void Idle()
     {
         _timeToStayIdle -= Time.deltaTime;
-        agent.ResetPath();
+        _navAgent.ResetPath();
+        _rb.velocity = Vector3.zero;
+        _rb.rotation = Quaternion.identity;
         //play idle animation
         if (_timeToStayIdle < 0)
         {
@@ -84,8 +88,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _patrolAcceleration = 8f;
     void Patrol()
     {
-        agent.acceleration = _patrolAcceleration;
-        agent.speed = _patrolSpeed;
+        _navAgent.acceleration = _patrolAcceleration;
+        _navAgent.speed = _patrolSpeed;
         _timeToStayPatrolling -= Time.deltaTime;
         float wanderRadius = 10;
         float wanderDistance = 10;
@@ -115,19 +119,21 @@ public class EnemyAi : MonoBehaviour
     //send agent to a location on the nav mesh
     void Seek(Vector3 location)
     {
-        agent.SetDestination(location);
+        _navAgent.SetDestination(location);
     }
 
     [SerializeField] private float _chaseSpeed = 5f;
     [SerializeField] private float _chaseAcceleration = 12f;
     void Chase(Vector3 location)
     {
-        if (FieldOfView.CanSeePlayer)
+        if (_fieldOfView.CanSeePlayer)
         {
-            agent.SetDestination(location);
-            Quaternion.LookRotation(target.transform.position - transform.position);
-            agent.speed = _chaseSpeed;
-            agent.acceleration = _chaseAcceleration;
+            _navAgent.SetDestination(location);
+            Quaternion.LookRotation(Player.transform.position - transform.position);
+            //Quaternion.FromToRotation(transform.forward, Player.transform.position - transform.position);
+            //transform.LookAt(target.transform.position);
+            _navAgent.speed = _chaseSpeed;
+            _navAgent.acceleration = _chaseAcceleration;
         }
         else
         {
@@ -139,10 +145,10 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _windUpTime = .5f;
     void WindUp()
     {
-        agent.ResetPath();
-        Quaternion.LookRotation(target.transform.position - transform.position);
+        _navAgent.ResetPath();
+        Quaternion.LookRotation(Player.transform.position - transform.position);
         _windUpTime -= Time.deltaTime;
-        if (FieldOfView.CanSeePlayer && _windUpTime<0)
+        if (_fieldOfView.CanSeePlayer && _windUpTime<0)
         {
             _windUpTime = _resetWindUpTime;
             _currentState = State.Chase;
@@ -152,6 +158,42 @@ public class EnemyAi : MonoBehaviour
             _currentState = State.Idle;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            _rb.velocity = Vector3.zero;
+            _rb.rotation = Quaternion.identity;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            _rb.velocity = Vector3.zero;
+            _rb.rotation = Quaternion.identity;
+        }
+    }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        _navAgent.enabled = false;
+    //        _rb.isKinematic = false;
+    //        _rb.useGravity = true;
+    //        Invoke(nameof(EnableNavMesh), 1F);
+    //    }
+    //}
+
+    //void EnableNavMesh()
+    //{
+    //    _rb.isKinematic = true;
+    //    _rb.useGravity = false;
+    //    _navAgent.enabled = true;
+    //}
 
     //void Flee(Vector3 location)
     //{
