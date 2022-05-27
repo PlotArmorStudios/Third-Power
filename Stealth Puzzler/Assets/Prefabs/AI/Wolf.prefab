@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 4485177270935511254}
   - component: {fileID: 4485177270935511240}
   - component: {fileID: 4485177270935511241}
+  - component: {fileID: 373742898}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -220,12 +221,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabc3600c76a07f4886b6a566b377c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 5
-  Angle: 100
-  PlayerRef: {fileID: 0}
   TargetMask:
     serializedVersion: 2
     m_Bits: 128
+  Radius: 5
+  Angle: 100
   ObstructionMask:
     serializedVersion: 2
     m_Bits: 256
@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c02e4e9723a36c449f7d9c63efd6d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   _fieldOfView: {fileID: 4485177270935511233}
   _currentState: 0
   _minTimeToStayIdle: 1
@@ -284,3 +283,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &373742898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4485177270935511232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44bc713063bd16c4d905a3301b2d6cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

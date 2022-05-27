@@ -1,17 +1,18 @@
-﻿using System;
+﻿#define DebugStates
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class EnemyAi : MonoBehaviour
+
+public class EnemyAI : MonoBehaviour
 {
-    private NavMeshAgent _navAgent;
-    public GameObject Player;
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
+    private NavMeshAgent _navAgent;
+    private PlayerController _player;
     private Rigidbody _rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         _navAgent = this.GetComponent<NavMeshAgent>();
@@ -19,7 +20,9 @@ public class EnemyAi : MonoBehaviour
         _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
         _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
         _rb = GetComponent<Rigidbody>();
+        _player = FindObjectOfType<PlayerController>();
     }
+
     void Update()
     {
         SwitchStates();
@@ -30,20 +33,35 @@ public class EnemyAi : MonoBehaviour
         switch (_currentState)
         {
             case State.Idle:
+#if DebugStates
+                Debug.Log("Ticking Idle");
+#endif
                 Idle();
                 WindUpIfCanSeePlayer();
                 break;
             case State.Patrol:
+#if DebugStates
+                Debug.Log("Ticking Patrol");
+#endif
                 Patrol();
                 WindUpIfCanSeePlayer();
                 break;
             case State.WindUp:
+#if DebugStates
+                Debug.Log("Ticking WindUp");
+#endif
                 WindUp();
                 break;
             case State.Chase:
-                Chase(Player.transform.position);
+#if DebugStates
+                Debug.Log("Ticking Chase");
+#endif
+                Chase(_player.transform.position);
                 break;
             case State.Attack:
+#if DebugStates
+                Debug.Log("Ticking Attack");
+#endif
                 break;
             default:
                 break;
@@ -61,6 +79,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private float _minTimeToStayIdle;
     [SerializeField] private float _maxTimeToStayIdle;
     private float _timeToStayIdle;
+
     void Idle()
     {
         _timeToStayIdle -= Time.deltaTime;
@@ -86,6 +105,7 @@ public class EnemyAi : MonoBehaviour
     Vector3 wanderTarget = Vector3.zero;
     [SerializeField] private float _patrolSpeed = 3f;
     [SerializeField] private float _patrolAcceleration = 8f;
+
     void Patrol()
     {
         _navAgent.acceleration = _patrolAcceleration;
@@ -97,8 +117,8 @@ public class EnemyAi : MonoBehaviour
 
         //determine a location on a circle 
         wanderTarget += new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter,
-                                        0,
-                                        UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter);
+            0,
+            UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter);
         wanderTarget.Normalize();
         //project the point out to the radius of the cirle
         wanderTarget *= wanderRadius;
@@ -114,8 +134,8 @@ public class EnemyAi : MonoBehaviour
             _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
             _currentState = State.Idle;
         }
-        
     }
+
     //send agent to a location on the nav mesh
     void Seek(Vector3 location)
     {
@@ -124,12 +144,13 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private float _chaseSpeed = 5f;
     [SerializeField] private float _chaseAcceleration = 12f;
+
     void Chase(Vector3 location)
     {
         if (_fieldOfView.CanSeePlayer)
         {
             _navAgent.SetDestination(location);
-            Quaternion.LookRotation(Player.transform.position - transform.position);
+            Quaternion.LookRotation(_player.transform.position - transform.position);
             //Quaternion.FromToRotation(transform.forward, Player.transform.position - transform.position);
             //transform.LookAt(target.transform.position);
             _navAgent.speed = _chaseSpeed;
@@ -143,12 +164,13 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private float _resetWindUpTime = .5f;
     [SerializeField] private float _windUpTime = .5f;
+
     void WindUp()
     {
         _navAgent.ResetPath();
-        Quaternion.LookRotation(Player.transform.position - transform.position);
+        Quaternion.LookRotation(_player.transform.position - transform.position);
         _windUpTime -= Time.deltaTime;
-        if (_fieldOfView.CanSeePlayer && _windUpTime<0)
+        if (_fieldOfView.CanSeePlayer && _windUpTime < 0)
         {
             _windUpTime = _resetWindUpTime;
             _currentState = State.Chase;
@@ -161,7 +183,7 @@ public class EnemyAi : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.GetComponent<PlayerController>())
         {
             _rb.velocity = Vector3.zero;
             _rb.rotation = Quaternion.identity;
@@ -170,7 +192,7 @@ public class EnemyAi : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.GetComponent<PlayerController>())
         {
             _rb.velocity = Vector3.zero;
             _rb.rotation = Quaternion.identity;

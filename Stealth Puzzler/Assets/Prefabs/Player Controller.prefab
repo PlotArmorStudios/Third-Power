@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7789406006338413189}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube Calibrator Transform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7789406006428515783}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player Camera Focal Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7789406006541125851}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,8 @@ GameObject:
   - component: {fileID: 7789406006588094454}
   - component: {fileID: 7789406006588094449}
   - component: {fileID: 1637140718}
-  m_Layer: 0
+  - component: {fileID: 282154609}
+  m_Layer: 7
   m_Name: Player Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,6 +187,12 @@ MonoBehaviour:
   _turnSmoothVelocity: 2
   CubeCalibratorTransform: {fileID: 7789406006338413189}
   <IsFalling>k__BackingField: 0
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _climbCheckPoint: {fileID: 0}
+  _isClimbing: 0
+  _climbSpeed: 2.5
 --- !u!114 &7789406006588094449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +222,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelRestartDelay: 2
+--- !u!114 &282154609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789406006588094453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac82b46f0cd4abc8b50399892847e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7789406006700636454
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +246,7 @@ GameObject:
   - component: {fileID: 7789406006700636450}
   - component: {fileID: 7789406006700636451}
   - component: {fileID: 7789406006700636448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +345,7 @@ GameObject:
   - component: {fileID: 7789406007369644010}
   - component: {fileID: 7789406007369644011}
   - component: {fileID: 7789406007369644004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
