@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class ToggleComponents : MonoBehaviour
 {
-    private Death _death;
+    private Health _health;
     
     private void OnEnable()
     {
-        _death = GetComponent<Death>();
-        _death.OnDie += ToggleOffComponents;
+        _health = GetComponent<Health>();
+        _health.OnDie += ToggleOffComponents;
     }
 
     private void OnDisable()
     {
-        _death.OnDie -= ToggleOffComponents;
+        _health.OnDie -= ToggleOffComponents;
     }
 
     public void ToggleOffComponents()

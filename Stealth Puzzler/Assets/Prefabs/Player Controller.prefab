@@ -106,8 +106,8 @@ GameObject:
   - component: {fileID: 7789406006588094455}
   - component: {fileID: 7789406006588094454}
   - component: {fileID: 7789406006588094449}
-  - component: {fileID: 1637140718}
   - component: {fileID: 282154609}
+  - component: {fileID: 8989654826882561585}
   m_Layer: 7
   m_Name: Player Controller
   m_TagString: Untagged
@@ -209,19 +209,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _feet: {fileID: 7789406006541125851}
---- !u!114 &1637140718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7789406006588094453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d9260915438cd943ab169a238f55123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelRestartDelay: 2
 --- !u!114 &282154609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +221,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac82b46f0cd4abc8b50399892847e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8989654826882561585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789406006588094453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc7490646564fba89efed90f59245cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxNumberOfHits: 1
+  _levelRestartDelay: 2
 --- !u!1 &7789406006700636454
 GameObject:
   m_ObjectHideFlags: 0

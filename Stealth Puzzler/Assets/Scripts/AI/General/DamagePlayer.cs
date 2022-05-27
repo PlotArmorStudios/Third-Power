@@ -9,6 +9,6 @@ public class DamagePlayer : MonoBehaviour
     {
         var player = other.gameObject.GetComponent<PlayerController>();
         if (!player) return;
-        player.GetComponent<Death>().Die();
+        player.GetComponent<Health>().TakeHit();
     }
 }

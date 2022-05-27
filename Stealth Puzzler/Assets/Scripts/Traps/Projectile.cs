@@ -46,6 +46,8 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         var reflector = other.gameObject.GetComponentInChildren<Reflector>();
+        var enemy = other.gameObject.GetComponent<EnemyAI>();
+        
         Debug.Log(reflector);
         var wallNormal = other.contacts[0].normal;
         var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
@@ -54,6 +56,11 @@ public class Projectile : MonoBehaviour
         {
             _rigidbody.velocity = bounceDirection * Speed;
             _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
+        }
+        else if(enemy)
+        {
+            enemy.GetComponent<Health>().TakeHit();
+            gameObject.SetActive(false);
         }
         else
         {
