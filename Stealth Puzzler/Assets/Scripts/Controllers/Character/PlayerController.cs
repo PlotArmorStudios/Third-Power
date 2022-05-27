@@ -7,25 +7,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-
-    [Header("Input")]
-    [SerializeField] private InputActionReference _move;
+    [Header("Input")] [SerializeField] private InputActionReference _move;
     [SerializeField] private InputActionReference _jump;
     [SerializeField] private InputActionReference _look;
-    
-    [Header("Movement")]
-    [SerializeField] private float _movementSpeed = 5.0f;
+
+    [Header("Movement")] [SerializeField] private float _movementSpeed = 5.0f;
     [SerializeField] private float _jumpHeight = 10f;
     [SerializeField] private float _weight = 2f;
 
-    [Header("Movement/Cam Rotation Sync")]
-    [SerializeField] private Camera _camera;
+    [Header("Movement/Cam Rotation Sync")] [SerializeField]
+    private Camera _camera;
+
     [SerializeField] private float _turnSmoothTime = 2f;
     [SerializeField] private float _turnSmoothVelocity = 2f;
-    
+
     [Tooltip("Transform for syncing player and cube position on switch.")]
     public Transform CubeCalibratorTransform;
-    
+
     [field: SerializeField] public bool IsFalling { get; set; }
 
     //Camera for calculating movement direction
@@ -87,11 +85,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_isClimbing) 
+        if (_isClimbing)
         {
             HandleWallClimbing();
             return;
         }
+
         RotateInDirectionOfMovement();
         ApplyGravity();
         UpDateJump();
@@ -208,7 +207,8 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfClimbing()
     {
-        _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, 1f, _groundMask);
+        if (_climbCheckPoint)
+            _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, 1f, _groundMask);
         _rigidbody.useGravity = !_isClimbing;
     }
 
@@ -219,6 +219,7 @@ public class PlayerController : MonoBehaviour
         {
             RotateInDirectionOfMovement();
         }
+
         Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
         _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
     }

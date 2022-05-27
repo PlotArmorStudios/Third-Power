@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
+    [SerializeField] private LayerMask TargetMask;
     public float Radius;
     [Range(0, 360)]
     public float Angle;
 
-    public GameObject PlayerRef;
+    public PlayerController Target { get; private set; }
 
-    public LayerMask TargetMask;
     public LayerMask ObstructionMask;
 
     public bool CanSeePlayer;
 
     private void Start()
     {
-        PlayerRef = GameObject.FindGameObjectWithTag("Player");
+        Target = FindObjectOfType<PlayerController>();
         StartCoroutine(FOVRoutine());
     }
 
