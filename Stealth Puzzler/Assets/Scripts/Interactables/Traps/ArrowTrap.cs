@@ -10,10 +10,16 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     
     public float SpawnDelay;
+    
+    //Accessible and editable in inspector.
+    public bool IsActive;
+    
     private float _currentSpawnTime;
 
     private void Update()
     {
+        if (!IsActive) return;
+        
         _currentSpawnTime += Time.deltaTime;
 
         if (_currentSpawnTime >= SpawnDelay)
@@ -23,4 +29,5 @@ public class ArrowTrap : MonoBehaviour
             arrow.transform.parent = transform;
         }
     }
+
 }
