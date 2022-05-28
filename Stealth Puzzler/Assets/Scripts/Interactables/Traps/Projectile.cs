@@ -47,19 +47,23 @@ public class Projectile : MonoBehaviour
     {
         var reflector = other.gameObject.GetComponentInChildren<Reflector>();
         var enemy = other.gameObject.GetComponent<EnemyAI>();
-        
-        Debug.Log(reflector);
-        var wallNormal = other.contacts[0].normal;
-        var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
+        var player = other.gameObject.GetComponent<PlayerController>();
 
         if (reflector)
         {
+            var wallNormal = other.contacts[0].normal;
+            var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
             _rigidbody.velocity = bounceDirection * Speed;
             _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
         }
         else if(enemy)
         {
             enemy.GetComponent<Health>().TakeHit();
+            gameObject.SetActive(false);
+        }
+        else if(player)
+        {
+            player.GetComponent<Health>().TakeHit();
             gameObject.SetActive(false);
         }
         else
