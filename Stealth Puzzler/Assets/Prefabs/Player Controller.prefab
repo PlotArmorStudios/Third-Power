@@ -180,6 +180,7 @@ MonoBehaviour:
   _move: {fileID: 8569720206534178987, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _jump: {fileID: -816710980706335620, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _look: {fileID: -9193725717127629328, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
+  _run: {fileID: -6078045319058410995, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _movementSpeed: 5
   _jumpHeight: 10
   _weight: 2
@@ -474,7 +475,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 42e8ae0c0a196f24fbadd79d1f7ab4d0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.522
+      value: -0.556
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42e8ae0c0a196f24fbadd79d1f7ab4d0,
         type: 3}
@@ -521,6 +522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: akai_e_espiritu@Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 42e8ae0c0a196f24fbadd79d1f7ab4d0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bf50090f0c2a1f84ea403898e23be7de, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42e8ae0c0a196f24fbadd79d1f7ab4d0, type: 3}
 --- !u!4 &8212015848211102651 stripped
