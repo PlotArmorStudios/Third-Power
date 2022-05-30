@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     [SerializeField] private float _levelRestartDelay = 2f;
-
+    
     private IEnumerator RestartLevel()
     {
         yield return new WaitForSeconds(_levelRestartDelay);

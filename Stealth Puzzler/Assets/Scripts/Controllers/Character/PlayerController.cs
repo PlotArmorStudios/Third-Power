@@ -97,8 +97,8 @@ public class PlayerController : MonoBehaviour
         }
 
         RotateInDirectionOfMovement();
-        ApplyGravity();
         UpDateJump();
+        ApplyGravity();
         HandleJump();
     }
 
@@ -113,11 +113,11 @@ public class PlayerController : MonoBehaviour
         if (_groundCheck.IsGrounded())
             IsJumping = false;
 
-        if (_groundCheck.IsGrounded() && FallTimer > 0)
+        if (_groundCheck.IsGrounded() && IsFalling)
         {
             FallTimer = 0;
-            //_animator.SetBool("Airborne", false);
-            // _animator.SetTrigger("Land");
+            _animator.SetBool("Airborne", false);
+            _animator.SetTrigger("Land");
         }
     }
 
@@ -215,8 +215,7 @@ public class PlayerController : MonoBehaviour
                                                                           | RigidbodyConstraints.FreezeRotationZ;
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpHeight, _rigidbody.velocity.z);
             IsJumping = true; //for landing
-            //_animator.SetBool("Land", false);
-            //_animator.SetTrigger("Jump");
+            _animator.SetTrigger("Jump");
             _triggerJump = false;
         }
     }
