@@ -7,9 +7,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Input")] [SerializeField] private InputActionReference _move;
+    [Header("Input")]
+    [SerializeField] private InputActionReference _move;
     [SerializeField] private InputActionReference _jump;
     [SerializeField] private InputActionReference _look;
+    [SerializeField] private InputActionReference _run;
 
     [Header("Movement")] [SerializeField] private float _movementSpeed = 5.0f;
     [SerializeField] private float _jumpHeight = 10f;
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform _climbCheckPoint;
     [SerializeField] private bool _isClimbing = false;
     [SerializeField] private float _climbSpeed = 2.5f;
+    private bool _isRunning;
 
 
     private void OnEnable()
@@ -57,12 +60,14 @@ public class PlayerController : MonoBehaviour
         _move.action.Enable();
         _jump.action.Enable();
         _look.action.Enable();
+        _run.action.Enable();
     }
 
     private void OnDisable()
     {
         _jump.action.Disable();
         _look.action.Disable();
+        _run.action.Disable();
     }
 
     void Start()
@@ -78,7 +83,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ReadInput();
-        //ApplyMovementInputToAnimator();
+        ApplyMovementInputToAnimator();
         if (PlayerJumpedFromGround()) _triggerJump = true;
         CheckIfClimbing();
     }
@@ -92,8 +97,8 @@ public class PlayerController : MonoBehaviour
         }
 
         RotateInDirectionOfMovement();
-        ApplyGravity();
         UpDateJump();
+        ApplyGravity();
         HandleJump();
     }
 
@@ -108,19 +113,27 @@ public class PlayerController : MonoBehaviour
         if (_groundCheck.IsGrounded())
             IsJumping = false;
 
-        if (_groundCheck.IsGrounded() && FallTimer > 0)
+        if (_groundCheck.IsGrounded() && IsFalling)
         {
             FallTimer = 0;
-            //_animator.SetBool("Airborne", false);
-            // _animator.SetTrigger("Land");
+            _animator.SetBool("Airborne", false);
+            _animator.SetTrigger("Land");
         }
     }
 
     private void ApplyMovementInputToAnimator()
     {
-        _animator.SetFloat("Movement",
-            Mathf.Max(Mathf.Abs(_horizontal),
-                Mathf.Abs(_vertical)));
+        var speedVariant = Mathf.Max(Mathf.Abs(_horizontal),
+            Mathf.Abs(_vertical));
+
+        _isRunning = _run.action.IsPressed();
+        
+        if (_isRunning)
+            speedVariant = Mathf.Clamp(speedVariant, 0, 1f);
+        else
+            speedVariant = Mathf.Clamp(speedVariant, 0, .5f);
+        
+        _animator.SetFloat("Movement", speedVariant);
     }
 
     private bool PlayerJumpedFromGround()
@@ -172,7 +185,10 @@ public class PlayerController : MonoBehaviour
         //the angle that the character is moving * the actual movement itself
         moveDir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
 
-        var moving = moveDir.normalized * _movementSpeed;
+        var moving = Vector3.zero;
+        
+        if(_isRunning) moving = moveDir.normalized * (_movementSpeed * 1.5f);
+        else moving = moveDir.normalized * _movementSpeed;
 
         //how to have character face direction you are moving
         if (!IsJumping)
@@ -199,8 +215,7 @@ public class PlayerController : MonoBehaviour
                                                                           | RigidbodyConstraints.FreezeRotationZ;
             _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpHeight, _rigidbody.velocity.z);
             IsJumping = true; //for landing
-            //_animator.SetBool("Land", false);
-            //_animator.SetTrigger("Jump");
+            _animator.SetTrigger("Jump");
             _triggerJump = false;
         }
     }

@@ -9,10 +9,12 @@ public abstract class Health : MonoBehaviour
     [SerializeField] private int _maxNumberOfHits;
 
     private int _currentNumberOfHits;
-
-    private void Start()
+    protected Animator _animator;
+    
+    protected virtual void Start()
     {
         _currentNumberOfHits = _maxNumberOfHits;
+        _animator = GetComponentInChildren<Animator>();
     }
 
     public virtual void TakeHit()
@@ -32,5 +34,6 @@ public abstract class Health : MonoBehaviour
     protected void TriggerOnDie()
     {
         OnDie?.Invoke();
+        _animator.SetTrigger("Die");
     }
 }
