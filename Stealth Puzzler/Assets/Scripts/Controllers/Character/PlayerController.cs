@@ -49,7 +49,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private Transform _climbCheckPoint;
     [SerializeField] private bool _isClimbing = false;
-    [SerializeField] private float _climbSpeed = 2.5f;
+    [SerializeField][Range(200,500)] private float _climbSpeed = 300;
+    private float _stoppingDistance = 0.5f;
 
 
     private void OnEnable()
@@ -208,20 +209,44 @@ public class PlayerController : MonoBehaviour
     private void CheckIfClimbing()
     {
         if (_climbCheckPoint)
-            _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, 1f, _groundMask);
+            _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, _stoppingDistance, _groundMask);
         _rigidbody.useGravity = !_isClimbing;
     }
 
+    // private void HandleWallClimbing()
+    // {
+    //     if (!_isClimbing) return;
+    //     if (_vertical < 0 && _groundCheck.IsGrounded())
+    //     {
+    //         RotateInDirectionOfMovement();
+    //     }
+
+    //     Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
+    //     _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+    // }
     private void HandleWallClimbing()
     {
-        if (!_isClimbing) return;
         if (_vertical < 0 && _groundCheck.IsGrounded())
         {
             RotateInDirectionOfMovement();
+            return;
         }
 
-        Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
-        _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+        if (_horizontal != 0 || _vertical != 0)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _groundMask))
+            {
+                transform.forward = -hit.normal;
+                _rigidbody.position = Vector3.Lerp(_rigidbody.position, hit.point + hit.normal * _stoppingDistance, 10f * Time.fixedDeltaTime);
+                Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
+                _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+            }
+        }   
+        else
+        {
+            _rigidbody.velocity = Vector3.zero;
+        }
     }
 
     private void ApplyGravity()
