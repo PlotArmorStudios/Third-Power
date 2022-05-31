@@ -47,10 +47,11 @@ public class PlayerController : MonoBehaviour
 
     //Wall Climbing
     [SerializeField] private LayerMask _groundMask;
-    [SerializeField] private Transform _climbCheckPoint;
+    [SerializeField] private Transform[] _climbCheckPoints;
     [SerializeField] private bool _isClimbing = false;
     [SerializeField][Range(200,500)] private float _climbSpeed = 300;
-    private float _stoppingDistance = 0.5f;
+    [SerializeField] private float _stoppingDistance = 0.2f;
+    private RaycastHit _lastGrabPoint; 
 
 
     private void OnEnable()
@@ -208,8 +209,10 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfClimbing()
     {
-        if (_climbCheckPoint)
-            _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, _stoppingDistance, _groundMask);
+        //Using a big or instead of a for loop so that if one checksphere succeeds, it won't waste time trying the rest
+        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _groundMask) 
+                    || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _groundMask) 
+                    || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _groundMask));
         _rigidbody.useGravity = !_isClimbing;
     }
 
@@ -232,16 +235,24 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        IsFalling = false;
+        FallTimer = 0;
+
         if (_horizontal != 0 || _vertical != 0)
         {
             RaycastHit hit;
+
             if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _groundMask))
             {
-                transform.forward = -hit.normal;
-                _rigidbody.position = Vector3.Lerp(_rigidbody.position, hit.point + hit.normal * _stoppingDistance, 10f * Time.fixedDeltaTime);
-                Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
-                _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+                _lastGrabPoint = hit;
+                _rigidbody.position = Vector3.Lerp(_rigidbody.position, _lastGrabPoint.point + _lastGrabPoint.normal * _stoppingDistance, 10f * Time.fixedDeltaTime);
+
             }
+            
+            transform.forward = -_lastGrabPoint.normal;
+            //TODO when raycast no longer hit, position is 
+            Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
+            _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
         }   
         else
         {
@@ -251,7 +262,7 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (!_groundCheck.IsGrounded())
+        if (!_groundCheck.IsGrounded() && !_isClimbing)
         {
             FallTimer += Time.deltaTime;
             var downForce = _weight * FallTimer * FallTimer;

@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494952152}
   m_Layer: 0
-  m_Name: ClimbGrabPoint
+  m_Name: ClimbCheck(0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494952151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.085, z: 0.662}
+  m_LocalPosition: {x: 0, y: -0.75, z: 0.49599963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -554,6 +554,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701309661}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &847685843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847685844}
+  m_Layer: 0
+  m_Name: ClimbCheck(2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &847685844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847685843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.49599963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2093354778}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951030733
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +739,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270618783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270618784}
+  m_Layer: 0
+  m_Name: ClimbCheck(1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270618784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270618783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2093354778}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361668637
 GameObject:
@@ -1534,10 +1596,35 @@ PrefabInstance:
       propertyPath: _climbCheckPoint
       value: 
       objectReference: {fileID: 494952152}
+    - target: {fileID: 2397874376897209057, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: _climbCheckPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397874376897209057, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: _climbCheckPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 494952152}
+    - target: {fileID: 2397874376897209057, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: _climbCheckPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1270618784}
+    - target: {fileID: 2397874376897209057, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: _climbCheckPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 847685844}
     - target: {fileID: 2397874377043307575, guid: a57a28a26dcba354283509b38fba6b3b,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397874377432550281, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2397874377860063776, guid: a57a28a26dcba354283509b38fba6b3b,
         type: 3}
