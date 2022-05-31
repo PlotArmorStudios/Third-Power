@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -11,7 +10,6 @@ public class ArrowTrap : MonoBehaviour
     
     public float SpawnDelay;
     
-    //Accessible and editable in inspector.
     public bool IsActive;
     
     private float _currentSpawnTime;
@@ -24,10 +22,14 @@ public class ArrowTrap : MonoBehaviour
 
         if (_currentSpawnTime >= SpawnDelay)
         {
-            var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
-            _currentSpawnTime = 0;
-            arrow.transform.parent = transform;
+            ShootArrow();
         }
     }
-
+    
+    private void ShootArrow()
+    {
+        var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
+        _currentSpawnTime = 0;
+        arrow.transform.parent = transform;
+    }
 }
