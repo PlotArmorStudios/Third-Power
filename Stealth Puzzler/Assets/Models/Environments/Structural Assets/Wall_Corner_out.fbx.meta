@@ -3,7 +3,22 @@ guid: 0343c807b108d9e488f7742516e94533
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneWall
+    second: {fileID: 2100000, guid: f3e4913edfbec614a91f2c3c1ab75415, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneWallRegular
+    second: {fileID: 2100000, guid: 55cad322689da224599b178a4400af74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneWall_Squarish
+    second: {fileID: 2100000, guid: 45beb435f075aeb49b130e5cbdc89505, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
