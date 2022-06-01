@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 2515349384055860791}
   - component: {fileID: 1533347465605587346}
   - component: {fileID: 3648896654586303832}
-  - component: {fileID: 4542861295585086506}
-  m_Layer: 0
+  - component: {fileID: 1629757683}
+  - component: {fileID: 1629757682}
+  - component: {fileID: -7387340885863458886}
+  - component: {fileID: 1629757688}
+  m_Layer: 6
   m_Name: StalagticPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3000382911533151373}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -84,8 +87,49 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4542861295585086506
+--- !u!114 &1629757683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000382911533151373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43fcb1936fa4d69bae541904b085640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wayPoints: {fileID: 0}
+  _moveSpeed: 2
+  _distanceThreshold: 0.1
+  IsActive: 1
+--- !u!114 &1629757682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000382911533151373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a186b865876442d46841f45e1b1b4c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-7387340885863458886
 BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000382911533151373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.996195, y: 1.51, z: 6.021858}
+  m_Center: {x: 0.11923897, y: -0.03, z: -0.09148204}
+--- !u!64 &1629757688
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +138,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.996195, y: 8.146146, z: 6.021858}
-  m_Center: {x: 0.11923897, y: -3.6543164, z: -0.09148204}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8228862714402804623, guid: 2511796c2a7ca984b8aabbf6646e2019, type: 3}
