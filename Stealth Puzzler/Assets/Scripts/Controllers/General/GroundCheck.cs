@@ -10,6 +10,8 @@ public class GroundCheck : MonoBehaviour
     private Animator _animator;
     bool _isGrounded;
 
+   
+    
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
