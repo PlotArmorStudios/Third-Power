@@ -39,7 +39,6 @@ public class ToggleArrowTrap : MonoBehaviour
     {
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
         _currentSpawnTime = 0;
-        arrow.transform.parent = transform;
     }
 
 }

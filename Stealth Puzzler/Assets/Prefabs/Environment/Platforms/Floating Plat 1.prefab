@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 89618229283624366}
   - component: {fileID: 89618229283624365}
+  - component: {fileID: 19544816149063227}
+  - component: {fileID: 7998927894641855759}
   m_Layer: 0
   m_Name: Floating Plat 1
   m_TagString: Untagged
@@ -89,6 +91,32 @@ MonoBehaviour:
   _wayPoints: {fileID: 0}
   _moveSpeed: 0.3
   _distanceThreshold: 0.1
+  IsActive: 0
+--- !u!114 &19544816149063227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89618229283624367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a186b865876442d46841f45e1b1b4c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7998927894641855759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89618229283624367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 1.38, z: 6}
+  m_Center: {x: 0, y: 0, z: -0.09}
 --- !u!1001 &89618229283387610
 PrefabInstance:
   m_ObjectHideFlags: 0

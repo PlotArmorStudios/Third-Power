@@ -12,7 +12,8 @@ public enum ToggleObjectState
 public class ReappearingObject : MonoBehaviour
 {
     [SerializeField] private GameObject _object;
-    [SerializeField] private float _toggleDelay = 2f;
+    [SerializeField] private float _toggleOffDelay = 2f;
+    [SerializeField] private float _toggleOnDelay = 2f;
 
     public bool IsActive;
     private float _currentToggleTime;
@@ -25,17 +26,35 @@ public class ReappearingObject : MonoBehaviour
         _currentToggleTime += Time.deltaTime;
         switch (_toggleObjectState)
         {
-            case ToggleObjectState.Active: 
+            case ToggleObjectState.Active:
+                if (_currentToggleTime >= _toggleOffDelay)
+                {
+                    ToggleObject();
+                    _toggleObjectState = ToggleObjectState.Inactive;
+                    _currentToggleTime = 0;
+                }
                 break;
             
-            case ToggleObjectState.Inactive: 
+            case ToggleObjectState.Inactive:
+                if (_currentToggleTime >= _toggleOnDelay)
+                {
+                    ToggleObject();
+                    _toggleObjectState = ToggleObjectState.Active;
+                    _currentToggleTime = 0;
+                }
                 break;
         }
-        if (_currentToggleTime >= _toggleDelay)
-        {
-            ToggleObject();
-            _currentToggleTime = 0;
-        }
+        
+    }
+
+    public void Activate()
+    {
+        IsActive = true;
+    }
+
+    public void Deactivate()
+    {
+        IsActive = false;
     }
 
     private void ToggleObject()

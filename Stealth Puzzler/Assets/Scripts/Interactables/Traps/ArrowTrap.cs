@@ -26,6 +26,16 @@ public class ArrowTrap : MonoBehaviour
         }
     }
     
+    public void Activate()
+    {
+        IsActive = true;
+    }
+
+    public void Deactivate()
+    {
+        IsActive = false;
+    }
+    
     private void ShootArrow()
     {
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);

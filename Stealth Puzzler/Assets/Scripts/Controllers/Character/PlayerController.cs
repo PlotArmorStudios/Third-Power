@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rigidbody;
     private Animator _animator;
 
+    //Gravity
     private GroundCheck _groundCheck { get; set; }
     public float FallTimer { get; set; }
 
@@ -42,18 +43,20 @@ public class PlayerController : MonoBehaviour
     private Vector3 _heightMovement;
     private float _horizontal;
     private float _vertical;
+    
+    //Running
+    private bool _isRunning;
 
     //Jumping
     private bool _triggerJump;
     public bool IsJumping { get; set; }
 
+    
     //Wall Climbing
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private Transform _climbCheckPoint;
     [SerializeField] private bool _isClimbing = false;
     [SerializeField] private float _climbSpeed = 2.5f;
-    private bool _isRunning;
-
 
     private void OnEnable()
     {
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour
         CheckIfClimbing();
     }
 
+
     private void FixedUpdate()
     {
         if (_isClimbing)
@@ -97,10 +101,11 @@ public class PlayerController : MonoBehaviour
         }
 
         RotateInDirectionOfMovement();
-        UpDateJump();
+        UpdateJump();
         ApplyGravity();
         HandleJump();
     }
+
 
     private void ReadInput()
     {
@@ -108,7 +113,7 @@ public class PlayerController : MonoBehaviour
         _vertical = _move.action.ReadValue<Vector2>().y;
     }
 
-    private void UpDateJump()
+    private void UpdateJump()
     {
         if (_groundCheck.IsGrounded())
             IsJumping = false;

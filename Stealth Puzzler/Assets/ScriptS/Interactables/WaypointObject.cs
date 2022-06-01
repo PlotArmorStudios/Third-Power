@@ -27,4 +27,15 @@ public class WaypointObject : MonoBehaviour
             _currentWayPoint = _wayPoints.GetNextWayPoint(_currentWayPoint);
         }
     }
+    
+    public void Activate()
+    {
+        IsActive = true;
+    }
+
+    public void Deactivate()
+    {
+        IsActive = false;
+    }
+
 }
