@@ -694,7 +694,7 @@ MonoBehaviour:
   WhatIsEnemy:
     serializedVersion: 2
     m_Bits: 1024
-  isDead: 0
+  IsDead: 0
   LowDangerRange: 15
   MedDangerRange: 10
   HighDangerRange: 5
@@ -1227,24 +1227,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &1308447156 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 1792937690864033516, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1792937691891978072}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1308447158 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1792937690864033518, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1792937691891978072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c02e4e9723a36c449f7d9c63efd6d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1308447163 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1792937690864033507, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
@@ -1861,16 +1843,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1792937690864033505, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-        type: 3}
-      propertyPath: _enemyAi
-      value: 
-      objectReference: {fileID: 1308447158}
-    - target: {fileID: 1792937690864033505, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-        type: 3}
-      propertyPath: _navMeshAgent
-      value: 
-      objectReference: {fileID: 1308447156}
     - target: {fileID: 1792937690864033508, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1931,21 +1903,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: JellyController
       objectReference: {fileID: 0}
-    - target: {fileID: 1792937690864033515, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1792937690864033515, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1792937690864033517, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6,
-        type: 3}
-      propertyPath: _targetMask.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc45c4fb6095b844a3d4fa95a7c45b6, type: 3}
 --- !u!1001 &2869162658370563638
@@ -1959,21 +1916,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WolfController
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121800, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121800, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121907, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _targetMask.m_Bits
-      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
