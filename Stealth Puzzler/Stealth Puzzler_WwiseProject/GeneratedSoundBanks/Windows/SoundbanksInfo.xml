@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4072029455" Language="SFX" Hash="3396583982">
+			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
+			<ShortName>New_SoundBank</ShortName>
+			<Path>New_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.253076" DurationMax="0.284069">
+					<IncludedMemoryFiles>
+						<File Id="89521839" Language="SFX">
+							<ShortName>FS_Asphalt_01.wav</ShortName>
+							<Path>SFX\FS_Asphalt_01_10C4C929.wem</Path>
+						</File>
+						<File Id="266083498" Language="SFX">
+							<ShortName>FS_Asphalt_05.wav</ShortName>
+							<Path>SFX\FS_Asphalt_05_10C4C929.wem</Path>
+						</File>
+						<File Id="489123100" Language="SFX">
+							<ShortName>FS_Asphalt_03.wav</ShortName>
+							<Path>SFX\FS_Asphalt_03_10C4C929.wem</Path>
+						</File>
+						<File Id="833342183" Language="SFX">
+							<ShortName>FS_Asphalt_04.wav</ShortName>
+							<Path>SFX\FS_Asphalt_04_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{02E275B7-15CD-4327-8B5A-9895E68E8ED9}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{02E275B7-15CD-4327-8B5A-9895E68E8ED9}">
+							<Media>
+								<File Id="89521839"/>
+								<File Id="266083498"/>
+								<File Id="489123100"/>
+								<File Id="833342183"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C75CFBD6-319A-4983-85A4-740332E0D106}">
+							<Media>
+								<File Id="89521839"/>
+								<File Id="266083498"/>
+								<File Id="489123100"/>
+								<File Id="833342183"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{13610534-0166-4A86-B21E-F167063AA6D2}">
+					<Switches>
+						<Switch Id="3725073853" Name="Cement" ObjectPath="\Switches\Default Work Unit\Material\Cement" GUID="{02E275B7-15CD-4327-8B5A-9895E68E8ED9}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Material\Wood" GUID="{C75CFBD6-319A-4983-85A4-740332E0D106}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
