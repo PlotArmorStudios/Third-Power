@@ -17,13 +17,13 @@ GameObject:
   - component: {fileID: 1792937690864033518}
   - component: {fileID: 1792937690864033517}
   - component: {fileID: 1792937690864033516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JellyController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1792937690864033508
 Transform:
   m_ObjectHideFlags: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf8df59ac9f88c44914fffa78a242c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: 1792937690864033516}
-  enemyAi: {fileID: 1792937690864033518}
+  _navMeshAgent: {fileID: 1792937690864033516}
+  _enemyAi: {fileID: 1792937690864033518}
 --- !u!114 &1792937690864033504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabc3600c76a07f4886b6a566b377c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetMask:
+  _targetMask:
     serializedVersion: 2
     m_Bits: 128
   Radius: 5
