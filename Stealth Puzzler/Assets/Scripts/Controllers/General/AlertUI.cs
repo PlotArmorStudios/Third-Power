@@ -11,12 +11,15 @@ public class AlertUI : MonoBehaviour
     public bool IsDead;
     public float LowDangerRange, MedDangerRange, HighDangerRange;
     public bool PlayerInLowDanger, PlayerInMediumDanger, PlayerInHighDanger;
+
+    //so UI icons face camera
     public Camera MainCamera;
-    // Start is called before the first frame update
+
+    //placeholder UI icons
     [SerializeField] private GameObject _lowDangerIcon, _medDangerIcon, _highDangerIcon;
     private void OnEnable()
     {
-        _playerHealth.OnDie += DisableAlertUI;
+        _playerHealth.OnDie += SetInactiveAlertUI;
         _playerHealth.OnDie += ToggleDeath;
     }
 
@@ -27,7 +30,7 @@ public class AlertUI : MonoBehaviour
 
     private void OnDisable()
     {
-        _playerHealth.OnDie -= DisableAlertUI;
+        _playerHealth.OnDie -= SetInactiveAlertUI;
         _playerHealth.OnDie -= ToggleDeath;
     }
 
@@ -45,26 +48,26 @@ public class AlertUI : MonoBehaviour
         if (IsDead) return;
         if (!PlayerInLowDanger) //No danger
         {
-            DisableAlertUI();
+            SetInactiveAlertUI();
             return;
         }
         else if (PlayerInLowDanger && !PlayerInMediumDanger && !PlayerInHighDanger) //low danger
         {
-            DisableAlertUI();
+            SetInactiveAlertUI();
             _lowDangerIcon.SetActive(true);
             _lowDangerIcon.transform.LookAt(MainCamera.transform.position);
             return;
         }
         else if (PlayerInMediumDanger && !PlayerInHighDanger) //med danger
         {
-            DisableAlertUI();
+            SetInactiveAlertUI();
             _medDangerIcon.SetActive(true);
             _medDangerIcon.transform.LookAt(MainCamera.transform.position);
             return;
         }
         else if (PlayerInHighDanger) //high danger
         {
-            DisableAlertUI();
+            SetInactiveAlertUI();
             _highDangerIcon.SetActive(true);
             _highDangerIcon.transform.LookAt(MainCamera.transform.position);
             return;
@@ -72,7 +75,7 @@ public class AlertUI : MonoBehaviour
 
     }
 
-    private void DisableAlertUI()
+    private void SetInactiveAlertUI()
     {
         _lowDangerIcon.SetActive(false);
         _medDangerIcon.SetActive(false);
