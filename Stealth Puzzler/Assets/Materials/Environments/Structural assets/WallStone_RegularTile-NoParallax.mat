@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WallStone_EnglishChurch
+  m_Name: WallStone_RegularTile-NoParallax
   m_Shader: {fileID: -6465566751694194690, guid: cb4ae0f4c8ff7824d90f595687a0a652,
     type: 3}
   m_ValidKeywords: []
@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 925d621db84c9114b92a8df758c7e103, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1ade4ba8956b4504a832de7790f3b89b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -50,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Height:
-        m_Texture: {fileID: 2800000, guid: c62a1a0781768bf4cb85dec134983be9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1246aaf33208d2d45b14c9d4e32cc34a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -62,15 +62,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Smoothness_Mask_Moss:
-        m_Texture: {fileID: 2800000, guid: a3e5c71fb7715954fa19f3106ceecc80, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88b06062fb420764bab2db60e31d7672, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Smoothness_Noise:
-        m_Texture: {fileID: 2800000, guid: a3e5c71fb7715954fa19f3106ceecc80, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88b06062fb420764bab2db60e31d7672, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normals:
-        m_Texture: {fileID: 2800000, guid: 3c2aebf62ee930c40ad8f3861d392099, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68b5a597101deee4d87b2261e6138f3c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -100,7 +100,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Amplitude: 9.83
+    - _Amplitude: 0.1
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -117,14 +117,14 @@ Material:
     - _Mask_influence: 1
     - _Metallic: 0
     - _Metallic_Strength: 1
-    - _Moss_metallic: 0.592
-    - _Moss_normal_strength: 0.0239
-    - _Moss_smoothness_max: 1
-    - _Moss_smoothness_min: 0.302
+    - _Moss_metallic: 0
+    - _Moss_normal_strength: 1
+    - _Moss_smoothness_max: 0.5
+    - _Moss_smoothness_min: 0
     - _Normal_Strength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _Parallax_amplitude: 10
+    - _Parallax_amplitude: 3
     - _Primitive_size: 1
     - _QueueControl: 0
     - _QueueOffset: 0
