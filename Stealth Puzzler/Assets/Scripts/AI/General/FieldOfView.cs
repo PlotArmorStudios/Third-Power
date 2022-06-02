@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    [SerializeField] private LayerMask TargetMask;
+    [SerializeField] private LayerMask _targetMask;
     public float Radius;
     [Range(0, 360)]
     public float Angle;
@@ -35,7 +35,7 @@ public class FieldOfView : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, Radius, TargetMask);
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, Radius, _targetMask);
 
         if (rangeChecks.Length != 0)
         {
