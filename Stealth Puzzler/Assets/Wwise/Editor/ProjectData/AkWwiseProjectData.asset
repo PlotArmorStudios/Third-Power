@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 69fb655ec0cb8749945091a4dc13033b
     GuidInternal: 
-    m_lastTime: -8585478465635721201
+    m_lastTime: -8585479341454775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585478465635911235
+    m_lastTime: -8585479341454775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585478465635811225
-    List: []
+    m_lastTime: -8585474861014775808
+    List:
+    - name: New_SoundBank
+      guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
+      id: 4072029455
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0d9cc7fe7c781e418be540ee4599b958
+      - ElementName: New_SoundBank
+        ObjectType: 7
+        guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
+      Path: SoundBanks\Default Work Unit\New_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585478465635941255
-    List: []
+    m_lastTime: -8585474861014775808
+    List:
+    - name: Play_Footsteps
+      guid: 657a78a4e5f0af4a9123ed8ca7d81f28
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: 657a78a4e5f0af4a9123ed8ca7d81f28
+      Path: Events\Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.454812
+      minDuration: 0.307271
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +125,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585478465635931238
+    m_lastTime: -8585479341454775808
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -108,7 +139,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6f7ac499df9b841b0b218b367cc7899
     GuidInternal: 
-    m_lastTime: -8585478465635791218
+    m_lastTime: -8585479341454775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -122,8 +153,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 492f89aa40d0a5488035723ae0d102a4
     GuidInternal: 
-    m_lastTime: -8585478465635741183
-    List: []
+    m_lastTime: -8585474863774775808
+    List:
+    - name: Material
+      guid: 340561136601864ab21ef167063aa6d2
+      id: 3865314626
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 492f89aa40d0a5488035723ae0d102a4
+      - ElementName: Material
+        ObjectType: 11
+        guid: 340561136601864ab21ef167063aa6d2
+      Path: Switches\Default Work Unit\Material
+      values:
+      - name: Cement
+        guid: b775e202cd1527438b5a9895e68e8ed9
+        id: 3725073853
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 492f89aa40d0a5488035723ae0d102a4
+        - ElementName: Material
+          ObjectType: 11
+          guid: 340561136601864ab21ef167063aa6d2
+        - ElementName: Cement
+          ObjectType: 10
+          guid: b775e202cd1527438b5a9895e68e8ed9
+      - name: Wood
+        guid: d6fb5cc79a31834985a4740332e0d106
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 492f89aa40d0a5488035723ae0d102a4
+        - ElementName: Material
+          ObjectType: 11
+          guid: 340561136601864ab21ef167063aa6d2
+        - ElementName: Wood
+          ObjectType: 10
+          guid: d6fb5cc79a31834985a4740332e0d106
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -136,10 +217,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: edf5011ce171b447ab95b8288a826deb
     GuidInternal: 
-    m_lastTime: -8585478465635731205
+    m_lastTime: -8585479341454775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000b0000000c0000000d0000000e0000000f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
