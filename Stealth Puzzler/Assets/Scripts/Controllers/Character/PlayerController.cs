@@ -54,9 +54,13 @@ public class PlayerController : MonoBehaviour
     
     //Wall Climbing
     [SerializeField] private LayerMask _groundMask;
-    [SerializeField] private Transform _climbCheckPoint;
+    [SerializeField] private Transform[] _climbCheckPoints;
     [SerializeField] private bool _isClimbing = false;
-    [SerializeField] private float _climbSpeed = 2.5f;
+    [SerializeField][Range(200,500)] private float _climbSpeed = 300;
+    [SerializeField] private float _stoppingDistance = 0.2f;
+    [SerializeField] private float _climbJumpForce = 300f;
+    private RaycastHit _lastGrabPoint; 
+    private float _distanceToWall;
 
     private void OnEnable()
     {
@@ -103,7 +107,9 @@ public class PlayerController : MonoBehaviour
         RotateInDirectionOfMovement();
         UpdateJump();
         ApplyGravity();
-        HandleJump();
+        UpDateJump();
+        HandleJump();*/
+
     }
 
 
@@ -227,26 +233,78 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfClimbing()
     {
-        if (_climbCheckPoint)
-            _isClimbing = Physics.CheckSphere(_climbCheckPoint.position, 1f, _groundMask);
+        //Using a big or instead of a for loop so that if one checksphere succeeds, it won't waste time trying the rest
+        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _groundMask) 
+                    || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _groundMask) 
+                    || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _groundMask));
         _rigidbody.useGravity = !_isClimbing;
     }
 
     private void HandleWallClimbing()
     {
-        if (!_isClimbing) return;
+        if (_jump.action.triggered)
+        {
+            Debug.Log("Yumped");
+            if (_vertical < 0)
+            {
+                transform.forward = -transform.forward;
+                WallJump();
+                return;
+            }
+            else if (_horizontal < 0)
+            {
+                transform.forward = -transform.right;
+                WallJump();
+                return;
+            }
+            else if (_horizontal > 0)
+            {
+                transform.forward = transform.right;
+                WallJump();
+                return;
+            }
+        }
+
         if (_vertical < 0 && _groundCheck.IsGrounded())
         {
             RotateInDirectionOfMovement();
+            return;
         }
 
-        Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
-        _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+        IsFalling = false;
+        FallTimer = 0;
+
+        if (_horizontal != 0 || _vertical != 0)
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _groundMask))
+            {
+                _lastGrabPoint = hit;
+                Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
+                //_rigidbody.position = endPoint;
+            }
+            
+            transform.forward = -_lastGrabPoint.normal;
+            //TODO when raycast no longer hit, position is 
+            Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
+            _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+        }   
+        else
+        {
+            _rigidbody.velocity = Vector3.zero;
+        }
+    }
+
+    private void WallJump()
+    {
+        transform.position += transform.forward / 10;
+        _rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
     }
 
     private void ApplyGravity()
     {
-        if (!_groundCheck.IsGrounded())
+        if (!_groundCheck.IsGrounded() && !_isClimbing)
         {
             FallTimer += Time.deltaTime;
             var downForce = _weight * FallTimer * FallTimer;
