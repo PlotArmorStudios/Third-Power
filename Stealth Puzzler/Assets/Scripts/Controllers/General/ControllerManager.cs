@@ -10,8 +10,9 @@ public class ControllerManager : MonoBehaviour
     [SerializeField] private InputActionReference _switch;
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private CubeController _cubeController;
+    [SerializeField] private ActiveController _startingController = ActiveController.Player;
 
-    [SerializeField] private ActiveController _activeController = ActiveController.Player;
+    private ActiveController _activeController = ActiveController.Player;
 
     private void OnEnable()
     {
@@ -25,7 +26,17 @@ public class ControllerManager : MonoBehaviour
 
     private void Start()
     {
-        SwitchControllers();
+        if (_startingController == ActiveController.Player)
+        {
+            _activeController = ActiveController.Cube;
+            SwitchControllers();
+        }
+        
+        if (_startingController == ActiveController.Cube)
+        {
+            _activeController = ActiveController.Player;
+            SwitchControllers();
+        }
     }
 
     private void Update()

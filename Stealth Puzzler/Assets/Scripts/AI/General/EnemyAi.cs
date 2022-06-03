@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAi : MonoBehaviour
 {
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
