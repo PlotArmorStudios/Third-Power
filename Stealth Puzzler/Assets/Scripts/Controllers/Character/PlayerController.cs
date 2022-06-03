@@ -51,7 +51,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _isClimbing = false;
     [SerializeField][Range(200,500)] private float _climbSpeed = 300;
     [SerializeField] private float _stoppingDistance = 0.2f;
+    [SerializeField] private float _climbJumpForce = 300f;
     private RaycastHit _lastGrabPoint; 
+    private float _distanceToWall;
 
 
     private void OnEnable()
@@ -95,8 +97,9 @@ public class PlayerController : MonoBehaviour
 
         RotateInDirectionOfMovement();
         ApplyGravity();
+        /*
         UpDateJump();
-        HandleJump();
+        HandleJump();*/
     }
 
     private void ReadInput()
@@ -216,19 +219,31 @@ public class PlayerController : MonoBehaviour
         _rigidbody.useGravity = !_isClimbing;
     }
 
-    // private void HandleWallClimbing()
-    // {
-    //     if (!_isClimbing) return;
-    //     if (_vertical < 0 && _groundCheck.IsGrounded())
-    //     {
-    //         RotateInDirectionOfMovement();
-    //     }
-
-    //     Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
-    //     _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
-    // }
     private void HandleWallClimbing()
     {
+        if (_jump.action.triggered)
+        {
+            Debug.Log("Yumped");
+            if (_vertical < 0)
+            {
+                transform.forward = -transform.forward;
+                WallJump();
+                return;
+            }
+            else if (_horizontal < 0)
+            {
+                transform.forward = -transform.right;
+                WallJump();
+                return;
+            }
+            else if (_horizontal > 0)
+            {
+                transform.forward = transform.right;
+                WallJump();
+                return;
+            }
+        }
+
         if (_vertical < 0 && _groundCheck.IsGrounded())
         {
             RotateInDirectionOfMovement();
@@ -245,8 +260,8 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _groundMask))
             {
                 _lastGrabPoint = hit;
-                _rigidbody.position = Vector3.Lerp(_rigidbody.position, _lastGrabPoint.point + _lastGrabPoint.normal * _stoppingDistance, 10f * Time.fixedDeltaTime);
-
+                Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
+                //_rigidbody.position = endPoint;
             }
             
             transform.forward = -_lastGrabPoint.normal;
@@ -258,6 +273,12 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody.velocity = Vector3.zero;
         }
+    }
+
+    private void WallJump()
+    {
+        transform.position += transform.forward / 10;
+        _rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
     }
 
     private void ApplyGravity()
