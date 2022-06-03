@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
     
     //Wall Climbing
-    [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private LayerMask _climbMask;
     [SerializeField] private Transform[] _climbCheckPoints;
     [SerializeField] private bool _isClimbing = false;
     [SerializeField][Range(200,500)] private float _climbSpeed = 300;
@@ -107,8 +107,7 @@ public class PlayerController : MonoBehaviour
         RotateInDirectionOfMovement();
         UpdateJump();
         ApplyGravity();
-        UpDateJump();
-        HandleJump();*/
+        HandleJump();
 
     }
 
@@ -234,9 +233,9 @@ public class PlayerController : MonoBehaviour
     private void CheckIfClimbing()
     {
         //Using a big or instead of a for loop so that if one checksphere succeeds, it won't waste time trying the rest
-        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _groundMask) 
-                    || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _groundMask) 
-                    || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _groundMask));
+        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask) 
+                    || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask) 
+                    || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
         _rigidbody.useGravity = !_isClimbing;
     }
 
@@ -278,7 +277,7 @@ public class PlayerController : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _groundMask))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _climbMask))
             {
                 _lastGrabPoint = hit;
                 Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
