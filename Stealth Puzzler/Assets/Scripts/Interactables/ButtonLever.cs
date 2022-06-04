@@ -17,6 +17,7 @@ public class ButtonLever : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var cube = other.GetComponentInChildren<CubeController>();
+        
         if (!cube) return;
         _animator.SetBool("Pressed", true);
         _pressEvent?.Invoke();
@@ -25,7 +26,9 @@ public class ButtonLever : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         var cube = other.GetComponentInChildren<CubeController>();
-        if (!cube) return;
-        _animator.SetBool("Pressed", false);
+        var player = other.GetComponentInChildren<PlayerController>();
+        
+        if (cube || player)
+            _animator.SetBool("Pressed", false);
     }
 }
