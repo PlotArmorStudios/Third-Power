@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1266098782193399587}
   - component: {fileID: 8005849425389995710}
   - component: {fileID: 4392781445037989930}
+  - component: {fileID: 2050006721}
   m_Layer: 0
   m_Name: Button Base
   m_TagString: Untagged
@@ -194,8 +195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5617787221631131419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.058178946, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.61112, z: 0}
+  m_LocalScale: {x: 1.0619, y: 5.7298, z: 1.0619}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1193779795270498764}
@@ -251,6 +252,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2050006721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617787221631131419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8382201, y: 0.18643725, z: 1.840213}
+  m_Center: {x: 0, y: 0.09321862, z: 0}
 --- !u!1 &7218043771407381776
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +276,7 @@ GameObject:
   - component: {fileID: 6744726534550542868}
   - component: {fileID: 5205739250663759236}
   - component: {fileID: 7347176492161573015}
+  - component: {fileID: 1011327298}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -336,3 +351,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1011327298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218043771407381776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0881819, y: 0.17915532, z: 1.0820539}
+  m_Center: {x: 0, y: 0.16468327, z: 0}
