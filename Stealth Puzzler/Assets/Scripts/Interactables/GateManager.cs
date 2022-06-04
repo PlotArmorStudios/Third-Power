@@ -7,7 +7,7 @@ public class GateManager : MonoBehaviour
     [SerializeField] private Transform _gateTransform;
     [SerializeField] private Transform _openPosition;
     [SerializeField] private Transform _closedPosition;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _duration = 1f;
 
     [ContextMenu("Open Gate")]
     public void OpenGate()
@@ -27,17 +27,23 @@ public class GateManager : MonoBehaviour
     {
         float elapsedTime = 0;
 
-        while (elapsedTime < 1f)
+        while (elapsedTime < _duration)
         {
-            _gateTransform.position = Vector3.Lerp(_gateTransform.position, _openPosition.position, Time.deltaTime);
-            elapsedTime+= .1f;
+            _gateTransform.position = Vector3.Lerp(_gateTransform.position, _openPosition.position, elapsedTime / _duration);
+            elapsedTime+= Time.deltaTime;
             yield return null;
         }
     }
 
     private IEnumerator MoveGateDown()
     {
-        _gateTransform.position = Vector3.Lerp(_gateTransform.position, _closedPosition.position, Time.deltaTime);
-        yield return null;
+        float elapsedTime = 0;
+
+        while (elapsedTime < _duration)
+        {
+            _gateTransform.position = Vector3.Lerp(_gateTransform.position, _closedPosition.position, elapsedTime / _duration);
+            elapsedTime+= Time.deltaTime;
+            yield return null;
+        }
     }
 }
