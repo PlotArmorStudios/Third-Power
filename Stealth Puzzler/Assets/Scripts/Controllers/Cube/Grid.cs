@@ -13,6 +13,7 @@ public class Grid : MonoBehaviour
    [Range(1, 5)] [SerializeField] private float _gridScaleZ = 1f;
 
    private Vector3 _defaultPosition = new Vector3(.5f, 0, .5f);
+   
    private void OnValidate()
    {
       transform.position = _defaultPosition;
