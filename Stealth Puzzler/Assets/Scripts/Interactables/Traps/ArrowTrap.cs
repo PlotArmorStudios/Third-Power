@@ -26,11 +26,13 @@ public class ArrowTrap : MonoBehaviour
         }
     }
     
+    [ContextMenu("Activate")]
     public void Activate()
     {
         IsActive = true;
     }
 
+    [ContextMenu("Deactivate")]
     public void Deactivate()
     {
         IsActive = false;
