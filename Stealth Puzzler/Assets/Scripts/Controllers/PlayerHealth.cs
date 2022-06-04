@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth : Health
 {
+    public static event Action OnPlayerDie;
     [SerializeField] private float _levelRestartDelay = 2f;
     
     private IEnumerator RestartLevel()
@@ -14,6 +16,7 @@ public class PlayerHealth : Health
     protected override void Die()
     {
         TriggerOnDie();
+        OnPlayerDie?.Invoke();
         StartCoroutine(RestartLevel());
     }
 }
