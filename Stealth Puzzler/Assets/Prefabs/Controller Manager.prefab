@@ -145,6 +145,7 @@ MonoBehaviour:
   _playerController: {fileID: 2397874376897209057}
   _cubeController: {fileID: 2397874377432550287}
   _startingController: 0
+  _poofObject: {fileID: 1745354067485366688}
 --- !u!1001 &393688833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,6 +215,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 978c17e949f6e9746bb119157c272c39, type: 3}
+--- !u!1 &1745354067485366688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1745354067636956833, guid: 978c17e949f6e9746bb119157c272c39,
+    type: 3}
+  m_PrefabInstance: {fileID: 393688833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7340376817844306175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7340376818201425918, guid: 978c17e949f6e9746bb119157c272c39,
