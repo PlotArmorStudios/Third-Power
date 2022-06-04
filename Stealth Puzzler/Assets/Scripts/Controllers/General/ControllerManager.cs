@@ -11,6 +11,9 @@ public class ControllerManager : MonoBehaviour
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private CubeController _cubeController;
     [SerializeField] private ActiveController _startingController = ActiveController.Player;
+    [SerializeField] private GameObject _poofObject;
+    
+    private ParticleSystem _poofEffect;
 
     private ActiveController _activeController = ActiveController.Player;
 
@@ -26,6 +29,7 @@ public class ControllerManager : MonoBehaviour
 
     private void Start()
     {
+        _poofEffect = _poofObject.GetComponentInChildren<ParticleSystem>();
         if (_startingController == ActiveController.Player)
         {
             _activeController = ActiveController.Cube;
@@ -49,6 +53,8 @@ public class ControllerManager : MonoBehaviour
 
     private void SwitchControllers()
     {
+        var currentControllerPosition = Vector3.zero;
+        
         switch (_activeController)
         {
             case ActiveController.Player:
@@ -56,6 +62,7 @@ public class ControllerManager : MonoBehaviour
                 _playerController.gameObject.SetActive(false);
                 _cubeController.gameObject.SetActive(true);
                 OnSwitchFocalPoints?.Invoke(2);
+                currentControllerPosition = _cubeController.Rigidbody.transform.position;
                 _activeController = ActiveController.Cube;
                 break;
             case ActiveController.Cube:
@@ -67,9 +74,14 @@ public class ControllerManager : MonoBehaviour
 
                 _playerController.gameObject.SetActive(true);
                 _cubeController.gameObject.SetActive(false);
+                currentControllerPosition = _playerController.Rigidbody.transform.position;
                 OnSwitchFocalPoints?.Invoke(1);
                 _activeController = ActiveController.Player;
                 break;
         }
+
+        _poofEffect.transform.position = currentControllerPosition;
+        _poofEffect.gameObject.SetActive(true);
+        _poofEffect.Play();
     }
 }
