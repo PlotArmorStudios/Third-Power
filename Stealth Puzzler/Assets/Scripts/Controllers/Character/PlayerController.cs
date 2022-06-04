@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     //Camera for calculating movement direction
     private Transform CamTransform;
 
-    private Rigidbody _rigidbody;
+    public Rigidbody Rigidbody { get; private set; }
     private Animator _animator;
 
     //Gravity
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
-        _rigidbody = GetComponent<Rigidbody>();
+        Rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
         _groundCheck = GetComponent<GroundCheck>();
 
@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
             //set airborne false whenever grounded
             if (_groundCheck.IsGrounded())
             {
-                _rigidbody.velocity = new Vector3(0f, _rigidbody.velocity.y, 0f);
+                Rigidbody.velocity = new Vector3(0f, Rigidbody.velocity.y, 0f);
             }
         }
     }
@@ -203,12 +203,12 @@ public class PlayerController : MonoBehaviour
         //how to have character face direction you are moving
         if (!IsJumping)
         {
-            _rigidbody.velocity = new Vector3(moving.x, _rigidbody.velocity.y, moving.z);
+            Rigidbody.velocity = new Vector3(moving.x, Rigidbody.velocity.y, moving.z);
         }
         else if (IsJumping)
         {
             //aerial mobility
-            _rigidbody.AddForce(.1f * moveDir, ForceMode.VelocityChange);
+            Rigidbody.AddForce(.1f * moveDir, ForceMode.VelocityChange);
         }
     }
 
@@ -221,9 +221,9 @@ public class PlayerController : MonoBehaviour
     {
         if (_triggerJump)
         {
-            _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
+            Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
                                                                           | RigidbodyConstraints.FreezeRotationZ;
-            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpHeight, _rigidbody.velocity.z);
+            Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, _jumpHeight, Rigidbody.velocity.z);
             IsJumping = true; //for landing
             _animator.SetTrigger("Jump");
             _triggerJump = false;
@@ -236,7 +236,7 @@ public class PlayerController : MonoBehaviour
         _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask) 
                     || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask) 
                     || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
-        _rigidbody.useGravity = !_isClimbing;
+        Rigidbody.useGravity = !_isClimbing;
     }
 
     private void HandleWallClimbing()
@@ -287,18 +287,18 @@ public class PlayerController : MonoBehaviour
             transform.forward = -_lastGrabPoint.normal;
             //TODO when raycast no longer hit, position is 
             Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
-            _rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+            Rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
         }   
         else
         {
-            _rigidbody.velocity = Vector3.zero;
+            Rigidbody.velocity = Vector3.zero;
         }
     }
 
     private void WallJump()
     {
         transform.position += transform.forward / 10;
-        _rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
+        Rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
     }
 
     private void ApplyGravity()
@@ -311,10 +311,10 @@ public class PlayerController : MonoBehaviour
             if (downForce > 3f)
                 downForce = 3f;
 
-            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _rigidbody.velocity.y - downForce,
-                _rigidbody.velocity.z);
+            Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, Rigidbody.velocity.y - downForce,
+                Rigidbody.velocity.z);
 
-            if (_rigidbody.velocity.y < 0)
+            if (Rigidbody.velocity.y < 0)
                 IsFalling = true;
             _animator.SetBool("Airborne", true);
         }
