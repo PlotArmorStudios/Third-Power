@@ -49,6 +49,10 @@ public class Projectile : MonoBehaviour
         Reflector reflector = other.gameObject.GetComponentInChildren<Reflector>();
         var enemy = other.gameObject.GetComponent<EnemyAi>();
         var player = other.gameObject.GetComponent<PlayerController>();
+        
+        Debug.Log(other.gameObject);
+        
+        
 
         if (reflector)
         {
@@ -57,12 +61,12 @@ public class Projectile : MonoBehaviour
             _rigidbody.velocity = bounceDirection * Speed;
             _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
         }
-        else if(enemy)
+        else if (enemy)
         {
             enemy.GetComponent<Health>().TakeHit();
             gameObject.SetActive(false);
         }
-        else if(player)
+        else if (player)
         {
             player.GetComponent<Health>().TakeHit();
             gameObject.SetActive(false);
