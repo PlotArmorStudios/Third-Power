@@ -15,16 +15,27 @@ public class Projectile : MonoBehaviour
     private Vector3 _inputDirection;
     private Ray _ray;
     private bool _isBouncing;
+    private float _timeActive;
 
     private void OnValidate()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void OnEnable()
+    {
+        _timeActive = 0;
+    }
+
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.velocity = _rigidbody.transform.forward * Speed;
+    }
+
+    private void Update()
+    {
+        _timeActive += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -49,7 +60,9 @@ public class Projectile : MonoBehaviour
         Reflector reflector = other.gameObject.GetComponentInChildren<Reflector>();
         var enemy = other.gameObject.GetComponent<EnemyAi>();
         var player = other.gameObject.GetComponent<PlayerController>();
-
+        
+        Debug.Log(other.gameObject);
+        
         if (reflector)
         {
             var wallNormal = other.contacts[0].normal;
@@ -57,18 +70,19 @@ public class Projectile : MonoBehaviour
             _rigidbody.velocity = bounceDirection * Speed;
             _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
         }
-        else if(enemy)
+        else if (enemy)
         {
             enemy.GetComponent<Health>().TakeHit();
             gameObject.SetActive(false);
         }
-        else if(player)
+        else if (player)
         {
             player.GetComponent<Health>().TakeHit();
             gameObject.SetActive(false);
         }
         else
         {
+            if (_timeActive < .8f) return;
             gameObject.SetActive(false);
         }
     }
