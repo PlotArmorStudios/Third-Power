@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1171101810991275422}
   - component: {fileID: 1171101810991275421}
   - component: {fileID: -6664003468939754488}
+  - component: {fileID: 446788106}
   m_Layer: 0
   m_Name: Arrow Trap
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrow: {fileID: 2530716403042677329, guid: b83b2fa300439864e9a89aed504445c7, type: 3}
   _spawnPoint: {fileID: 1171101810857875267}
-  SpawnDelay: 2
+  SpawnDelay: 5
   IsActive: 1
 --- !u!114 &-6664003468939754488
 MonoBehaviour:
@@ -147,5 +148,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrow: {fileID: 2530716403042677329, guid: b83b2fa300439864e9a89aed504445c7, type: 3}
   _spawnPoint: {fileID: 1171101810857875267}
+  _shootDelay: 0
   SpawnDelay: 0.5
   IsActive: 1
+--- !u!114 &446788106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171101810991275408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3910bf5f1f1d452ba7f676c82130ecc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxReflectionCount: 5
+  maxStepDistance: 200
