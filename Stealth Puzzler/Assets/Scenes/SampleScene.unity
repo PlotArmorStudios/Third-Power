@@ -1089,12 +1089,14 @@ MonoBehaviour:
   _turnSmoothVelocity: 2
   CubeCalibratorTransform: {fileID: 0}
   <IsFalling>k__BackingField: 0
-  _groundMask:
+  _climbMask:
     serializedVersion: 2
     m_Bits: 0
-  _climbCheckPoint: {fileID: 0}
+  _climbCheckPoints: []
   _isClimbing: 0
   _climbSpeed: 2.5
+  _stoppingDistance: 0.2
+  _climbJumpForce: 300
 --- !u!1001 &1157445091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1999,7 +2001,7 @@ PrefabInstance:
     - target: {fileID: 8606858335630510640, guid: 4d294f463bcd8ed48aad649c543667af,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.4429749
       objectReference: {fileID: 0}
     - target: {fileID: 8606858335630510640, guid: 4d294f463bcd8ed48aad649c543667af,
         type: 3}
