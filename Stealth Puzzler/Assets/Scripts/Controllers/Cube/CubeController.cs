@@ -145,6 +145,7 @@ public class CubeController : MonoBehaviour
     private void PlayTumbleSound()
     {
         //Implement sound event here
+        AkSoundEngine.PostEvent("Play_Cube_Movement", gameObject);
     }
 
     private void SnapToGrid()

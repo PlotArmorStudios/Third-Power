@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585470150954775808
+    m_lastTime: -8585469994894775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585470598434775808
+    m_lastTime: -8585469994894775808
     List:
     - name: Play_Character_Cube_Transform
       guid: a8234785f3875d47a8fd9f82db3016a8
@@ -113,6 +113,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.5
       minDuration: 1.5
+    - name: Play_Cube_Movement
+      guid: 70f65c947a9f854da517472bb49645cb
+      id: 2774595811
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Cube_Movement
+        ObjectType: 3
+        guid: 70f65c947a9f854da517472bb49645cb
+      Path: Events\Default Work Unit\Play_Cube_Movement
+      maxAttenuation: 0
+      maxDuration: 0.56284
+      minDuration: 0.471937
     - name: Play_Footsteps
       guid: 657a78a4e5f0af4a9123ed8ca7d81f28
       id: 3854155799
@@ -128,8 +145,8 @@ MonoBehaviour:
         guid: 657a78a4e5f0af4a9123ed8ca7d81f28
       Path: Events\Default Work Unit\Play_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.284069
-      minDuration: 0.253076
+      maxDuration: 0.30096
+      minDuration: 0.238872
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -237,7 +254,7 @@ MonoBehaviour:
     m_lastTime: -8585477889833830137
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c0000000d0000000e0000000f000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
