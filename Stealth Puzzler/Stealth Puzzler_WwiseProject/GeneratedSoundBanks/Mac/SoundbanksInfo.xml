@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="2054867095">
+		<SoundBank Id="4072029455" Language="SFX" Hash="3212968948">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -41,7 +41,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.253076" DurationMax="0.284069">
+				<Event Id="2774595811" Name="Play_Cube_Movement" ObjectPath="\Events\Default Work Unit\Play_Cube_Movement" DurationType="OneShot" DurationMin="0.471937" DurationMax="0.56284">
+					<IncludedMemoryFiles>
+						<File Id="331044563" Language="SFX">
+							<ShortName>Cube_Movement_03.wav</ShortName>
+							<Path>SFX\Cube_Movement_03_10C4C929.wem</Path>
+						</File>
+						<File Id="337029874" Language="SFX">
+							<ShortName>Cube_Movement_02.wav</ShortName>
+							<Path>SFX\Cube_Movement_02_10C4C929.wem</Path>
+						</File>
+						<File Id="416225587" Language="SFX">
+							<ShortName>Cube_Movement_04.wav</ShortName>
+							<Path>SFX\Cube_Movement_04_10C4C929.wem</Path>
+						</File>
+						<File Id="823154544" Language="SFX">
+							<ShortName>Cube_Movement_01.wav</ShortName>
+							<Path>SFX\Cube_Movement_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.238872" DurationMax="0.30096">
 					<IncludedMemoryFiles>
 						<File Id="89521839" Language="SFX">
 							<ShortName>FS_Asphalt_01.wav</ShortName>

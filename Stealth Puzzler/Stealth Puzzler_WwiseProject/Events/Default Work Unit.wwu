@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Cube_Movement" ID="{945CF670-9F7A-4D85-A517-472BB49645CB}">
+					<ChildrenList>
+						<Action Name="" ID="{CE015C44-86DC-4D47-8605-78BAAD7721A9}" ShortID="352800735">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cube Movement" ID="{3F457803-77B2-4B39-A4F4-6D8876010379}" WorkUnitID="{473B2D4F-8E5C-4034-8729-981913AE76C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
