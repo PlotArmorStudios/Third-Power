@@ -11,16 +11,36 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1147299202">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="3396583982">
+		<SoundBank Id="4072029455" Language="SFX" Hash="2054867095">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1769817372" Name="Play_Character_Cube_Transform" ObjectPath="\Events\Default Work Unit\Play_Character_Cube_Transform" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<IncludedMemoryFiles>
+						<File Id="624839553" Language="SFX">
+							<ShortName>SFX_Player_Character-Cube_Transform_04.wav</ShortName>
+							<Path>SFX\SFX_Player_Character-Cube_Transform_04_10C4C929.wem</Path>
+						</File>
+						<File Id="650049960" Language="SFX">
+							<ShortName>SFX_Player_Character-Cube_Transform_02.wav</ShortName>
+							<Path>SFX\SFX_Player_Character-Cube_Transform_02_10C4C929.wem</Path>
+						</File>
+						<File Id="662988376" Language="SFX">
+							<ShortName>SFX_Player_Character-Cube_Transform_01.wav</ShortName>
+							<Path>SFX\SFX_Player_Character-Cube_Transform_01_10C4C929.wem</Path>
+						</File>
+						<File Id="1014851438" Language="SFX">
+							<ShortName>SFX_Player_Character-Cube_Transform_03.wav</ShortName>
+							<Path>SFX\SFX_Player_Character-Cube_Transform_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.253076" DurationMax="0.284069">
 					<IncludedMemoryFiles>
 						<File Id="89521839" Language="SFX">
