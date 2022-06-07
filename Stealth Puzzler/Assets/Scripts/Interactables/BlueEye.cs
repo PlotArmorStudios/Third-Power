@@ -14,6 +14,7 @@ public class BlueEye : MonoBehaviour
     [SerializeField] private float _frequency = 1f;
 
     private Color _emissionColor;
+
     private void Start()
     {
         _emissionColor = _emissionMaterial.color;
@@ -26,20 +27,24 @@ public class BlueEye : MonoBehaviour
 
         while (timeElasped < _frequency)
         {
-            currentEmission = Mathf.Lerp(currentEmission, _emissionMax, timeElasped * _frequency);
+            currentEmission = Mathf.Lerp(currentEmission, _emissionMax, timeElasped / _frequency);
             timeElasped += Time.deltaTime;
             _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
-            Debug.Log(currentEmission);
+            Debug.Log("Lerp progress: " + timeElasped / _frequency);
+            Debug.Log("Time Elapsed: " + timeElasped);
+            Debug.Log("Time: " + Time.deltaTime);
+            Debug.Log("Current emission" + currentEmission);
             yield return null;
         }
 
         timeElasped = 0;
-        
+
         while (timeElasped < _frequency)
         {
-            currentEmission = Mathf.Lerp(currentEmission, _emissionMin, timeElasped * _frequency);
+            currentEmission = Mathf.Lerp(currentEmission, _emissionMin, timeElasped / _frequency);
             timeElasped += Time.deltaTime;
             _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
+            Debug.Log(timeElasped / _frequency);
             Debug.Log(currentEmission);
             yield return null;
         }
