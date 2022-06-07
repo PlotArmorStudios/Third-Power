@@ -1,4 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1769817372	Play_Character_Cube_Transform			\Default Work Unit\Play_Character_Cube_Transform	
+	2774595811	Play_Cube_Movement			\Default Work Unit\Play_Cube_Movement	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -8,9 +10,20 @@ Switch	ID	Name	Switch Group			Notes
 	2058049674	Wood	Material			
 	3725073853	Cement	Material			
 
+Effect plug-ins	ID	Name	Type				Notes
+	2171127646	Hall_Conversation	Wwise RoomVerb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	89521839	FS_Asphalt_01	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps_Cement\FS_Asphalt_01		25804
-	266083498	FS_Asphalt_05	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps_Cement\FS_Asphalt_05		25804
-	489123100	FS_Asphalt_03	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps_Cement\FS_Asphalt_03		25804
-	833342183	FS_Asphalt_04	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps_Cement\FS_Asphalt_04		25804
+	89521839	FS_Asphalt_01	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\FS_Asphalt_01		25804
+	266083498	FS_Asphalt_05	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\FS_Asphalt_05		25804
+	331044563	Cube_Movement_03	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Cube_Movement_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Cube Movement\Cube_Movement_03		96064
+	337029874	Cube_Movement_02	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Cube_Movement_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Cube Movement\Cube_Movement_02		102064
+	416225587	Cube_Movement_04	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Cube_Movement_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Cube Movement\Cube_Movement_04		96064
+	489123100	FS_Asphalt_03	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\FS_Asphalt_03		25804
+	624839553	SFX_Player_Character-Cube_Transform_04	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\SFX_Player_Character-Cube_Transform_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Character-Cube_Transform\SFX_Player_Character-Cube_Transform_04		288064
+	650049960	SFX_Player_Character-Cube_Transform_02	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\SFX_Player_Character-Cube_Transform_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Character-Cube_Transform\SFX_Player_Character-Cube_Transform_02		288064
+	662988376	SFX_Player_Character-Cube_Transform_01	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\SFX_Player_Character-Cube_Transform_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Character-Cube_Transform\SFX_Player_Character-Cube_Transform_01		288064
+	823154544	Cube_Movement_01	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Cube_Movement_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Cube Movement\Cube_Movement_01		96064
+	833342183	FS_Asphalt_04	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\FS_Asphalt_04		25804
+	1014851438	SFX_Player_Character-Cube_Transform_03	F:\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\SFX_Player_Character-Cube_Transform_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Character-Cube_Transform\SFX_Player_Character-Cube_Transform_03		288064
 

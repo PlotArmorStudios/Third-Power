@@ -1176,7 +1176,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1782272017}
+      objectReference: {fileID: 58306353}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b92ac77f5686ac45b63ccc9786bc5a4, type: 3}
 --- !u!4 &206475860 stripped
@@ -3066,6 +3066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391910180}
   - component: {fileID: 391910179}
+  - component: {fileID: 391910181}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -3114,6 +3115,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &391910181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391910178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07593f0ec0ea8df44a8f1d3ed38b733a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 671e52a5598ab144c9d733f850387c75,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!4 &408368326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7615230289973796420, guid: c9f2873be8d5713478da3ec4522c48e1,
@@ -3810,6 +3836,11 @@ PrefabInstance:
     - target: {fileID: 2397874377860063782, guid: a57a28a26dcba354283509b38fba6b3b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397874377860063783, guid: a57a28a26dcba354283509b38fba6b3b,
+        type: 3}
+      propertyPath: _startingController
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6700,7 +6731,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1825536766}
+      objectReference: {fileID: 58306353}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b92ac77f5686ac45b63ccc9786bc5a4, type: 3}
 --- !u!4 &1240003015 stripped
@@ -9168,7 +9199,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1221298133}
+      objectReference: {fileID: 1057078612}
     - target: {fileID: 7907945271180199194, guid: 9b92ac77f5686ac45b63ccc9786bc5a4,
         type: 3}
       propertyPath: m_Enabled
@@ -14103,7 +14134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1440871196}
+      objectReference: {fileID: 58306353}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b92ac77f5686ac45b63ccc9786bc5a4, type: 3}
 --- !u!4 &2061864161 stripped
@@ -20122,7 +20153,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 815282009}
+      objectReference: {fileID: 2135955194}
     - target: {fileID: 7907945271180199194, guid: 9b92ac77f5686ac45b63ccc9786bc5a4,
         type: 3}
       propertyPath: m_Mesh

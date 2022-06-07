@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 69fb655ec0cb8749945091a4dc13033b
     GuidInternal: 
-    m_lastTime: -8585470480287179950
+    m_lastTime: -8585477889833820134
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585470480287391793
+    m_lastTime: -8585477889833950163
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585470480287239743
+    m_lastTime: -8585469994894775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -94,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585470480287491758
+    m_lastTime: -8585469994894775808
     List:
+    - name: Play_Character_Cube_Transform
+      guid: a8234785f3875d47a8fd9f82db3016a8
+      id: 1769817372
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Character_Cube_Transform
+        ObjectType: 3
+        guid: a8234785f3875d47a8fd9f82db3016a8
+      Path: Events\Default Work Unit\Play_Character_Cube_Transform
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: Play_Cube_Movement
+      guid: 70f65c947a9f854da517472bb49645cb
+      id: 2774595811
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Cube_Movement
+        ObjectType: 3
+        guid: 70f65c947a9f854da517472bb49645cb
+      Path: Events\Default Work Unit\Play_Cube_Movement
+      maxAttenuation: 0
+      maxDuration: 0.56284
+      minDuration: 0.471937
     - name: Play_Footsteps
       guid: 657a78a4e5f0af4a9123ed8ca7d81f28
       id: 3854155799
@@ -111,8 +145,8 @@ MonoBehaviour:
         guid: 657a78a4e5f0af4a9123ed8ca7d81f28
       Path: Events\Default Work Unit\Play_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.284069
-      minDuration: 0.253076
+      maxDuration: 0.30096
+      minDuration: 0.238872
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -125,7 +159,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585470480287491758
+    m_lastTime: -8585477889833970167
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -139,7 +173,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6f7ac499df9b841b0b218b367cc7899
     GuidInternal: 
-    m_lastTime: -8585470480287229920
+    m_lastTime: -8585477889833890151
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -153,7 +187,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 492f89aa40d0a5488035723ae0d102a4
     GuidInternal: 
-    m_lastTime: -8585470480287189933
+    m_lastTime: -8585473391333750362
     List:
     - name: Material
       guid: 340561136601864ab21ef167063aa6d2
@@ -217,10 +251,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: edf5011ce171b447ab95b8288a826deb
     GuidInternal: 
-    m_lastTime: -8585470480287189933
+    m_lastTime: -8585477889833830137
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000b0000000c0000000d0000000e0000000f000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

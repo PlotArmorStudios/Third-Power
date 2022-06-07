@@ -48,6 +48,7 @@ public class ControllerManager : MonoBehaviour
         if (_switch.action.triggered)
         {
             SwitchControllers();
+            AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject); 
         }
     }
 
@@ -83,5 +84,6 @@ public class ControllerManager : MonoBehaviour
         _poofEffect.transform.position = currentControllerPosition;
         _poofEffect.gameObject.SetActive(true);
         _poofEffect.Play();
+        
     }
 }

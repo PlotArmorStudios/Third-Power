@@ -96,13 +96,13 @@ public class CubeController : MonoBehaviour
         float largestDot = 0;
         int closestAxis = 0;
 
-        for (int a = 0; a < _directions.Count; a++)
+        for (int currentAxis = 0; currentAxis < _directions.Count; currentAxis++)
         {
-            var dot = Vector3.Dot(dir, _directions[a]);
+            var dot = Vector3.Dot(dir, _directions[currentAxis]);
             if (dot > largestDot)
             {
                 largestDot = dot;
-                closestAxis = a;
+                closestAxis = currentAxis;
             }
         }
 
@@ -135,10 +135,17 @@ public class CubeController : MonoBehaviour
         }
 
         SnapToGrid();
+        PlayTumbleSound();
         _isMoving = false;
     #if UNITY_EDITOR && DEBUGLOG 
         Debug.Log("Roll took " + (Time.time - currTime) + "seconds");
     #endif
+    }
+
+    private void PlayTumbleSound()
+    {
+        //Implement sound event here
+        AkSoundEngine.PostEvent("Play_Cube_Movement", gameObject);
     }
 
     private void SnapToGrid()
