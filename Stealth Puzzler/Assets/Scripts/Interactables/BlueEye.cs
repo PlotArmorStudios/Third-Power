@@ -30,10 +30,12 @@ public class BlueEye : MonoBehaviour
             currentEmission = Mathf.Lerp(currentEmission, _emissionMax, timeElasped / _frequency);
             timeElasped += Time.deltaTime;
             _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
+#if DebugTimeTransition
             Debug.Log("Lerp progress: " + timeElasped / _frequency);
             Debug.Log("Time Elapsed: " + timeElasped);
             Debug.Log("Time: " + Time.deltaTime);
             Debug.Log("Current emission" + currentEmission);
+#endif
             yield return null;
         }
 
@@ -44,8 +46,10 @@ public class BlueEye : MonoBehaviour
             currentEmission = Mathf.Lerp(currentEmission, _emissionMin, timeElasped / _frequency);
             timeElasped += Time.deltaTime;
             _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
+#if DebugTimeTransition
             Debug.Log(timeElasped / _frequency);
             Debug.Log(currentEmission);
+#endif
             yield return null;
         }
     }

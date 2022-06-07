@@ -39,6 +39,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2130999246823588640}
     m_Modifications:
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _frequency
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _emissionMax
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _emissionMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 190fcacc63903de409081294686bd199, type: 2}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664379858269633251, guid: 298a481cd2d61544897306efdfc34543,
+        type: 3}
+      propertyPath: _collisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6022397948362124077, guid: 298a481cd2d61544897306efdfc34543,
         type: 3}
       propertyPath: m_Name
