@@ -13,24 +13,35 @@ public class BlueEye : MonoBehaviour
     [SerializeField] private float _emissionMin = 1.4f;
     [SerializeField] private float _frequency = 1f;
 
+    private Color _emissionColor;
+    private void Start()
+    {
+        _emissionColor = _emissionMaterial.color;
+    }
+
     public IEnumerator OscillateEmission()
     {
         float timeElasped = 0f;
-        float cycles = 0f;
-        float rawSineWave = 0f;
         float currentEmission = _emissionMin;
-        const float tau = Mathf.PI * 2;
-        cycles = Time.time / _period; 
-        //rawSineWave = Mathf.Sin(Time.time * _frequency * _emissionMin) * _emissionMax;
 
         while (timeElasped < _frequency)
         {
             currentEmission = Mathf.Lerp(currentEmission, _emissionMax, timeElasped * _frequency);
             timeElasped += Time.deltaTime;
-            yield return currentEmission == _emissionMax;
-            currentEmission = Mathf.Lerp(currentEmission, _emissionMin, timeElasped * _frequency);
-            yield return null;
+            _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
             Debug.Log(currentEmission);
+            yield return null;
+        }
+
+        timeElasped = 0;
+        
+        while (timeElasped < _frequency)
+        {
+            currentEmission = Mathf.Lerp(currentEmission, _emissionMin, timeElasped * _frequency);
+            timeElasped += Time.deltaTime;
+            _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
+            Debug.Log(currentEmission);
+            yield return null;
         }
     }
 
