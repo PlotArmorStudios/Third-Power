@@ -43,5 +43,12 @@ public class ArrowTrap : MonoBehaviour
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
         _currentSpawnTime = 0;
         arrow.transform.parent = transform;
+
+        PlayShootSound();
+    }
+
+    private void PlayShootSound()
+    {
+        //Implement arrow shoot sound here
     }
 }

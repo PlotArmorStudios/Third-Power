@@ -21,6 +21,7 @@ public class AlertUI : MonoBehaviour
     {
         _playerHealth.OnDie += SetInactiveAlertUI;
         _playerHealth.OnDie += ToggleDeath;
+        MainCamera = Camera.main;
     }
 
     private void ToggleDeath()
