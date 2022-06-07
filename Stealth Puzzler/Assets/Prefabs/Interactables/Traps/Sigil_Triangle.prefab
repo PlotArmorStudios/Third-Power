@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6401879695928471959}
   - component: {fileID: 8032117431396023858}
   - component: {fileID: 5229566982726470392}
+  - component: {fileID: 1664379858269633251}
+  - component: {fileID: 8152598499900897958}
   m_Layer: 0
   m_Name: Sigil_Triangle
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6022397948362124077}
-  m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -83,3 +85,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1664379858269633251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022397948362124077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434635dcb373f6742a04cf0f94eef4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!64 &8152598499900897958
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022397948362124077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3587177288063973793, guid: d54d379de0ca79e48b491664594ed7e3, type: 3}
