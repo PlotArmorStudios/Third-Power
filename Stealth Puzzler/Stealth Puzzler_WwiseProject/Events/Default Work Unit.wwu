@@ -8,7 +8,18 @@
 						<Action Name="" ID="{A56436BC-C9AC-4D9D-AD1C-40ED38DD8209}" ShortID="865036771">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footsteps" ID="{8C8FD5E8-F407-4CA0-BD77-AF47FCA81B63}" WorkUnitID="{1AE6EBED-6C58-4CC7-9D19-E58832FA3AC7}"/>
+									<ObjectRef Name="Footsteps" ID="{8C8FD5E8-F407-4CA0-BD77-AF47FCA81B63}" WorkUnitID="{473B2D4F-8E5C-4034-8729-981913AE76C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Character_Cube_Transform" ID="{854723A8-87F3-475D-A8FD-9F82DB3016A8}">
+					<ChildrenList>
+						<Action Name="" ID="{508A7613-F57C-4D15-A798-1DDC4678F5DC}" ShortID="988639875">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Character-Cube_Transform" ID="{9C549B1D-FDEB-41AF-AA7A-1C903D71184E}" WorkUnitID="{1AE6EBED-6C58-4CC7-9D19-E58832FA3AC7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
