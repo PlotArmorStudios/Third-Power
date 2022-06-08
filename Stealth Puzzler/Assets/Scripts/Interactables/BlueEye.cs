@@ -19,6 +19,8 @@ public class BlueEye : MonoBehaviour
     private void Start()
     {
         _emissionColor = _emissionMaterial.color;
+        _emissionMaterial.SetColor("_EmissionColor", _emissionColor * _emissionMin);
+
     }
 
     public IEnumerator OscillateEmission()
