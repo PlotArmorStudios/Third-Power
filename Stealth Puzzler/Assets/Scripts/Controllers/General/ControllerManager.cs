@@ -86,4 +86,16 @@ public class ControllerManager : MonoBehaviour
         _poofEffect.Play();
         
     }
+
+    public void DeactivateControllers()
+    {
+        _playerController.GetComponent<ToggleComponents>().ToggleOffComponents();
+        _cubeController.GetComponent<ToggleComponents>().ToggleOffComponents();
+    }
+
+    public void ActivateControllers()
+    {
+        _playerController.GetComponent<ToggleComponents>().ToggleOnComponents();
+        _cubeController.GetComponent<ToggleComponents>().ToggleOnComponents();
+    }
 }
