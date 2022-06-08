@@ -106,6 +106,8 @@ public class CubeController : MonoBehaviour
             }
         }
 
+        PlayTumbleSound();
+
         _newdirection = _directions[closestAxis];
         var anchor = Rigidbody.transform.position + (Vector3.down + _newdirection) * 0.5f;
         var axis = Vector3.Cross(Vector3.up, _newdirection);
@@ -135,7 +137,6 @@ public class CubeController : MonoBehaviour
         }
 
         SnapToGrid();
-        PlayTumbleSound();
         _isMoving = false;
     #if UNITY_EDITOR && DEBUGLOG 
         Debug.Log("Roll took " + (Time.time - currTime) + "seconds");
@@ -144,7 +145,6 @@ public class CubeController : MonoBehaviour
 
     private void PlayTumbleSound()
     {
-        //Implement sound event here
         AkSoundEngine.PostEvent("Play_Cube_Movement", gameObject);
     }
 

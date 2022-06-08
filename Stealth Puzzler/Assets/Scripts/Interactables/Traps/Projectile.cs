@@ -69,6 +69,7 @@ public class Projectile : MonoBehaviour
             var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
             _rigidbody.velocity = bounceDirection * Speed;
             _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
+            PlayReflectSound();
         }
         else if (enemy)
         {
@@ -85,5 +86,10 @@ public class Projectile : MonoBehaviour
             if (_timeActive < .8f) return;
             gameObject.SetActive(false);
         }
+    }
+
+    private void PlayReflectSound()
+    {
+        //Implement reflect sound here
     }
 }
