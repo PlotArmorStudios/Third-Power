@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class BlueEye : MonoBehaviour
 {
+    [SerializeField] private bool _isActive = true;
     [SerializeField] private UnityEvent _collisionEvent;
     [SerializeField] private Material _emissionMaterial;
     [SerializeField] private float _period = 1f; // Time for 1 oscillation (1 sec)
@@ -14,13 +15,13 @@ public class BlueEye : MonoBehaviour
     [SerializeField] private float _frequency = 1f;
 
     [SerializeField] private int _numberOfTriggers = 1;
+    
     private Color _emissionColor;
-
+    
     private void Start()
     {
         _emissionColor = _emissionMaterial.color;
         _emissionMaterial.SetColor("_EmissionColor", _emissionColor * _emissionMin);
-
     }
 
     public IEnumerator OscillateEmission()
@@ -63,10 +64,22 @@ public class BlueEye : MonoBehaviour
         StartCoroutine(OscillateEmission());
     }
 
+    public void Activate()
+    {
+        _isActive = true;
+    }
+    
+    public void Deactivate()
+    {
+        _isActive = false;
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         var projectile = other.gameObject.GetComponent<Projectile>();
         if (!projectile) return;
+        if (!_isActive) return;
+        
         _collisionEvent?.Invoke();
         StartCoroutine(OscillateEmission());
         PlayPuzzleSolvedSound();
