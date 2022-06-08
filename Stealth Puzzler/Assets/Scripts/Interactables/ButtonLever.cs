@@ -32,6 +32,7 @@ public class ButtonLever : MonoBehaviour
         _animator.SetBool("Pressed", true);
         if (!_isActive) return;
         _pressEvent?.Invoke();
+        AkSoundEngine.PostEvent("Play_SFX_Cutscene_Arrow_Demonstartion", gameObject);
     }
 
     private void OnTriggerExit(Collider other)
