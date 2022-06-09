@@ -20,12 +20,13 @@ public class EnemyAi : MonoBehaviour
         _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
         _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
         _rb = GetComponent<Rigidbody>();
-        _player = FindObjectOfType<PlayerController>();
+        _player = FindObjectOfType<PlayerController>(true);
     }
 
     void Update()
     {
         SwitchStates();
+        Debug.Log(_player.transform.position);
     }
 
     private void SwitchStates()
