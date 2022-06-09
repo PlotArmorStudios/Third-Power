@@ -50,6 +50,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Cannon" ID="{8EE52293-E38A-4047-AFF2-CD36F6FBF622}">
+					<ChildrenList>
+						<Action Name="" ID="{6C15FB3A-D40B-499A-8A1C-1281477A3789}" ShortID="288444129">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cannon" ID="{A1118EA0-ECD3-49DD-9B71-2FF8F3004C14}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

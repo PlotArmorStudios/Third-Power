@@ -16,11 +16,31 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="1409534792">
+		<SoundBank Id="4072029455" Language="SFX" Hash="1951854788">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
+					<IncludedMemoryFiles>
+						<File Id="272633937" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_03.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_03_10C4C929.wem</Path>
+						</File>
+						<File Id="354517231" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_02.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_02_10C4C929.wem</Path>
+						</File>
+						<File Id="802308215" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_04.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_04_10C4C929.wem</Path>
+						</File>
+						<File Id="972897040" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_01.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1769817372" Name="Play_Character_Cube_Transform" ObjectPath="\Events\Default Work Unit\Play_Character_Cube_Transform" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
 					<IncludedMemoryFiles>
 						<File Id="624839553" Language="SFX">

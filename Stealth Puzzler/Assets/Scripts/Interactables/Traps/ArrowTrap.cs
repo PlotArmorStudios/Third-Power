@@ -51,5 +51,6 @@ public class ArrowTrap : MonoBehaviour
     private void PlayShootSound()
     {
         //Implement arrow shoot sound here
+        AkSoundEngine.PostEvent("Play_Cannon", gameObject);
     }
 }
