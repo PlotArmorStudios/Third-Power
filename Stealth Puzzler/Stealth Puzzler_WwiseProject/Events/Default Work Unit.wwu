@@ -61,6 +61,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Arrow_In_Air" ID="{2F896DE2-6B79-4633-B135-0D0AD8901B39}">
+					<ChildrenList>
+						<Action Name="" ID="{A8B1EF86-2F1E-408F-B4D0-295DC96E3E87}" ShortID="839329328">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Arrow_In_Air" ID="{E37738A9-2D3F-47C2-A344-8F4C36BF5A5E}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Arrow_In_Air" ID="{44C92443-A288-4A7A-8DA3-065BD34F4AAB}">
+					<ChildrenList>
+						<Action Name="" ID="{FC63F0E7-CBD3-4BC9-ABA7-290AE1744772}" ShortID="830801980">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Arrow_In_Air" ID="{E37738A9-2D3F-47C2-A344-8F4C36BF5A5E}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -13,11 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ARROW_IN_AIR = 3919960416U;
         static const AkUniqueID PLAY_CANNON = 712207333U;
         static const AkUniqueID PLAY_CHARACTER_CUBE_TRANSFORM = 1769817372U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
+        static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
     } // namespace EVENTS
 
     namespace SWITCHES

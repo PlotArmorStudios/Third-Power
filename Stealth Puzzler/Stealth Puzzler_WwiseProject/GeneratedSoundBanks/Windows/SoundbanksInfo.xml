@@ -11,16 +11,32 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1147299202">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1607029167">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="1951854788">
+		<SoundBank Id="4072029455" Language="SFX" Hash="1355492939">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3919960416" Name="Play_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Play_Arrow_In_Air" MaxAttenuation="30." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="316855928" Language="SFX">
+							<ShortName>SFX_Objects_ArrowInAir_01.wav</ShortName>
+							<Path>SFX\SFX_Objects_ArrowInAir_01_10C4C929.wem</Path>
+						</File>
+						<File Id="515314100" Language="SFX">
+							<ShortName>SFX_Objects_ArrowInAir_03.wav</ShortName>
+							<Path>SFX\SFX_Objects_ArrowInAir_03_10C4C929.wem</Path>
+						</File>
+						<File Id="880170465" Language="SFX">
+							<ShortName>SFX_Objects_ArrowInAir_02.wav</ShortName>
+							<Path>SFX\SFX_Objects_ArrowInAir_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
 					<IncludedMemoryFiles>
 						<File Id="272633937" Language="SFX">
@@ -128,6 +144,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1384937390" Name="Stop_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Stop_Arrow_In_Air" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{13610534-0166-4A86-B21E-F167063AA6D2}">
