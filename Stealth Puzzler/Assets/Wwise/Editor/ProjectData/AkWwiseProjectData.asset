@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585468753137260594
+    m_lastTime: -8585468366394775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585468753138714821
+    m_lastTime: -8585468366474775808
     List:
+    - name: Play_Cannon
+      guid: 9322e58e8ae34740aff2cd36f6fbf622
+      id: 712207333
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Cannon
+        ObjectType: 3
+        guid: 9322e58e8ae34740aff2cd36f6fbf622
+      Path: Events\Default Work Unit\Play_Cannon
+      maxAttenuation: 40
+      maxDuration: 2.118926
+      minDuration: 1.887748
     - name: Play_Character_Cube_Transform
       guid: a8234785f3875d47a8fd9f82db3016a8
       id: 1769817372
@@ -271,7 +288,7 @@ MonoBehaviour:
     m_lastTime: -8585470480287189933
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0600000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
