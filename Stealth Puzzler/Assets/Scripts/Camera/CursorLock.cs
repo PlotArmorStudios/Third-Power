@@ -14,6 +14,11 @@ public class CursorLock : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenu.IsPaused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
             Cursor.lockState = CursorLockMode.None;
         if (Input.GetMouseButtonDown(0))
