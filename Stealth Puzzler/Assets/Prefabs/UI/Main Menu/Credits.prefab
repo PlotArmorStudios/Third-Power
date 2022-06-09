@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4319789077033448544
+--- !u!1 &2299499900614336440
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,27 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4319789077033448545}
-  - component: {fileID: 4319789077033448548}
-  - component: {fileID: 4319789077033448547}
-  - component: {fileID: 4319789077033448546}
-  - component: {fileID: 4319789077033448550}
-  - component: {fileID: 4319789077033448551}
-  - component: {fileID: 9123222705977940036}
+  - component: {fileID: 2299499900614336441}
+  - component: {fileID: 2299499900614336444}
+  - component: {fileID: 2299499900614336443}
+  - component: {fileID: 2299499900614336442}
+  - component: {fileID: 2299499900614336446}
+  - component: {fileID: 2299499900614336447}
+  - component: {fileID: 1720331506778815852}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4319789077033448545
+--- !u!224 &2299499900614336441
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,24 +39,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4319789077033448548
+--- !u!222 &2299499900614336444
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_CullTransparentMesh: 1
---- !u!114 &4319789077033448547
+--- !u!114 &2299499900614336443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -139,13 +139,13 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4319789077033448546
+--- !u!114 &2299499900614336442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -179,11 +179,23 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 4319789077033448547}
+  m_TargetGraphic: {fileID: 2299499900614336443}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4319789077033448550}
+      - m_Target: {fileID: 1720331506778815852}
+        m_TargetAssemblyTypeName: Credits, Assembly-CSharp
+        m_MethodName: OnCreditsClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2299499900614336446}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnPointerExit
         m_Mode: 1
@@ -195,28 +207,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4319789077033448550
+--- !u!114 &2299499900614336446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba6ca32d787b058469238fceb623fec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonText: {fileID: 4319789077033448547}
+  _buttonText: {fileID: 2299499900614336443}
   _onHoverTextSize: 100
   _textSizeDefault: 70
---- !u!114 &4319789077033448551
+--- !u!114 &2299499900614336447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
@@ -227,7 +239,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4319789077033448550}
+        - m_Target: {fileID: 2299499900614336446}
           m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
           m_MethodName: OnPointerEnter
           m_Mode: 1
@@ -243,7 +255,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4319789077033448550}
+        - m_Target: {fileID: 2299499900614336446}
           m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
           m_MethodName: OnPointerExit
           m_Mode: 1
@@ -255,15 +267,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &9123222705977940036
+--- !u!114 &1720331506778815852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4319789077033448544}
+  m_GameObject: {fileID: 2299499900614336440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47468aad08f9b6f49902fe1d0299789d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d6a55762c242044abbf61be8dc88121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainMenu: {fileID: 0}
+  _creditsMask: {fileID: 0}
