@@ -12,7 +12,7 @@ public class Grid : MonoBehaviour
    [Range(1, 5)] [SerializeField] private float _gridScaleY = 1f;
    [Range(1, 5)] [SerializeField] private float _gridScaleZ = 1f;
 
-   private Vector3 _defaultPosition = new Vector3(.5f, 0, .5f);
+   private Vector3 _defaultPosition = new Vector3(.0f, 0, .0f);
    
    private void OnValidate()
    {
