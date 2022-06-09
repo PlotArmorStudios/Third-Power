@@ -13,16 +13,11 @@ public class Button : MonoBehaviour
     public void OnPointerEnter()
     {
         LeanTween.cancel(gameObject);
-        LeanTween.value(gameObject, a => _buttonText.fontSize = a, _textSizeDefault, _onHoverTextSize, _transitionTime);
+        LeanTween.value(gameObject, a => _buttonText.fontSize = a, _textSizeDefault, _onHoverTextSize, _transitionTime).setIgnoreTimeScale(true);
     }
     public void OnPointerExit()
     {
         LeanTween.cancel(gameObject);
-        LeanTween.value(gameObject, a => _buttonText.fontSize = a, _onHoverTextSize, _textSizeDefault, _transitionTime);
-    }
-
-    public void OnClicked()
-    {
-        LeanTween.value(gameObject, a => _buttonText.fontSize = a, _onHoverTextSize, _textSizeDefault, _transitionTime);
+        LeanTween.value(gameObject, a => _buttonText.fontSize = a, _onHoverTextSize, _textSizeDefault, _transitionTime).setIgnoreTimeScale(true);
     }
 }
