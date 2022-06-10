@@ -6,6 +6,7 @@ using UnityEngine;
 public class Grid : MonoBehaviour
 {
    [SerializeField] private float _size = 1f;
+   [SerializeField] private bool _showGizmo;
    [SerializeField] private int _gizmoSize = 40;
    
    [Range(1, 5)] [SerializeField] private float _gridScaleX = 1f;
@@ -13,7 +14,7 @@ public class Grid : MonoBehaviour
    [Range(1, 5)] [SerializeField] private float _gridScaleZ = 1f;
 
    private Vector3 _defaultPosition = new Vector3(.0f, 0, .0f);
-   
+
    private void OnValidate()
    {
       transform.position = _defaultPosition;
@@ -39,6 +40,8 @@ public class Grid : MonoBehaviour
    
    private void OnDrawGizmos()
    {
+      if (!_showGizmo) return;
+      
       Gizmos.color = Color.yellow;
       
       for (float x = 0; x < _gizmoSize; x += _gridScaleX)
