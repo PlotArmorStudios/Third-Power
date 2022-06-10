@@ -2884,7 +2884,7 @@ PrefabInstance:
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
@@ -2894,6 +2894,11 @@ PrefabInstance:
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
+        type: 3}
+      propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
@@ -2908,12 +2913,22 @@ PrefabInstance:
       objectReference: {fileID: 1282679786}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
+      propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1505944281}
+    - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
+        type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
+        type: 3}
+      propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
@@ -2928,6 +2943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
+      propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayCutsceneSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
+        type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
@@ -2938,12 +2958,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
+      propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: CutsceneSounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
+        type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
+        type: 3}
+      propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1193779795270498767, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
@@ -5978,7 +6008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 4.18175, z: -2.199139}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -6454,7 +6484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 2.5919, z: -3.006541}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -6965,12 +6995,12 @@ PrefabInstance:
     - target: {fileID: 623622010754636990, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: 0.1371493
+      value: 11.49905
       objectReference: {fileID: 0}
     - target: {fileID: 623622010754636990, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -4.00868
+      value: -10.00932
       objectReference: {fileID: 0}
     - target: {fileID: 623622010783452169, guid: ae1a751119413714d908600118f61af1,
         type: 3}
@@ -6995,37 +7025,37 @@ PrefabInstance:
     - target: {fileID: 623622010783452169, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04319192
+      value: 0.04319191
       objectReference: {fileID: 0}
     - target: {fileID: 623622010783452169, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.58215326
+      value: -0.5821533
       objectReference: {fileID: 0}
     - target: {fileID: 623622010783452169, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.40540463
+      value: 0.4054047
       objectReference: {fileID: 0}
     - target: {fileID: 623622011000231252, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: 0.1371493
+      value: 11.49905
       objectReference: {fileID: 0}
     - target: {fileID: 623622011000231252, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -4.00868
+      value: -10.00932
       objectReference: {fileID: 0}
     - target: {fileID: 623622011105745496, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: 0.1371493
+      value: 11.49905
       objectReference: {fileID: 0}
     - target: {fileID: 623622011105745496, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -4.00868
+      value: -10.00932
       objectReference: {fileID: 0}
     - target: {fileID: 623622011667152623, guid: ae1a751119413714d908600118f61af1,
         type: 3}
@@ -7060,7 +7090,7 @@ PrefabInstance:
     - target: {fileID: 623622011667152623, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.20408355
+      value: -0.20408358
       objectReference: {fileID: 0}
     - target: {fileID: 623622012151952690, guid: ae1a751119413714d908600118f61af1,
         type: 3}
@@ -7080,22 +7110,22 @@ PrefabInstance:
     - target: {fileID: 623622012151952690, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.70414567
+      value: -0.7041457
       objectReference: {fileID: 0}
     - target: {fileID: 623622012151952690, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.030388858
+      value: 0.030388888
       objectReference: {fileID: 0}
     - target: {fileID: 623622012151952690, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5746829
+      value: -0.57468283
       objectReference: {fileID: 0}
     - target: {fileID: 623622012151952690, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.41592664
+      value: 0.4159266
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae1a751119413714d908600118f61af1, type: 3}
@@ -27181,7 +27211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 4.18175, z: -2.199139}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -28504,6 +28534,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1505944279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505944280}
+  - component: {fileID: 1505944281}
+  m_Layer: 0
+  m_Name: Cutscene Sound Effects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1505944280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505944279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.0374603, y: 2.128051, z: 0.9814676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505944281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505944279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58b11e7c3194f229a8e43a668de3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1521301914
@@ -31103,7 +31177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 2.5919, z: -3.006541}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -35067,7 +35141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 4.18175, z: -2.199139}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -39161,7 +39235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 2.5919, z: -3.006541}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
