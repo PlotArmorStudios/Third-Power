@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 888483881355376688}
   - component: {fileID: 4322150473635723157}
   - component: {fileID: 2026527186999509855}
+  - component: {fileID: 1439559949821221247}
   m_Layer: 0
   m_Name: WeaponRack
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1439559949821221247
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513225422174462602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7067025, y: 2.3673916, z: 3.4545105}
+  m_Center: {x: -0.23859239, y: 1.1600599, z: 0.06615007}

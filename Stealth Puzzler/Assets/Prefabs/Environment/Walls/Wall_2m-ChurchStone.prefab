@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2951460217997150546}
   - component: {fileID: 2259235789355730679}
   - component: {fileID: 4088878903462277693}
+  - component: {fileID: 8237855623074040342}
   m_Layer: 0
   m_Name: Wall_2m-ChurchStone
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8237855623074040342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575603526459364328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.192752, y: 1.9999986, z: 6.000001}
+  m_Center: {x: -0.09637588, y: 0.9999988, z: -0.0000011920929}
