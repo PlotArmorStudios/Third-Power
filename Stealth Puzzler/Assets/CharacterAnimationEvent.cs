@@ -1,14 +1,10 @@
+//#define DebugLog
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character_Animation_Event : MonoBehaviour
+public class CharacterAnimationEvent : MonoBehaviour
 {
-
-
-    public bool Debug_Enabled = false;
-
-    // Start is called before the first frame update
     void Start()
     {
         AkSoundEngine.RegisterGameObj(gameObject);
@@ -16,13 +12,17 @@ public class Character_Animation_Event : MonoBehaviour
 
     void fs_Left_Foot()
     {
+#if DebugLog
         Debug.Log("Left Foot Triggered");
+#endif
         AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
     }
 
     void fs_Right_Foot()
     {
+#if DebugLog
         Debug.Log("Right Foot Triggered");
+#endif
         AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
     }
 }

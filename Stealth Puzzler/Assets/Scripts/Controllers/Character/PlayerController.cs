@@ -7,13 +7,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : Controller
 {
-    [Header("Input")]
-    [SerializeField] private InputActionReference _move;
+    [Header("Input")] [SerializeField] private InputActionReference _move;
     [SerializeField] private InputActionReference _jump;
     [SerializeField] private InputActionReference _look;
     [SerializeField] private InputActionReference _run;
 
-    [Header("Movement")] [SerializeField] private float _movementSpeed = 5.0f;
+    [Header("Movement")] [SerializeField] private float _maxMovementSpeed = 5f;
     [SerializeField] private float _jumpHeight = 10f;
     [SerializeField] private float _weight = 2f;
 
@@ -43,23 +42,25 @@ public class PlayerController : Controller
     private Vector3 _heightMovement;
     private float _horizontal;
     private float _vertical;
-    
+    private float _currentMovementSpeed;
+
     //Running
     private bool _isRunning;
+    private float _speedVariant;
 
     //Jumping
     private bool _triggerJump;
     public bool IsJumping { get; set; }
 
-    
+
     //Wall Climbing
     [SerializeField] private LayerMask _climbMask;
     [SerializeField] private Transform[] _climbCheckPoints;
     [SerializeField] private bool _isClimbing = false;
-    [SerializeField][Range(200,500)] private float _climbSpeed = 300;
+    [SerializeField] [Range(200, 500)] private float _climbSpeed = 300;
     [SerializeField] private float _stoppingDistance = 0.2f;
     [SerializeField] private float _climbJumpForce = 300f;
-    private RaycastHit _lastGrabPoint; 
+    private RaycastHit _lastGrabPoint;
     private float _distanceToWall;
 
     private void OnEnable()
@@ -108,7 +109,6 @@ public class PlayerController : Controller
         UpdateJump();
         ApplyGravity();
         HandleJump();
-
     }
 
 
@@ -133,17 +133,33 @@ public class PlayerController : Controller
 
     private void ApplyMovementInputToAnimator()
     {
-        var speedVariant = Mathf.Max(Mathf.Abs(_horizontal),
+        var input = Mathf.Max(Mathf.Abs(_horizontal),
             Mathf.Abs(_vertical));
-
         _isRunning = _run.action.IsPressed();
-        
-        if (_isRunning)
-            speedVariant = Mathf.Clamp(speedVariant, 0, 1f);
+
+        if (input > 0.1f)
+        {
+            if (_isRunning)
+            {
+                _speedVariant += Time.deltaTime;
+                _speedVariant = Mathf.Clamp(_speedVariant, 0, 1f);
+            }
+            else
+            {
+                if (_speedVariant < .5f)
+                    _speedVariant += Time.deltaTime;
+                if (_speedVariant > .5f)
+                    _speedVariant -= Time.deltaTime;
+                _speedVariant = Mathf.Clamp(_speedVariant, 0, 1f);
+            }
+        }
         else
-            speedVariant = Mathf.Clamp(speedVariant, 0, .5f);
-        
-        _animator.SetFloat("Movement", speedVariant);
+        {
+            _speedVariant -= Time.deltaTime;
+            _speedVariant = Mathf.Clamp(_speedVariant, 0, .5f);
+        }
+
+        _animator.SetFloat("Movement", _speedVariant);
     }
 
     private bool PlayerJumpedFromGround()
@@ -157,6 +173,7 @@ public class PlayerController : Controller
         _movement = new Vector3(_horizontal, 0, _vertical);
         if (_movement.magnitude >= .3f)
         {
+            _currentMovementSpeed += Time.deltaTime;
             CalculateMovementDirection();
         }
         else
@@ -164,11 +181,14 @@ public class PlayerController : Controller
             //let character jump while stopping sliding
             //character only stops completely when grounded
             //set airborne false whenever grounded
+
             if (_groundCheck.IsGrounded())
-            {
                 Rigidbody.velocity = new Vector3(0f, Rigidbody.velocity.y, 0f);
-            }
+            
+            _currentMovementSpeed -= Time.deltaTime;
         }
+
+        _currentMovementSpeed = Mathf.Clamp(_currentMovementSpeed, 2.5f, _maxMovementSpeed);
     }
 
     private void CalculateMovementDirection()
@@ -196,9 +216,9 @@ public class PlayerController : Controller
         moveDir = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
 
         var moving = Vector3.zero;
-        
-        if(_isRunning) moving = moveDir.normalized * (_movementSpeed * 1.5f);
-        else moving = moveDir.normalized * _movementSpeed;
+
+        if (_isRunning) moving = moveDir.normalized * (_currentMovementSpeed * 1.5f);
+        else moving = moveDir.normalized * _currentMovementSpeed;
 
         //how to have character face direction you are moving
         if (!IsJumping)
@@ -222,7 +242,7 @@ public class PlayerController : Controller
         if (_triggerJump)
         {
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
-                                                                          | RigidbodyConstraints.FreezeRotationZ;
+                                                                         | RigidbodyConstraints.FreezeRotationZ;
             Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, _jumpHeight, Rigidbody.velocity.z);
             IsJumping = true; //for landing
             _animator.SetTrigger("Jump");
@@ -233,9 +253,9 @@ public class PlayerController : Controller
     private void CheckIfClimbing()
     {
         //Using a big or instead of a for loop so that if one checksphere succeeds, it won't waste time trying the rest
-        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask) 
-                    || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask) 
-                    || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
+        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask)
+                       || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask)
+                       || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
         Rigidbody.useGravity = !_isClimbing;
     }
 
@@ -283,12 +303,12 @@ public class PlayerController : Controller
                 Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
                 //_rigidbody.position = endPoint;
             }
-            
+
             transform.forward = -_lastGrabPoint.normal;
             //TODO when raycast no longer hit, position is 
             Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
             Rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
-        }   
+        }
         else
         {
             Rigidbody.velocity = Vector3.zero;
