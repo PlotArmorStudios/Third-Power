@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3410998127104997001}
   - component: {fileID: 1799635742043060524}
   - component: {fileID: 4547897188902129126}
-  m_Layer: 0
+  - component: {fileID: 2983080448147615966}
+  m_Layer: 14
   m_Name: Debris_Medium3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2602407777811688499}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.851073, y: 0, z: -20.213984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.33977473, y: 0.23926598, z: 0.33977473}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2983080448147615966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602407777811688499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6481051, y: 0.4337496, z: 1.1646502}
+  m_Center: {x: -0.0018686496, y: 0.000102989376, z: 0.024892926}
