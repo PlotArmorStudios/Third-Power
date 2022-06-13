@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="839244504">
+		<SoundBank Id="4072029455" Language="SFX" Hash="80892083">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -97,6 +97,42 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1533459680" Name="Play_Dungeon_1" ObjectPath="\Events\Default Work Unit\Play_Dungeon_1" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="30157072" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_01.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_01_10C4C929.wem</Path>
+						</File>
+						<File Id="55532973" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_03.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_03_10C4C929.wem</Path>
+						</File>
+						<File Id="848395372" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_04.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
+						</File>
+						<File Id="1044968183" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_02.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1501216439" Name="Play_FirePlace" ObjectPath="\Events\Default Work Unit\Play_FirePlace" MaxAttenuation="10." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="249206915" Language="SFX">
+							<ShortName>Ambiences_3D_FirePlace_03.wav</ShortName>
+							<Path>SFX\Ambiences_3D_FirePlace_03_10C4C929.wem</Path>
+						</File>
+						<File Id="636149935" Language="SFX">
+							<ShortName>Ambiences_3D_FirePlace_02.wav</ShortName>
+							<Path>SFX\Ambiences_3D_FirePlace_02_10C4C929.wem</Path>
+						</File>
+						<File Id="980379078" Language="SFX">
+							<ShortName>Ambiences_3D_FirePlace_01.wav</ShortName>
+							<Path>SFX\Ambiences_3D_FirePlace_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.238872" DurationMax="0.30096">
 					<IncludedMemoryFiles>
 						<File Id="89521839" Language="SFX">
@@ -136,11 +172,11 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="OneShot" DurationMin="7.984375" DurationMax="7.984375">
+				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="OneShot" DurationMin="7.5" DurationMax="7.5">
 					<IncludedMemoryFiles>
-						<File Id="876461121" Language="SFX">
-							<ShortName>SFX_Cutscene_Arrow_Demonstartion.wav</ShortName>
-							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_10C4C929.wem</Path>
+						<File Id="563282605" Language="SFX">
+							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V02.wav</ShortName>
+							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

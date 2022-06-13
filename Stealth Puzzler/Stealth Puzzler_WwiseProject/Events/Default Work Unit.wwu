@@ -38,13 +38,10 @@
 				</Event>
 				<Event Name="Play_SFX_Cutscene_Arrow_Demonstartion" ID="{4A358F4B-048E-4AB2-8794-6D6646466544}">
 					<ChildrenList>
-						<Action Name="" ID="{08BAFE50-6DC3-4713-A6D7-E4635F93C92F}" ShortID="255444942">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
-							</PropertyList>
+						<Action Name="" ID="{3200E9DB-BCB8-421D-9C3B-9887896DB540}" ShortID="445557000">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion" ID="{D6682476-DFA2-4C9E-B859-2A06ADDFF6B6}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
+									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V02" ID="{942EE0B1-346A-4C81-864E-411051B6430E}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -81,6 +78,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Arrow_In_Air" ID="{E37738A9-2D3F-47C2-A344-8F4C36BF5A5E}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FirePlace" ID="{DBFF8910-B0EC-49A9-8C8A-D9C3B9788001}">
+					<ChildrenList>
+						<Action Name="" ID="{0FA26EAB-27CC-4802-B50C-A46BF54CAACA}" ShortID="923057659">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FirePlace" ID="{20EEEA35-F395-477B-94FC-00A8F9360236}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Dungeon_1" ID="{17984AD9-DE29-4405-A0A4-C564D086D246}">
+					<ChildrenList>
+						<Action Name="" ID="{864BF895-36C8-470A-A3DA-F76619A7CB58}" ShortID="736071220">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
