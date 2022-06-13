@@ -6,10 +6,10 @@ using UnityEngine.AI;
 public class Jelly : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent _navMeshAgent;
-    [SerializeField] private EnemyAi _enemyAi;
+    [SerializeField] private WolfAI wolfAI;
     private void OnCollisionEnter(Collision collision)
     {
-        _enemyAi.enabled = true;
+        wolfAI.enabled = true;
         _navMeshAgent.enabled = true;
     }
 }
