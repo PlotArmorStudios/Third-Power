@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}" SchemaVersion="103" RootDocumentID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" ParentDocumentID="{20C0FA9D-2C07-41DB-90F4-4CD9C48C1880}">
+	<AudioObjects>
+		<WorkUnit Name="3D" ID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}" OwnerID="{20C0FA9D-2C07-41DB-90F4-4CD9C48C1880}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="FirePlace" ID="{20EEEA35-F395-477B-94FC-00A8F9360236}" ShortID="407448204">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="5 m" ID="{02DCF2BB-E04B-4300-8E39-04BB75428E9B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ambiences_3D_FirePlace_01" ID="{05CBD6C1-17A3-4961-B16B-E7B8300DE463}" ShortID="944942446">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambiences_3D_FirePlace_01" ID="{39CBD1DE-9556-45C2-9B1E-B81CAA3B0D8B}">
+									<Language>SFX</Language>
+									<AudioFile>Ambiences_3D_FirePlace_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="980379078"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambiences_3D_FirePlace_01" ID="{39CBD1DE-9556-45C2-9B1E-B81CAA3B0D8B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambiences_3D_FirePlace_02" ID="{62D5E6ED-DD61-4F41-978E-48F93E407FAE}" ShortID="380916308">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambiences_3D_FirePlace_02" ID="{A6E2F2B2-BE7C-4414-BEE8-B30DFED0FD25}">
+									<Language>SFX</Language>
+									<AudioFile>Ambiences_3D_FirePlace_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="636149935"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambiences_3D_FirePlace_02" ID="{A6E2F2B2-BE7C-4414-BEE8-B30DFED0FD25}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambiences_3D_FirePlace_03" ID="{97E7DB77-2F8F-4A34-A2CA-C133FED92ADE}" ShortID="570293345">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambiences_3D_FirePlace_03" ID="{FDC7E3B5-5156-4B02-91DC-35468654DCB4}">
+									<Language>SFX</Language>
+									<AudioFile>Ambiences_3D_FirePlace_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="249206915"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambiences_3D_FirePlace_03" ID="{FDC7E3B5-5156-4B02-91DC-35468654DCB4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
