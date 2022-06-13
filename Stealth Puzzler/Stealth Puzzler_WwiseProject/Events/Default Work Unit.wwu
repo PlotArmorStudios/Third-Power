@@ -94,6 +94,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Dungeon_1" ID="{17984AD9-DE29-4405-A0A4-C564D086D246}">
+					<ChildrenList>
+						<Action Name="" ID="{864BF895-36C8-470A-A3DA-F76619A7CB58}" ShortID="736071220">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

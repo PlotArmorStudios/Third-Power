@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585464895374775808
+    m_lastTime: -8585464854414775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585464895374775808
+    m_lastTime: -8585464854494775808
     List:
     - name: Play_Arrow_In_Air
       guid: e26d892f796b3346b1350d0ad8901b39
@@ -164,6 +164,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.56284
       minDuration: 0.471937
+    - name: Play_Dungeon_1
+      guid: d94a981729de0544a0a4c564d086d246
+      id: 1533459680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Dungeon_1
+        ObjectType: 3
+        guid: d94a981729de0544a0a4c564d086d246
+      Path: Events\Default Work Unit\Play_Dungeon_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_FirePlace
       guid: 1089ffdbecb0a9498c8ad9c3b9788001
       id: 1501216439
@@ -178,7 +195,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1089ffdbecb0a9498c8ad9c3b9788001
       Path: Events\Default Work Unit\Play_FirePlace
-      maxAttenuation: 5
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_Footsteps

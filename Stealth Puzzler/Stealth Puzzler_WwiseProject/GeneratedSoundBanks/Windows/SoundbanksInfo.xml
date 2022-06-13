@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="2899324003">
+		<SoundBank Id="4072029455" Language="SFX" Hash="80892083">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -94,6 +94,26 @@
 						<File Id="823154544" Language="SFX">
 							<ShortName>Cube_Movement_01.wav</ShortName>
 							<Path>SFX\Cube_Movement_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1533459680" Name="Play_Dungeon_1" ObjectPath="\Events\Default Work Unit\Play_Dungeon_1" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="30157072" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_01.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_01_10C4C929.wem</Path>
+						</File>
+						<File Id="55532973" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_03.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_03_10C4C929.wem</Path>
+						</File>
+						<File Id="848395372" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_04.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
+						</File>
+						<File Id="1044968183" Language="SFX">
+							<ShortName>Ambiences_2D_Dungeon1_02.wav</ShortName>
+							<Path>SFX\Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
