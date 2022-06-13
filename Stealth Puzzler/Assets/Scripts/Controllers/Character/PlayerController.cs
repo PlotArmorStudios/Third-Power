@@ -92,10 +92,10 @@ public class PlayerController : Controller
     {
         ReadInput();
         ApplyMovementInputToAnimator();
+        ToggleAirborneState();
         if (PlayerJumpedFromGround()) _triggerJump = true;
         CheckIfClimbing();
     }
-
 
     private void FixedUpdate()
     {
@@ -111,7 +111,6 @@ public class PlayerController : Controller
         HandleJump();
     }
 
-
     private void ReadInput()
     {
         _horizontal = _move.action.ReadValue<Vector2>().x;
@@ -122,11 +121,17 @@ public class PlayerController : Controller
     {
         if (_groundCheck.IsGrounded())
             IsJumping = false;
+        
+        HandleLand();
+    }
 
-        if (_groundCheck.IsGrounded() && IsFalling)
+    private void HandleLand()
+    {
+        if (_groundCheck.IsGrounded() && FallTimer > 0)
         {
             FallTimer = 0;
             _animator.SetBool("Airborne", false);
+            _animator.ResetTrigger("Jump");
             _animator.SetTrigger("Land");
         }
     }
@@ -162,6 +167,11 @@ public class PlayerController : Controller
         _animator.SetFloat("Movement", _speedVariant);
     }
 
+    private void ToggleAirborneState()
+    {
+        _animator.SetBool("Animator", !_groundCheck.IsGrounded());
+    }
+    
     private bool PlayerJumpedFromGround()
     {
         return _jump.action.triggered && _groundCheck.IsGrounded();
@@ -184,11 +194,11 @@ public class PlayerController : Controller
 
             if (_groundCheck.IsGrounded())
                 Rigidbody.velocity = new Vector3(0f, Rigidbody.velocity.y, 0f);
-            
+
             _currentMovementSpeed -= Time.deltaTime;
         }
 
-        _currentMovementSpeed = Mathf.Clamp(_currentMovementSpeed, 2.5f, _maxMovementSpeed);
+        _currentMovementSpeed = Mathf.Clamp(_currentMovementSpeed, 3.8f, _maxMovementSpeed);
     }
 
     private void CalculateMovementDirection()
@@ -241,6 +251,7 @@ public class PlayerController : Controller
     {
         if (_triggerJump)
         {
+            _animator.ResetTrigger("Land");
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
                                                                          | RigidbodyConstraints.FreezeRotationZ;
             Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, _jumpHeight, Rigidbody.velocity.z);
