@@ -9,14 +9,13 @@ public class WolfAI : MonoBehaviour
 {
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
+    [SerializeField] private Animator _animator;
     private NavMeshAgent _navAgent;
     private PlayerController _player;
     private Rigidbody _rb;
-    private Animator _animator;
     
     void Start()
     {
-        _animator = GetComponent<Animator>();
         _navAgent = GetComponent<NavMeshAgent>();
         _currentState = State.Idle;
         _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
@@ -171,12 +170,14 @@ public class WolfAI : MonoBehaviour
     void WindUp()
     {
         _navAgent.ResetPath();
+        _animator.SetBool("Running", false);
         Quaternion.LookRotation(_player.transform.position - transform.position);
         _windUpTime -= Time.deltaTime;
         if (_fieldOfView.CanSeePlayer && _windUpTime < 0)
         {
             _windUpTime = _resetWindUpTime;
             _currentState = State.Chase;
+            _animator.SetTrigger("Chase");
         }
         else
         {
