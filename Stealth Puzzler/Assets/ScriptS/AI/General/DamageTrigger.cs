@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DamagePlayer : MonoBehaviour
+public class DamageTrigger : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         var player = other.gameObject.GetComponent<PlayerController>();
         if (!player) return;

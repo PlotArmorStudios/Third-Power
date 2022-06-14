@@ -10,12 +10,18 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
     [SerializeField] private Animator _animator;
+
+    private LayerMask _enemyLayer;
+    private LayerMask _playerLayer;
+
     private NavMeshAgent _navAgent;
     private PlayerController _player;
     private Rigidbody _rb;
-    
+
     void Start()
     {
+        _enemyLayer = LayerMask.NameToLayer("Enemy");
+        _playerLayer = LayerMask.NameToLayer("Player");
         _navAgent = GetComponent<NavMeshAgent>();
         _currentState = State.Idle;
         _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
@@ -65,10 +71,17 @@ public class WolfAI : MonoBehaviour
                 Debug.Log("Ticking Attack");
 #endif
                 break;
+            case State.TurnAround:
+#if DebugStates
+                Debug.Log("Ticking Turn Around");
+#endif
+                RevertDirection();
+                break;
             default:
                 break;
         }
     }
+
 
     private void WindUpIfCanSeePlayer()
     {
@@ -148,15 +161,31 @@ public class WolfAI : MonoBehaviour
 
     [SerializeField] private float _chaseSpeed = 5f;
     [SerializeField] private float _chaseAcceleration = 12f;
+    [SerializeField] private float _chaseDistance = 5f;
 
     void Chase(Vector3 location)
     {
         if (_fieldOfView.CanSeePlayer)
         {
-            _navAgent.SetDestination(location);
+            var targetDirection = (location - transform.position).normalized;
+            var targetPosition = location + (targetDirection * _chaseDistance);
             Quaternion.LookRotation(_player.transform.position - transform.position);
+            _navAgent.SetDestination(targetPosition);
             _navAgent.speed = _chaseSpeed;
             _navAgent.acceleration = _chaseAcceleration;
+        }
+        else
+        {
+            _currentState = State.TurnAround;
+        }
+    }
+
+    private void RevertDirection()
+    {
+        StartCoroutine(TurnToPlayer());
+        if (_fieldOfView.CanSeePlayer)
+        {
+            Chase(_player.transform.position);
         }
         else
         {
@@ -164,8 +193,15 @@ public class WolfAI : MonoBehaviour
         }
     }
 
+    private IEnumerator TurnToPlayer()
+    {
+        Quaternion.LookRotation(_player.transform.position - transform.position);
+        yield return null;
+    }
+
     [SerializeField] private float _resetWindUpTime = .5f;
     [SerializeField] private float _windUpTime = .5f;
+
 
     void WindUp()
     {
