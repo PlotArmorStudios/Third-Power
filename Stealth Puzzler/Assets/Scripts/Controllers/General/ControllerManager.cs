@@ -12,10 +12,17 @@ public class ControllerManager : MonoBehaviour
     [SerializeField] private CubeController _cubeController;
     [SerializeField] private ActiveController _startingController = ActiveController.Player;
     [SerializeField] private GameObject _poofObject;
-    
+
+    public static ControllerManager Instance;
     private ParticleSystem _poofEffect;
 
     private ActiveController _activeController = ActiveController.Player;
+    public bool PlayerIsActive { get; set; }
+    
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void OnEnable()
     {
@@ -29,13 +36,14 @@ public class ControllerManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerIsActive = true;
         _poofEffect = _poofObject.GetComponentInChildren<ParticleSystem>();
         if (_startingController == ActiveController.Player)
         {
             _activeController = ActiveController.Cube;
             SwitchControllers();
         }
-        
+
         if (_startingController == ActiveController.Cube)
         {
             _activeController = ActiveController.Player;
@@ -48,14 +56,14 @@ public class ControllerManager : MonoBehaviour
         if (_switch.action.triggered)
         {
             SwitchControllers();
-            AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject); 
+            AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject);
         }
     }
 
-    private void SwitchControllers()
+    public void SwitchControllers()
     {
         var currentControllerPosition = Vector3.zero;
-        
+
         switch (_activeController)
         {
             case ActiveController.Player:
@@ -84,7 +92,6 @@ public class ControllerManager : MonoBehaviour
         _poofEffect.transform.position = currentControllerPosition;
         _poofEffect.gameObject.SetActive(true);
         _poofEffect.Play();
-        
     }
 
     public void DeactivateControllers()
@@ -97,5 +104,17 @@ public class ControllerManager : MonoBehaviour
     {
         _playerController.GetComponent<ToggleComponents>().ToggleOnComponents();
         _cubeController.GetComponent<ToggleComponents>().ToggleOnComponents();
+    }
+
+    /// <summary>
+    /// Used to toggle an enemy's ability to detect player (on death).
+    /// </summary>
+    public void ActivatePlayer()
+    {
+        PlayerIsActive = true;
+    }
+    public void DeactivatePlayer()
+    {
+        PlayerIsActive = false;
     }
 }

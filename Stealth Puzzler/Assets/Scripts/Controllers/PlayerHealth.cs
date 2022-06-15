@@ -18,6 +18,7 @@ public class PlayerHealth : Health
     {
         TriggerOnDie();
         OnPlayerDie?.Invoke();
+        ControllerManager.Instance.DeactivatePlayer();
         StartCoroutine(RestartLevel());
     }
 }

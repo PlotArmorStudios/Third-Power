@@ -4,5 +4,6 @@
     Patrol,
     Chase,
     Attack,
-    WindUp
+    WindUp,
+    TurnAround
 }

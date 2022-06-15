@@ -58,7 +58,7 @@ public class Projectile : MonoBehaviour
     {
         //Reflector reflector = other.gameObject.GetComponent<Faces>().GetReflector();
         Reflector reflector = other.gameObject.GetComponentInChildren<Reflector>();
-        var enemy = other.gameObject.GetComponent<EnemyAi>();
+        var enemy = other.gameObject.GetComponent<WolfAI>();
         var player = other.gameObject.GetComponent<PlayerController>();
         
         Debug.Log(other.gameObject);

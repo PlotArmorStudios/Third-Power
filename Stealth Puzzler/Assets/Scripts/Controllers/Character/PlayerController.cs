@@ -52,7 +52,10 @@ public class PlayerController : Controller
     private bool _triggerJump;
     public bool IsJumping { get; set; }
 
-
+    //Vulnerability
+    public bool IsVulnerable { get; private set; }
+    private float _vulnerableTime;
+    
     //Wall Climbing
     [SerializeField] private LayerMask _climbMask;
     [SerializeField] private Transform[] _climbCheckPoints;
@@ -69,6 +72,9 @@ public class PlayerController : Controller
         _jump.action.Enable();
         _look.action.Enable();
         _run.action.Enable();
+
+        IsVulnerable = false;
+        _vulnerableTime = 0;
     }
 
     private void OnDisable()
@@ -90,11 +96,20 @@ public class PlayerController : Controller
 
     void Update()
     {
+        MakeVulnerable();
         ReadInput();
         ApplyMovementInputToAnimator();
         ToggleAirborneState();
         if (PlayerJumpedFromGround()) _triggerJump = true;
         CheckIfClimbing();
+    }
+
+    private void MakeVulnerable()
+    {
+        _vulnerableTime += Time.deltaTime;
+
+        if (_vulnerableTime > .2f)
+            IsVulnerable = true;
     }
 
     private void FixedUpdate()
