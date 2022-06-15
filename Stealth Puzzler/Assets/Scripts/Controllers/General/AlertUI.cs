@@ -46,34 +46,37 @@ public class AlertUI : MonoBehaviour
 
         //Check if Player in high danger
         PlayerInHighDanger = Physics.CheckSphere(transform.position, HighDangerRange, WhatIsEnemy);
+        
         if (IsDead) return;
+        
         if (!PlayerInLowDanger) //No danger
         {
             SetInactiveAlertUI();
             return;
         }
-        else if (PlayerInLowDanger && !PlayerInMediumDanger && !PlayerInHighDanger) //low danger
+        if (PlayerInLowDanger && !PlayerInMediumDanger && !PlayerInHighDanger) //low danger
         {
-            SetInactiveAlertUI();
             _lowDangerIcon.SetActive(true);
             _lowDangerIcon.transform.LookAt(MainCamera.transform.position);
-            return;
         }
-        else if (PlayerInMediumDanger && !PlayerInHighDanger) //med danger
+        else
+            _lowDangerIcon.SetActive(false);
+
+        if (PlayerInMediumDanger && !PlayerInHighDanger) //med danger
         {
-            SetInactiveAlertUI();
             _medDangerIcon.SetActive(true);
             _medDangerIcon.transform.LookAt(MainCamera.transform.position);
-            return;
         }
-        else if (PlayerInHighDanger) //high danger
+        else
+            _medDangerIcon.SetActive(false);
+        
+        if (PlayerInHighDanger) //high danger
         {
-            SetInactiveAlertUI();
             _highDangerIcon.SetActive(true);
             _highDangerIcon.transform.LookAt(MainCamera.transform.position);
-            return;
         }
-
+        else
+            _highDangerIcon.SetActive(false);
     }
 
     private void SetInactiveAlertUI()
