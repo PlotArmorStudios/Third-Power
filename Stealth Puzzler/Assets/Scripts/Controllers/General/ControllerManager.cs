@@ -17,7 +17,7 @@ public class ControllerManager : MonoBehaviour
     private ParticleSystem _poofEffect;
 
     private ActiveController _activeController = ActiveController.Player;
-    public bool PlayerIsActive { get; private set; }
+    public bool PlayerIsActive { get; set; }
     
     private void Awake()
     {
@@ -36,6 +36,7 @@ public class ControllerManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerIsActive = true;
         _poofEffect = _poofObject.GetComponentInChildren<ParticleSystem>();
         if (_startingController == ActiveController.Player)
         {
@@ -108,11 +109,11 @@ public class ControllerManager : MonoBehaviour
     /// <summary>
     /// Used to toggle an enemy's ability to detect player (on death).
     /// </summary>
-    private void ActivatePlayer()
+    public void ActivatePlayer()
     {
         PlayerIsActive = true;
     }
-    private void DeactivatePlayer()
+    public void DeactivatePlayer()
     {
         PlayerIsActive = false;
     }

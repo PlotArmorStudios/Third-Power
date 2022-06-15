@@ -143,6 +143,7 @@ public class WolfAI : MonoBehaviour
         Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
 
         Seek(targetWorld);
+        
         if (_timeToStayPatrolling < 0)
         {
             _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
