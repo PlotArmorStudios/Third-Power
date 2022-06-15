@@ -32,7 +32,6 @@ public class WolfAI : MonoBehaviour
     void Update()
     {
         SwitchStates();
-        Debug.Log(_player.transform.position);
     }
 
     private void SwitchStates()
@@ -168,7 +167,6 @@ public class WolfAI : MonoBehaviour
         {
             var targetDirection = (location - _rb.transform.position).normalized;
             var targetPosition = location + (targetDirection * _chaseDistance);
-            _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
             _navAgent.SetDestination(targetPosition);
             _navAgent.speed = _chaseSpeed;
             _navAgent.acceleration = _chaseAcceleration;
@@ -183,8 +181,8 @@ public class WolfAI : MonoBehaviour
     {
         _navAgent.ResetPath();
         _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
-        
-        WindUpIfCanSeePlayer();
+
+        _currentState = State.Idle;
     }
 
     private IEnumerator TurnToPlayer()
@@ -195,13 +193,12 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private float _resetWindUpTime = .5f;
     [SerializeField] private float _windUpTime = .5f;
 
-
     void WindUp()
     {
         _navAgent.ResetPath();
         _animator.SetBool("Running", false);
-        _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - transform.position);
         _windUpTime -= Time.deltaTime;
+        
         if (_fieldOfView.CanSeePlayer && _windUpTime < 0)
         {
             _windUpTime = _resetWindUpTime;
