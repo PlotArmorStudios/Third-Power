@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,19 +16,17 @@ public class WolfAI : MonoBehaviour
     private LayerMask _playerLayer;
 
     private NavMeshAgent _navAgent;
-    private PlayerController _player;
+    private Controller _player;
     private Rigidbody _rb;
 
     void Start()
     {
-        _enemyLayer = LayerMask.NameToLayer("Enemy");
-        _playerLayer = LayerMask.NameToLayer("Player");
         _navAgent = GetComponent<NavMeshAgent>();
         _currentState = State.Idle;
         _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
         _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
         _rb = GetComponent<Rigidbody>();
-        _player = FindObjectOfType<PlayerController>(true);
+        _player = FindObjectOfType<Controller>(true);
     }
 
     void Update()
@@ -167,9 +166,9 @@ public class WolfAI : MonoBehaviour
     {
         if (_fieldOfView.CanSeePlayer)
         {
-            var targetDirection = (location - transform.position).normalized;
+            var targetDirection = (location - _rb.transform.position).normalized;
             var targetPosition = location + (targetDirection * _chaseDistance);
-            Quaternion.LookRotation(_player.transform.position - transform.position);
+            _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
             _navAgent.SetDestination(targetPosition);
             _navAgent.speed = _chaseSpeed;
             _navAgent.acceleration = _chaseAcceleration;
@@ -182,20 +181,14 @@ public class WolfAI : MonoBehaviour
 
     private void RevertDirection()
     {
-        StartCoroutine(TurnToPlayer());
-        if (_fieldOfView.CanSeePlayer)
-        {
-            Chase(_player.transform.position);
-        }
-        else
-        {
-            _currentState = State.Idle;
-        }
+        _navAgent.ResetPath();
+        _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
+        
+        WindUpIfCanSeePlayer();
     }
 
     private IEnumerator TurnToPlayer()
     {
-        Quaternion.LookRotation(_player.transform.position - transform.position);
         yield return null;
     }
 
@@ -207,7 +200,7 @@ public class WolfAI : MonoBehaviour
     {
         _navAgent.ResetPath();
         _animator.SetBool("Running", false);
-        Quaternion.LookRotation(_player.transform.position - transform.position);
+        _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - transform.position);
         _windUpTime -= Time.deltaTime;
         if (_fieldOfView.CanSeePlayer && _windUpTime < 0)
         {
