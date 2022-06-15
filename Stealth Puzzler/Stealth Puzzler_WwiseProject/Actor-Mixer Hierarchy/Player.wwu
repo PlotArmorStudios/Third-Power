@@ -6,9 +6,22 @@
 				<WorkUnit Name="Locomotive" ID="{473B2D4F-8E5C-4034-8729-981913AE76C7}" PersistMode="Reference"/>
 				<RandomSequenceContainer Name="Character-Cube_Transform" ID="{9C549B1D-FDEB-41AF-AA7A-1C903D71184E}" ShortID="995863518">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{05822283-A3DB-4496-961E-BE9838D7E290}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -16,15 +29,12 @@
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
 						</Reference>
-						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-							<ObjectRef Name="Hall_Conversation" ID="{E2C3BD70-E5E4-46A5-BDA6-99A92FAAC1AC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="SFX_Player_Character-Cube_Transform_01" ID="{1E36235C-030F-454A-BADE-4CBC877D8D15}" ShortID="511104782">
+						<Sound Name="SFX_Player_Character-Cube_Transform_01" ID="{A56F353D-ECC4-4C18-A287-D004CAA125A2}" ShortID="462366366">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -34,7 +44,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_01" ID="{26725610-2470-495C-9DE1-8CB3B7B9AD6F}">
+								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_01" ID="{8C98F593-0402-44DA-8BFC-76A29C64A1A0}">
 									<Language>SFX</Language>
 									<AudioFile>SFX_Player_Character-Cube_Transform_01.wav</AudioFile>
 									<MediaIDList>
@@ -44,10 +54,10 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_Player_Character-Cube_Transform_01" ID="{26725610-2470-495C-9DE1-8CB3B7B9AD6F}" Platform="Linked"/>
+								<ActiveSource Name="SFX_Player_Character-Cube_Transform_01" ID="{8C98F593-0402-44DA-8BFC-76A29C64A1A0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Player_Character-Cube_Transform_02" ID="{5C44446D-2B35-43B6-B7AB-93AF2BECE227}" ShortID="669029543">
+						<Sound Name="SFX_Player_Character-Cube_Transform_02" ID="{0852514E-5247-4F4B-BAAC-0636E8B9CC67}" ShortID="1045022773">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -57,7 +67,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_02" ID="{BA86E743-8A47-476F-A4B2-2CE5D5BE7CC1}">
+								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_02" ID="{AF9B569A-5342-4834-BC10-C393A599249A}">
 									<Language>SFX</Language>
 									<AudioFile>SFX_Player_Character-Cube_Transform_02.wav</AudioFile>
 									<MediaIDList>
@@ -67,10 +77,10 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_Player_Character-Cube_Transform_02" ID="{BA86E743-8A47-476F-A4B2-2CE5D5BE7CC1}" Platform="Linked"/>
+								<ActiveSource Name="SFX_Player_Character-Cube_Transform_02" ID="{AF9B569A-5342-4834-BC10-C393A599249A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Player_Character-Cube_Transform_03" ID="{6A26FBA2-9DB3-4574-9775-39A081002F1F}" ShortID="584549826">
+						<Sound Name="SFX_Player_Character-Cube_Transform_03" ID="{7D3A5A7F-5CFE-4ED8-8CE0-6B90ED96E4A1}" ShortID="785477668">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -80,7 +90,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_03" ID="{DA557EE9-6AB4-43EA-9554-B0F667B2C437}">
+								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_03" ID="{B8853249-0074-41D9-AE4E-F927F184A570}">
 									<Language>SFX</Language>
 									<AudioFile>SFX_Player_Character-Cube_Transform_03.wav</AudioFile>
 									<MediaIDList>
@@ -90,30 +100,7 @@
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_Player_Character-Cube_Transform_03" ID="{DA557EE9-6AB4-43EA-9554-B0F667B2C437}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_Player_Character-Cube_Transform_04" ID="{24B17CFC-5A48-4C41-8DD6-D12A122D6528}" ShortID="633684462">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Player_Character-Cube_Transform_04" ID="{F3BDB77F-B8A4-45FC-9C6A-978819313CCE}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Player_Character-Cube_Transform_04.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="624839553"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Player_Character-Cube_Transform_04" ID="{F3BDB77F-B8A4-45FC-9C6A-978819313CCE}" Platform="Linked"/>
+								<ActiveSource Name="SFX_Player_Character-Cube_Transform_03" ID="{B8853249-0074-41D9-AE4E-F927F184A570}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
