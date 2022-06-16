@@ -17,6 +17,7 @@ public static class SaveSystem
 
         GameData data = new GameData(gameManager);
 
+        Debug.Log("Game saved. Path: " + path);
         formatter.Serialize(stream, data);
         stream.Close();
     }
@@ -31,6 +32,7 @@ public static class SaveSystem
             FileStream stream = new FileStream(path, FileMode.Open);
 
             GameData data = formatter.Deserialize(stream) as GameData;
+            Debug.Log("Game Loaded. Path: " + path);
             stream.Close();
 
             return data;

@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         PlayerSpawnLocation.y = CurrentPosition[1];
         PlayerSpawnLocation.z = CurrentPosition[2];
 
+        Debug.Log("Should Load Game. Level to load: " + CurrentLevel);
         SceneLoader.Instance.LoadScene("Level " + CurrentLevel);
     }
 
@@ -66,13 +67,15 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SequentialInstantiate(Transform defaultSpawn)
     {
-        Instantiate(ControllerManager, defaultSpawn.position, Quaternion.identity);
+        Instantiate(ControllerManager, defaultSpawn.position, defaultSpawn.rotation);
         yield return new WaitForSeconds(.2f);
         Instantiate(_camRig, transform.position, Quaternion.identity);
     }
 
     private IEnumerator SequentialInstantiate()
     {
+        //TODO: Verify that this does not cause an issue with player rotation on load.
+        Debug.Log("Spawned from Save. Spawn location: " + PlayerSpawnLocation);
         Instantiate(ControllerManager, PlayerSpawnLocation, Quaternion.identity);
         yield return new WaitForSeconds(.2f);
         Instantiate(_camRig, transform.position, Quaternion.identity);
@@ -98,7 +101,7 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded: " + scene.name);
-
+        Instance.CurrentLevel = FindObjectOfType<LevelData>().LevelIndex;
         if (!Instance.LoadedFromSave)
         {
             //TODO: Load player at default spawn area if not loading game
