@@ -19,11 +19,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int CurrentLevel { get; private set; }
-    public float[] CurrentPosition { get; set; }
+    public float[] CurrentPosition = new float[3];
     public bool LoadedFromSave { get; set; }
 
-    [HideInInspector]
-    public Vector3 PlayerSpawnLocation;
+    [HideInInspector] public Vector3 PlayerSpawnLocation;
 
     private void Awake()
     {
@@ -38,6 +37,10 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
+        var controller = FindObjectOfType<Controller>();
+        var controllerPosition = controller.transform.position;
+        CurrentPosition = new float[] {controllerPosition.x, controllerPosition.y, controllerPosition.z};
+        Debug.Log("Saved position. " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[1]);
         SaveSystem.SaveGame(this);
     }
 
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
         LoadedFromSave = true;
         CurrentLevel = data.CurrentLevel;
         CurrentPosition = data.CurrentPosition;
+
+        PlayerSpawnLocation = new Vector3();
 
         PlayerSpawnLocation.x = CurrentPosition[0];
         PlayerSpawnLocation.y = CurrentPosition[1];
