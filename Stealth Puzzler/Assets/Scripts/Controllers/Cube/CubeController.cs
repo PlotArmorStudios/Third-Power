@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CubeController : MonoBehaviour
+public class CubeController : Controller
 {
     [SerializeField] private InputActionReference _move;
     [SerializeField] private float _rollSpeed = 5;
@@ -23,7 +23,6 @@ public class CubeController : MonoBehaviour
     public Rigidbody Rigidbody;
     private List<Vector3> _directions = new List<Vector3>();
     private Vector3 _newdirection;
-    private Camera _cam;
 
     private GroundCheck _groundCheck { get; set; }
     private Grid _grid;
@@ -45,7 +44,7 @@ public class CubeController : MonoBehaviour
 
     private void OnValidate()
     {
-        _cam = Camera.main;
+        Cam = Camera.main;
         Rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -57,7 +56,7 @@ public class CubeController : MonoBehaviour
     private void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        _cam = Camera.main;
+        Cam = Camera.main;
         
         //Initialize directions to snap to
         _directions.Add(Vector3.forward);
@@ -71,10 +70,10 @@ public class CubeController : MonoBehaviour
         ReadInput();
         if (_isMoving) return;
 
-        if (_horizontal <= -0.1f) Tumble(-_cam.transform.right);
-        else if (_horizontal >= 0.1f) Tumble(_cam.transform.right);
-        else if (_vertical >= 0.1f) Tumble(_cam.transform.forward);
-        else if (_vertical <= -0.1f) Tumble(-_cam.transform.forward);
+        if (_horizontal <= -0.1f) Tumble(-Cam.transform.right);
+        else if (_horizontal >= 0.1f) Tumble(Cam.transform.right);
+        else if (_vertical >= 0.1f) Tumble(Cam.transform.forward);
+        else if (_vertical <= -0.1f) Tumble(-Cam.transform.forward);
 
         if (IsFalling) FallTimer += Time.deltaTime;
         else FallTimer = 0;
@@ -164,6 +163,6 @@ public class CubeController : MonoBehaviour
         Gizmos.DrawRay(Rigidbody.transform.position, _newdirection * 5);
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(_cam.transform.position, _cam.transform.forward * 10);
+        Gizmos.DrawRay(Cam.transform.position, Cam.transform.forward * 10);
     }
 }
