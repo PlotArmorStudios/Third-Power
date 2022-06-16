@@ -252,8 +252,7 @@ public class PlayerController : Controller
 
     private float CalculateAngleWithCam()
     {
-        Quaternion worldRotation = CamTransform.parent.rotation * CamTransform.localRotation;
-        return Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg + worldRotation.y;
+        return Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg + CamTransform.localEulerAngles.y;
     }
 
     private void HandleJump()

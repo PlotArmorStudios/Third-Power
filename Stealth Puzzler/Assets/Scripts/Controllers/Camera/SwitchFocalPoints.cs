@@ -20,7 +20,7 @@ public class SwitchFocalPoints : MonoBehaviour
 
     private void Start()
     {
-        _focalPoints = GameManager.Instance.ControllerManager.FocalPoints;
+        _focalPoints = FindObjectOfType<ControllerManager>().FocalPoints;
         _vCam.Follow = _focalPoints[0];
         _vCam.LookAt = _focalPoints[0];
     }
