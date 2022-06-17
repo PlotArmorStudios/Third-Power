@@ -13,6 +13,7 @@ public class ControllerManager : MonoBehaviour
     [SerializeField] private ActiveController _startingController = ActiveController.Player;
     [SerializeField] private GameObject _poofObject;
 
+    public List<Transform> FocalPoints;
     public static ControllerManager Instance;
     private ParticleSystem _poofEffect;
 
@@ -38,6 +39,11 @@ public class ControllerManager : MonoBehaviour
     {
         PlayerIsActive = true;
         _poofEffect = _poofObject.GetComponentInChildren<ParticleSystem>();
+        //SetStartingController();
+    }
+
+    private void SetStartingController()
+    {
         if (_startingController == ActiveController.Player)
         {
             _activeController = ActiveController.Cube;

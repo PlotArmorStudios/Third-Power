@@ -18,6 +18,13 @@ public class SwitchFocalPoints : MonoBehaviour
         _vCam = GetComponent<CinemachineFreeLook>();
     }
 
+    private void Start()
+    {
+        _focalPoints = FindObjectOfType<ControllerManager>().FocalPoints;
+        _vCam.Follow = _focalPoints[0];
+        _vCam.LookAt = _focalPoints[0];
+    }
+
     private void HandleSwitchFocalPoint(int focalPoint)
     {
         _vCam.Follow = _focalPoints[focalPoint - 1];

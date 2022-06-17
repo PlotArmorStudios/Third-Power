@@ -18,11 +18,6 @@ public class PauseMenu : MonoBehaviour
         _playerInput = GetComponent<PlayerInput>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnEnable()
     {
         _pause.action.started += PauseGame;
@@ -58,5 +53,10 @@ public class PauseMenu : MonoBehaviour
         _pauseMenu.SetActive(false);
         _playerInput.SwitchCurrentActionMap("Player");
         IsPaused = false;
+    }
+
+    public void Save()
+    {
+        GameManager.Instance.SaveGame();
     }
 }

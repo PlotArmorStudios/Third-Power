@@ -16,8 +16,7 @@ public class PlayerController : Controller
     [SerializeField] private float _jumpHeight = 10f;
     [SerializeField] private float _weight = 2f;
 
-    [Header("Movement/Cam Rotation Sync")] [SerializeField]
-    private Camera _camera;
+    
 
     [SerializeField] private float _turnSmoothTime = 2f;
     [SerializeField] private float _turnSmoothVelocity = 2f;
@@ -26,9 +25,6 @@ public class PlayerController : Controller
     public Transform CubeCalibratorTransform;
 
     [field: SerializeField] public bool IsFalling { get; set; }
-
-    //Camera for calculating movement direction
-    private Transform CamTransform;
 
     public Rigidbody Rigidbody { get; private set; }
     private Animator _animator;
@@ -86,12 +82,9 @@ public class PlayerController : Controller
 
     void Start()
     {
-        _camera = Camera.main;
         Rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
         _groundCheck = GetComponent<GroundCheck>();
-
-        CamTransform = _camera.transform;
     }
 
     void Update()
