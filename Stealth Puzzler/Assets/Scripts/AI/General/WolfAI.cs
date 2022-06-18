@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -40,14 +41,14 @@ public class WolfAI : MonoBehaviour
         {
             case State.Idle:
 #if DebugStates
-                Debug.Log("Ticking Idle");
+                //Debug.Log("Ticking Idle");
 #endif
                 Idle();
                 WindUpIfCanSeePlayer();
                 break;
             case State.Patrol:
 #if DebugStates
-                Debug.Log("Ticking Patrol");
+                //Debug.Log("Ticking Patrol");
 #endif
                 Patrol();
                 WindUpIfCanSeePlayer();
@@ -118,6 +119,14 @@ public class WolfAI : MonoBehaviour
     Vector3 wanderTarget = Vector3.zero;
     [SerializeField] private float _patrolSpeed = 3f;
     [SerializeField] private float _patrolAcceleration = 8f;
+    //[SerializeField] private float _wanderRadius = 10;
+    //[SerializeField] private float _wanderDistance = 10;
+    //[SerializeField] private float _wanderJitter = 1;
+    [SerializeField] private float _xWorldMin = 1;
+    [SerializeField] private float _xWorldMax = 1;
+    [SerializeField] private float _zWorldMin = 1;
+    [SerializeField] private float _zWorldMax = 1;
+    private bool _targetSelected = false;
 
     void Patrol()
     {
@@ -125,30 +134,36 @@ public class WolfAI : MonoBehaviour
         _navAgent.acceleration = _patrolAcceleration;
         _navAgent.speed = _patrolSpeed;
         _timeToStayPatrolling -= Time.deltaTime;
-        float wanderRadius = 10;
-        float wanderDistance = 10;
-        float wanderJitter = 1;
 
-        //determine a location on a circle 
-        wanderTarget += new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter,
-            0,
-            UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter);
-        wanderTarget.Normalize();
-        //project the point out to the radius of the cirle
-        wanderTarget *= wanderRadius;
+        if (!_targetSelected)
+        {
+            _targetSelected = true;
+            //determine a location on a circle 
+            //wanderTarget = new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter,
+            //    0,
+            //    UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter);
+            
+            //wanderTarget.Normalize();
+            ////project the point out to the radius of the cirle
+            //wanderTarget *= _wanderRadius;
 
-        //move the circle out in front of the agent to the wander distance
-        Vector3 targetLocal = wanderTarget + new Vector3(0, 0, wanderDistance);
-        //work out the world location of the point on the circle.
-        Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
-
-        Seek(targetWorld);
+            ////move the circle out in front of the agent to the wander distance
+            //Vector3 targetLocal = wanderTarget + new Vector3(0, 0, _wanderDistance);
+            //work out the world location of the point on the circle.
+            //Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
+            var xMapTarget = UnityEngine.Random.Range(_xWorldMin, _xWorldMax);
+            var zMapTarget = UnityEngine.Random.Range(_zWorldMin, _zWorldMax);
+            var wolfTarget = new Vector3(xMapTarget, 0, zMapTarget);
+            Seek(wolfTarget);
+        }
         
+
         if (_timeToStayPatrolling < 0)
         {
             _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
             _animator.SetBool("Running", false);
             _currentState = State.Idle;
+            _targetSelected = false;
         }
     }
 
@@ -197,6 +212,7 @@ public class WolfAI : MonoBehaviour
     void WindUp()
     {
         _navAgent.ResetPath();
+        _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
         _animator.SetBool("Running", false);
         _windUpTime -= Time.deltaTime;
         
