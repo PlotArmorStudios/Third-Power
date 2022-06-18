@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -197,6 +198,7 @@ public class WolfAI : MonoBehaviour
     void WindUp()
     {
         _navAgent.ResetPath();
+        _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
         _animator.SetBool("Running", false);
         _windUpTime -= Time.deltaTime;
         

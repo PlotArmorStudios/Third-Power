@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1622484444477580465}
   - component: {fileID: 1622484444477580467}
   - component: {fileID: 1622484444477580466}
+  - component: {fileID: 403305745482411321}
   m_Layer: 8
   m_Name: StoneStraight
   m_TagString: Untagged
@@ -83,6 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &403305745482411321
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622484444477580464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0519629, z: 6}
+  m_Center: {x: 0, y: 0.025981426, z: 0}
 --- !u!1 &1622484444610445125
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +144,7 @@ GameObject:
   - component: {fileID: 1622484445790374499}
   - component: {fileID: 1622484445790374501}
   - component: {fileID: 1622484445790374500}
+  - component: {fileID: 7477379633017899865}
   m_Layer: 8
   m_Name: StoneStraight (3)
   m_TagString: Untagged
@@ -202,6 +217,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7477379633017899865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622484445790374498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0519629, z: 6}
+  m_Center: {x: 0, y: 0.025981426, z: 0}
 --- !u!1 &1622484445850450622
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +241,7 @@ GameObject:
   - component: {fileID: 1622484445850450623}
   - component: {fileID: 1622484445850450609}
   - component: {fileID: 1622484445850450608}
+  - component: {fileID: 7429967885774404249}
   m_Layer: 8
   m_Name: StoneStraight (4)
   m_TagString: Untagged
@@ -285,6 +314,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7429967885774404249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622484445850450622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0519629, z: 6}
+  m_Center: {x: 0, y: 0.025981426, z: 0}
 --- !u!1 &1622484446198921542
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +338,7 @@ GameObject:
   - component: {fileID: 1622484446198921543}
   - component: {fileID: 1622484446198921529}
   - component: {fileID: 1622484446198921528}
+  - component: {fileID: 1879738825001515358}
   m_Layer: 8
   m_Name: StoneStraight (2)
   m_TagString: Untagged
@@ -368,6 +411,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1879738825001515358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622484446198921542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0519629, z: 6}
+  m_Center: {x: 0, y: 0.025981426, z: 0}
 --- !u!1 &1622484446497332476
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +435,7 @@ GameObject:
   - component: {fileID: 1622484446497332477}
   - component: {fileID: 1622484446497332479}
   - component: {fileID: 1622484446497332478}
+  - component: {fileID: 4114883686760859785}
   m_Layer: 8
   m_Name: StoneStraight (1)
   m_TagString: Untagged
@@ -451,3 +508,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4114883686760859785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622484446497332476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0519629, z: 6}
+  m_Center: {x: 0, y: 0.025981426, z: 0}
