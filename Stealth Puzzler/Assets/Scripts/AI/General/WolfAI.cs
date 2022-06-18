@@ -41,14 +41,14 @@ public class WolfAI : MonoBehaviour
         {
             case State.Idle:
 #if DebugStates
-                Debug.Log("Ticking Idle");
+                //Debug.Log("Ticking Idle");
 #endif
                 Idle();
                 WindUpIfCanSeePlayer();
                 break;
             case State.Patrol:
 #if DebugStates
-                Debug.Log("Ticking Patrol");
+                //Debug.Log("Ticking Patrol");
 #endif
                 Patrol();
                 WindUpIfCanSeePlayer();
@@ -119,9 +119,13 @@ public class WolfAI : MonoBehaviour
     Vector3 wanderTarget = Vector3.zero;
     [SerializeField] private float _patrolSpeed = 3f;
     [SerializeField] private float _patrolAcceleration = 8f;
-    [SerializeField] private float wanderRadius = 10;
-    [SerializeField] private float wanderDistance = 10;
-    [SerializeField] private float wanderJitter = 1;
+    //[SerializeField] private float _wanderRadius = 10;
+    //[SerializeField] private float _wanderDistance = 10;
+    //[SerializeField] private float _wanderJitter = 1;
+    [SerializeField] private float _xWorldMin = 1;
+    [SerializeField] private float _xWorldMax = 1;
+    [SerializeField] private float _zWorldMin = 1;
+    [SerializeField] private float _zWorldMax = 1;
     private bool _targetSelected = false;
 
     void Patrol()
@@ -135,18 +139,22 @@ public class WolfAI : MonoBehaviour
         {
             _targetSelected = true;
             //determine a location on a circle 
-            wanderTarget = new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter,
-                0,
-                UnityEngine.Random.Range(-1.0f, 1.0f) * wanderJitter);
-            wanderTarget.Normalize();
-            //project the point out to the radius of the cirle
-            wanderTarget *= wanderRadius;
+            //wanderTarget = new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter,
+            //    0,
+            //    UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter);
+            
+            //wanderTarget.Normalize();
+            ////project the point out to the radius of the cirle
+            //wanderTarget *= _wanderRadius;
 
-            //move the circle out in front of the agent to the wander distance
-            Vector3 targetLocal = wanderTarget + new Vector3(0, 0, wanderDistance);
+            ////move the circle out in front of the agent to the wander distance
+            //Vector3 targetLocal = wanderTarget + new Vector3(0, 0, _wanderDistance);
             //work out the world location of the point on the circle.
-            Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
-            Seek(targetWorld);
+            //Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
+            var xMapTarget = UnityEngine.Random.Range(_xWorldMin, _xWorldMax);
+            var zMapTarget = UnityEngine.Random.Range(_zWorldMin, _zWorldMax);
+            var wolfTarget = new Vector3(xMapTarget, 0, zMapTarget);
+            Seek(wolfTarget);
         }
         
 
