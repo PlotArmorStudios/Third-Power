@@ -118,8 +118,12 @@ MonoBehaviour:
   _maxTimeToPatrol: 2
   _patrolSpeed: 3
   _patrolAcceleration: 8
+  wanderRadius: 10
+  wanderDistance: 10
+  wanderJitter: 1
   _chaseSpeed: 100
   _chaseAcceleration: 100
+  _chaseDistance: 5
   _resetWindUpTime: 0.5
   _windUpTime: 0.5
 --- !u!195 &2869162657433121904
@@ -192,8 +196,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 0.5973796, z: 1.4428015}
-  m_Center: {x: 0, y: 0.26588902, z: 0.009935856}
+  m_Size: {x: 0.48566848, y: 0.70077056, z: 1.4428016}
+  m_Center: {x: -0.010799832, y: 0.31758457, z: 0.009935855}
 --- !u!114 &2869162657433121911
 MonoBehaviour:
   m_ObjectHideFlags: 0
