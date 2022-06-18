@@ -23,7 +23,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1792937690864033508
 Transform:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 1792937690864033516}
-  _enemyAi: {fileID: 1792937690864033518}
+  wolfAI: {fileID: 0}
 --- !u!114 &1792937690864033504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fieldOfView: {fileID: 1792937690864033517}
   _currentState: 0
+  _animator: {fileID: 0}
   _minTimeToStayIdle: 0
   _maxTimeToStayIdle: 0
   _minTimeToPatrol: 0
@@ -130,6 +131,7 @@ MonoBehaviour:
   _patrolAcceleration: 8
   _chaseSpeed: 2.5
   _chaseAcceleration: 2.5
+  _chaseDistance: 5
   _resetWindUpTime: 0
   _windUpTime: 0
 --- !u!114 &1792937690864033517
