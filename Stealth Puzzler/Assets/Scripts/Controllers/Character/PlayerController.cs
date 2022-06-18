@@ -177,7 +177,7 @@ public class PlayerController : Controller
 
     private void ToggleAirborneState()
     {
-        _animator.SetBool("Animator", !_groundCheck.IsGrounded());
+        _animator.SetBool("Airborne", !_groundCheck.IsGrounded());
     }
     
     private bool PlayerJumpedFromGround()
