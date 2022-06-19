@@ -52,9 +52,12 @@ public class GameData
     public int CurrentLevel;
     public float[] CurrentPosition;
 
+    public Dictionary<string, bool> TrapBooleans;
+    
     public GameData(GameManager gameManager)
     {
         CurrentLevel = gameManager.CurrentLevel;
         CurrentPosition = gameManager.CurrentPosition;
+        TrapBooleans = gameManager.ObstacleBooleans;
     }
 }

@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int CurrentLevel { get; private set; }
     public float[] CurrentPosition = new float[3];
     public bool LoadedFromSave { get; set; }
+    public Dictionary<string, bool> ObstacleBooleans { get; set; }
 
     [HideInInspector] public Vector3 PlayerSpawnLocation;
 
@@ -32,6 +33,8 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
+
+        ObstacleBooleans = new Dictionary<string, bool>();
     }
 
     public void SaveGame()
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
         LoadedFromSave = true;
         CurrentLevel = data.CurrentLevel;
         CurrentPosition = data.CurrentPosition;
+        ObstacleBooleans = data.TrapBooleans;
 
         PlayerSpawnLocation = new Vector3();
 
@@ -111,5 +115,10 @@ public class GameManager : MonoBehaviour
             //TODO: Load player at default spawn area if not loading game
             //FindObjectOfType<PlayerSpawner>().SpawnDefault();
         }
+    }
+
+    public void AddObstacleBoolean(string obstacleID, bool isOpen)
+    {
+        Instance.ObstacleBooleans.Add(obstacleID, isOpen);
     }
 }
