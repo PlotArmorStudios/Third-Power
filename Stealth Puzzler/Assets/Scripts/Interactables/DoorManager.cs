@@ -11,8 +11,8 @@ public class DoorManager : Obstacle
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        
-        if (GameManager.Instance.ObstacleBooleans[_obstacleID])
+
+        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID))
             OpenDoor();
     }
 
@@ -20,11 +20,11 @@ public class DoorManager : Obstacle
     {
         _animator.SetTrigger("Open");
         _isOpen = true;
-        
-        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
-        GameManager.Instance.AddObstacleBoolean(_obstacleID, _isOpen);
 
         PlayOpenDoorSound();
+
+        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
+        GameManager.Instance.AddObstacleBoolean(_obstacleID, _isOpen);
     }
 
     private void PlayOpenDoorSound()

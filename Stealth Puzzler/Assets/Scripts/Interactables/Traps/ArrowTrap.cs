@@ -14,6 +14,11 @@ public class ArrowTrap : MonoBehaviour
     
     private float _currentSpawnTime;
 
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         if (!IsActive) return;

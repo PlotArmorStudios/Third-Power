@@ -16,7 +16,7 @@ public class ButtonLever : Obstacle
     {
         _animator = GetComponent<Animator>();
 
-        if (GameManager.Instance.ObstacleBooleans[_obstacleID])
+        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID))
         {
             _isPressed = true;   
             _isActive = false;
