@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\SSD\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\SSD\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\SSD\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\SSD\Unity Projects\Stealth Puzzler\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="1554703461">
+		<SoundBank Id="4072029455" Language="SFX" Hash="161970367">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -173,6 +173,30 @@
 						<File Id="563282605" Language="SFX">
 							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V02.wav</ShortName>
 							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2298613774" Name="Play_WaterDroplets" ObjectPath="\Events\Default Work Unit\Play_WaterDroplets" DurationType="OneShot" DurationMin="0.4375" DurationMax="0.5">
+					<IncludedMemoryFiles>
+						<File Id="50648789" Language="SFX">
+							<ShortName>Waterdrop_01.wav</ShortName>
+							<Path>SFX\Waterdrop_01_10C4C929.wem</Path>
+						</File>
+						<File Id="136446839" Language="SFX">
+							<ShortName>Waterdrop_05.wav</ShortName>
+							<Path>SFX\Waterdrop_05_10C4C929.wem</Path>
+						</File>
+						<File Id="360760542" Language="SFX">
+							<ShortName>Waterdrop_04.wav</ShortName>
+							<Path>SFX\Waterdrop_04_10C4C929.wem</Path>
+						</File>
+						<File Id="886490584" Language="SFX">
+							<ShortName>Waterdrop_03.wav</ShortName>
+							<Path>SFX\Waterdrop_03_10C4C929.wem</Path>
+						</File>
+						<File Id="1026445588" Language="SFX">
+							<ShortName>Waterdrop_02.wav</ShortName>
+							<Path>SFX\Waterdrop_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
