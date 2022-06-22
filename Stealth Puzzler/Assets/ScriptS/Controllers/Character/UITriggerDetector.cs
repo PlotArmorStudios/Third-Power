@@ -6,10 +6,12 @@ namespace UITrigger
 {
     public class UITriggerDetector : MonoBehaviour
     {
-        private GameObject _uiObject;
-        [SerializeField] private GameObject _referenceInteractable;
+        [SerializeField] protected GameObject _referenceInteractable;
         [SerializeField] private GameObject _canvasObject;
         [SerializeField] private string _interactableText;
+        
+        private GameObject _uiObject;
+        protected float _dot;
 
         private void OnValidate()
         {
@@ -17,7 +19,7 @@ namespace UITrigger
                 transform.rotation = _referenceInteractable.transform.rotation;
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             if (_referenceInteractable)
                 transform.rotation = _referenceInteractable.transform.rotation;
@@ -34,18 +36,20 @@ namespace UITrigger
             _uiObject.gameObject.SetActive(false);
         }
 
-        private void OnTriggerStay(Collider other)
+        protected virtual void OnTriggerStay(Collider other)
         {
             var player = other.GetComponent<Controller>();
             if (!player) return;
 
             var playerForward = transform.worldToLocalMatrix.MultiplyVector(player.gameObject.transform.forward);
             var triggerForward = transform.worldToLocalMatrix.MultiplyVector(gameObject.transform.forward);
-            var dot = Vector3.Dot(playerForward, triggerForward);
+            _dot = Vector3.Dot(playerForward, triggerForward);
 
-            Debug.Log("Dot: " + dot);
+#if DebugLog
+            Debug.Log("Dot: " + _dot);
+#endif
 
-            if (dot > -0.5) _uiObject.gameObject.SetActive(true);
+            if (_dot > -0.5) _uiObject.gameObject.SetActive(true);
             else _uiObject.gameObject.SetActive(false);
         }
     }

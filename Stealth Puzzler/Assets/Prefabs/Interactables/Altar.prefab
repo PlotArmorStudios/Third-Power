@@ -4880,6 +4880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7292677944822225216}
   - component: {fileID: 1290161605}
+  - component: {fileID: 5585168205300159937}
   m_Layer: 0
   m_Name: Altar
   m_TagString: Untagged
@@ -4919,97 +4920,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: -0.03, y: -1, z: 0.13}
---- !u!1001 &1002225677
-PrefabInstance:
+--- !u!114 &5585168205300159937
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7292677944822225216}
-    m_Modifications:
-    - target: {fileID: 4555872940947155016, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_Name
-      value: UI Tutorial Trigger Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155016, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7895241765780985732, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: _canvasObject
-      value: 
-      objectReference: {fileID: 7042600638511552549, guid: 68633a0c38463fd488db8be85a5fcd28,
-        type: 3}
-    - target: {fileID: 7895241765780985732, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-        type: 3}
-      propertyPath: _referenceInteractable
-      value: 
-      objectReference: {fileID: 1400753609438635987}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ad7df7405ec3bfc45b9741bbaad8a983, type: 3}
---- !u!4 &4555872939979106372 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4555872940947155017, guid: ad7df7405ec3bfc45b9741bbaad8a983,
-    type: 3}
-  m_PrefabInstance: {fileID: 1002225677}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400753609438635987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef6dcf57f82476cb8cc11e119d1fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interact: {fileID: 0}
 --- !u!1001 &1317036481991656685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5136,6 +5059,91 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &2889092548381971068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7292677944822225216}
+    m_Modifications:
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666798126340373049, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_Name
+      value: Altar UI Tutorial Trigger Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336500665539914356, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: _referenceInteractable
+      value: 
+      objectReference: {fileID: 1400753609438635987}
+    - target: {fileID: 5010701895673693685, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: _referenceInteractable
+      value: 
+      objectReference: {fileID: 1400753609438635987}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 043afca7a5454d34a89a39a6858e62cc, type: 3}
+--- !u!4 &4555872939979106372 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2889092548381971068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5749620134695195108
 PrefabInstance:
   m_ObjectHideFlags: 0
