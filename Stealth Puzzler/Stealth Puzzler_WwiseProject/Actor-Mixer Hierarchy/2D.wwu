@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="2D" ID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}" OwnerID="{20C0FA9D-2C07-41DB-90F4-4CD9C48C1880}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Dungeon_1" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" ShortID="424090856">
+				<RandomSequenceContainer Name="Dungeon_1_Layer_01" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" ShortID="424090856">
 					<PropertyList>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -11,7 +11,7 @@
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-16</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -114,6 +114,123 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Ambiences_2D_Dungeon1_04" ID="{01339D4C-44D5-4AC5-980B-820EEA172E7C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Dungeon_1_Layer_02" ID="{2263062C-3E32-42BE-8494-F50955326E17}" ShortID="174057780">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Dungeon_01_Layer_02_01" ID="{B4128403-D7AB-4C2E-9FAD-B83AE0D9CCF8}" ShortID="431830438">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dungeon_01_Layer_02_01" ID="{88D4A138-5BC0-4317-A5ED-40DF0E7E129C}">
+									<Language>SFX</Language>
+									<AudioFile>Dungeon_01_Layer_02_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="876759871"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Dungeon_01_Layer_02_01" ID="{88D4A138-5BC0-4317-A5ED-40DF0E7E129C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dungeon_01_Layer_02_02" ID="{EEF90A09-9617-4976-B2DF-A3EAAE6B65AB}" ShortID="569504829">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dungeon_01_Layer_02_02" ID="{A2B5F538-C67E-411B-9C8F-DCBE7FD6B969}">
+									<Language>SFX</Language>
+									<AudioFile>Dungeon_01_Layer_02_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1027396423"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Dungeon_01_Layer_02_02" ID="{A2B5F538-C67E-411B-9C8F-DCBE7FD6B969}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dungeon_01_Layer_02_03" ID="{668763BE-B2DE-435C-AD29-D1E5F88788E9}" ShortID="898396794">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dungeon_01_Layer_02_03" ID="{F0B95712-1E0F-4EEA-B355-95923455EF1D}">
+									<Language>SFX</Language>
+									<AudioFile>Dungeon_01_Layer_02_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="648969644"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Dungeon_01_Layer_02_03" ID="{F0B95712-1E0F-4EEA-B355-95923455EF1D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dungeon_01_Layer_02_04" ID="{C1AC284B-0225-4787-941A-5A33C538AD18}" ShortID="847985451">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dungeon_01_Layer_02_04" ID="{D9E04ECE-2275-4888-AB78-F735C3FEED6D}">
+									<Language>SFX</Language>
+									<AudioFile>Dungeon_01_Layer_02_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="692782014"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Dungeon_01_Layer_02_04" ID="{D9E04ECE-2275-4888-AB78-F735C3FEED6D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

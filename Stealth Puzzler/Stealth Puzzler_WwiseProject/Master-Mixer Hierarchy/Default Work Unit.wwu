@@ -21,6 +21,14 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
+				<Bus Name="sfxAmbient" ID="{EE8B7AFE-889F-40E5-904D-C4D825D060DC}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

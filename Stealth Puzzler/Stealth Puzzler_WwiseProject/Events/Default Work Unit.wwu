@@ -99,7 +99,14 @@
 						<Action Name="" ID="{864BF895-36C8-470A-A3DA-F76619A7CB58}" ShortID="736071220">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Dungeon_1" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+									<ObjectRef Name="Dungeon_1_Layer_01" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C513E81F-68F4-43C9-B888-868D28298288}" ShortID="271559842">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1_Layer_02" ID="{2263062C-3E32-42BE-8494-F50955326E17}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -111,6 +118,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="WaterDroplets" ID="{2A3A99B7-2848-44B5-A33E-B2067DE636A9}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cannon_Idle_Steam" ID="{81ACB0A2-0713-43C3-A0FF-91EDE832EC1C}">
+					<ChildrenList>
+						<Action Name="" ID="{FFE0AA99-98CB-42D8-B9C9-73E8357B4287}" ShortID="13022917">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cannon_Idle_Steam" ID="{26B5E393-B37F-4713-A29E-A24B0A97095E}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_ARROW_IN_AIR = 3919960416U;
         static const AkUniqueID PLAY_CANNON = 712207333U;
+        static const AkUniqueID PLAY_CANNON_IDLE_STEAM = 112147695U;
         static const AkUniqueID PLAY_CHARACTER_CUBE_TRANSFORM = 1769817372U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_DUNGEON_1 = 1533459680U;
@@ -49,6 +50,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SFXAMBIENT = 3850048146U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
