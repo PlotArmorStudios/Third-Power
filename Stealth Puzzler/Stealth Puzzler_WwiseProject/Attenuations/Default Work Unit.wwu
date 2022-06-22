@@ -99,7 +99,7 @@
 				</Attenuation>
 				<Attenuation Name="5 m" ID="{02DCF2BB-E04B-4300-8E39-04BB75428E9B}" ShortID="435182539">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="10"/>
+						<Property Name="RadiusMax" Type="Real64" Value="20"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -113,10 +113,10 @@
 											<XPos>0</XPos>
 											<YPos>0</YPos>
 											<Flags>5</Flags>
-											<SegmentShape>InvertedSCurve</SegmentShape>
+											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>10</XPos>
+											<XPos>20</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
