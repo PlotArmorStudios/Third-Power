@@ -105,6 +105,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_WaterDroplets" ID="{EEE1D10B-1E44-4196-B4CF-D23003CAA4D7}">
+					<ChildrenList>
+						<Action Name="" ID="{BFF707BB-6FC9-4F39-8EE7-05038CB9C924}" ShortID="339866671">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WaterDroplets" ID="{2A3A99B7-2848-44B5-A33E-B2067DE636A9}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

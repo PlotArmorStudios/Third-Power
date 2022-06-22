@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
+        static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
     } // namespace EVENTS
 
