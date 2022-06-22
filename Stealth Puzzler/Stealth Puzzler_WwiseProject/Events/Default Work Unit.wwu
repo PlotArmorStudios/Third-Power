@@ -123,6 +123,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Cannon_Idle_Steam" ID="{81ACB0A2-0713-43C3-A0FF-91EDE832EC1C}">
+					<ChildrenList>
+						<Action Name="" ID="{FFE0AA99-98CB-42D8-B9C9-73E8357B4287}" ShortID="13022917">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cannon_Idle_Steam" ID="{26B5E393-B37F-4713-A29E-A24B0A97095E}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

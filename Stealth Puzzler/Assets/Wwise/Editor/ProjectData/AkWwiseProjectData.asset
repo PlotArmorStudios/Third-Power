@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585457057414775808
+    m_lastTime: -8585456896994775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -71,6 +71,20 @@ MonoBehaviour:
         ObjectType: 1
         guid: d76ff04cbe9ef7459a1a418c6ed275e1
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Dungeon_01
+    - name: sfxAmbient
+      guid: fe7a8bee9f88e540904dc4d825d060dc
+      id: 3850048146
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: sfxAmbient
+        ObjectType: 2
+        guid: fe7a8bee9f88e540904dc4d825d060dc
+      Path: Master-Mixer Hierarchy\Default Work Unit\sfxAmbient
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -83,7 +97,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585457077054775808
+    m_lastTime: -8585456895094775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -111,7 +125,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585456916814775808
+    m_lastTime: -8585456895174775808
     List:
     - name: Play_Arrow_In_Air
       guid: e26d892f796b3346b1350d0ad8901b39
@@ -147,6 +161,23 @@ MonoBehaviour:
       maxAttenuation: 40
       maxDuration: 2.118926
       minDuration: 1.887748
+    - name: Play_Cannon_Idle_Steam
+      guid: a2b0ac811307c343a0ff91ede832ec1c
+      id: 112147695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Cannon_Idle_Steam
+        ObjectType: 3
+        guid: a2b0ac811307c343a0ff91ede832ec1c
+      Path: Events\Default Work Unit\Play_Cannon_Idle_Steam
+      maxAttenuation: 20
+      maxDuration: 1.5
+      minDuration: 1.0625
     - name: Play_Character_Cube_Transform
       guid: a8234785f3875d47a8fd9f82db3016a8
       id: 1769817372
@@ -390,7 +421,7 @@ MonoBehaviour:
     m_lastTime: -8585462986054775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 060000000700000008000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
