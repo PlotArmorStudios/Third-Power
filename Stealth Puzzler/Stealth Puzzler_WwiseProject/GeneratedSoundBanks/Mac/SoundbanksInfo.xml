@@ -11,12 +11,15 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2574184929">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2388427666">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Dungeon_01"/>
+			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="161970367">
+		<SoundBank Id="4072029455" Language="SFX" Hash="2241429282">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -113,7 +116,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1501216439" Name="Play_FirePlace" ObjectPath="\Events\Default Work Unit\Play_FirePlace" MaxAttenuation="10." DurationType="Infinite">
+				<Event Id="1501216439" Name="Play_FirePlace" ObjectPath="\Events\Default Work Unit\Play_FirePlace" MaxAttenuation="20." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="249206915" Language="SFX">
 							<ShortName>Ambiences_3D_FirePlace_03.wav</ShortName>
@@ -176,7 +179,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2298613774" Name="Play_WaterDroplets" ObjectPath="\Events\Default Work Unit\Play_WaterDroplets" DurationType="OneShot" DurationMin="0.4375" DurationMax="0.5">
+				<Event Id="2298613774" Name="Play_WaterDroplets" ObjectPath="\Events\Default Work Unit\Play_WaterDroplets" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.4375" DurationMax="0.5">
 					<IncludedMemoryFiles>
 						<File Id="50648789" Language="SFX">
 							<ShortName>Waterdrop_01.wav</ShortName>
@@ -199,6 +202,9 @@
 							<Path>SFX\Waterdrop_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1384937390" Name="Stop_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Stop_Arrow_In_Air" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>

@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}" SchemaVersion="103">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Convolution_Reverb_Dungeon_01" ID="{2E37BF5B-D6B5-43B6-8F60-E0511333A4B1}" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">					<PluginData>
+	<ConvolutionData>
+		<CurveList Version="1">
+			<CurveInfo Name="IRGraphicEQ">
+				<Curve Name="" ID="{3D8C0317-4B86-4F1B-9026-7AA55736D4BA}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="19"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>20</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>20000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+	</ConvolutionData>
+</PluginData>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
