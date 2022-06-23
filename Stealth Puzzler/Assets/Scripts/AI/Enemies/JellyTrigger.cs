@@ -8,6 +8,10 @@ public class JellyTrigger : MonoBehaviour
 {
     [SerializeField] private Controller _playerCube;
     [SerializeField] private Controller _playerHumanoid;
+    [SerializeField] private GameObject _jellyController;
+    private bool _jellyCanExpand = true;
+    [SerializeField] private float _jellyScaleSize = 2f;
+    [SerializeField] private float _jellyTimeOfExpansion = 2f;
     [SerializeField] private InputActionReference _move;
     [SerializeField] private InputActionReference _switchController;
     private bool _isInvincible = false;
@@ -40,16 +44,28 @@ public class JellyTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    { 
+    {
+        
         if (GameObject.ReferenceEquals(other.gameObject, _playerCube.gameObject))
         {
             _move.action.Disable();
             _invicibilityTimeLeft = _invicibilityTimeInitial;
+            ExpandJelly();
         }
         else if (GameObject.ReferenceEquals(other.gameObject, _playerHumanoid.gameObject) && _invicibilityTimeLeft <= 0)
         {
+            print("humanoid hit");
             _playerHumanoid.GetComponent<Health>().TakeHit();
-            print("player hit");
+            ExpandJelly();
+        }
+    }
+
+    private void ExpandJelly()
+    {
+        if (_jellyCanExpand)
+        {
+            _jellyCanExpand = false;
+            LeanTween.scale(_jellyController, Vector3.one * _jellyScaleSize, _jellyTimeOfExpansion).setEase(LeanTweenType.easeSpring);
         }
     }
 

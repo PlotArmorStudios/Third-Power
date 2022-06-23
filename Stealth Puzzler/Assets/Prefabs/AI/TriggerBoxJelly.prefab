@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 6486048745630651275}
   - component: {fileID: 6486048745630651269}
   - component: {fileID: 6486048745630651274}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: JellyTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,12 +299,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerCube: {fileID: 0}
   _playerHumanoid: {fileID: 0}
+  _jellyController: {fileID: 6486048745067535006}
+  _jellyScaleSize: 2
+  _jellyTimeOfExpansion: 3
   _move: {fileID: 8569720206534178987, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _switchController: {fileID: -8671253035872491615, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
-  _invicibilityTimeInitial: 1
+  _invicibilityTimeInitial: 0.5
   _invicibilityTimeLeft: 0
-  _jellyUpwardForce: 4
+  _jellyUpwardForce: 15
 --- !u!1 &6486048746804382688
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +319,7 @@ GameObject:
   - component: {fileID: 6486048746804382717}
   - component: {fileID: 6486048746804382690}
   - component: {fileID: 6486048746804382691}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: TriggerBoxJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
