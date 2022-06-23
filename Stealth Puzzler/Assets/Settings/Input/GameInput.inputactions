@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "77eae743-6d8c-4842-94a2-538281372302",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Look",
                     "type": "Value",
                     "id": "30242cd9-ad44-449e-9a9f-0cfd0790feaa",
@@ -22,6 +31,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "858067f1-8d7b-47e3-88f4-118c8d3e4be2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchController",
+                    "type": "Button",
+                    "id": "28fd1235-b7a4-4232-900f-195853f75777",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "6b37f84b-a5ff-48b2-9273-94ce05c76cb3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Fire",
@@ -42,45 +78,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "SwitchController",
-                    "type": "Button",
-                    "id": "28fd1235-b7a4-4232-900f-195853f75777",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "77eae743-6d8c-4842-94a2-538281372302",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Drop",
                     "type": "Button",
                     "id": "a2d10310-ef70-4bcb-b3e0-f659a72a00ef",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Run",
-                    "type": "Button",
-                    "id": "858067f1-8d7b-47e3-88f4-118c8d3e4be2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Hold",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "6b37f84b-a5ff-48b2-9273-94ce05c76cb3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -321,12 +321,12 @@
                 },
                 {
                     "name": "",
-                    "id": "186c9915-1af6-438b-a08a-0ad1f73918a9",
-                    "path": "<Mouse>/leftButton",
+                    "id": "a474a09a-c645-4904-9219-c322f4d8f4b2",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "SwitchController",
+                    "action": "Drop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -343,23 +343,23 @@
                 },
                 {
                     "name": "",
-                    "id": "a474a09a-c645-4904-9219-c322f4d8f4b2",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Drop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ff717f9b-453f-447d-86ad-e514af654cd3",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "186c9915-1af6-438b-a08a-0ad1f73918a9",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "SwitchController",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
