@@ -116,12 +116,12 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private float _minTimeToPatrol;
     [SerializeField] private float _maxTimeToPatrol;
     private float _timeToStayPatrolling;
-    Vector3 wanderTarget = Vector3.zero;
     [SerializeField] private float _patrolSpeed = 3f;
     [SerializeField] private float _patrolAcceleration = 8f;
     //[SerializeField] private float _wanderRadius = 10;
     //[SerializeField] private float _wanderDistance = 10;
     //[SerializeField] private float _wanderJitter = 1;
+    //Vector3 wanderTarget = Vector3.zero;
     [SerializeField] private float _xWorldMin = 1;
     [SerializeField] private float _xWorldMax = 1;
     [SerializeField] private float _zWorldMin = 1;
