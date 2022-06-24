@@ -10,8 +10,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private InputActionReference _pause;
     [SerializeField] private InputActionReference _resume;
     public static PlayerInput PlayerInput;
+
     public static bool IsPaused { get; private set; }
-    // Start is called before the first frame update
+
     void Awake()
     {
         IsPaused = false;
@@ -23,6 +24,7 @@ public class PauseMenu : MonoBehaviour
         _pause.action.started += PauseGame;
         _resume.action.started += ResumeGame;
     }
+
     private void OnDisable()
     {
         _pause.action.started -= PauseGame;
@@ -31,8 +33,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Update()
     {
+#if DebugActionMap
         Debug.Log("Current action map: " + PlayerInput.currentActionMap);
         Debug.Log("Current control scheme: " + PlayerInput.currentControlScheme);
+#endif
     }
 
     private void PauseGame(InputAction.CallbackContext obj)
