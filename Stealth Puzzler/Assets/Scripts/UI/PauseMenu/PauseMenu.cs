@@ -9,13 +9,14 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private InputActionReference _pause;
     [SerializeField] private InputActionReference _resume;
-    [SerializeField] private static PlayerInput _playerInput;
+    public static PlayerInput PlayerInput;
+
     public static bool IsPaused { get; private set; }
-    // Start is called before the first frame update
+
     void Awake()
     {
         IsPaused = false;
-        _playerInput = GetComponent<PlayerInput>();
+        PlayerInput = GetComponent<PlayerInput>();
     }
 
     private void OnEnable()
@@ -23,18 +24,28 @@ public class PauseMenu : MonoBehaviour
         _pause.action.started += PauseGame;
         _resume.action.started += ResumeGame;
     }
+
     private void OnDisable()
     {
         _pause.action.started -= PauseGame;
         _resume.action.started -= ResumeGame;
     }
+
+    public void Update()
+    {
+#if DebugActionMap
+        Debug.Log("Current action map: " + PlayerInput.currentActionMap);
+        Debug.Log("Current control scheme: " + PlayerInput.currentControlScheme);
+#endif
+    }
+
     private void PauseGame(InputAction.CallbackContext obj)
     {
         if (obj.started)
         {
             Time.timeScale = 0;
             _pauseMenu.SetActive(true);
-            _playerInput.SwitchCurrentActionMap("UI");
+            PlayerInput.SwitchCurrentActionMap("UI");
             IsPaused = true;
         }
     }
@@ -51,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
-        _playerInput.SwitchCurrentActionMap("Player");
+        PlayerInput.SwitchCurrentActionMap("Player");
         IsPaused = false;
     }
 
