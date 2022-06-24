@@ -10,9 +10,10 @@ public class AltarInput : MonoBehaviour
     
     [SerializeField] private GameObject _altarUIObject;
     [SerializeField] private float _timeToActivateUI = .5f;
+    [SerializeField] private UIAltar _altarUI;
+    [SerializeField] private GameObject _altarTriggerBox;
     
     public InputActionReference Interact;
-    private UIAltar _altarUI;
 
     private RectTransform _altarRectTransform;
 
@@ -24,16 +25,6 @@ public class AltarInput : MonoBehaviour
     private void OnDisable()
     {
         Interact.action.started -= OnInteract;
-    }
-
-    private void Start()
-    {
-        var altarUI = Instantiate(_altarUIObject, transform.position, _altarUIObject.transform.rotation);
-        altarUI.transform.parent = transform;
-        var rotation = new Quaternion(60, 0, 0, 100);
-        altarUI.GetComponent<RectTransform>().rotation = rotation;
-        altarUI.SetActive(false);
-        _altarUI = altarUI.GetComponent<UIAltar>();
     }
 
     private void OnInteract(InputAction.CallbackContext obj)
@@ -51,6 +42,8 @@ public class AltarInput : MonoBehaviour
     private IEnumerator ActivateAltarUI()
     {
         OnActivateUI?.Invoke();
+        PauseMenu.PlayerInput.SwitchCurrentActionMap("UI");
+        _altarTriggerBox.SetActive(false);
         yield return new WaitForSeconds(_timeToActivateUI);
         _altarUI.gameObject.SetActive(true);
     }

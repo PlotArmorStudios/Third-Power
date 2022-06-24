@@ -208,7 +208,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 15
+  m_Priority: 0
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -5180,7 +5180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _altarUIObject: {fileID: 8299755284783567151, guid: 07b21d947c3cf4d458131b73ededcd2a,
     type: 3}
-  _timeToActivateUI: 2
+  _timeToActivateUI: 2.34
+  _altarUI: {fileID: 7679365271575183685}
+  _altarTriggerBox: {fileID: 4555872939979106373}
   Interact: {fileID: -6575133343087404151, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
 --- !u!1001 &2889092548381971068
@@ -5248,7 +5250,7 @@ PrefabInstance:
     - target: {fileID: 1666798126340373049, guid: 043afca7a5454d34a89a39a6858e62cc,
         type: 3}
       propertyPath: m_Name
-      value: UI Tutorial Trigger Box
+      value: Altar UI Trigger Box
       objectReference: {fileID: 0}
     - target: {fileID: 2336500665539914356, guid: 043afca7a5454d34a89a39a6858e62cc,
         type: 3}
@@ -5265,6 +5267,12 @@ PrefabInstance:
 --- !u!4 &4555872939979106372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1666798126340373048, guid: 043afca7a5454d34a89a39a6858e62cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2889092548381971068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4555872939979106373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666798126340373049, guid: 043afca7a5454d34a89a39a6858e62cc,
     type: 3}
   m_PrefabInstance: {fileID: 2889092548381971068}
   m_PrefabAsset: {fileID: 0}
@@ -5437,7 +5445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hoverFrequency: 1
-  _hoverMagnitude: 1
+  _hoverMagnitude: 0.05
 --- !u!1001 &8299755285072852268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5555,6 +5563,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Altar UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8299755284783567151, guid: 07b21d947c3cf4d458131b73ededcd2a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
 --- !u!224 &289547327 stripped
@@ -5563,3 +5576,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8299755285072852268}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7679365271575183685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1854411513235108969, guid: 07b21d947c3cf4d458131b73ededcd2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8299755285072852268}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb526a5d99d6ee4c9c1277e205a7c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

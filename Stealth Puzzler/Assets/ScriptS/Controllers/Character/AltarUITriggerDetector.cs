@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace UITrigger
@@ -18,6 +19,11 @@ namespace UITrigger
             
             if (_dot > -0.5) _altar.Interact.action.Enable();
             else _altar.Interact.action.Disable();
+        }
+
+        private void OnDisable()
+        {
+            _altar.Interact.action.Disable();
         }
     }
 }
