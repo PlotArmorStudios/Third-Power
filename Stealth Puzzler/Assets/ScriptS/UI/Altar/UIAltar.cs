@@ -12,6 +12,7 @@ public class UIAltar : MonoBehaviour
     {
         _altar.OnActivateUI += HandleActivateCamera;
         _altar.OnDeactivateUI += HandleDeactivateCamera;
+        _uiCam.gameObject.SetActive(true);
     }
 
     private void OnDisable()

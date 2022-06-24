@@ -7,9 +7,12 @@ public class AltarInput : MonoBehaviour
 {
     public event Action OnActivateUI;
     public event Action OnDeactivateUI;
+    public event Action OnActivateCamInput;
+    public event Action OnDeactivateCamInput;
     
     [SerializeField] private GameObject _altarUIObject;
     [SerializeField] private float _timeToActivateUI = .5f;
+    [SerializeField] private float _timeToDeactivateUI = 1f;
     [SerializeField] private UIAltar _altarUI;
     [SerializeField] private GameObject _altarTriggerBox;
 
@@ -21,7 +24,7 @@ public class AltarInput : MonoBehaviour
     private RectTransform _altarRectTransform;
 
     private Camera _mainCamera;
-    
+
     private void OnEnable()
     {
         Interact.action.started += OnInteract;
@@ -48,6 +51,8 @@ public class AltarInput : MonoBehaviour
     private IEnumerator ActivateAltarUI()
     {
         OnActivateUI?.Invoke();
+        OnDeactivateCamInput?.Invoke();
+        
         _mainCamera.cullingMask = _noViewUIMask;
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("UI");
@@ -64,5 +69,13 @@ public class AltarInput : MonoBehaviour
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("Player");
         _altarTriggerBox.SetActive(true);
+        StartCoroutine(DeactivateUI());
+    }
+
+    private IEnumerator DeactivateUI()
+    {
+        yield return new WaitForSeconds(_timeToDeactivateUI);
+        _altarUI.gameObject.SetActive(false);
+        OnActivateCamInput?.Invoke();
     }
 }
