@@ -28,7 +28,6 @@ public class AltarInput : MonoBehaviour
     private void OnEnable()
     {
         Interact.action.started += OnInteract;
-        _mainCamera = Camera.main;
     }
 
     private void OnDisable()
@@ -53,6 +52,7 @@ public class AltarInput : MonoBehaviour
         OnActivateUI?.Invoke();
         OnDeactivateCamInput?.Invoke();
         
+        _mainCamera = Camera.main;
         _mainCamera.cullingMask = _noViewUIMask;
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("UI");
@@ -65,6 +65,7 @@ public class AltarInput : MonoBehaviour
     public void DeactivateAltarUi()
     {
         OnDeactivateUI?.Invoke();
+        _mainCamera = Camera.main;
         _mainCamera.cullingMask = _viewUIMask;
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("Player");
