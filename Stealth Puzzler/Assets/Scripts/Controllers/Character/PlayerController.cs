@@ -77,6 +77,7 @@ public class PlayerController : Controller
         Rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
         GroundCheck = GetComponent<GroundCheck>();
+        _climb = GetComponent<Climb>();
     }
 
     void Update()
