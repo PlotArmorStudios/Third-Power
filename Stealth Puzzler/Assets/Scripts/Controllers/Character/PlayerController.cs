@@ -265,8 +265,14 @@ public class PlayerController : Controller
             Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, _jumpHeight, Rigidbody.velocity.z);
             IsJumping = true; //for landing
             _animator.SetTrigger("Jump");
+            PlayJumpSound();
             _triggerJump = false;
         }
+    }
+
+    private void PlayJumpSound()
+    {
+        //Implement jump sound
     }
 
     private void CheckIfClimbing()

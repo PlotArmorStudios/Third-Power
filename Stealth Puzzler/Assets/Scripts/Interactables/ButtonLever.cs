@@ -47,12 +47,12 @@ public class ButtonLever : Obstacle
         if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
         GameManager.Instance.AddObstacleBoolean(_obstacleID, _isPressed);
 
-        PlayButtonPressSound();
+        PlayButtonPressDownSound();
     }
 
-    private void PlayButtonPressSound()
+    private void PlayButtonPressDownSound()
     {
-        //Implement button press sound here
+        //Implement button press down sound here
     }
 
     private void OnTriggerExit(Collider other)
@@ -64,5 +64,11 @@ public class ButtonLever : Obstacle
 
         if (cube || player)
             _animator.SetBool("Pressed", false);
+        PlayButtonPressUpSound();
+    }
+
+    private void PlayButtonPressUpSound()
+    {
+        //Implement button press up sound
     }
 }
