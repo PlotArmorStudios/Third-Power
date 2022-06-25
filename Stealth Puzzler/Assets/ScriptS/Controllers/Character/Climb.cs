@@ -67,24 +67,35 @@ public class Climb : MonoBehaviour
 
         if (_playerController.Horizontal != 0 || _playerController.Vertical != 0)
         {
-            RaycastHit hit;
-
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _climbMask))
-            {
-                _lastGrabPoint = hit;
-                Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
-                //_rigidbody.position = endPoint;
-            }
-
-            transform.forward = -_lastGrabPoint.normal;
-            //TODO when raycast no longer hit, position is 
-            Vector3 movePos = (transform.right * _playerController.Horizontal + transform.up * _playerController.Vertical).normalized;
-            Rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
+            RawClimb();
         }
         else
         {
             Rigidbody.velocity = Vector3.zero;
         }
+    }
+
+    private void RootMotionClimb()
+    {
+        
+    }
+    
+    private void RawClimb()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _climbMask))
+        {
+            _lastGrabPoint = hit;
+            Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
+            //_rigidbody.position = endPoint;
+        }
+
+        transform.forward = -_lastGrabPoint.normal;
+        //TODO when raycast no longer hit, position is 
+        Vector3 movePos = (transform.right * _playerController.Horizontal + transform.up * _playerController.Vertical)
+            .normalized;
+        Rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
     }
 
     private void WallJump()
