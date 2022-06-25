@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : Controller
 {
     [Header("Input")] [SerializeField] private InputActionReference _move;
-    [SerializeField] private InputActionReference _jump;
+    [FormerlySerializedAs("_jump")] public InputActionReference Jump;
     [SerializeField] private InputActionReference _look;
     [SerializeField] private InputActionReference _run;
 
     [Header("Movement")] [SerializeField] private float _maxMovementSpeed = 5f;
     [SerializeField] private float _jumpHeight = 10f;
     [SerializeField] private float _weight = 2f;
-
-    
 
     [SerializeField] private float _turnSmoothTime = 2f;
     [SerializeField] private float _turnSmoothVelocity = 2f;
@@ -30,14 +29,15 @@ public class PlayerController : Controller
     private Animator _animator;
 
     //Gravity
-    private GroundCheck _groundCheck { get; set; }
+    public GroundCheck GroundCheck { get; set; }
     public float FallTimer { get; set; }
 
     //Movement
     private Vector3 _movement;
     private Vector3 _heightMovement;
-    private float _horizontal;
-    private float _vertical;
+    public float Horizontal { get; set; }
+    public float Vertical { get; set; }
+    
     private float _currentMovementSpeed;
 
     //Running
@@ -51,21 +51,13 @@ public class PlayerController : Controller
     //Vulnerability
     public bool IsVulnerable { get; private set; }
     private float _vulnerableTime;
-    
-    //Wall Climbing
-    [SerializeField] private LayerMask _climbMask;
-    [SerializeField] private Transform[] _climbCheckPoints;
-    [SerializeField] private bool _isClimbing = false;
-    [SerializeField] [Range(200, 500)] private float _climbSpeed = 300;
-    [SerializeField] private float _stoppingDistance = 0.2f;
-    [SerializeField] private float _climbJumpForce = 300f;
-    private RaycastHit _lastGrabPoint;
-    private float _distanceToWall;
+
+    private Climb _climb;
 
     private void OnEnable()
     {
         _move.action.Enable();
-        _jump.action.Enable();
+        Jump.action.Enable();
         _look.action.Enable();
         _run.action.Enable();
 
@@ -75,7 +67,7 @@ public class PlayerController : Controller
 
     private void OnDisable()
     {
-        _jump.action.Disable();
+        Jump.action.Disable();
         _look.action.Disable();
         _run.action.Disable();
     }
@@ -84,7 +76,7 @@ public class PlayerController : Controller
     {
         Rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
-        _groundCheck = GetComponent<GroundCheck>();
+        GroundCheck = GetComponent<GroundCheck>();
     }
 
     void Update()
@@ -94,7 +86,7 @@ public class PlayerController : Controller
         ApplyMovementInputToAnimator();
         ToggleAirborneState();
         if (PlayerJumpedFromGround()) _triggerJump = true;
-        CheckIfClimbing();
+        _climb.CheckIfClimbing();
     }
 
     private void MakeVulnerable()
@@ -107,9 +99,9 @@ public class PlayerController : Controller
 
     private void FixedUpdate()
     {
-        if (_isClimbing)
+        if (_climb.IsClimbing)
         {
-            HandleWallClimbing();
+            _climb.HandleWallClimbing();
             return;
         }
 
@@ -121,13 +113,13 @@ public class PlayerController : Controller
 
     private void ReadInput()
     {
-        _horizontal = _move.action.ReadValue<Vector2>().x;
-        _vertical = _move.action.ReadValue<Vector2>().y;
+        Horizontal = _move.action.ReadValue<Vector2>().x;
+        Vertical = _move.action.ReadValue<Vector2>().y;
     }
 
     private void UpdateJump()
     {
-        if (_groundCheck.IsGrounded())
+        if (GroundCheck.IsGrounded())
             IsJumping = false;
         
         HandleLand();
@@ -135,7 +127,7 @@ public class PlayerController : Controller
 
     private void HandleLand()
     {
-        if (_groundCheck.IsGrounded() && FallTimer > 0)
+        if (GroundCheck.IsGrounded() && FallTimer > 0)
         {
             FallTimer = 0;
             _animator.SetBool("Airborne", false);
@@ -146,8 +138,8 @@ public class PlayerController : Controller
 
     private void ApplyMovementInputToAnimator()
     {
-        var input = Mathf.Max(Mathf.Abs(_horizontal),
-            Mathf.Abs(_vertical));
+        var input = Mathf.Max(Mathf.Abs(Horizontal),
+            Mathf.Abs(Vertical));
         _isRunning = _run.action.IsPressed();
 
         if (input > 0.1f)
@@ -177,18 +169,18 @@ public class PlayerController : Controller
 
     private void ToggleAirborneState()
     {
-        _animator.SetBool("Airborne", !_groundCheck.IsGrounded());
+        _animator.SetBool("Airborne", !GroundCheck.IsGrounded());
     }
     
     private bool PlayerJumpedFromGround()
     {
-        return _jump.action.triggered && _groundCheck.IsGrounded();
+        return Jump.action.triggered && GroundCheck.IsGrounded();
     }
 
-    private void RotateInDirectionOfMovement()
+    public void RotateInDirectionOfMovement()
     {
         //have player face the direction the camera is facing only if they are moving
-        _movement = new Vector3(_horizontal, 0, _vertical);
+        _movement = new Vector3(Horizontal, 0, Vertical);
         if (_movement.magnitude >= .3f)
         {
             _currentMovementSpeed += Time.deltaTime;
@@ -200,7 +192,7 @@ public class PlayerController : Controller
             //character only stops completely when grounded
             //set airborne false whenever grounded
 
-            if (_groundCheck.IsGrounded())
+            if (GroundCheck.IsGrounded())
                 Rigidbody.velocity = new Vector3(0f, Rigidbody.velocity.y, 0f);
 
             _currentMovementSpeed -= Time.deltaTime;
@@ -269,80 +261,9 @@ public class PlayerController : Controller
         }
     }
 
-    private void CheckIfClimbing()
-    {
-        //Using a big or instead of a for loop so that if one checksphere succeeds, it won't waste time trying the rest
-        _isClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask)
-                       || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask)
-                       || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
-        Rigidbody.useGravity = !_isClimbing;
-    }
-
-    private void HandleWallClimbing()
-    {
-        if (_jump.action.triggered)
-        {
-            Debug.Log("Yumped");
-            if (_vertical < 0)
-            {
-                transform.forward = -transform.forward;
-                WallJump();
-                return;
-            }
-            else if (_horizontal < 0)
-            {
-                transform.forward = -transform.right;
-                WallJump();
-                return;
-            }
-            else if (_horizontal > 0)
-            {
-                transform.forward = transform.right;
-                WallJump();
-                return;
-            }
-        }
-
-        if (_vertical < 0 && _groundCheck.IsGrounded())
-        {
-            RotateInDirectionOfMovement();
-            return;
-        }
-
-        IsFalling = false;
-        FallTimer = 0;
-
-        if (_horizontal != 0 || _vertical != 0)
-        {
-            RaycastHit hit;
-
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, _climbMask))
-            {
-                _lastGrabPoint = hit;
-                Vector3 endPoint = hit.point + -transform.forward.normalized * _stoppingDistance;
-                //_rigidbody.position = endPoint;
-            }
-
-            transform.forward = -_lastGrabPoint.normal;
-            //TODO when raycast no longer hit, position is 
-            Vector3 movePos = (transform.right * _horizontal + transform.up * _vertical).normalized;
-            Rigidbody.velocity = movePos * _climbSpeed * Time.fixedDeltaTime;
-        }
-        else
-        {
-            Rigidbody.velocity = Vector3.zero;
-        }
-    }
-
-    private void WallJump()
-    {
-        transform.position += transform.forward / 10;
-        Rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
-    }
-
     private void ApplyGravity()
     {
-        if (!_groundCheck.IsGrounded() && !_isClimbing)
+        if (!GroundCheck.IsGrounded() && !_climb.IsClimbing)
         {
             FallTimer += Time.deltaTime;
             var downForce = _weight * FallTimer * FallTimer;
