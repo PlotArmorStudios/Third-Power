@@ -22,6 +22,7 @@ namespace Helpers
         [SerializeField] private GameObject[] _objectsToDisable;
         
         private bool _isSceneLoading = false;
+        private float _loadWaitTime = 1f; //loading screen will wait this long when scene has loaded before showing it
 
         public static SceneLoader Instance;
 
@@ -83,7 +84,8 @@ namespace Helpers
         private IEnumerator AsyncLoad(string scene)
         {
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
-            
+            asyncLoad.allowSceneActivation = false;
+
             try {
                 ControllerManager[] playerControllers = FindObjectsOfType<ControllerManager>();
                 foreach (ControllerManager controller in playerControllers)
@@ -95,12 +97,16 @@ namespace Helpers
 
             _loadScreenCanvas.gameObject.SetActive(true);
 
-            while (!asyncLoad.isDone)
+            while (asyncLoad.progress < 0.9f)
             {
                 Debug.Log("Progress: " + asyncLoad.progress + " | Bar: " + _loadingBar.fillAmount);
-                _loadingBar.fillAmount = asyncLoad.progress + 0.05f;
+                _loadingBar.fillAmount = asyncLoad.progress + 0.01f;
                 yield return null;
             }
+
+            yield return new WaitForSeconds(_loadWaitTime);
+            _loadingBar.fillAmount = 1;
+            asyncLoad.allowSceneActivation = true;
         }
     }
 }
