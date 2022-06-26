@@ -17,10 +17,13 @@ public class PlayableBinder : MonoBehaviour
         timeline = _playableDirector.playableAsset as TimelineAsset;
         var controllerTrack = timeline.GetOutputTrack(0);
         var camTrack = timeline.GetOutputTrack(2);
+
+        yield return new WaitForSeconds(1f);
         
         foreach (var output in _playableDirector.playableAsset.outputs)
         {
-            Debug.Log(output.sourceObject.GetType() );
+            Debug.Log("Output type: " + output.sourceObject.GetType() );
+            
             if (output.streamName == "Cinemachine Track" )
             {
                 _playableDirector.SetGenericBinding(output.sourceObject, Camera.main.GetComponent<CinemachineBrain>() );
@@ -29,6 +32,8 @@ public class PlayableBinder : MonoBehaviour
                 foreach( var clip in cinemachineTrack.GetClips() ){
  
                     var cinemachineShot = clip.asset as CinemachineShot;
+                    
+                    Debug.Log("Cam to assign to track: " + RigVCamReference.Instance.VCam);
                     _playableDirector.SetReferenceValue(cinemachineShot.VirtualCamera.exposedName, RigVCamReference.Instance.VCam);
  
                 }
