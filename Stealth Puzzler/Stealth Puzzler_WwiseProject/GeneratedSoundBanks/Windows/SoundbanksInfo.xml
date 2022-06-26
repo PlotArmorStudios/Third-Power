@@ -19,7 +19,7 @@
 				<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Dungeon_01"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="3910099714">
+		<SoundBank Id="4072029455" Language="SFX" Hash="148228040">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -164,23 +164,71 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.238872" DurationMax="0.30096">
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.238872" DurationMax="0.529732">
 					<IncludedMemoryFiles>
+						<File Id="77153870" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_11.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_11_10C4C929.wem</Path>
+						</File>
 						<File Id="89521839" Language="SFX">
 							<ShortName>FS_Asphalt_01.wav</ShortName>
 							<Path>SFX\FS_Asphalt_01_10C4C929.wem</Path>
+						</File>
+						<File Id="265513247" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_04.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_04_10C4C929.wem</Path>
 						</File>
 						<File Id="266083498" Language="SFX">
 							<ShortName>FS_Asphalt_05.wav</ShortName>
 							<Path>SFX\FS_Asphalt_05_10C4C929.wem</Path>
 						</File>
+						<File Id="350975809" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_07.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_07_10C4C929.wem</Path>
+						</File>
+						<File Id="352251700" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_10.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_10_10C4C929.wem</Path>
+						</File>
 						<File Id="489123100" Language="SFX">
 							<ShortName>FS_Asphalt_03.wav</ShortName>
 							<Path>SFX\FS_Asphalt_03_10C4C929.wem</Path>
 						</File>
+						<File Id="551190759" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_09.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_09_10C4C929.wem</Path>
+						</File>
+						<File Id="636819685" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_05.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_05_10C4C929.wem</Path>
+						</File>
+						<File Id="763489660" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_08.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_08_10C4C929.wem</Path>
+						</File>
 						<File Id="833342183" Language="SFX">
 							<ShortName>FS_Asphalt_04.wav</ShortName>
 							<Path>SFX\FS_Asphalt_04_10C4C929.wem</Path>
+						</File>
+						<File Id="948898698" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_02.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_02_10C4C929.wem</Path>
+						</File>
+						<File Id="985033293" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_03.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_03_10C4C929.wem</Path>
+						</File>
+						<File Id="993682168" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_01.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_01_10C4C929.wem</Path>
+						</File>
+						<File Id="997402142" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_06.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_06_10C4C929.wem</Path>
+						</File>
+						<File Id="1023747984" Language="SFX">
+							<ShortName>Player_Footsteps_Metal_12.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Metal_12_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{02E275B7-15CD-4327-8B5A-9895E68E8ED9}</DefaultSwitchValue>
@@ -199,6 +247,22 @@
 								<File Id="266083498"/>
 								<File Id="489123100"/>
 								<File Id="833342183"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{FE5C42EE-6168-4482-BB8D-6C8784C7FB7F}">
+							<Media>
+								<File Id="77153870"/>
+								<File Id="265513247"/>
+								<File Id="350975809"/>
+								<File Id="352251700"/>
+								<File Id="551190759"/>
+								<File Id="636819685"/>
+								<File Id="763489660"/>
+								<File Id="948898698"/>
+								<File Id="985033293"/>
+								<File Id="993682168"/>
+								<File Id="997402142"/>
+								<File Id="1023747984"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -245,6 +309,7 @@
 					<Switches>
 						<Switch Id="3725073853" Name="Cement" ObjectPath="\Switches\Default Work Unit\Material\Cement" GUID="{02E275B7-15CD-4327-8B5A-9895E68E8ED9}"/>
 						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Material\Wood" GUID="{C75CFBD6-319A-4983-85A4-740332E0D106}"/>
+						<Switch Id="2473969246" Name="Metal" ObjectPath="\Switches\Default Work Unit\Material\Metal" GUID="{FE5C42EE-6168-4482-BB8D-6C8784C7FB7F}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>

@@ -15,19 +15,21 @@ public class TerrainCheckV2 : MonoBehaviour
         Ray leftFootRay = new Ray(_leftFoot.position, Vector3.down);
         Ray rightFootRay = new Ray(_rightFoot.position, Vector3.down);
         RaycastHit hit;
-        Debug.DrawRay(_leftFoot.position, Vector3.down * _maxRayDistance);
-        Debug.DrawRay(_rightFoot.position, Vector3.down * _maxRayDistance);
+        //Debug.DrawRay(_leftFoot.position, Vector3.down * _maxRayDistance);
+        //Debug.DrawRay(_rightFoot.position, Vector3.down * _maxRayDistance);
 
         if (Physics.Raycast(leftFootRay, out hit, _maxRayDistance))
         {
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Cement"))
             {
               AkSoundEngine.SetSwitch("Material", "Cement", gameObject);
+              Debug.Log("Cement");
             }
 
-            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wood"))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Metal"))
             {
-                AkSoundEngine.SetSwitch("Material", "Wood", gameObject);
+                AkSoundEngine.SetSwitch("Material", "Metal", gameObject);
+                Debug.Log("Metal");
             }
         }
 
@@ -38,9 +40,9 @@ public class TerrainCheckV2 : MonoBehaviour
                 AkSoundEngine.SetSwitch("Material", "Cement", gameObject);
             }
 
-            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wood"))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Metal"))
             {
-                AkSoundEngine.SetSwitch("Material", "Wood", gameObject);
+                AkSoundEngine.SetSwitch("Material", "Metal", gameObject);
             }
         }
     }

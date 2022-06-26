@@ -35,6 +35,7 @@ namespace AK
             namespace SWITCH
             {
                 static const AkUniqueID CEMENT = 3725073853U;
+                static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
         } // namespace MATERIAL
