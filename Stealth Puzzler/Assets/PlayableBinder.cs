@@ -15,15 +15,12 @@ public class PlayableBinder : MonoBehaviour
         _playableDirector = GetComponent<PlayableDirector>();
         timeline = _playableDirector.playableAsset as TimelineAsset;
         var controllerTrack = timeline.GetOutputTrack(0);
-        var camTrack = timeline.GetOutputTrack(2);
-        
+
         yield return new WaitForSeconds(.5f);
 
         Debug.Log("Tracks assigned");
         var controllerManger = FindObjectOfType<ControllerManager>();
-        var bindingCam = Camera.main;
         _playableDirector.SetGenericBinding(controllerTrack, controllerManger);
-        _playableDirector.SetGenericBinding(camTrack, bindingCam);
 
     }
 }
