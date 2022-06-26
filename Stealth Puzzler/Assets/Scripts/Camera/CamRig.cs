@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class RigVCamReference : MonoBehaviour
+public class CamRig : MonoBehaviour
 {
-    public static RigVCamReference Instance;
+    public static CamRig Instance;
     public CinemachineFreeLook VCam;
 
     private void OnEnable()

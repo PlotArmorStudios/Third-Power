@@ -9,9 +9,4 @@ public class PlayerSpawner : MonoBehaviour
         _defaultSpawnPoint = transform;
         GameManager.Instance.SpawnPlayer(_defaultSpawnPoint);
     }
-
-    public void SpawnDefault()
-    {
-//        Instantiate(Game)
-    }
 }

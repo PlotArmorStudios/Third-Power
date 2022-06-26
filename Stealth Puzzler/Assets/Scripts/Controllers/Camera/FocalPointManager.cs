@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class SwitchFocalPoints : MonoBehaviour
+public class FocalPointManager : MonoBehaviour
 {
     [SerializeField] private List<Transform> _focalPoints;
 
@@ -18,9 +18,9 @@ public class SwitchFocalPoints : MonoBehaviour
         _vCam = GetComponent<CinemachineFreeLook>();
     }
 
-    private void Start()
+    public void InitializeFocalPoints(ControllerManager controllerManager)
     {
-        _focalPoints = FindObjectOfType<ControllerManager>().FocalPoints;
+        _focalPoints = controllerManager.FocalPoints;
         _vCam.Follow = _focalPoints[0];
         _vCam.LookAt = _focalPoints[0];
     }
