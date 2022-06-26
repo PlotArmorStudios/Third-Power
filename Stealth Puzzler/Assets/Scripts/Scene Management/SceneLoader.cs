@@ -103,9 +103,9 @@ namespace Helpers
                 _loadingBar.fillAmount = asyncLoad.progress + 0.01f;
                 yield return null;
             }
-
-            yield return new WaitForSeconds(_loadWaitTime);
             _loadingBar.fillAmount = 1;
+            yield return new WaitForSeconds(_loadWaitTime);
+            
             asyncLoad.allowSceneActivation = true;
         }
     }
