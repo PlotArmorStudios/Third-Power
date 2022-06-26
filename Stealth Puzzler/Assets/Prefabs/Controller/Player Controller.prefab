@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790840373}
   m_Layer: 7
-  m_Name: CimbGrabPoint
+  m_Name: CimbGrabPoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213422960}
   m_Layer: 7
-  m_Name: CimbGrabPoint (1)
+  m_Name: CimbGrabPoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418657993}
   m_Layer: 7
-  m_Name: CimbGrabPoint (2)
+  m_Name: CimbGrabPoint 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,6 +674,7 @@ GameObject:
   - component: {fileID: 8989654826882561585}
   - component: {fileID: 282154619}
   - component: {fileID: 610357102}
+  - component: {fileID: 1748067480}
   m_Layer: 7
   m_Name: Player Controller
   m_TagString: Untagged
@@ -751,7 +752,7 @@ MonoBehaviour:
   Cam: {fileID: 0}
   CamTransform: {fileID: 0}
   _move: {fileID: 8569720206534178987, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
-  _jump: {fileID: -816710980706335620, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
+  Jump: {fileID: -816710980706335620, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _look: {fileID: -9193725717127629328, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _run: {fileID: -6078045319058410995, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _maxMovementSpeed: 5
@@ -761,17 +762,6 @@ MonoBehaviour:
   _turnSmoothVelocity: 2
   CubeCalibratorTransform: {fileID: 7789406006338413189}
   <IsFalling>k__BackingField: 0
-  _climbMask:
-    serializedVersion: 2
-    m_Bits: 8192
-  _climbCheckPoints:
-  - {fileID: 790840373}
-  - {fileID: 1213422960}
-  - {fileID: 1418657993}
-  _isClimbing: 0
-  _climbSpeed: 250
-  _stoppingDistance: 0.2
-  _climbJumpForce: 300
 --- !u!114 &7789406006588094449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,6 +853,29 @@ MonoBehaviour:
   _lowDangerIcon: {fileID: 1542608273}
   _medDangerIcon: {fileID: 248410742}
   _highDangerIcon: {fileID: 1896561885}
+--- !u!114 &1748067480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789406006588094453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5db148f4434241854dfedbdbe723dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _climbMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  _climbCheckPoints:
+  - {fileID: 790840373}
+  - {fileID: 1213422960}
+  - {fileID: 1418657993}
+  IsClimbing: 0
+  _climbSpeed: 300
+  _stoppingDistance: 0.2
+  _climbJumpForce: 300
 --- !u!1 &7789406006700636454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1238,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1427a566692ef742bf3fab9bf7ecf32, type: 3}
+--- !u!1 &1215717147819223260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3103464417331886315, guid: e1427a566692ef742bf3fab9bf7ecf32,
+    type: 3}
+  m_PrefabInstance: {fileID: 4309558089628782647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1765122907
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215717147819223260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.06
+  m_Height: 0.34
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.13, z: -0.03}
 --- !u!4 &1534182971978386801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3351843016779603270, guid: e1427a566692ef742bf3fab9bf7ecf32,
@@ -1276,6 +1309,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d257b13f3c5d9ff4a9757eda4b39716e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4843527433467623319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8717010331568596896, guid: e1427a566692ef742bf3fab9bf7ecf32,
+    type: 3}
+  m_PrefabInstance: {fileID: 4309558089628782647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &387573651
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4843527433467623319}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1916393897364856708, guid: 07c0880cd88364142a4f36702b0e30df, type: 3}
 --- !u!1 &5358459492756107531 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8184081465939599676, guid: e1427a566692ef742bf3fab9bf7ecf32,
@@ -1291,10 +1344,10 @@ Cloth:
   m_GameObject: {fileID: 5358459492756107531}
   m_Enabled: 1
   m_StretchingStiffness: 1
-  m_BendingStiffness: 0
+  m_BendingStiffness: 1
   m_UseTethers: 1
   m_UseGravity: 1
-  m_Damping: 0
+  m_Damping: 0.2
   m_ExternalAcceleration: {x: 0, y: 0, z: 0}
   m_RandomAcceleration: {x: 0, y: 0, z: 0}
   m_WorldVelocityScale: 0.5
@@ -2418,16 +2471,59 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  m_CapsuleColliders: []
+  m_CapsuleColliders:
+  - {fileID: 1093404154}
+  - {fileID: 1765122907}
+  - {fileID: 1664144504}
   m_SphereColliders: []
-  m_SelfCollisionDistance: 0
-  m_SelfCollisionStiffness: 0.2
+  m_SelfCollisionDistance: 0.01
+  m_SelfCollisionStiffness: 1
   m_SelfAndInterCollisionIndices: 
   m_VirtualParticleWeights:
   - {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
   - {x: 0.5, y: 0.5, z: 0}
   m_VirtualParticleIndices: 
+--- !u!1 &7538817300459953945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6003828661604585262, guid: e1427a566692ef742bf3fab9bf7ecf32,
+    type: 3}
+  m_PrefabInstance: {fileID: 4309558089628782647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1093404154
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538817300459953945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.06
+  m_Height: 0.34
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.13, z: -0.03}
+--- !u!1 &8064815945227568797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6063352943968392874, guid: e1427a566692ef742bf3fab9bf7ecf32,
+    type: 3}
+  m_PrefabInstance: {fileID: 4309558089628782647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1664144504
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8064815945227568797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13
+  m_Height: 0.55
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.03}
 --- !u!1001 &8537779923056417872
 PrefabInstance:
   m_ObjectHideFlags: 0
