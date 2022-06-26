@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -16,6 +17,23 @@ public class PlayableBinder : MonoBehaviour
         timeline = _playableDirector.playableAsset as TimelineAsset;
         var controllerTrack = timeline.GetOutputTrack(0);
         var camTrack = timeline.GetOutputTrack(2);
+        
+        foreach (var output in _playableDirector.playableAsset.outputs)
+        {
+            Debug.Log(output.sourceObject.GetType() );
+            if (output.streamName == "Cinemachine Track" )
+            {
+                _playableDirector.SetGenericBinding(output.sourceObject, Camera.main.GetComponent<CinemachineBrain>() );
+           
+                var cinemachineTrack = output.sourceObject as CinemachineTrack;
+                foreach( var clip in cinemachineTrack.GetClips() ){
+ 
+                    var cinemachineShot = clip.asset as CinemachineShot;
+                    _playableDirector.SetReferenceValue(cinemachineShot.VirtualCamera.exposedName, RigVCamReference.Instance.VCam);
+ 
+                }
+            }
+        }
         
         yield return new WaitForSeconds(.5f);
 

@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Cinemachine;
+using UnityEngine;
+
+public class RigVCamReference : MonoBehaviour
+{
+    public static RigVCamReference Instance;
+    public CinemachineFreeLook VCam;
+
+    private void OnEnable()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+}
