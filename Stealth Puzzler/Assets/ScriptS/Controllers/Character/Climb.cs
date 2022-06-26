@@ -14,11 +14,13 @@ public class Climb : MonoBehaviour
 
     private Rigidbody Rigidbody;
     private PlayerController _playerController;
+    private Animator _animator;
 
     private void Start()
     {
         _playerController = GetComponent<PlayerController>();
         Rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
 
     public void CheckIfClimbing()
@@ -65,9 +67,11 @@ public class Climb : MonoBehaviour
         _playerController.IsFalling = false;
         _playerController.FallTimer = 0;
 
+        RootMotionClimb(_playerController.Horizontal, _playerController.Vertical);
+        
         if (_playerController.Horizontal != 0 || _playerController.Vertical != 0)
         {
-            RawClimb();
+            //RawClimb();
         }
         else
         {
@@ -75,9 +79,10 @@ public class Climb : MonoBehaviour
         }
     }
 
-    private void RootMotionClimb()
+    private void RootMotionClimb(float horizontal, float vertical)
     {
-        
+        _animator.SetFloat("Climb X", horizontal);
+        _animator.SetFloat("Climb Y", vertical);
     }
     
     private void RawClimb()
