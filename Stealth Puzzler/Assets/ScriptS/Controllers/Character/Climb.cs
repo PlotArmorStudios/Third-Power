@@ -29,6 +29,7 @@ public class Climb : MonoBehaviour
         IsClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask)
                       || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask)
                       || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
+        
         Rigidbody.useGravity = !IsClimbing;
     }
     
