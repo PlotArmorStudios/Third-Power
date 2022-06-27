@@ -56,20 +56,13 @@ public class PlayerController : Controller
 
     private void OnEnable()
     {
-        _move.action.Enable();
-        Jump.action.Enable();
-        _look.action.Enable();
-        _run.action.Enable();
-
         IsVulnerable = false;
         _vulnerableTime = 0;
     }
 
     private void OnDisable()
     {
-        Jump.action.Disable();
-        _look.action.Disable();
-        _run.action.Disable();
+
     }
 
     void Start()
