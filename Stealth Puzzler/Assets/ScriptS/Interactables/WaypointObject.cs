@@ -2,13 +2,24 @@ using UnityEngine;
 
 public class WaypointObject : MonoBehaviour
 {
+    public enum Mode
+    {
+        Loop,
+        PingPong,
+        Once
+    }
+
     [SerializeField] private WayPoints _wayPoints;
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _delayAtPoints = 0;
     
     [SerializeField] private float _distanceThreshold = .1f;
     private Transform _currentWayPoint;
+    private bool waiting;
 
     public bool IsActive;
+    [SerializeField] private Mode mode;
+
     private void Start()
     {
         _currentWayPoint = _wayPoints.GetNextWayPoint(_currentWayPoint);
@@ -19,12 +30,17 @@ public class WaypointObject : MonoBehaviour
 
     private void Update()
     {
-        if (!IsActive) return;
+        if (!IsActive || waiting) return;
         
         transform.position = Vector3.MoveTowards(transform.position, _currentWayPoint.position, _moveSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, _currentWayPoint.position) < _distanceThreshold)
         {
-            _currentWayPoint = _wayPoints.GetNextWayPoint(_currentWayPoint);
+            _currentWayPoint = _wayPoints.GetNextWayPoint(_currentWayPoint, mode);
+            if (_delayAtPoints > 0)
+            {
+                waiting = true;
+                Invoke("DoneWaiting", _delayAtPoints);
+            }
         }
     }
     
@@ -38,4 +54,8 @@ public class WaypointObject : MonoBehaviour
         IsActive = false;
     }
 
+    private void DoneWaiting()
+    {
+        waiting = false;
+    }
 }
