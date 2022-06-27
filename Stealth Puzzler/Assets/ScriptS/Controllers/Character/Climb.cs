@@ -37,7 +37,9 @@ public class Climb : MonoBehaviour
             if (_climbTime == 0)
             {
                 Debug.Log("Set Climb anim");
-                _animator.SetTrigger("Climb");
+                _animator.ResetTrigger("Set Climb");
+                _animator.ResetTrigger("Unset Climb");
+                _animator.SetTrigger("Set Climb");
             }
 
             _climbTime += Time.deltaTime;
@@ -47,7 +49,10 @@ public class Climb : MonoBehaviour
         {
             if (_climbTime > 0)
             {
-                
+                Debug.Log("Unset climb anim");
+                _animator.ResetTrigger("Set Climb");
+                _animator.ResetTrigger("Unset Climb");
+                _animator.SetTrigger("Unset Climb");
             }
 
             _climbTime = 0;
