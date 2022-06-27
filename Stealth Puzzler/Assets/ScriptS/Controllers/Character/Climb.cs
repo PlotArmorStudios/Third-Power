@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Climb : MonoBehaviour
@@ -14,11 +15,14 @@ public class Climb : MonoBehaviour
 
     private Rigidbody Rigidbody;
     private PlayerController _playerController;
+    private Animator _animator;
+    private float _climbTime;
 
     private void Start()
     {
         _playerController = GetComponent<PlayerController>();
         Rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
 
     public void CheckIfClimbing()
@@ -27,7 +31,44 @@ public class Climb : MonoBehaviour
         IsClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask)
                       || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask)
                       || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
+
+        if (IsClimbing)
+        {
+            if (_climbTime == 0)
+            {
+                Debug.Log("Set Climb anim");
+                _animator.ResetTrigger("Set Climb");
+                _animator.ResetTrigger("Unset Climb");
+                _animator.SetTrigger("Set Climb");
+            }
+
+            _climbTime += Time.deltaTime;
+        }
+
+        if (!IsClimbing)
+        {
+            if (_climbTime > 0)
+            {
+                Debug.Log("Unset climb anim");
+                _animator.ResetTrigger("Set Climb");
+                _animator.ResetTrigger("Unset Climb");
+                _animator.SetTrigger("Unset Climb");
+            }
+
+            _climbTime = 0;
+        }
+
         Rigidbody.useGravity = !IsClimbing;
+    }
+
+    public void ToggleOnClimbState()
+    {
+        _animator.SetTrigger("Climb");
+    }
+
+    public void ToggleOffClimbState()
+    {
+        _animator.SetTrigger("Stop Climb");
     }
     
     public void HandleWallClimbing()
@@ -65,9 +106,11 @@ public class Climb : MonoBehaviour
         _playerController.IsFalling = false;
         _playerController.FallTimer = 0;
 
+        RootMotionClimb(_playerController.Horizontal, _playerController.Vertical);
+        
         if (_playerController.Horizontal != 0 || _playerController.Vertical != 0)
         {
-            RawClimb();
+            //RawClimb();
         }
         else
         {
@@ -75,9 +118,10 @@ public class Climb : MonoBehaviour
         }
     }
 
-    private void RootMotionClimb()
+    private void RootMotionClimb(float horizontal, float vertical)
     {
-        
+        _animator.SetFloat("Climb X", horizontal);
+        _animator.SetFloat("Climb Y", vertical);
     }
     
     private void RawClimb()
