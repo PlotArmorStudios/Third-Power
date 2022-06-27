@@ -100,6 +100,257 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="WaterDroplets" ID="{2A3A99B7-2848-44B5-A33E-B2067DE636A9}" ShortID="606208685">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="5 m" ID="{02DCF2BB-E04B-4300-8E39-04BB75428E9B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb_Dungeon_01" ID="{4CF06FD7-9EBE-45F7-9A1A-418C6ED275E1}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Waterdrop_01" ID="{A1C23565-7438-4983-91EF-5AB305F7840D}" ShortID="977254400">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Waterdrop_01" ID="{91795B1F-8C20-4558-8C60-D27C977D3322}">
+									<Language>SFX</Language>
+									<AudioFile>Waterdrop_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="50648789"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Waterdrop_01" ID="{91795B1F-8C20-4558-8C60-D27C977D3322}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Waterdrop_02" ID="{9B76FA8C-8F70-4CA2-B0E0-1FDEEA42B7DE}" ShortID="677052526">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Waterdrop_02" ID="{7293C7EC-6BD6-4B9E-94F5-1C100733C0B0}">
+									<Language>SFX</Language>
+									<AudioFile>Waterdrop_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1026445588"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Waterdrop_02" ID="{7293C7EC-6BD6-4B9E-94F5-1C100733C0B0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Waterdrop_03" ID="{E8E0E7AD-6356-4222-B5A1-D973D0CE39AB}" ShortID="880271750">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Waterdrop_03" ID="{1B43DEDE-A9E3-41A6-A129-790186A8D48F}">
+									<Language>SFX</Language>
+									<AudioFile>Waterdrop_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="886490584"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Waterdrop_03" ID="{1B43DEDE-A9E3-41A6-A129-790186A8D48F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Waterdrop_04" ID="{D5D5B697-6328-4DFB-A0FE-452FEFB51323}" ShortID="329579513">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Waterdrop_04" ID="{1DE3FA88-0099-41BF-83E4-002D31439887}">
+									<Language>SFX</Language>
+									<AudioFile>Waterdrop_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="360760542"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Waterdrop_04" ID="{1DE3FA88-0099-41BF-83E4-002D31439887}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Waterdrop_05" ID="{AA17FDDA-1EA1-456E-B5CC-F58AF7A7FF4C}" ShortID="4756998">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Waterdrop_05" ID="{8275B65E-FBCA-486D-B67E-543AF5D2890F}">
+									<Language>SFX</Language>
+									<AudioFile>Waterdrop_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="136446839"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Waterdrop_05" ID="{8275B65E-FBCA-486D-B67E-543AF5D2890F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<ActorMixer Name="Cannon_Idle" ID="{0E22007F-C6D5-4689-909E-91CD6DA1A87C}" ShortID="833694023">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="5 m" ID="{02DCF2BB-E04B-4300-8E39-04BB75428E9B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Cannon_Idle_Steam" ID="{26B5E393-B37F-4713-A29E-A24B0A97095E}" ShortID="571006016">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="3m" ID="{20477950-B563-4963-831C-094BA1DD9C4F}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cannon_Idle_Steam_01" ID="{29CC8020-F482-45F9-A1D9-662378165692}" ShortID="97553185">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cannon_Idle_Steam_01" ID="{45DF9595-6501-4BFA-80DE-E23E4FF27CDE}">
+											<Language>SFX</Language>
+											<AudioFile>Cannon_Idle_Steam_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="807781783"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cannon_Idle_Steam_01" ID="{45DF9595-6501-4BFA-80DE-E23E4FF27CDE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Cannon_Idle_Steam_02" ID="{73BD8F46-542D-463C-B0A2-DE4372842B4E}" ShortID="982635129">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cannon_Idle_Steam_02" ID="{AEE77AAE-0D2A-4732-B8CE-1E5E9202CE0D}">
+											<Language>SFX</Language>
+											<AudioFile>Cannon_Idle_Steam_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="959657543"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cannon_Idle_Steam_02" ID="{AEE77AAE-0D2A-4732-B8CE-1E5E9202CE0D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Cannon_Idle_Steam_03" ID="{90283296-BC74-44AB-9C35-54EE9880236B}" ShortID="775289243">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cannon_Idle_Steam_03" ID="{F19D6162-6CB9-4D29-8E5B-16230A82595E}">
+											<Language>SFX</Language>
+											<AudioFile>Cannon_Idle_Steam_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="976971680"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cannon_Idle_Steam_03" ID="{F19D6162-6CB9-4D29-8E5B-16230A82595E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

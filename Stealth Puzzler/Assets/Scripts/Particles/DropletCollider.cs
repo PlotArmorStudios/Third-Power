@@ -8,5 +8,7 @@ public class DropletCollider : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         Debug.Log("collide");
+        AkSoundEngine.PostEvent("Play_WaterDroplets", gameObject);
+
     }
 }

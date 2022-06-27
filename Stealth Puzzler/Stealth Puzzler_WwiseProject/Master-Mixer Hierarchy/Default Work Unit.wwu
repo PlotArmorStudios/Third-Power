@@ -9,6 +9,24 @@
 							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="Reverb_Dungeon_01" ID="{4CF06FD7-9EBE-45F7-9A1A-418C6ED275E1}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Hall_Large_Dark" ID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists/>
+						</AuxBus>
+					</ChildrenList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="sfxAmbient" ID="{EE8B7AFE-889F-40E5-904D-C4D825D060DC}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
+						</Reference>
+					</ReferenceList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

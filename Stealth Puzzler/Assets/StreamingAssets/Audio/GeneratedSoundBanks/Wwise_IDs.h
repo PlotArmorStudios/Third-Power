@@ -15,12 +15,14 @@ namespace AK
     {
         static const AkUniqueID PLAY_ARROW_IN_AIR = 3919960416U;
         static const AkUniqueID PLAY_CANNON = 712207333U;
+        static const AkUniqueID PLAY_CANNON_IDLE_STEAM = 112147695U;
         static const AkUniqueID PLAY_CHARACTER_CUBE_TRANSFORM = 1769817372U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_DUNGEON_1 = 1533459680U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
+        static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
     } // namespace EVENTS
 
@@ -48,7 +50,13 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SFXAMBIENT = 3850048146U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB_DUNGEON_01 = 2580481396U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
