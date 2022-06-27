@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Climb : MonoBehaviour
@@ -15,6 +16,7 @@ public class Climb : MonoBehaviour
     private Rigidbody Rigidbody;
     private PlayerController _playerController;
     private Animator _animator;
+    private float _climbTime;
 
     private void Start()
     {
@@ -29,8 +31,39 @@ public class Climb : MonoBehaviour
         IsClimbing = (Physics.CheckSphere(_climbCheckPoints[0].position, _stoppingDistance, _climbMask)
                       || Physics.CheckSphere(_climbCheckPoints[1].position, _stoppingDistance, _climbMask)
                       || Physics.CheckSphere(_climbCheckPoints[2].position, _stoppingDistance, _climbMask));
-        
+
+        if (IsClimbing)
+        {
+            if (_climbTime == 0)
+            {
+                Debug.Log("Set Climb anim");
+                _animator.SetTrigger("Climb");
+            }
+
+            _climbTime += Time.deltaTime;
+        }
+
+        if (!IsClimbing)
+        {
+            if (_climbTime > 0)
+            {
+                
+            }
+
+            _climbTime = 0;
+        }
+
         Rigidbody.useGravity = !IsClimbing;
+    }
+
+    public void ToggleOnClimbState()
+    {
+        _animator.SetTrigger("Climb");
+    }
+
+    public void ToggleOffClimbState()
+    {
+        _animator.SetTrigger("Stop Climb");
     }
     
     public void HandleWallClimbing()
