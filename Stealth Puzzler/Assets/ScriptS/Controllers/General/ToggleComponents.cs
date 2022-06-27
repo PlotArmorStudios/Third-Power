@@ -20,7 +20,7 @@ public class ToggleComponents : MonoBehaviour
         var behaviours = GetComponents<Behaviour>();
         foreach (var behaviour in behaviours)
         {
-            if (behaviour != this)
+            if (behaviour != this && !(behaviour is Animator))
                 behaviour.enabled = false;
         }
     }
