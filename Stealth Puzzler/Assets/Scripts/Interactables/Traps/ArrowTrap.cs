@@ -8,15 +8,21 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private GameObject _arrow;
     [SerializeField] private Transform _spawnPoint;
     
+    [Tooltip("The delay between shots")]
     public float SpawnDelay;
-    
+    [Tooltip("The delay between the start of the level and the first shot")]
+    public float InitialDelay = 0;
     public bool IsActive;
     
     private float _currentSpawnTime;
 
     private void Start()
     {
-        
+        if (InitialDelay > 0)
+        {
+            IsActive = false;
+            Invoke("Activate", InitialDelay);
+        }
     }
 
     private void Update()

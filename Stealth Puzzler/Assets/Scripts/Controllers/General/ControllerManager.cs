@@ -19,7 +19,8 @@ public class ControllerManager : MonoBehaviour
 
     private ActiveController _activeController = ActiveController.Player;
     public bool PlayerIsActive { get; set; }
-    
+    public bool SwitchingBlocked = false;
+
     private void Awake()
     {
         Instance = this;
@@ -68,36 +69,54 @@ public class ControllerManager : MonoBehaviour
 
     public void SwitchControllers()
     {
+        if (SwitchingBlocked)
+        {
+            return;
+        }
         var currentControllerPosition = Vector3.zero;
 
         switch (_activeController)
         {
             case ActiveController.Player:
-                _cubeController.transform.position = _playerController.CubeCalibratorTransform.position;
-                _playerController.gameObject.SetActive(false);
-                _cubeController.gameObject.SetActive(true);
-                OnSwitchFocalPoints?.Invoke(2);
-                currentControllerPosition = _cubeController.Rigidbody.transform.position;
-                _activeController = ActiveController.Cube;
+                currentControllerPosition = ForceCube();
                 break;
             case ActiveController.Cube:
-                var distance = Vector3.Distance(_playerController.transform.position,
-                    _playerController.CubeCalibratorTransform.position);
-
-                _playerController.transform.position = _cubeController.transform.position +
-                                                       (Vector3.up * distance);
-
-                _playerController.gameObject.SetActive(true);
-                _cubeController.gameObject.SetActive(false);
-                currentControllerPosition = _playerController.Rigidbody.transform.position;
-                OnSwitchFocalPoints?.Invoke(1);
-                _activeController = ActiveController.Player;
+                currentControllerPosition = ForceHuman();
                 break;
         }
 
         _poofEffect.transform.position = currentControllerPosition;
         _poofEffect.gameObject.SetActive(true);
         _poofEffect.Play();
+    }
+
+    public Vector3 ForceHuman()
+    {
+        Vector3 currentControllerPosition;
+        var distance = Vector3.Distance(_playerController.transform.position,
+_playerController.CubeCalibratorTransform.position);
+
+        _playerController.transform.position = _cubeController.transform.position +
+                                               (Vector3.up * distance);
+
+        _playerController.gameObject.SetActive(true);
+        _cubeController.gameObject.SetActive(false);
+        currentControllerPosition = _playerController.Rigidbody.transform.position;
+        OnSwitchFocalPoints?.Invoke(1);
+        _activeController = ActiveController.Player;
+        return currentControllerPosition;
+    }
+
+    public Vector3 ForceCube()
+    {
+        Vector3 currentControllerPosition;
+        _cubeController.transform.position = _playerController.CubeCalibratorTransform.position;
+        _playerController.gameObject.SetActive(false);
+        _cubeController.gameObject.SetActive(true);
+        OnSwitchFocalPoints?.Invoke(2);
+        currentControllerPosition = _cubeController.Rigidbody.transform.position;
+        _activeController = ActiveController.Cube;
+        return currentControllerPosition;
     }
 
     public void DeactivateControllers()

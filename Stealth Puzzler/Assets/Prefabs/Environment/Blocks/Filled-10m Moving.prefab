@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4640579865371946000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5156836491750041942, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_Name
+      value: Filled-10m
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056396835988768285, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff06db5692fe66744bbf5c1c70a8b8e2, type: 3}
+--- !u!1 &573757858195916102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5156836491750041942, guid: ff06db5692fe66744bbf5c1c70a8b8e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4640579865371946000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1443699954125508472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573757858195916102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2, z: 5}
+  m_Center: {x: 3, y: 11, z: 0}
+--- !u!114 &1443699954125508471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573757858195916102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342d3bfd50d9e1349a32f72855e35d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1443699954125508470}
+        m_TargetAssemblyTypeName: WaypointObject, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1443699954125508470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573757858195916102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43fcb1936fa4d69bae541904b085640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wayPoints: {fileID: 0}
+  _moveSpeed: 2
+  _delayAtPoints: 0
+  _distanceThreshold: 0.1
+  IsActive: 0
