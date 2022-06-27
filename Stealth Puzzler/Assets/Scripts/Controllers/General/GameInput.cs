@@ -37,6 +37,15 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""77eae743-6d8c-4842-94a2-538281372302"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
                     ""id"": ""30242cd9-ad44-449e-9a9f-0cfd0790feaa"",
@@ -44,6 +53,33 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""858067f1-8d7b-47e3-88f4-118c8d3e4be2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchController"",
+                    ""type"": ""Button"",
+                    ""id"": ""28fd1235-b7a4-4232-900f-195853f75777"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b37f84b-a5ff-48b2-9273-94ce05c76cb3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Fire"",
@@ -64,45 +100,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""SwitchController"",
-                    ""type"": ""Button"",
-                    ""id"": ""28fd1235-b7a4-4232-900f-195853f75777"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""77eae743-6d8c-4842-94a2-538281372302"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Drop"",
                     ""type"": ""Button"",
                     ""id"": ""a2d10310-ef70-4bcb-b3e0-f659a72a00ef"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Run"",
-                    ""type"": ""Button"",
-                    ""id"": ""858067f1-8d7b-47e3-88f4-118c8d3e4be2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Hold"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""6b37f84b-a5ff-48b2-9273-94ce05c76cb3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -352,12 +352,12 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""186c9915-1af6-438b-a08a-0ad1f73918a9"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""a474a09a-c645-4904-9219-c322f4d8f4b2"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""SwitchController"",
+                    ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -374,23 +374,23 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a474a09a-c645-4904-9219-c322f4d8f4b2"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Drop"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""ff717f9b-453f-447d-86ad-e514af654cd3"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""186c9915-1af6-438b-a08a-0ad1f73918a9"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""SwitchController"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1021,11 +1021,13 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
+        m_Player_SwitchController = m_Player.FindAction("SwitchController", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
-        m_Player_SwitchController = m_Player.FindAction("SwitchController", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Drop = m_Player.FindAction("Drop", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
@@ -1103,11 +1105,13 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_Run;
+    private readonly InputAction m_Player_SwitchController;
+    private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Scroll;
-    private readonly InputAction m_Player_SwitchController;
-    private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Drop;
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Pause;
@@ -1117,11 +1121,13 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         private @GameInput m_Wrapper;
         public PlayerActions(@GameInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @Run => m_Wrapper.m_Player_Run;
+        public InputAction @SwitchController => m_Wrapper.m_Player_SwitchController;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
-        public InputAction @SwitchController => m_Wrapper.m_Player_SwitchController;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Drop => m_Wrapper.m_Player_Drop;
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
@@ -1138,21 +1144,27 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Run.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                @SwitchController.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
+                @SwitchController.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
+                @SwitchController.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Scroll.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScroll;
                 @Scroll.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScroll;
                 @Scroll.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScroll;
-                @SwitchController.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
-                @SwitchController.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
-                @SwitchController.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
-                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Drop.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
                 @Drop.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
                 @Drop.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDrop;
@@ -1172,21 +1184,27 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @Run.started += instance.OnRun;
+                @Run.performed += instance.OnRun;
+                @Run.canceled += instance.OnRun;
+                @SwitchController.started += instance.OnSwitchController;
+                @SwitchController.performed += instance.OnSwitchController;
+                @SwitchController.canceled += instance.OnSwitchController;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
                 @Scroll.started += instance.OnScroll;
                 @Scroll.performed += instance.OnScroll;
                 @Scroll.canceled += instance.OnScroll;
-                @SwitchController.started += instance.OnSwitchController;
-                @SwitchController.performed += instance.OnSwitchController;
-                @SwitchController.canceled += instance.OnSwitchController;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
                 @Drop.started += instance.OnDrop;
                 @Drop.performed += instance.OnDrop;
                 @Drop.canceled += instance.OnDrop;
@@ -1364,11 +1382,13 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
+        void OnSwitchController(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
-        void OnSwitchController(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
