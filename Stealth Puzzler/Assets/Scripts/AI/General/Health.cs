@@ -14,7 +14,7 @@ public abstract class Health : MonoBehaviour
     protected virtual void Start()
     {
         _currentNumberOfHits = _maxNumberOfHits;
-        _animator = GetComponentInChildren<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     public virtual void TakeHit()
@@ -34,6 +34,7 @@ public abstract class Health : MonoBehaviour
     protected void TriggerOnDie()
     {
         OnDie?.Invoke();
+        Debug.Log("Trigger die anim: " + _animator);
         _animator.SetTrigger("Die");
     }
 }
