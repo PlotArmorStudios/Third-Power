@@ -56,6 +56,29 @@
 						<ActiveSource Name="SFX_Cutscene_Arrow_Demonstartion_V02" ID="{E1B79324-84F5-47BB-B6DD-2B0A05CE3DE7}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="SFX_Cutscene_Arrow_Demonstartion_V03" ID="{F7FAB5BE-8CF7-4720-8E73-B28B87BBA5E9}" ShortID="926792886">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Cutscene_Arrow_Demonstartion_V03" ID="{C6DEB9DB-66AE-4F74-92EA-387B552860BB}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Cutscene_Arrow_Demonstartion_V03.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="897764226"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Cutscene_Arrow_Demonstartion_V03" ID="{C6DEB9DB-66AE-4F74-92EA-387B552860BB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
