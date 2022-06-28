@@ -57,8 +57,10 @@ public class Climb : MonoBehaviour
 
             _climbTime = 0;
         }
-
-        Rigidbody.useGravity = !IsClimbing;
+        if (Rigidbody != null)
+        {
+            Rigidbody.useGravity = !IsClimbing;
+        }
     }
 
     public void ToggleOnClimbState()
