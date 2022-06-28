@@ -9,28 +9,17 @@ public class JellyTriggerBox : MonoBehaviour
     [SerializeField] private GameObject _jellyController;
     [SerializeField] private Rigidbody _jellyRb;
     [SerializeField] private float _initialForceMultiplier;
-    //SerializeField] private ControllerManager _player;
-    [SerializeField] private Controller _playerCube;
-    [SerializeField] private Controller _playerHumanoid;
-
-    private void Start()
-    {
-        //_player = FindObjectOfType<ControllerManager>(true);
-        _playerCube = FindObjectOfType<CubeController>(true);
-        _playerHumanoid = FindObjectOfType<PlayerController>(true);
-    }
+    public static event Action OnJellyTriggerBoxEntered;
     private void OnTriggerEnter(Collider other)
     {
-        if (GameObject.ReferenceEquals(other.gameObject, _playerCube.gameObject))
+        if (other.gameObject.GetComponent<CubeController>())
         {
-            print("cube hit");
             _jellyRb.useGravity = true;
             _jellyRb.AddForce(Vector3.down * _initialForceMultiplier);
             
         }
-        else if (GameObject.ReferenceEquals(other.gameObject, _playerHumanoid.gameObject))
+        else if (other.gameObject.GetComponent<PlayerController>())
         {
-            print("humanoid hit");
             _jellyRb.useGravity = true;
             _jellyRb.AddForce(Vector3.down * _initialForceMultiplier);
         }
