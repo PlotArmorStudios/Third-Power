@@ -79,6 +79,7 @@ public class Projectile : MonoBehaviour
         else if (player)
         {
             player.GetComponent<Health>().TakeHit();
+            PlayStabSound();
             gameObject.SetActive(false);
         }
         else
@@ -88,8 +89,15 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    private void PlayStabSound()
+    {
+        //Implement damage 'stab' sound
+        //The sound will likely cut off immediately because the object will be turned off directly after hitting the player.
+        //This will be addressed later
+    }
+
     private void PlayReflectSound()
     {
-        //Implement reflect sound here
+        //Implement projectile reflect sound here
     }
 }

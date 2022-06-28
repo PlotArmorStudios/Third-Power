@@ -75,18 +75,24 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SequentialInstantiate(Transform defaultSpawn)
     {
-        Instantiate(ControllerManager, defaultSpawn.position, defaultSpawn.rotation);
+        var controllerManager = Instantiate(ControllerManager, defaultSpawn.position, defaultSpawn.rotation);
+        var camRig = FindObjectOfType<CamRig>();
+        controllerManager.InitializeControllers(Camera.main);
+        camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
-        Instantiate(_camRig, transform.position, Quaternion.identity);
+        //Instantiate(_camRig, transform.position, Quaternion.identity);
     }
 
     private IEnumerator SequentialInstantiate()
     {
         //TODO: Verify that this does not cause an issue with player rotation on load.
         Debug.Log("Spawned from Save. Spawn location: " + PlayerSpawnLocation);
-        Instantiate(ControllerManager, PlayerSpawnLocation, Quaternion.identity);
+        var camRig = FindObjectOfType<CamRig>();
+        var controllerManager = Instantiate(ControllerManager, PlayerSpawnLocation, Quaternion.identity);
+        controllerManager.InitializeControllers(Camera.main);
+        camRig.GetComponent<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
-        Instantiate(_camRig, transform.position, Quaternion.identity);
+        //Instantiate(_camRig, transform.position, Quaternion.identity);
         LoadedFromSave = false;
     }
 

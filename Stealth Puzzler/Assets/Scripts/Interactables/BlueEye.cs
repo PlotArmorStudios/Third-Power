@@ -94,5 +94,7 @@ public class BlueEye : MonoBehaviour
     private void PlayPuzzleSolvedSound()
     {
         //Implement puzzle solved sound
+        //Let this be a sound that fires off immediately.
+        //The programmers may play around with the timing of the sound later
     }
 }

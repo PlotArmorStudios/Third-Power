@@ -26,8 +26,14 @@ public class TrapIdleLoadAttack : MonoBehaviour
     {
         _spikeAnim.SetTrigger("load");
         _spikeAnim.SetTrigger("attack");
+        PlaySpikeTrapAttackSound();
         yield return new WaitForSeconds(_reloadTime);
         _spikeAnim.SetTrigger("idle");
+    }
+
+    private void PlaySpikeTrapAttackSound()
+    {
+        //Implement spike trap attack
     }
 
     private void OnTriggerStay(Collider other)

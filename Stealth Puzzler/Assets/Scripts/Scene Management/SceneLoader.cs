@@ -9,10 +9,21 @@ namespace Helpers
 {
     public class SceneLoader : MonoBehaviour
     {
+        [Header("Screen fade variables")]
         [SerializeField] private Image _fadeScreen;
         [SerializeField] private bool _transitionToggle;
-        [SerializeField] private float _transitionSpeed = 1f;
+        [Min(0.001f)][SerializeField] private float _transitionSpeed = 1f;
+
+        [Header("Loading Screen UI")]
+        [SerializeField] private Image _loadingBar;
+        [SerializeField] private Canvas _loadScreenCanvas;
+
+        [Header("GameObjects to be disabled while scene loading")]
+        [SerializeField] private GameObject[] _objectsToDisable;
         
+        private bool _isSceneLoading = false;
+        private float _loadWaitTime = 1f; //loading screen will wait this long when scene has loaded before showing it
+
         public static SceneLoader Instance;
 
         private void Awake()
@@ -31,7 +42,7 @@ namespace Helpers
             if (_transitionToggle)
                 StartCoroutine(PlayTransition(scene));
             else
-                TransitionScene(scene);
+                TransitionScene(scene);        
         }
 
         public void LoadScene(string scene, bool transitionToggle)
@@ -39,7 +50,7 @@ namespace Helpers
             if (transitionToggle)
                 StartCoroutine(PlayTransition(scene));
             else
-                TransitionScene(scene);
+                TransitionScene(scene);        
         }
 
         private IEnumerator PlayTransition(string scene)
@@ -48,7 +59,7 @@ namespace Helpers
 
             while (alpha < 1)
             {
-                alpha += .01f * _transitionSpeed;
+                alpha += _transitionSpeed * Time.deltaTime;
                 var newColor = new Color(0, 0, 0, alpha);
                 _fadeScreen.color = newColor;
                 yield return null;
@@ -56,10 +67,46 @@ namespace Helpers
 
             TransitionScene(scene);
         }
-
-        private void TransitionScene(string scene)
+        
+        private void TransitionScene(string scene) 
         {
-            SceneManager.LoadScene(scene);
+            if (!_isSceneLoading)
+            {
+                _isSceneLoading = true;
+                StartCoroutine(AsyncLoad(scene));
+            }
+            else
+            {
+                Debug.Log("Tried to load new scene but a scene load is already in progress.");
+            }
+        }
+
+        private IEnumerator AsyncLoad(string scene)
+        {
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+            asyncLoad.allowSceneActivation = false;
+
+            try {
+                ControllerManager[] playerControllers = FindObjectsOfType<ControllerManager>();
+                foreach (ControllerManager controller in playerControllers)
+                    controller.gameObject.SetActive(false);
+            } catch (NullReferenceException e) { }
+            
+            foreach (GameObject gameObject in _objectsToDisable)
+                gameObject.SetActive(false);
+
+            _loadScreenCanvas.gameObject.SetActive(true);
+
+            while (asyncLoad.progress < 0.9f)
+            {
+                Debug.Log("Progress: " + asyncLoad.progress + " | Bar: " + _loadingBar.fillAmount);
+                _loadingBar.fillAmount = asyncLoad.progress + 0.01f;
+                yield return null;
+            }
+            _loadingBar.fillAmount = 1;
+            yield return new WaitForSeconds(_loadWaitTime);
+            
+            asyncLoad.allowSceneActivation = true;
         }
     }
 }

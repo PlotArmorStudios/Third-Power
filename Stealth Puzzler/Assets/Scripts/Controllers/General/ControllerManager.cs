@@ -43,6 +43,16 @@ public class ControllerManager : MonoBehaviour
         //SetStartingController();
     }
 
+    public void InitializeControllers(Camera main)
+    {
+        var controllers = GetComponentsInChildren<Controller>();
+        
+        foreach (var controller in controllers)
+        {
+            controller.InitializeCam(main);
+        }
+    }
+    
     private void SetStartingController()
     {
         if (_startingController == ActiveController.Player)
