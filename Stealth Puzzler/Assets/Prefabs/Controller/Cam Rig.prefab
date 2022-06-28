@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: -1
+  AutoEnableInputs: 1
   XYAxis: {fileID: -9193725717127629328, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   ZAxis: {fileID: 7287162185402683271, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
 --- !u!114 &623622010709062600
@@ -882,7 +883,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 131063
+    m_Bits: 262135
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
