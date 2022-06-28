@@ -7,7 +7,7 @@ public class Climb : MonoBehaviour
     public LayerMask _climbMask;
     [SerializeField] private Transform[] _climbCheckPoints;
     public bool IsClimbing = false;
-    [SerializeField] [Range(200, 500)] private float _climbSpeed = 300;
+    [SerializeField] [Range(50, 500)] private float _climbSpeed = 300;
     public float _stoppingDistance = 0.2f;
     [SerializeField] private float _climbJumpForce = 300f;
     private RaycastHit _lastGrabPoint;
@@ -71,25 +71,27 @@ public class Climb : MonoBehaviour
     {
         _animator.SetTrigger("Stop Climb");
     }
-    
+
     public void HandleWallClimbing()
     {
         if (_playerController.Jump.action.triggered)
         {
             Debug.Log("Yumped");
-            
+
             if (_playerController.Vertical < 0)
             {
                 transform.forward = -transform.forward;
                 WallJump();
                 return;
             }
+
             if (_playerController.Horizontal < 0)
             {
                 transform.forward = -transform.right;
                 WallJump();
                 return;
             }
+
             if (_playerController.Horizontal > 0)
             {
                 transform.forward = transform.right;
@@ -108,10 +110,10 @@ public class Climb : MonoBehaviour
         _playerController.FallTimer = 0;
 
         RootMotionClimb(_playerController.Horizontal, _playerController.Vertical);
-        
+
         if (_playerController.Horizontal != 0 || _playerController.Vertical != 0)
         {
-            //RawClimb();
+            RawClimb();
         }
         else
         {
@@ -124,7 +126,7 @@ public class Climb : MonoBehaviour
         _animator.SetFloat("Climb X", horizontal);
         _animator.SetFloat("Climb Y", vertical);
     }
-    
+
     private void RawClimb()
     {
         RaycastHit hit;
