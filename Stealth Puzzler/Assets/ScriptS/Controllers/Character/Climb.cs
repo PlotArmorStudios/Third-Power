@@ -22,6 +22,7 @@ public class Climb : MonoBehaviour
     {
         _playerController = GetComponent<PlayerController>();
         Rigidbody = GetComponent<Rigidbody>();
+        Debug.Log("Rigibody is: " + Rigidbody);
         _animator = GetComponent<Animator>();
     }
 
