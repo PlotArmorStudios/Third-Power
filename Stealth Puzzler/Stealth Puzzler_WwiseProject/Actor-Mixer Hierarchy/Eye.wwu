@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D4972D92-0C1C-4CB5-8A90-1B68B9F98CA3}" SchemaVersion="103" RootDocumentID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" ParentDocumentID="{86B47DEB-58CB-4828-8A9B-239302D175F4}">
+	<AudioObjects>
+		<WorkUnit Name="Eye" ID="{D4972D92-0C1C-4CB5-8A90-1B68B9F98CA3}" OwnerID="{86B47DEB-58CB-4828-8A9B-239302D175F4}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Eye_Impact" ID="{98A10F2F-F525-4574-8B62-5EC9D7212026}" ShortID="432878556">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="30m" ID="{A2B73156-CBC4-489E-B50C-DC2E0B2B901B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Eye_Impact_01" ID="{BB6A838E-C342-471A-BCAB-2AB5C4C88A12}" ShortID="831054180">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Eye_Impact_01" ID="{8822C9B7-31C5-43C9-B193-9E0141833D1B}">
+									<Language>SFX</Language>
+									<AudioFile>Eye_Impact_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="436634046"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Eye_Impact_01" ID="{8822C9B7-31C5-43C9-B193-9E0141833D1B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Eye_Impact_02" ID="{977B65B5-F4B1-422D-8B88-6B25A4F0D067}" ShortID="359911340">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Eye_Impact_02" ID="{134B4CC5-8E84-4DFF-860F-25152C804E3C}">
+									<Language>SFX</Language>
+									<AudioFile>Eye_Impact_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="261185651"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Eye_Impact_02" ID="{134B4CC5-8E84-4DFF-860F-25152C804E3C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Eye_Impact_03" ID="{9462A684-8A04-4C4E-A5C3-AED44F11EA1C}" ShortID="310966275">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Eye_Impact_03" ID="{05D1CCC0-5BD5-4E39-B2DB-7CE997655EDA}">
+									<Language>SFX</Language>
+									<AudioFile>Eye_Impact_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="419690396"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Eye_Impact_03" ID="{05D1CCC0-5BD5-4E39-B2DB-7CE997655EDA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Eye_Impact_04" ID="{47362BE9-0AA4-4949-87A1-FB6AD11B4D25}" ShortID="126963742">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Eye_Impact_04" ID="{B8FC76A0-3553-4E2D-A93D-ABA60F689BB0}">
+									<Language>SFX</Language>
+									<AudioFile>Eye_Impact_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="719797406"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Eye_Impact_04" ID="{B8FC76A0-3553-4E2D-A93D-ABA60F689BB0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Eye_Impact_glow" ID="{32345341-9F94-429B-ADC3-BC94151B77DD}" ShortID="162691379">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

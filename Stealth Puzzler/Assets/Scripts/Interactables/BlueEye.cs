@@ -89,6 +89,7 @@ public class BlueEye : MonoBehaviour
     private void PlayEyeGlowSound()
     {
         //Implement blue eye glow sound
+        AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
     }
 
     private void PlayPuzzleSolvedSound()

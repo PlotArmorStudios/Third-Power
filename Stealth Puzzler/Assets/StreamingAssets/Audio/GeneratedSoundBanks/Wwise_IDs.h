@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_CHARACTER_CUBE_TRANSFORM = 1769817372U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_DUNGEON_1 = 1533459680U;
+        static const AkUniqueID PLAY_EYE_IMPACT = 2423728726U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
@@ -34,6 +35,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID CARPET = 2412606308U;
                 static const AkUniqueID CEMENT = 3725073853U;
                 static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID WOOD = 2058049674U;
@@ -50,6 +52,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BINAURAL_BUS = 1044284324U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID SFXAMBIENT = 3850048146U;
     } // namespace BUSSES

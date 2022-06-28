@@ -3,143 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Objects" ID="{86B47DEB-58CB-4828-8A9B-239302D175F4}" OwnerID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Cannon" ID="{A1118EA0-ECD3-49DD-9B71-2FF8F3004C14}" ShortID="516541784">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Lowpass" Type="int16">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{2189C029-F290-4604-AC5C-3E69BD06D938}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="16"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{E422AD7A-99C2-42C1-9BD8-9892872519A8}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
-											<Property Name="Min" Type="Real64" Value="-100"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="40 m" ID="{06B5F8CD-54B9-4D34-B0D6-C6B3A73DB3F7}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="SFX_Objects_Cannon_01" ID="{096239DF-9D04-4715-8544-593D311ABB57}" ShortID="53603915">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_01" ID="{E36C1DA4-73D5-40AB-8BF4-6BC73121B0FE}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="972897040"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_01" ID="{E36C1DA4-73D5-40AB-8BF4-6BC73121B0FE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_Objects_Cannon_02" ID="{1AF7FC21-FA54-466B-8FE4-225433AFE6D8}" ShortID="146420249">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_02" ID="{9F633AA5-48A1-4D06-9D6C-59DEFAA5581F}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_02.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="354517231"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_02" ID="{9F633AA5-48A1-4D06-9D6C-59DEFAA5581F}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_Objects_Cannon_03" ID="{5433B0EF-A9DE-4F2D-8F23-FF99D9555A68}" ShortID="611845328">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_03" ID="{4E4C1727-ED5D-4EEC-97F9-A4FE33220595}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_03.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="272633937"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_03" ID="{4E4C1727-ED5D-4EEC-97F9-A4FE33220595}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_Objects_Cannon_04" ID="{C215FFDC-AA55-4D82-879D-97D36D1EE280}" ShortID="433115136">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_04" ID="{61DA4AC8-98A6-455F-8A50-14DC642446C3}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_04.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="802308215"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_04" ID="{61DA4AC8-98A6-455F-8A50-14DC642446C3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-					<ObjectLists/>
-				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Arrow_In_Air" ID="{E37738A9-2D3F-47C2-A344-8F4C36BF5A5E}" ShortID="441926198">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -238,6 +101,8 @@
 					</PositioningInfo>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<WorkUnit Name="Eye" ID="{D4972D92-0C1C-4CB5-8A90-1B68B9F98CA3}" PersistMode="Reference"/>
+				<WorkUnit Name="Arrow Trap" ID="{DCE57691-448D-4D09-97FE-FCE5CC10EF58}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

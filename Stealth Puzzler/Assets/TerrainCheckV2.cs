@@ -26,10 +26,10 @@ public class TerrainCheckV2 : MonoBehaviour
               Debug.Log("Cement");
             }
 
-            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Metal"))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Carpet"))
             {
-                AkSoundEngine.SetSwitch("Material", "Metal", gameObject);
-                Debug.Log("Metal");
+                AkSoundEngine.SetSwitch("Material", "Carpet", gameObject);
+                Debug.Log("Carpet");
             }
         }
 
@@ -40,9 +40,9 @@ public class TerrainCheckV2 : MonoBehaviour
                 AkSoundEngine.SetSwitch("Material", "Cement", gameObject);
             }
 
-            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Metal"))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Carpet"))
             {
-                AkSoundEngine.SetSwitch("Material", "Metal", gameObject);
+                AkSoundEngine.SetSwitch("Material", "Carpet", gameObject);
             }
         }
     }

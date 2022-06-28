@@ -60,6 +60,8 @@ public class Projectile : MonoBehaviour
         Reflector reflector = other.gameObject.GetComponentInChildren<Reflector>();
         var enemy = other.gameObject.GetComponent<WolfAI>();
         var player = other.gameObject.GetComponent<PlayerController>();
+
+        AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
         
         Debug.Log(other.gameObject);
         
