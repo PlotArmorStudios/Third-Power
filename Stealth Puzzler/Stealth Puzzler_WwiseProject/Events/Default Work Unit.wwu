@@ -38,10 +38,60 @@
 				</Event>
 				<Event Name="Play_SFX_Cutscene_Arrow_Demonstartion" ID="{4A358F4B-048E-4AB2-8794-6D6646466544}">
 					<ChildrenList>
-						<Action Name="" ID="{8AB3F459-0146-4CB0-8365-01BE50AB4B23}" ShortID="87117771">
+						<Action Name="" ID="{7899FEC8-D298-43E2-8542-C3E7C7C95BEB}" ShortID="813958412">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V03" ID="{F7FAB5BE-8CF7-4720-8E73-B28B87BBA5E9}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
+									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V04" ID="{F83F8F05-5B4A-43B4-9732-A9572F4C51CD}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A63F6FF9-8500-432A-B236-2A3474374A45}" ShortID="786280300">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{0E1CD242-6F5E-4BA9-97F4-82713B13F5C4}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V04" ID="{F83F8F05-5B4A-43B4-9732-A9572F4C51CD}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+						<Action Name="" ID="{DE3E171B-F243-405B-A15E-7A3C16C1FB6D}" ShortID="850539192">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1_Layer_01" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{62CCE9A5-6DE3-47EC-A259-C025CBAF154F}" ShortID="629637926">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1_Layer_02" ID="{2263062C-3E32-42BE-8494-F50955326E17}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5BE2F7E2-4B0A-4EDE-93B7-31BF2780CCF2}" ShortID="630357449">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1_Layer_03" ID="{4104E4F2-08AB-42BE-8E8E-4FED87751075}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -52,7 +102,7 @@
 						<Action Name="" ID="{6C15FB3A-D40B-499A-8A1C-1281477A3789}" ShortID="288444129">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Cannon" ID="{A1118EA0-ECD3-49DD-9B71-2FF8F3004C14}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+									<ObjectRef Name="Cannon" ID="{A1118EA0-ECD3-49DD-9B71-2FF8F3004C14}" WorkUnitID="{DCE57691-448D-4D09-97FE-FCE5CC10EF58}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -110,6 +160,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{A3D121D2-00FD-4B38-92B0-376DE53900B6}" ShortID="981195845">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dungeon_1_Layer_03" ID="{4104E4F2-08AB-42BE-8E8E-4FED87751075}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_WaterDroplets" ID="{EEE1D10B-1E44-4196-B4CF-D23003CAA4D7}">
@@ -129,6 +186,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Cannon_Idle_Steam" ID="{26B5E393-B37F-4713-A29E-A24B0A97095E}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Eye_Impact" ID="{C8D87DF2-89B8-4FB6-88AE-D4BBE1C0FB75}">
+					<ChildrenList>
+						<Action Name="" ID="{010E4276-59D8-49E2-8D89-1E6EB3C3DD5B}" ShortID="836683796">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Eye_Impact" ID="{98A10F2F-F525-4574-8B62-5EC9D7212026}" WorkUnitID="{D4972D92-0C1C-4CB5-8A90-1B68B9F98CA3}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

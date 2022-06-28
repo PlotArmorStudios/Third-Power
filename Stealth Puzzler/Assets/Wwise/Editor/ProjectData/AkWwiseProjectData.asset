@@ -38,8 +38,22 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585453378514775808
+    m_lastTime: -8585451858674775808
     List:
+    - name: Binaural_Bus
+      guid: 803a9cf555806c4f833936a89fad00f3
+      id: 1044284324
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Binaural_Bus
+        ObjectType: 2
+        guid: 803a9cf555806c4f833936a89fad00f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Binaural_Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -97,7 +111,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585453378494775808
+    m_lastTime: -8585451901174775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -125,7 +139,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585453169754775808
+    m_lastTime: -8585451763114775808
     List:
     - name: Play_Arrow_In_Air
       guid: e26d892f796b3346b1350d0ad8901b39
@@ -229,6 +243,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Eye_Impact
+      guid: f27dd8c8b889b64f88aed4bbe1c0fb75
+      id: 2423728726
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Eye_Impact
+        ObjectType: 3
+        guid: f27dd8c8b889b64f88aed4bbe1c0fb75
+      Path: Events\Default Work Unit\Play_Eye_Impact
+      maxAttenuation: 0
+      maxDuration: 2.75
+      minDuration: 2
     - name: Play_FirePlace
       guid: 1089ffdbecb0a9498c8ad9c3b9788001
       id: 1501216439
@@ -261,7 +292,7 @@ MonoBehaviour:
         guid: 657a78a4e5f0af4a9123ed8ca7d81f28
       Path: Events\Default Work Unit\Play_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.529732
+      maxDuration: 0.561231
       minDuration: 0.238872
     - name: Play_SFX_Cutscene_Arrow_Demonstartion
       guid: 4b8f354a8e04b24a87946d6646466544
@@ -278,8 +309,8 @@ MonoBehaviour:
         guid: 4b8f354a8e04b24a87946d6646466544
       Path: Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion
       maxAttenuation: 0
-      maxDuration: 6.529792
-      minDuration: 6.529792
+      maxDuration: -1
+      minDuration: -1
     - name: Play_WaterDroplets
       guid: 0bd1e1ee441e9641b4cfd23003caa4d7
       id: 2298613774
@@ -354,7 +385,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 492f89aa40d0a5488035723ae0d102a4
     GuidInternal: 
-    m_lastTime: -8585453364534775808
+    m_lastTime: -8585451869274775808
     List:
     - name: Material
       guid: 340561136601864ab21ef167063aa6d2
@@ -371,6 +402,22 @@ MonoBehaviour:
         guid: 340561136601864ab21ef167063aa6d2
       Path: Switches\Default Work Unit\Material
       values:
+      - name: Carpet
+        guid: fb001d52e5fcb84796969c1cb9b32487
+        id: 2412606308
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 492f89aa40d0a5488035723ae0d102a4
+        - ElementName: Material
+          ObjectType: 11
+          guid: 340561136601864ab21ef167063aa6d2
+        - ElementName: Carpet
+          ObjectType: 10
+          guid: fb001d52e5fcb84796969c1cb9b32487
       - name: Cement
         guid: b775e202cd1527438b5a9895e68e8ed9
         id: 3725073853
@@ -437,7 +484,7 @@ MonoBehaviour:
     m_lastTime: -8585462986054775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000001a0000001b0000001c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
