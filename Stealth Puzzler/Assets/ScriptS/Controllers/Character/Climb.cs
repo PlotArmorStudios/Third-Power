@@ -147,7 +147,8 @@ public class Climb : MonoBehaviour
 
     private void WallJump()
     {
-        transform.position += transform.forward / 10;
-        Rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
+        //transform.position += transform.forward / 10;
+        //Rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
+        _animator.SetTrigger("Wall Jump");
     }
 }
