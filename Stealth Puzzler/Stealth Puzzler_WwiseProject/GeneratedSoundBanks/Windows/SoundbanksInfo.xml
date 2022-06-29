@@ -11,15 +11,15 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="964483827">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1909833791">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
-				<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Dungeon_01"/>
+				<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="3878312062">
+		<SoundBank Id="4072029455" Language="SFX" Hash="2412941414">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -59,6 +59,9 @@
 							<Path>SFX\SFX_Objects_Cannon_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="112147695" Name="Play_Cannon_Idle_Steam" ObjectPath="\Events\Default Work Unit\Play_Cannon_Idle_Steam" MaxAttenuation="20." DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -91,6 +94,9 @@
 							<Path>SFX\SFX_Player_Character-Cube_Transform_03_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2774595811" Name="Play_Cube_Movement" ObjectPath="\Events\Default Work Unit\Play_Cube_Movement" DurationType="OneShot" DurationMin="0.471937" DurationMax="0.56284">
 					<IncludedMemoryFiles>
@@ -111,6 +117,9 @@
 							<Path>SFX\Cube_Movement_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1533459680" Name="Play_Dungeon_1" ObjectPath="\Events\Default Work Unit\Play_Dungeon_1" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -163,8 +172,11 @@
 							<Path>SFX\Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
-				<Event Id="2423728726" Name="Play_Eye_Impact" ObjectPath="\Events\Default Work Unit\Play_Eye_Impact" DurationType="OneShot" DurationMin="2." DurationMax="2.75">
+				<Event Id="2423728726" Name="Play_Eye_Impact" ObjectPath="\Events\Default Work Unit\Play_Eye_Impact" MaxAttenuation="30." DurationType="OneShot" DurationMin="2." DurationMax="2.75">
 					<IncludedMemoryFiles>
 						<File Id="261185651" Language="SFX">
 							<ShortName>Eye_Impact_02.wav</ShortName>
@@ -366,6 +378,9 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -385,10 +400,6 @@
 							<ShortName>Dunegon_01_Layer_03_03.wav</ShortName>
 							<Path>SFX\Dunegon_01_Layer_03_03_10C4C929.wem</Path>
 						</File>
-						<File Id="558730601" Language="SFX">
-							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V04.wav</ShortName>
-							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V04_10C4C929.wem</Path>
-						</File>
 						<File Id="607834779" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_04.wav</ShortName>
 							<Path>SFX\Dunegon_01_Layer_03_04_10C4C929.wem</Path>
@@ -404,6 +415,10 @@
 						<File Id="848395372" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_04.wav</ShortName>
 							<Path>SFX\Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
+						</File>
+						<File Id="857811186" Language="SFX">
+							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V05.wav</ShortName>
+							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V05_10C4C929.wem</Path>
 						</File>
 						<File Id="876759871" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_01.wav</ShortName>
@@ -422,6 +437,9 @@
 							<Path>SFX\Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2298613774" Name="Play_WaterDroplets" ObjectPath="\Events\Default Work Unit\Play_WaterDroplets" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.4375" DurationMax="0.5">
 					<IncludedMemoryFiles>
@@ -447,7 +465,7 @@
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
-						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Dungeon_01"/>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
 				<Event Id="1384937390" Name="Stop_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Stop_Arrow_In_Air" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>

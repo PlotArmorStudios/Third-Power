@@ -52,6 +52,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AURO_BINAURAL = 1368310311U;
         static const AkUniqueID BINAURAL_BUS = 1044284324U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID SFXAMBIENT = 3850048146U;
