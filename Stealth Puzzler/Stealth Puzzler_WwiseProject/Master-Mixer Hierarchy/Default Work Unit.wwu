@@ -35,6 +35,65 @@
 									</ReferenceList>
 									<ObjectLists/>
 								</AuxBus>
+								<Bus Name="SC" ID="{57B2D3F9-F5B4-4A59-81E3-33D77AA0A0EA}">
+									<ReferenceList/>
+									<ChildrenList>
+										<Bus Name="Cutscene" ID="{4DE11964-8818-4C33-BB1F-5E4B607677F9}">
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+													<ObjectRef Name="New_Wwise_Meter" ID="{63EDD9DA-5E4B-4DE7-9138-F74A16ED2250}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
+												</Reference>
+											</ReferenceList>
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="Arrow_Trap" ID="{355E0390-036B-45DD-9379-6C01BBD2942C}">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{85EAE90A-26CC-404B-8BE4-036B979654A5}" ShortID="171640500">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Cutscene" ID="{9586EEEC-A6BE-40D8-ACB3-1FB8DAB249CB}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{29751AC2-E331-4E46-B9AA-83DC32B3757F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-48</XPos>
+																		<YPos>0.08558</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-44.93943</XPos>
+																		<YPos>-0.04036</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>-25.19872</XPos>
+																		<YPos>-12.41223</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ObjectLists/>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists/>
+								</Bus>
 							</ChildrenList>
 							<ObjectLists/>
 						</Bus>

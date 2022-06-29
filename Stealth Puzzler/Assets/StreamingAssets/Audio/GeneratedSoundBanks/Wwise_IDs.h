@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
+        static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
     } // namespace EVENTS
@@ -44,6 +45,11 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID CUTSCENE = 1182958561U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -52,9 +58,12 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ARROW_TRAP = 1780485226U;
         static const AkUniqueID AURO_BINAURAL = 1368310311U;
         static const AkUniqueID BINAURAL_BUS = 1044284324U;
+        static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SC = 1584861543U;
         static const AkUniqueID SFXAMBIENT = 3850048146U;
     } // namespace BUSSES
 

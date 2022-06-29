@@ -11,15 +11,18 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1909833791">
+		<SoundBank Id="1355168291" Language="SFX" Hash="887377802">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 			</IncludedAuxBusses>
+			<GameParameters>
+				<GameParameter Id="1182958561" Name="Cutscene" ObjectPath="\Game Parameters\Default Work Unit\Cutscene"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="2412941414">
+		<SoundBank Id="4072029455" Language="SFX" Hash="762304487">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -440,6 +443,14 @@
 					<AuxBusSends>
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="919698874" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_Reload_01.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_Reload_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2298613774" Name="Play_WaterDroplets" ObjectPath="\Events\Default Work Unit\Play_WaterDroplets" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.4375" DurationMax="0.5">
 					<IncludedMemoryFiles>

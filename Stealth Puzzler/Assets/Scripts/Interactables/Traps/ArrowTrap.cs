@@ -70,6 +70,7 @@ public class ArrowTrap : MonoBehaviour
     {
         //Implement arrow reload sound here
         Debug.Log("Play reload sound");
+        AkSoundEngine.PostEvent("Play_Trap_Reload", gameObject);
     }
 
     private void PlayShootSound()
