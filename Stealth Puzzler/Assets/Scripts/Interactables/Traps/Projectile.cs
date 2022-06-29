@@ -61,10 +61,9 @@ public class Projectile : MonoBehaviour
         var enemy = other.gameObject.GetComponent<WolfAI>();
         var player = other.gameObject.GetComponent<PlayerController>();
 
-        AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
-        
+
         Debug.Log(other.gameObject);
-        
+
         if (reflector)
         {
             var wallNormal = other.contacts[0].normal;
@@ -87,6 +86,7 @@ public class Projectile : MonoBehaviour
         else
         {
             if (_timeActive < .8f) return;
+            AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
             gameObject.SetActive(false);
         }
     }
