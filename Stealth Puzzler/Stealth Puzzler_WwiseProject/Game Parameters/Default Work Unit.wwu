@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}" SchemaVersion="103">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Cutscene" ID="{9586EEEC-A6BE-40D8-ACB3-1FB8DAB249CB}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

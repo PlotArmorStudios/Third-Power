@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 69fb655ec0cb8749945091a4dc13033b
     GuidInternal: 
-    m_lastTime: -8585457378000013406
+    m_lastTime: -8585462986054775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,8 +38,31 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585450778306463171
+    m_lastTime: -8585450745254775808
     List:
+    - name: Arrow_Trap
+      guid: 90035e356b03dd4593796c01bbd2942c
+      id: 1780485226
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Auro_Binaural
+        ObjectType: 2
+        guid: 8efbb65fcb102540affa08c79ad1069b
+      - ElementName: SC
+        ObjectType: 2
+        guid: f9d3b257b4f5594a81e333d77aa0a0ea
+      - ElementName: Arrow_Trap
+        ObjectType: 2
+        guid: 90035e356b03dd4593796c01bbd2942c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\SC\Arrow_Trap
     - name: Auro_Binaural
       guid: 8efbb65fcb102540affa08c79ad1069b
       id: 1368310311
@@ -71,6 +94,29 @@ MonoBehaviour:
         ObjectType: 2
         guid: 803a9cf555806c4f833936a89fad00f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Binaural_Bus
+    - name: Cutscene
+      guid: 6419e14d1888334cbb1f5e4b607677f9
+      id: 1182958561
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Auro_Binaural
+        ObjectType: 2
+        guid: 8efbb65fcb102540affa08c79ad1069b
+      - ElementName: SC
+        ObjectType: 2
+        guid: f9d3b257b4f5594a81e333d77aa0a0ea
+      - ElementName: Cutscene
+        ObjectType: 2
+        guid: 6419e14d1888334cbb1f5e4b607677f9
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\SC\Cutscene
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -105,6 +151,26 @@ MonoBehaviour:
         ObjectType: 1
         guid: d76ff04cbe9ef7459a1a418c6ed275e1
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01
+    - name: SC
+      guid: f9d3b257b4f5594a81e333d77aa0a0ea
+      id: 1584861543
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Auro_Binaural
+        ObjectType: 2
+        guid: 8efbb65fcb102540affa08c79ad1069b
+      - ElementName: SC
+        ObjectType: 2
+        guid: f9d3b257b4f5594a81e333d77aa0a0ea
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\SC
     - name: sfxAmbient
       guid: fe7a8bee9f88e540904dc4d825d060dc
       id: 3850048146
@@ -131,7 +197,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585450778303039958
+    m_lastTime: -8585450758474775808
     List:
     - name: New_SoundBank
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
@@ -159,7 +225,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585450778312732566
+    m_lastTime: -8585450751334775808
     List:
     - name: Play_Arrow_In_Air
       guid: e26d892f796b3346b1350d0ad8901b39
@@ -331,6 +397,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Trap_Reload
+      guid: 9afb7bd5f740c74183e7c1a4217f7176
+      id: 2607723329
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Trap_Reload
+        ObjectType: 3
+        guid: 9afb7bd5f740c74183e7c1a4217f7176
+      Path: Events\Default Work Unit\Play_Trap_Reload
+      maxAttenuation: 40
+      maxDuration: 2
+      minDuration: 2
     - name: Play_WaterDroplets
       guid: 0bd1e1ee441e9641b4cfd23003caa4d7
       id: 2298613774
@@ -377,8 +460,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585457378005324882
-    List: []
+    m_lastTime: -8585450745254775808
+    List:
+    - name: Cutscene
+      guid: ecee8695bea6d840acb31fb8dab249cb
+      id: 1182958561
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8d7f87f94dbf14a978b4f7c63429dd2
+      - ElementName: Cutscene
+        ObjectType: 13
+        guid: ecee8695bea6d840acb31fb8dab249cb
+      Path: Game Parameters\Default Work Unit\Cutscene
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -391,7 +488,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6f7ac499df9b841b0b218b367cc7899
     GuidInternal: 
-    m_lastTime: -8585457378000083373
+    m_lastTime: -8585462986054775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -405,7 +502,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 492f89aa40d0a5488035723ae0d102a4
     GuidInternal: 
-    m_lastTime: -8585450778302756425
+    m_lastTime: -8585451761514775808
     List:
     - name: Material
       guid: 340561136601864ab21ef167063aa6d2
@@ -501,10 +598,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: edf5011ce171b447ab95b8288a826deb
     GuidInternal: 
-    m_lastTime: -8585457378000023392
+    m_lastTime: -8585462986054775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 020000000300000004000000050000000600000023000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

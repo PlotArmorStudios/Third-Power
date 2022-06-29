@@ -46,9 +46,7 @@
 							</PropertyList>
 							<ReferenceList/>
 							<ChildrenList>
-								<EventActionException Name="" ID="{0E1CD242-6F5E-4BA9-97F4-82713B13F5C4}">
-									<ReferenceList/>
-								</EventActionException>
+								<EventActionException Name="" ID="{0E1CD242-6F5E-4BA9-97F4-82713B13F5C4}"/>
 							</ChildrenList>
 						</Action>
 						<Action Name="" ID="{DE3E171B-F243-405B-A15E-7A3C16C1FB6D}" ShortID="850539192">
@@ -88,6 +86,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V05" ID="{F8173FF4-DDFC-4972-A5DB-5B9AE2753104}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F63D3CFD-ED3B-42B0-9AF8-1CD0C98A1CC7}" ShortID="551625307">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cannon" ID="{A1118EA0-ECD3-49DD-9B71-2FF8F3004C14}" WorkUnitID="{DCE57691-448D-4D09-97FE-FCE5CC10EF58}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -193,6 +202,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Eye_Impact" ID="{98A10F2F-F525-4574-8B62-5EC9D7212026}" WorkUnitID="{D4972D92-0C1C-4CB5-8A90-1B68B9F98CA3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Trap_Reload" ID="{D57BFB9A-40F7-41C7-83E7-C1A4217F7176}">
+					<ChildrenList>
+						<Action Name="" ID="{30B25B37-85AD-4FB1-8654-C2E02883C7ED}" ShortID="479115707">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Trap_Reload" ID="{0C26BB6A-880E-42B5-8974-882DC1770882}" WorkUnitID="{DCE57691-448D-4D09-97FE-FCE5CC10EF58}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
