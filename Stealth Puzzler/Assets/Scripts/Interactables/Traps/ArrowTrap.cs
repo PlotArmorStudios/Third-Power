@@ -8,13 +8,14 @@ public class ArrowTrap : MonoBehaviour
 {
     [SerializeField] private GameObject _arrow;
     [SerializeField] private Transform _spawnPoint;
-    
-    [Tooltip("The delay between shots")]
-    public float SpawnDelay;
+
+    [Tooltip("The delay between shots")] public float SpawnDelay;
+
     [Tooltip("The delay between the start of the level and the first shot")]
     public float InitialDelay = 0;
+
     public bool IsActive;
-    
+
     private float _currentSpawnTime;
 
     private void Start()
@@ -29,16 +30,17 @@ public class ArrowTrap : MonoBehaviour
     private void Update()
     {
         if (!IsActive) return;
-        
+
         _currentSpawnTime += Time.deltaTime;
 
         if (_currentSpawnTime >= SpawnDelay)
         {
             StopCoroutine(ShootArrow());
             StartCoroutine(ShootArrow());
+            _currentSpawnTime = 0;
         }
     }
-    
+
     [ContextMenu("Activate")]
     public void Activate()
     {
@@ -51,15 +53,14 @@ public class ArrowTrap : MonoBehaviour
     {
         IsActive = false;
     }
-    
+
     private IEnumerator ShootArrow()
     {
         PlayReloadSound();
-        
+
         yield return new WaitForSeconds(2f);
-        
+
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
-        _currentSpawnTime = 0;
         arrow.transform.parent = transform;
 
         PlayShootSound();
@@ -68,6 +69,7 @@ public class ArrowTrap : MonoBehaviour
     private void PlayReloadSound()
     {
         //Implement arrow reload sound here
+        Debug.Log("Play reload sound");
     }
 
     private void PlayShootSound()
