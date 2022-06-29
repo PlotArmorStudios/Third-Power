@@ -20,6 +20,8 @@ public class ArrowTrap : MonoBehaviour
 
     private void Start()
     {
+        _currentSpawnTime = 0;
+        
         if (InitialDelay > 0)
         {
             IsActive = false;
@@ -45,7 +47,6 @@ public class ArrowTrap : MonoBehaviour
     public void Activate()
     {
         IsActive = true;
-        _currentSpawnTime = SpawnDelay;
     }
 
     [ContextMenu("Deactivate")]
