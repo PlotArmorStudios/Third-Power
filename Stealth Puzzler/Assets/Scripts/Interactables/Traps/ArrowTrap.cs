@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -33,7 +34,8 @@ public class ArrowTrap : MonoBehaviour
 
         if (_currentSpawnTime >= SpawnDelay)
         {
-            ShootArrow();
+            StopCoroutine(ShootArrow());
+            StartCoroutine(ShootArrow());
         }
     }
     
@@ -50,13 +52,22 @@ public class ArrowTrap : MonoBehaviour
         IsActive = false;
     }
     
-    private void ShootArrow()
+    private IEnumerator ShootArrow()
     {
+        PlayReloadSound();
+        
+        yield return new WaitForSeconds(2f);
+        
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
         _currentSpawnTime = 0;
         arrow.transform.parent = transform;
 
         PlayShootSound();
+    }
+
+    private void PlayReloadSound()
+    {
+        //Implement arrow reload sound here
     }
 
     private void PlayShootSound()
