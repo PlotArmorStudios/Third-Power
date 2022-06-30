@@ -49,6 +49,7 @@ public class ControllerManager : MonoBehaviour
         
         foreach (var controller in controllers)
         {
+            Debug.Log("Initialized cam: " + main);
             controller.InitializeCam(main);
         }
     }

@@ -88,9 +88,10 @@ public class GameManager : MonoBehaviour
         //TODO: Verify that this does not cause an issue with player rotation on load.
         Debug.Log("Spawned from Save. Spawn location: " + PlayerSpawnLocation);
         var camRig = FindObjectOfType<CamRig>();
+        Debug.Log("Cam rig found: " + camRig);
         var controllerManager = Instantiate(ControllerManager, PlayerSpawnLocation, Quaternion.identity);
         controllerManager.InitializeControllers(Camera.main);
-        camRig.GetComponent<FocalPointManager>().InitializeFocalPoints(controllerManager);
+        camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
         //Instantiate(_camRig, transform.position, Quaternion.identity);
         LoadedFromSave = false;
