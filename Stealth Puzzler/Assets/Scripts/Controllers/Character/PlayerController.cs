@@ -37,7 +37,7 @@ public class PlayerController : Controller
     private Vector3 _heightMovement;
     public float Horizontal { get; set; }
     public float Vertical { get; set; }
-    
+
     private float _currentMovementSpeed;
 
     //Running
@@ -62,7 +62,6 @@ public class PlayerController : Controller
 
     private void OnDisable()
     {
-
     }
 
     void Start()
@@ -109,7 +108,6 @@ public class PlayerController : Controller
     }
 
 
-
     private void ReadInput()
     {
         Horizontal = _move.action.ReadValue<Vector2>().x;
@@ -123,8 +121,8 @@ public class PlayerController : Controller
             //_animator.SetTrigger("Land");
             IsJumping = false;
         }
-            
-        
+
+
         HandleLand();
     }
 
@@ -174,7 +172,7 @@ public class PlayerController : Controller
     {
         _animator.SetBool("Airborne", !GroundCheck.IsGrounded());
     }
-    
+
     private bool PlayerJumpedFromGround()
     {
         return Jump.action.triggered && GroundCheck.IsGrounded();
@@ -258,20 +256,23 @@ public class PlayerController : Controller
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
                                                                          | RigidbodyConstraints.FreezeRotationZ;
             Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, _jumpHeight, Rigidbody.velocity.z);
+            
             if (!GroundCheck.IsGrounded())
             {
                 IsJumping = true; //for landing
             }
             else
             {
+                _triggerJump = false;
                 return;
             }
+
             _animator.SetTrigger("Jump");
             PlayJumpSound();
             _triggerJump = false;
         }
     }
-    
+
     private void PlayJumpSound()
     {
         //Implement jump sound
