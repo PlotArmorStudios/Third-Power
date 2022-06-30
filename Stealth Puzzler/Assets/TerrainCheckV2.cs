@@ -23,7 +23,7 @@ public class TerrainCheckV2 : MonoBehaviour
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Cement"))
             {
               AkSoundEngine.SetSwitch("Material", "Cement", gameObject);
-              Debug.Log("Cement");
+              //Debug.Log("Cement");
             }
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Carpet"))
