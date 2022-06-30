@@ -80,8 +80,6 @@ public class PlayerController : Controller
         ToggleAirborneState();
         if (PlayerJumpedFromGround()) _triggerJump = true;
         _climb.CheckIfClimbing();
-        print(GroundCheck.IsGrounded() + " is grounded");
-        print(_climb.IsClimbing + " is climbing");
     }
 
     private void FixedUpdate()
@@ -96,7 +94,6 @@ public class PlayerController : Controller
         UpdateJump();
         ApplyGravity();
         HandleJump();
-        Debug.Log(GroundCheck.IsGrounded());
     }
 
     private void MakeVulnerable()
