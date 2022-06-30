@@ -81,14 +81,8 @@ public class PlayerController : Controller
         ToggleAirborneState();
         if (PlayerJumpedFromGround()) _triggerJump = true;
         _climb.CheckIfClimbing();
-    }
-
-    private void MakeVulnerable()
-    {
-        _vulnerableTime += Time.deltaTime;
-
-        if (_vulnerableTime > .2f)
-            IsVulnerable = true;
+        print(GroundCheck.IsGrounded() + " is grounded");
+        print(_climb.IsClimbing + " is climbing");
     }
 
     private void FixedUpdate()
@@ -103,7 +97,18 @@ public class PlayerController : Controller
         UpdateJump();
         ApplyGravity();
         HandleJump();
+        Debug.Log(GroundCheck.IsGrounded());
     }
+
+    private void MakeVulnerable()
+    {
+        _vulnerableTime += Time.deltaTime;
+
+        if (_vulnerableTime > .2f)
+            IsVulnerable = true;
+    }
+
+
 
     private void ReadInput()
     {
@@ -114,7 +119,11 @@ public class PlayerController : Controller
     private void UpdateJump()
     {
         if (GroundCheck.IsGrounded())
+        {
+            //_animator.SetTrigger("Land");
             IsJumping = false;
+        }
+            
         
         HandleLand();
     }
@@ -249,7 +258,14 @@ public class PlayerController : Controller
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
                                                                          | RigidbodyConstraints.FreezeRotationZ;
             Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, _jumpHeight, Rigidbody.velocity.z);
-            IsJumping = true; //for landing
+            if (!GroundCheck.IsGrounded())
+            {
+                IsJumping = true; //for landing
+            }
+            else
+            {
+                return;
+            }
             _animator.SetTrigger("Jump");
             PlayJumpSound();
             _triggerJump = false;
