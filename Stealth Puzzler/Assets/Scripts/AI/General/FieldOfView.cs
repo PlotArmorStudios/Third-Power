@@ -2,9 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FieldOfView : MonoBehaviour
 {
+    /// <summary>
+    /// Backing value for CanSeePlayer. Use CanSeePlayer instead.
+    /// </summary>
+    private bool csp;
     [SerializeField] private LayerMask _targetMask;
     public float Radius;
     [Range(0, 360)]
@@ -14,7 +19,30 @@ public class FieldOfView : MonoBehaviour
 
     public LayerMask ObstructionMask;
 
-    public bool CanSeePlayer;
+    public bool CanSeePlayer 
+    {
+        get 
+        {
+            return csp; 
+        }
+        set 
+        {
+            if (value != csp)
+            {
+                if (!csp && value)
+                {
+                    csp = value;
+                    JustSawPlayer.Invoke();
+                }
+                else
+                {
+                    csp = value;
+                }
+            }
+        }
+    }
+    
+    public UnityEvent JustSawPlayer;
 
     private void Start()
     {
