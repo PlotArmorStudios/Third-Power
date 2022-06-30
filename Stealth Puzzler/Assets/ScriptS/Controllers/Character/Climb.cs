@@ -77,27 +77,8 @@ public class Climb : MonoBehaviour
         if (_playerController.Jump.action.triggered)
         {
             Debug.Log("Yumped");
-
-            if (_playerController.Vertical < 0)
-            {
-                transform.forward = -transform.forward;
-                WallJump();
-                return;
-            }
-
-            if (_playerController.Horizontal < 0)
-            {
-                transform.forward = -transform.right;
-                WallJump();
-                return;
-            }
-
-            if (_playerController.Horizontal > 0)
-            {
-                transform.forward = transform.right;
-                WallJump();
-                return;
-            }
+            WallJump();
+            return;
         }
 
         if (_playerController.Vertical < 0 && _playerController.GroundCheck.IsGrounded())
@@ -147,6 +128,7 @@ public class Climb : MonoBehaviour
 
     private void WallJump()
     {
+        print("wall Jumped");
         //transform.position += transform.forward / 10;
         //Rigidbody.velocity = (transform.forward + transform.up) * _climbJumpForce;
         _animator.SetTrigger("Wall Jump");
