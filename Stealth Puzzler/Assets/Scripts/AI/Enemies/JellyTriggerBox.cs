@@ -16,7 +16,6 @@ public class JellyTriggerBox : MonoBehaviour
         {
             _jellyRb.useGravity = true;
             _jellyRb.AddForce(Vector3.down * _initialForceMultiplier);
-            
         }
         else if (other.gameObject.GetComponent<PlayerController>())
         {
