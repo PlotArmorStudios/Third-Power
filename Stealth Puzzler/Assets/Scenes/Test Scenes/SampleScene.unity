@@ -975,7 +975,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 976817605}
+      objectReference: {fileID: 859252749}
     - target: {fileID: 1193779795270498765, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
         type: 3}
       propertyPath: _pressEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1042,56 +1042,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &976817604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1193779795270498767, guid: 32d4ba03c0d156445acce7a9ad1a3b4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 832505088}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &976817605
+--- !u!114 &859252749 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8052914839029235108, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+    type: 3}
+  m_PrefabInstance: {fileID: 8052914839820441001}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976817604}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 591868ea538830149b5d14d8cc379f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unityEvent1:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 976817605}
-        m_TargetAssemblyTypeName: TimerObject, Assembly-CSharp
-        m_MethodName: OpenDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  unityEvent2:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 976817605}
-        m_TargetAssemblyTypeName: TimerObject, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _door: {fileID: 1962999930}
-  _timerDuration: 3
 --- !u!1 &1084585455
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +3728,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1588743921b5e3c4eafdbe17a61cf7b5, type: 3}
+--- !u!1001 &8052914839820441001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8052914839029235108, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: _timerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1962999930}
+    - target: {fileID: 8052914839029235108, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: _timerStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1962999930}
+    - target: {fileID: 8052914839029235109, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_Name
+      value: Timer Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.859579
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.697272
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5628195
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052914839029235111, guid: 67bcb4c8e3e7aeb49b8060e13333e2df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 67bcb4c8e3e7aeb49b8060e13333e2df, type: 3}
 --- !u!1001 &8602252235307298512
 PrefabInstance:
   m_ObjectHideFlags: 0

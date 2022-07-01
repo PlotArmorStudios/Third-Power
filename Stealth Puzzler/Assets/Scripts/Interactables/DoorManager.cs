@@ -45,6 +45,7 @@ public class DoorManager : Obstacle
         if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
         GameManager.Instance.AddObstacleBoolean(_obstacleID, _isOpen);
     }
+    
     private void PlayCloseDoorSound()
     {
         //Implement close door sound here
