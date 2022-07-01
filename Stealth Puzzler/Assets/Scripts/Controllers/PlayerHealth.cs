@@ -20,5 +20,6 @@ public class PlayerHealth : Health
         OnPlayerDie?.Invoke();
         ControllerManager.Instance.DeactivatePlayer();
         StartCoroutine(RestartLevel());
+        CamRig.Instance.UnsetFollow();
     }
 }

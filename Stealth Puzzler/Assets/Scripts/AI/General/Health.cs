@@ -33,7 +33,6 @@ public abstract class Health : MonoBehaviour
 
     protected void TriggerOnDie()
     {
-        Debug.Log("Trigger die anim: " + _animator);
         _animator.SetTrigger("Die");
         OnDie?.Invoke();
     }
