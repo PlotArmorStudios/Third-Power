@@ -16,4 +16,10 @@ public class CamRig : MonoBehaviour
         else
             Destroy(gameObject);
     }
+
+    public void UnsetFollow()
+    {
+        VCam.Follow = null;
+        Debug.Log("Follow is nulled");
+    }
 }
