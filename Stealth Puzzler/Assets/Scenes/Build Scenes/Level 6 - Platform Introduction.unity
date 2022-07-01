@@ -26244,7 +26244,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 36912195}
-  - {fileID: 1737245226}
   - {fileID: 6902295682697286888}
   m_Father: {fileID: 33510284}
   m_RootOrder: 2
@@ -45986,7 +45985,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 924922941}
+    m_TransformParent: {fileID: 778246145323290222}
     m_Modifications:
     - target: {fileID: 1100914574961353094, guid: 2cb300eff152ebf4d8b4eeefe3dba7f5,
         type: 3}
@@ -46041,22 +46040,22 @@ PrefabInstance:
     - target: {fileID: 2715581159521726186, guid: 2cb300eff152ebf4d8b4eeefe3dba7f5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2715581159521726186, guid: 2cb300eff152ebf4d8b4eeefe3dba7f5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 2715581159521726186, guid: 2cb300eff152ebf4d8b4eeefe3dba7f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2715581159521726186, guid: 2cb300eff152ebf4d8b4eeefe3dba7f5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2715581159521726186, guid: 2cb300eff152ebf4d8b4eeefe3dba7f5,
         type: 3}
@@ -60145,7 +60144,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1737245226}
   m_Father: {fileID: 6902295682697286888}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65222,7 +65222,7 @@ Transform:
   - {fileID: 1977907848503801439}
   - {fileID: 6110535553136508305}
   m_Father: {fileID: 924922941}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7106134229479417837
 PrefabInstance:
