@@ -130,6 +130,12 @@ _playerController.CubeCalibratorTransform.position);
         return currentControllerPosition;
     }
 
+    public void DeparentControllers()
+    {
+        _playerController.transform.SetParent(null);
+        _cubeController.transform.SetParent(null);
+    }
+    
     public void DeactivateControllers()
     {
         _playerController.GetComponent<ToggleComponents>().ToggleOffComponents();
