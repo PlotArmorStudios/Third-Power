@@ -5,25 +5,26 @@ using UnityEngine;
 
 public class SetPlayerParent : MonoBehaviour
 {
+    private PlayerController _player;
+    private CubeController _cube;
+
+
     private void OnTriggerEnter(Collider other)
     {
-        var player = other.GetComponent<PlayerController>();
-        var cube = other.GetComponent<CubeController>();
+        _player = other.GetComponent<PlayerController>();
+        _cube = other.GetComponent<CubeController>();
 
-        if (player)
-            player.transform.SetParent(transform);
-        if (cube)
-            cube.transform.SetParent(transform);
+        if (_player)
+            _player.transform.SetParent(transform);
+        if (_cube)
+            _cube.transform.SetParent(transform);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        var player = other.GetComponent<PlayerController>();
-        var cube = other.GetComponent<CubeController>();
-
-        if (player)
-            player.transform.SetParent(null);
-        if (cube)
-            cube.transform.SetParent(null);
+        if (_player || _cube)
+        {
+            ControllerManager.Instance.DeparentControllers();
+        }
     }
 }
