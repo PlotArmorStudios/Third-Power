@@ -19,6 +19,7 @@ public class DoorManager : Obstacle
     [ContextMenu("Open Door")]
     public void OpenDoor()
     {
+        _animator.ResetTrigger("Close");
         _animator.SetTrigger("Open");
         _isOpen = true;
 
@@ -31,5 +32,22 @@ public class DoorManager : Obstacle
     private void PlayOpenDoorSound()
     {
         //Implement open door sound here
+    }
+
+    public void CloseDoor()
+    {
+        _animator.ResetTrigger("Open");
+        _animator.SetTrigger("Close");
+        _isOpen = false;
+
+        PlayCloseDoorSound();
+
+        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
+        GameManager.Instance.AddObstacleBoolean(_obstacleID, _isOpen);
+    }
+    
+    private void PlayCloseDoorSound()
+    {
+        //Implement close door sound here
     }
 }
