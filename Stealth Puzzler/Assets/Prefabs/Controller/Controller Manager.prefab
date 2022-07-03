@@ -119,6 +119,9 @@ MonoBehaviour:
   _cubeController: {fileID: 2397874377432550287}
   _startingController: 0
   _poofObject: {fileID: 1745354067485366688}
+  _groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   FocalPoints:
   - {fileID: 2397874376771184848}
   - {fileID: 2397874376874866147}
@@ -278,6 +281,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2397874377860063782}
     m_Modifications:
+    - target: {fileID: 7789406006338413189, guid: e20857ff8a62d8443b1b18ed7159f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7789406006541125851, guid: e20857ff8a62d8443b1b18ed7159f83a,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -436,6 +444,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5465341349892834397, guid: e1ed9a1e1d1bb0942974e0f2ba932e65,
+        type: 3}
+      propertyPath: _turnLeft
+      value: 
+      objectReference: {fileID: 1584621106274322014, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+        type: 3}
+    - target: {fileID: 5465341349892834397, guid: e1ed9a1e1d1bb0942974e0f2ba932e65,
+        type: 3}
+      propertyPath: _turnRight
+      value: 
+      objectReference: {fileID: -8107408158120806641, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ed9a1e1d1bb0942974e0f2ba932e65, type: 3}
 --- !u!4 &2397874376874866147 stripped

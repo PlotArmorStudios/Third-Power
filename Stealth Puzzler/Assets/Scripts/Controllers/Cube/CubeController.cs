@@ -9,7 +9,10 @@ using UnityEngine.InputSystem;
 public class CubeController : Controller
 {
     [SerializeField] private InputActionReference _move;
+    [SerializeField] private InputActionReference _turnLeft;
+    [SerializeField] private InputActionReference _turnRight;
     [SerializeField] private float _rollSpeed = 5;
+    [SerializeField] private float _rotationDuration = 0.2f;
     
     [Header("Grid Snapping")]
     [SerializeField] private float _snapSpeed = .3f;
@@ -35,11 +38,45 @@ public class CubeController : Controller
     private bool _isMoving;
     private float _weight;
     private bool _touchingGround;
+    private bool _rotated45 = false;
 
     private void OnEnable()
     {
         _move.action.Enable();
+        _turnLeft.action.performed += TurnLeft;
+        _turnRight.action.performed += TurnRight;
         SnapToGrid();
+    }
+
+    private void TurnLeft(InputAction.CallbackContext context)
+    {
+        if (_isMoving) return;
+        StartCoroutine(RotateCube(-45));
+    }
+
+    private void TurnRight(InputAction.CallbackContext context)
+    {
+        if (_isMoving) return;
+        StartCoroutine(RotateCube(45));
+    }
+
+    private IEnumerator RotateCube(int degrees)
+    {
+        if (_isMoving) yield break;
+        _isMoving = true;
+        PlayTumbleSound();
+        _rotated45 = !_rotated45;
+        Quaternion startingRot = transform.rotation;
+        Quaternion targetRot = Quaternion.Euler(transform.rotation.eulerAngles + (Vector3.up * degrees));
+        float counter = 0;
+        while (counter < _rotationDuration)
+        {
+            counter += Time.deltaTime;
+            transform.rotation = Quaternion.Lerp(startingRot, targetRot, counter / _rotationDuration);
+            yield return null;
+        }
+        transform.rotation = targetRot;
+        _isMoving = false;
     }
 
     private void OnValidate()
@@ -69,6 +106,12 @@ public class CubeController : Controller
     {
         ReadInput();
         if (_isMoving) return;
+        //if cube is at a 45° rotation, turn instead of moving
+        if (_rotated45) 
+        {
+            ResetRotation();
+            return;
+        }
 
         if (_horizontal <= -0.1f) Tumble(-Cam.transform.right);
         else if (_horizontal >= 0.1f) Tumble(Cam.transform.right);
@@ -77,6 +120,19 @@ public class CubeController : Controller
 
         if (IsFalling) FallTimer += Time.deltaTime;
         else FallTimer = 0;
+    }
+
+    public bool GetIsMoving()
+    {
+        return _isMoving;
+    }
+
+    private void ResetRotation()
+    {
+        if (_horizontal <= -0.1f) StartCoroutine(RotateCube(-45));
+        else if (_horizontal >= 0.1f) StartCoroutine(RotateCube(45));
+        else if (_vertical >= 0.1f) StartCoroutine(RotateCube(45));
+        else if (_vertical <= -0.1f) StartCoroutine(RotateCube(-45));
     }
 
     private void FixedUpdate()
