@@ -8,6 +8,7 @@ public class ReflectionSimulation : MonoBehaviour
     public int maxReflectionCount = 5;
     public float maxStepDistance = 200;
 
+#if UNITY_EDITOR
     void OnDrawGizmos()
     {
         Handles.color = Color.red;
@@ -43,4 +44,5 @@ public class ReflectionSimulation : MonoBehaviour
 
         DrawPredictedReflectionPattern(position, direction, reflectionsRemaining - 1);
     }
+#endif
 }
