@@ -12,14 +12,14 @@ public class ControllerManager : MonoBehaviour
     [SerializeField] private CubeController _cubeController;
     [SerializeField] private ActiveController _startingController = ActiveController.Player;
     [SerializeField] private GameObject _poofObject;
-
+    [SerializeField][Tooltip("For adjusting height after switch")] private LayerMask _groundLayerMask;
     public List<Transform> FocalPoints;
     public static ControllerManager Instance;
     private ParticleSystem _poofEffect;
 
     private ActiveController _activeController = ActiveController.Player;
     public bool PlayerIsActive { get; set; }
-    public bool SwitchingBlocked = false;
+    public bool SwitchingBlocked = false;    
 
     private void Awake()
     {
@@ -73,16 +73,17 @@ public class ControllerManager : MonoBehaviour
     {
         if (_switch.action.triggered)
         {
-            SwitchControllers();
-            AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject);
+            if (SwitchControllers())
+                AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject);
         }
     }
 
-    public void SwitchControllers()
+    //true if successful, false if unable to switch
+    public bool SwitchControllers()
     {
         if (SwitchingBlocked)
         {
-            return;
+            return false;
         }
         var currentControllerPosition = Vector3.zero;
 
@@ -92,6 +93,7 @@ public class ControllerManager : MonoBehaviour
                 currentControllerPosition = ForceCube();
                 break;
             case ActiveController.Cube:
+                if (_cubeController.GetIsMoving()) return false;
                 currentControllerPosition = ForceHuman();
                 break;
         }
@@ -99,6 +101,7 @@ public class ControllerManager : MonoBehaviour
         _poofEffect.transform.position = currentControllerPosition;
         _poofEffect.gameObject.SetActive(true);
         _poofEffect.Play();
+        return true;
     }
 
     public Vector3 ForceHuman()
@@ -126,8 +129,20 @@ _playerController.CubeCalibratorTransform.position);
         _cubeController.gameObject.SetActive(true);
         OnSwitchFocalPoints?.Invoke(2);
         currentControllerPosition = _cubeController.Rigidbody.transform.position;
+        RaycastHit hit;
+        if (Physics.Raycast(_cubeController.transform.position, Vector3.down, out hit, 2f, _groundLayerMask))
+            _cubeController.transform.position = hit.point;
         _activeController = ActiveController.Cube;
         return currentControllerPosition;
+    }
+
+    //Y position after switch must be adjusted to avoid cube sticking in floor
+    private void AdjustPosition(ref Vector3 position, GameObject activeController)
+    {
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, _groundLayerMask))
+            position = hit.point;
     }
 
     public void DeparentControllers()
