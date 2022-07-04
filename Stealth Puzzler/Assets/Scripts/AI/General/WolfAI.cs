@@ -6,6 +6,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class WolfAI : MonoBehaviour
 {
@@ -41,16 +42,16 @@ public class WolfAI : MonoBehaviour
         {
             case State.Idle:
 #if DebugStates
-                //Debug.Log("Ticking Idle");
+                Debug.Log("Ticking Idle");
 #endif
                 Idle();
                 WindUpIfCanSeePlayer();
                 break;
             case State.Patrol:
 #if DebugStates
-                //Debug.Log("Ticking Patrol");
+                Debug.Log("Ticking Patrol");
 #endif
-                Patrol();
+                PatrolArea();
                 WindUpIfCanSeePlayer();
                 break;
             case State.WindUp:
@@ -118,16 +119,19 @@ public class WolfAI : MonoBehaviour
     private float _timeToStayPatrolling;
     [SerializeField] private float _patrolSpeed = 3f;
     [SerializeField] private float _patrolAcceleration = 8f;
-    //[SerializeField] private float _wanderRadius = 10;
-    //[SerializeField] private float _wanderDistance = 10;
-    //[SerializeField] private float _wanderJitter = 1;
-    //Vector3 wanderTarget = Vector3.zero;
+
     [SerializeField] private float _xWorldMin = 1;
     [SerializeField] private float _xWorldMax = 1;
     [SerializeField] private float _zWorldMin = 1;
     [SerializeField] private float _zWorldMax = 1;
     private bool _targetSelected = false;
 
+    [SerializeField] private float _homeRadius = 5f;
+    private bool _patrolling;
+    private float _patrolTime;
+    private float _timeToPatrol;
+    private Vector3 _newDestination;
+    
     void Patrol()
     {
         _animator.SetBool("Running", true);
@@ -138,25 +142,12 @@ public class WolfAI : MonoBehaviour
         if (!_targetSelected)
         {
             _targetSelected = true;
-            //determine a location on a circle 
-            //wanderTarget = new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter,
-            //    0,
-            //    UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter);
-            
-            //wanderTarget.Normalize();
-            ////project the point out to the radius of the cirle
-            //wanderTarget *= _wanderRadius;
 
-            ////move the circle out in front of the agent to the wander distance
-            //Vector3 targetLocal = wanderTarget + new Vector3(0, 0, _wanderDistance);
-            //work out the world location of the point on the circle.
-            //Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
             var xMapTarget = UnityEngine.Random.Range(_xWorldMin, _xWorldMax);
             var zMapTarget = UnityEngine.Random.Range(_zWorldMin, _zWorldMax);
             var wolfTarget = new Vector3(xMapTarget, 0, zMapTarget);
             Seek(wolfTarget);
         }
-        
 
         if (_timeToStayPatrolling < 0)
         {
@@ -167,6 +158,48 @@ public class WolfAI : MonoBehaviour
         }
     }
 
+    private void PatrolArea()
+    {
+        if (_patrolling == false)
+            _patrolTime += Time.deltaTime;
+
+        if (_patrolTime >= _timeToPatrol)
+        {
+            _timeToPatrol = Random.Range(2, 12);
+            TriggerPatrol();
+            _patrolTime = 0;
+        }
+
+        if (Vector3.Distance(transform.position, _newDestination) < .2f)
+        {
+            _animator.SetBool("Running", false);
+            _patrolling = false;
+        }
+    }
+    
+    private void TriggerPatrol()
+    {
+        Vector3 randomDirection = Random.insideUnitCircle * _homeRadius;
+        randomDirection += transform.position;
+        
+#if PatrolDebug
+        Debug.Log("X: " + randomX);
+        Debug.Log("Y: " + randomX);
+#endif
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, _homeRadius, 1);
+        Vector3 finalPosition = hit.position;
+        _newDestination = finalPosition;
+
+#if PatrolDebug
+        Debug.Log("New destination is: " + _newDestination);
+#endif
+        _navAgent.destination = finalPosition;
+        _animator.SetBool("Running", true);
+        _patrolling = true;
+    }
+    
     //send agent to a location on the nav mesh
     void Seek(Vector3 location)
     {
@@ -199,11 +232,6 @@ public class WolfAI : MonoBehaviour
         _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
 
         _currentState = State.Idle;
-    }
-
-    private IEnumerator TurnToPlayer()
-    {
-        yield return null;
     }
 
     [SerializeField] private float _resetWindUpTime = .5f;
