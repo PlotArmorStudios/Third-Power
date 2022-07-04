@@ -1,4 +1,5 @@
 ﻿#define DebugStates
+#define PatrolDebug
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -170,7 +171,7 @@ public class WolfAI : MonoBehaviour
             _patrolTime = 0;
         }
 
-        if (Vector3.Distance(transform.position, _newDestination) < .2f)
+        if (Vector3.Distance(transform.position, _newDestination) < 1f)
         {
             _animator.SetBool("Running", false);
             _patrolling = false;
@@ -179,27 +180,30 @@ public class WolfAI : MonoBehaviour
     
     private void TriggerPatrol()
     {
-        Vector3 randomDirection = Random.insideUnitCircle * _homeRadius;
+        Vector3 randomDirection = Random.insideUnitSphere * _homeRadius;
         randomDirection += transform.position;
         
-#if PatrolDebug
-        Debug.Log("X: " + randomX);
-        Debug.Log("Y: " + randomX);
-#endif
-
         NavMeshHit hit;
         NavMesh.SamplePosition(randomDirection, out hit, _homeRadius, 1);
         Vector3 finalPosition = hit.position;
         _newDestination = finalPosition;
 
 #if PatrolDebug
+        Debug.Log("Hit position is: " + hit.position);
         Debug.Log("New destination is: " + _newDestination);
 #endif
         _navAgent.destination = finalPosition;
         _animator.SetBool("Running", true);
         _patrolling = true;
     }
-    
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, .2f);
+        Gizmos.DrawSphere(_newDestination, 2f);
+    }
+
     //send agent to a location on the nav mesh
     void Seek(Vector3 location)
     {
