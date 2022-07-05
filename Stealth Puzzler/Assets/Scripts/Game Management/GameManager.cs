@@ -10,10 +10,11 @@ using Scene = UnityEngine.SceneManagement.Scene;
 /// <summary>
 /// Should always be paired with a SceneLoader game object.
 /// </summary>
+
+[DefaultExecutionOrder(100)]
 public class GameManager : MonoBehaviour
 {
     public ControllerManager ControllerManager;
-    [SerializeField] private GameObject _camRig;
 
     public static GameManager Instance;
 
@@ -80,7 +81,6 @@ public class GameManager : MonoBehaviour
         controllerManager.InitializeControllers(Camera.main);
         camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
-        //Instantiate(_camRig, transform.position, Quaternion.identity);
     }
 
     private IEnumerator SequentialInstantiate()
@@ -93,7 +93,6 @@ public class GameManager : MonoBehaviour
         controllerManager.InitializeControllers(Camera.main);
         camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
-        //Instantiate(_camRig, transform.position, Quaternion.identity);
         LoadedFromSave = false;
     }
 

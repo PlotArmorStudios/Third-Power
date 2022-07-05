@@ -41,6 +41,8 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private float _chaseDistance = 5f;
 
     [SerializeField] private float _attackRange;
+
+    private bool _inRange => Vector3.Distance(transform.position, _player.transform.position) > _attackRange;
     
     //Wind Up
     [SerializeField] private float _resetWindUpTime = .5f;
@@ -89,6 +91,8 @@ public class WolfAI : MonoBehaviour
 #if DebugStates
                 Debug.Log("Ticking Chase");
 #endif
+                Chase();
+                TackleIfInRange();
                 break;
             case State.Attack:
 #if DebugStates
@@ -107,17 +111,21 @@ public class WolfAI : MonoBehaviour
         }
     }
 
+    private void Chase()
+    {
+        _navAgent.SetDestination(_player.transform.position);
+    }
+
     private void ChaseIfCanSeePlayer()
     {
         if (_fieldOfView.CanSeePlayer)
-        {
             _currentState = State.Chase;
-        }
     }
 
     private void TackleIfInRange()
     {
-        
+        if (_inRange)
+            _currentState = State.Attack;
     }
 
     void Idle()
