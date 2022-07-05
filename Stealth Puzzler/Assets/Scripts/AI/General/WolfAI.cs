@@ -1,4 +1,5 @@
-﻿#define DebugStates
+﻿//#define DebugStates
+//#define PatrolDebug
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,13 +7,15 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class WolfAI : MonoBehaviour
 {
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
     [SerializeField] private Animator _animator;
-
+    [SerializeField] private bool _togglePatrol = true;
+    
     private LayerMask _enemyLayer;
     private LayerMask _playerLayer;
 
@@ -20,14 +23,39 @@ public class WolfAI : MonoBehaviour
     private Controller _player;
     private Rigidbody _rb;
 
+    //Patrolling
+    [SerializeField] private float _homeRadius = 5f;
+    [SerializeField] private float _minTimeToStayIdle;
+    [SerializeField] private float _maxTimeToStayIdle;
+
+    private bool _patrolling;
+    private float _timeToStayIdle;
+    private float _patrolTime;
+    private float _timeToPatrol;
+    private Vector3 _newDestination;
+    private Vector3 _startPosition;
+
+    //Chase
+    [SerializeField] private float _chaseSpeed = 5f;
+    [SerializeField] private float _chaseAcceleration = 12f;
+    [SerializeField] private float _chaseDistance = 5f;
+
+    [SerializeField] private float _attackRange;
+
+    private bool _inRange => Vector3.Distance(transform.position, _player.transform.position) < _attackRange;
+    
+    //Wind Up
+    [SerializeField] private float _resetWindUpTime = .5f;
+    [SerializeField] private float _windUpTime = .5f;
+
     void Start()
     {
         _navAgent = GetComponent<NavMeshAgent>();
         _currentState = State.Idle;
-        _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
         _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
         _rb = GetComponent<Rigidbody>();
         _player = FindObjectOfType<Controller>(true);
+        _startPosition = transform.position;
     }
 
     void Update()
@@ -41,17 +69,17 @@ public class WolfAI : MonoBehaviour
         {
             case State.Idle:
 #if DebugStates
-                //Debug.Log("Ticking Idle");
+                Debug.Log("Ticking Idle");
 #endif
                 Idle();
-                WindUpIfCanSeePlayer();
+                ChaseIfCanSeePlayer();
                 break;
             case State.Patrol:
 #if DebugStates
-                //Debug.Log("Ticking Patrol");
+                Debug.Log("Ticking Patrol");
 #endif
-                Patrol();
-                WindUpIfCanSeePlayer();
+                PatrolArea();
+                ChaseIfCanSeePlayer();
                 break;
             case State.WindUp:
 #if DebugStates
@@ -63,12 +91,14 @@ public class WolfAI : MonoBehaviour
 #if DebugStates
                 Debug.Log("Ticking Chase");
 #endif
-                Chase(_player.transform.position);
+                Chase();
+                TackleIfInRange();
                 break;
             case State.Attack:
 #if DebugStates
                 Debug.Log("Ticking Attack");
 #endif
+                Tackle(_player.transform.position);
                 break;
             case State.TurnAround:
 #if DebugStates
@@ -81,18 +111,22 @@ public class WolfAI : MonoBehaviour
         }
     }
 
-
-    private void WindUpIfCanSeePlayer()
+    private void Chase()
     {
-        if (_fieldOfView.CanSeePlayer)
-        {
-            _currentState = State.WindUp;
-        }
+        _navAgent.SetDestination(_player.transform.position);
     }
 
-    [SerializeField] private float _minTimeToStayIdle;
-    [SerializeField] private float _maxTimeToStayIdle;
-    private float _timeToStayIdle;
+    private void ChaseIfCanSeePlayer()
+    {
+        if (_fieldOfView.CanSeePlayer)
+            _currentState = State.Chase;
+    }
+
+    private void TackleIfInRange()
+    {
+        if (_inRange)
+            _currentState = State.Attack;
+    }
 
     void Idle()
     {
@@ -100,7 +134,11 @@ public class WolfAI : MonoBehaviour
         _navAgent.ResetPath();
         _rb.velocity = Vector3.zero;
         _rb.rotation = Quaternion.identity;
+
         //play idle animation
+
+        if (!_togglePatrol) return;
+        
         if (_timeToStayIdle < 0)
         {
             _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
@@ -113,71 +151,51 @@ public class WolfAI : MonoBehaviour
         return UnityEngine.Random.Range(minTime, maxTime);
     }
 
-    [SerializeField] private float _minTimeToPatrol;
-    [SerializeField] private float _maxTimeToPatrol;
-    private float _timeToStayPatrolling;
-    [SerializeField] private float _patrolSpeed = 3f;
-    [SerializeField] private float _patrolAcceleration = 8f;
-    //[SerializeField] private float _wanderRadius = 10;
-    //[SerializeField] private float _wanderDistance = 10;
-    //[SerializeField] private float _wanderJitter = 1;
-    //Vector3 wanderTarget = Vector3.zero;
-    [SerializeField] private float _xWorldMin = 1;
-    [SerializeField] private float _xWorldMax = 1;
-    [SerializeField] private float _zWorldMin = 1;
-    [SerializeField] private float _zWorldMax = 1;
-    private bool _targetSelected = false;
-
-    void Patrol()
+    private void PatrolArea()
     {
-        _animator.SetBool("Running", true);
-        _navAgent.acceleration = _patrolAcceleration;
-        _navAgent.speed = _patrolSpeed;
-        _timeToStayPatrolling -= Time.deltaTime;
+        if (_patrolling == false)
+            _patrolTime += Time.deltaTime;
 
-        if (!_targetSelected)
+        if (_patrolTime >= _timeToPatrol)
         {
-            _targetSelected = true;
-            //determine a location on a circle 
-            //wanderTarget = new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter,
-            //    0,
-            //    UnityEngine.Random.Range(-1.0f, 1.0f) * _wanderJitter);
-            
-            //wanderTarget.Normalize();
-            ////project the point out to the radius of the cirle
-            //wanderTarget *= _wanderRadius;
-
-            ////move the circle out in front of the agent to the wander distance
-            //Vector3 targetLocal = wanderTarget + new Vector3(0, 0, _wanderDistance);
-            //work out the world location of the point on the circle.
-            //Vector3 targetWorld = gameObject.transform.InverseTransformVector(targetLocal);
-            var xMapTarget = UnityEngine.Random.Range(_xWorldMin, _xWorldMax);
-            var zMapTarget = UnityEngine.Random.Range(_zWorldMin, _zWorldMax);
-            var wolfTarget = new Vector3(xMapTarget, 0, zMapTarget);
-            Seek(wolfTarget);
+            _timeToPatrol = Random.Range(2, 12);
+            TriggerPatrol();
+            _patrolTime = 0;
         }
-        
 
-        if (_timeToStayPatrolling < 0)
+        if (Vector3.Distance(transform.position, _newDestination) < 1f)
         {
-            _timeToStayPatrolling = RandomTime(_minTimeToPatrol, _maxTimeToPatrol);
             _animator.SetBool("Running", false);
-            _currentState = State.Idle;
-            _targetSelected = false;
+            _patrolling = false;
         }
     }
 
-    //send agent to a location on the nav mesh
-    void Seek(Vector3 location)
+    private void TriggerPatrol()
     {
-        _navAgent.SetDestination(location);
+        Vector3 randomDirection = Random.insideUnitSphere * _homeRadius;
+        randomDirection += _startPosition;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, _homeRadius, 1);
+        Vector3 finalPosition = hit.position;
+        _newDestination = finalPosition;
+
+#if PatrolDebug
+        Debug.Log("Hit position is: " + hit.position);
+        Debug.Log("New destination is: " + _newDestination);
+#endif
+        _navAgent.destination = finalPosition;
+        _animator.SetBool("Running", true);
+        _patrolling = true;
     }
 
-    [SerializeField] private float _chaseSpeed = 5f;
-    [SerializeField] private float _chaseAcceleration = 12f;
-    [SerializeField] private float _chaseDistance = 5f;
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, .2f);
+        Gizmos.DrawSphere(_newDestination, 2f);
+    }
 
-    void Chase(Vector3 location)
+    void Tackle(Vector3 location)
     {
         if (_fieldOfView.CanSeePlayer)
         {
@@ -201,21 +219,13 @@ public class WolfAI : MonoBehaviour
         _currentState = State.Idle;
     }
 
-    private IEnumerator TurnToPlayer()
-    {
-        yield return null;
-    }
-
-    [SerializeField] private float _resetWindUpTime = .5f;
-    [SerializeField] private float _windUpTime = .5f;
-
     void WindUp()
     {
         _navAgent.ResetPath();
         _rb.transform.rotation = Quaternion.LookRotation(_player.transform.position - _rb.transform.position);
         _animator.SetBool("Running", false);
         _windUpTime -= Time.deltaTime;
-        
+
         if (_fieldOfView.CanSeePlayer && _windUpTime < 0)
         {
             _windUpTime = _resetWindUpTime;

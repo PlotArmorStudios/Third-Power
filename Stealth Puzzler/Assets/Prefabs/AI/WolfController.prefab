@@ -112,18 +112,14 @@ MonoBehaviour:
   _fieldOfView: {fileID: 2869162657433121907}
   _currentState: 0
   _animator: {fileID: 7983060009232432041}
+  _togglePatrol: 0
+  _homeRadius: 10
   _minTimeToStayIdle: 1
   _maxTimeToStayIdle: 2
-  _minTimeToPatrol: 1
-  _maxTimeToPatrol: 2
-  _patrolSpeed: 3
-  _patrolAcceleration: 8
-  wanderRadius: 10
-  wanderDistance: 10
-  wanderJitter: 1
   _chaseSpeed: 100
   _chaseAcceleration: 100
   _chaseDistance: 5
+  _attackRange: 5
   _resetWindUpTime: 0.5
   _windUpTime: 0.5
 --- !u!195 &2869162657433121904
@@ -168,7 +164,9 @@ MonoBehaviour:
   ObstructionMask:
     serializedVersion: 2
     m_Bits: 256
-  CanSeePlayer: 0
+  JustSawPlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &2869162657433121906
 Rigidbody:
   m_ObjectHideFlags: 0
