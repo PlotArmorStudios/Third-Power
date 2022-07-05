@@ -146,6 +146,13 @@ public class CubeController : Controller
         return _touchingGround;
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        
+        Gizmos.DrawRay(Rigidbody.transform.position, Vector3.down * 1.3f);
+    }
+
     private void Tumble(Vector3 dir)
     {
         float largestDot = 0;
