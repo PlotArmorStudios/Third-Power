@@ -11,6 +11,7 @@ public class CrushEnemies : MonoBehaviour
     [SerializeField] private float _maxDropRate;
 
     private CubeController _cubeController;
+    private ParticleController _particleController;
 
     private float _dropTime;
     private bool _dropping;
@@ -29,6 +30,7 @@ public class CrushEnemies : MonoBehaviour
     private void Start()
     {
         _cubeController = GetComponent<CubeController>();
+        _particleController = GetComponent<ParticleController>();
         _rigidbody = _cubeController.Rigidbody;
     }
 
@@ -36,7 +38,10 @@ public class CrushEnemies : MonoBehaviour
     {
         if (!_cubeController.IsTouchingGround())
             if (_drop.action.triggered)
+            {
                 _dropping = true;
+                _particleController.PlayDropVFX(transform.position);
+            }
 
         if (_dropping)
         {
@@ -51,6 +56,8 @@ public class CrushEnemies : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (!_dropping) return;
+        _particleController.StopDropVFX();
+        _particleController.PlayDropImpactVFX(transform.position);
         _dropping = false;
         var crushableObject = collision.gameObject.GetComponent<Crushable>();
         if (!crushableObject) return;
