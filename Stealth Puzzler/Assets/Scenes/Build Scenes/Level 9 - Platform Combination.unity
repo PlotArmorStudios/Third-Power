@@ -30233,6 +30233,111 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1409644751}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1413686365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7687023723477837728}
+    m_Modifications:
+    - target: {fileID: 289547267, guid: 3fb6a2e53e507834fb705b6ed193891c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683657772, guid: 3fb6a2e53e507834fb705b6ed193891c, type: 3}
+      propertyPath: m_text
+      value: 'RETREAT
+
+        Only danger awaits you. You have been warned.
+
+        Your
+        body will not be recovered.
+
+        Your sacrifice will not be remembered.
+
+        It
+        is not worth it.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683657772, guid: 3fb6a2e53e507834fb705b6ed193891c, type: 3}
+      propertyPath: m_fontSize
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683657772, guid: 3fb6a2e53e507834fb705b6ed193891c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683657773, guid: 3fb6a2e53e507834fb705b6ed193891c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400753609438635987, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_Name
+      value: Altar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.424767
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fb6a2e53e507834fb705b6ed193891c, type: 3}
+--- !u!4 &1413686366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7292677944822225216, guid: 3fb6a2e53e507834fb705b6ed193891c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1413686365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1416549463
 GameObject:
   m_ObjectHideFlags: 0
@@ -48484,6 +48589,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7236900146141595880}
+  - {fileID: 1413686366}
   m_Father: {fileID: 3321082251936089367}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
