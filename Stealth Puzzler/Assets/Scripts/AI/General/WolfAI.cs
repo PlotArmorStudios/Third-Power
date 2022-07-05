@@ -42,7 +42,7 @@ public class WolfAI : MonoBehaviour
 
     [SerializeField] private float _attackRange;
 
-    private bool _inRange => Vector3.Distance(transform.position, _player.transform.position) > _attackRange;
+    private bool _inRange => Vector3.Distance(transform.position, _player.transform.position) < _attackRange;
     
     //Wind Up
     [SerializeField] private float _resetWindUpTime = .5f;

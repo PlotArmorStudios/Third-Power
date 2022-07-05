@@ -2292,50 +2292,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: WolfController (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
+    - target: {fileID: 2869162657433121904, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
-      propertyPath: _xWorldMax
-      value: 114
+      propertyPath: m_Speed
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
+    - target: {fileID: 2869162657433121907, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
-      propertyPath: _xWorldMin
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _zWorldMax
+      propertyPath: Radius
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _zWorldMin
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _homeRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _togglePatrol
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.3877006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.3877006
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
@@ -2350,7 +2320,7 @@ PrefabInstance:
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.495175
+      value: 9.495174
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
@@ -8072,27 +8042,27 @@ PrefabInstance:
     - target: {fileID: 623622010709062606, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_Orbits.Array.data[0].m_Radius
-      value: 14.77
+      value: 12.77
       objectReference: {fileID: 0}
     - target: {fileID: 623622010709062606, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_Orbits.Array.data[1].m_Radius
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 623622010709062606, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_Orbits.Array.data[2].m_Radius
-      value: 7.74
+      value: 5.74
       objectReference: {fileID: 0}
     - target: {fileID: 623622010754636990, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.216044
+      value: -0.1686689
       objectReference: {fileID: 0}
     - target: {fileID: 623622010754636990, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -9.105085
+      value: -5.829319
       objectReference: {fileID: 0}
     - target: {fileID: 623622010783452169, guid: ae1a751119413714d908600118f61af1,
         type: 3}
@@ -8132,22 +8102,22 @@ PrefabInstance:
     - target: {fileID: 623622011000231252, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.216044
+      value: -0.1686689
       objectReference: {fileID: 0}
     - target: {fileID: 623622011000231252, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -9.105085
+      value: -5.829319
       objectReference: {fileID: 0}
     - target: {fileID: 623622011105745496, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.216044
+      value: -0.1686689
       objectReference: {fileID: 0}
     - target: {fileID: 623622011105745496, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -9.105085
+      value: -5.829319
       objectReference: {fileID: 0}
     - target: {fileID: 623622011667152623, guid: ae1a751119413714d908600118f61af1,
         type: 3}
@@ -27788,35 +27758,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: WolfController (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
+    - target: {fileID: 2869162657433121904, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
-      propertyPath: _xWorldMax
-      value: 114
+      propertyPath: m_Speed
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
+    - target: {fileID: 2869162657433121907, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
-      propertyPath: _xWorldMin
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _zWorldMax
+      propertyPath: Radius
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _zWorldMin
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _homeRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
-        type: 3}
-      propertyPath: _togglePatrol
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
@@ -27836,7 +27786,7 @@ PrefabInstance:
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.995176
+      value: 14.995174
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
@@ -29790,10 +29740,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: WolfController
       objectReference: {fileID: 0}
-    - target: {fileID: 2869162657433121801, guid: b6a00d8629699b5419d85bb7013aab98,
+    - target: {fileID: 2869162657433121904, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
-      propertyPath: _togglePatrol
-      value: 0
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869162657433121907, guid: b6a00d8629699b5419d85bb7013aab98,
+        type: 3}
+      propertyPath: Radius
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2869162657433121910, guid: b6a00d8629699b5419d85bb7013aab98,
         type: 3}
