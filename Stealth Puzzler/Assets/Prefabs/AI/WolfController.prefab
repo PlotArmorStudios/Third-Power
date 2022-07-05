@@ -118,9 +118,11 @@ MonoBehaviour:
   _maxTimeToPatrol: 2
   _patrolSpeed: 3
   _patrolAcceleration: 8
-  wanderRadius: 10
-  wanderDistance: 10
-  wanderJitter: 1
+  _xWorldMin: 45
+  _xWorldMax: 114
+  _zWorldMin: -15
+  _zWorldMax: 15
+  _homeRadius: 10
   _chaseSpeed: 100
   _chaseAcceleration: 100
   _chaseDistance: 5
@@ -168,7 +170,9 @@ MonoBehaviour:
   ObstructionMask:
     serializedVersion: 2
     m_Bits: 256
-  CanSeePlayer: 0
+  JustSawPlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &2869162657433121906
 Rigidbody:
   m_ObjectHideFlags: 0
