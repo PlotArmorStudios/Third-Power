@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="887377802">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2851192426">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -22,7 +22,46 @@
 				<GameParameter Id="1182958561" Name="Cutscene" ObjectPath="\Game Parameters\Default Work Unit\Cutscene"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="762304487">
+		<SoundBank Id="1546231383" Language="SFX" Hash="223989351">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_Bank</ObjectPath>
+			<ShortName>Music_Bank</ShortName>
+			<Path>Music_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="29585292" Language="SFX">
+							<ShortName>SP_StringHarmonics_65.wav</ShortName>
+							<Path>SFX/SP_StringHarmonics_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="115399189" Language="SFX">
+							<ShortName>SP_Ambience_65.wav</ShortName>
+							<Path>SFX/SP_Ambience_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="308425292" Language="SFX">
+							<ShortName>SP_ShakerPerc_PU1_65_wTail.wav</ShortName>
+							<Path>SFX/SP_ShakerPerc_PU1_65_wTail_D79FB2B7.wem</Path>
+						</File>
+						<File Id="419687084" Language="SFX">
+							<ShortName>SP_Glockenspiel_65.wav</ShortName>
+							<Path>SFX/SP_Glockenspiel_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="446084114" Language="SFX">
+							<ShortName>SP_StringPlucks_65.wav</ShortName>
+							<Path>SFX/SP_StringPlucks_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="829363806" Language="SFX">
+							<ShortName>SP_HandPerc_PU1_65.wav</ShortName>
+							<Path>SFX/SP_HandPerc_PU1_65_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="4072029455" Language="SFX" Hash="3057841150">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -31,15 +70,15 @@
 					<IncludedMemoryFiles>
 						<File Id="316855928" Language="SFX">
 							<ShortName>SFX_Objects_ArrowInAir_01.wav</ShortName>
-							<Path>SFX\SFX_Objects_ArrowInAir_01_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_ArrowInAir_01_10C4C929.wem</Path>
 						</File>
 						<File Id="515314100" Language="SFX">
 							<ShortName>SFX_Objects_ArrowInAir_03.wav</ShortName>
-							<Path>SFX\SFX_Objects_ArrowInAir_03_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_ArrowInAir_03_10C4C929.wem</Path>
 						</File>
 						<File Id="880170465" Language="SFX">
 							<ShortName>SFX_Objects_ArrowInAir_02.wav</ShortName>
-							<Path>SFX\SFX_Objects_ArrowInAir_02_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_ArrowInAir_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -47,19 +86,19 @@
 					<IncludedMemoryFiles>
 						<File Id="272633937" Language="SFX">
 							<ShortName>SFX_Objects_Cannon_03.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_03_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_Cannon_03_10C4C929.wem</Path>
 						</File>
 						<File Id="354517231" Language="SFX">
 							<ShortName>SFX_Objects_Cannon_02.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_02_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_Cannon_02_10C4C929.wem</Path>
 						</File>
 						<File Id="802308215" Language="SFX">
 							<ShortName>SFX_Objects_Cannon_04.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_04_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_Cannon_04_10C4C929.wem</Path>
 						</File>
 						<File Id="972897040" Language="SFX">
 							<ShortName>SFX_Objects_Cannon_01.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_01_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_Cannon_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -70,15 +109,15 @@
 					<IncludedMemoryFiles>
 						<File Id="807781783" Language="SFX">
 							<ShortName>Cannon_Idle_Steam_01.wav</ShortName>
-							<Path>SFX\Cannon_Idle_Steam_01_10C4C929.wem</Path>
+							<Path>SFX/Cannon_Idle_Steam_01_10C4C929.wem</Path>
 						</File>
 						<File Id="959657543" Language="SFX">
 							<ShortName>Cannon_Idle_Steam_02.wav</ShortName>
-							<Path>SFX\Cannon_Idle_Steam_02_10C4C929.wem</Path>
+							<Path>SFX/Cannon_Idle_Steam_02_10C4C929.wem</Path>
 						</File>
 						<File Id="976971680" Language="SFX">
 							<ShortName>Cannon_Idle_Steam_03.wav</ShortName>
-							<Path>SFX\Cannon_Idle_Steam_03_10C4C929.wem</Path>
+							<Path>SFX/Cannon_Idle_Steam_03_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -86,15 +125,15 @@
 					<IncludedMemoryFiles>
 						<File Id="650049960" Language="SFX">
 							<ShortName>SFX_Player_Character-Cube_Transform_02.wav</ShortName>
-							<Path>SFX\SFX_Player_Character-Cube_Transform_02_10C4C929.wem</Path>
+							<Path>SFX/SFX_Player_Character-Cube_Transform_02_10C4C929.wem</Path>
 						</File>
 						<File Id="662988376" Language="SFX">
 							<ShortName>SFX_Player_Character-Cube_Transform_01.wav</ShortName>
-							<Path>SFX\SFX_Player_Character-Cube_Transform_01_10C4C929.wem</Path>
+							<Path>SFX/SFX_Player_Character-Cube_Transform_01_10C4C929.wem</Path>
 						</File>
 						<File Id="1014851438" Language="SFX">
 							<ShortName>SFX_Player_Character-Cube_Transform_03.wav</ShortName>
-							<Path>SFX\SFX_Player_Character-Cube_Transform_03_10C4C929.wem</Path>
+							<Path>SFX/SFX_Player_Character-Cube_Transform_03_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -105,19 +144,19 @@
 					<IncludedMemoryFiles>
 						<File Id="331044563" Language="SFX">
 							<ShortName>Cube_Movement_03.wav</ShortName>
-							<Path>SFX\Cube_Movement_03_10C4C929.wem</Path>
+							<Path>SFX/Cube_Movement_03_10C4C929.wem</Path>
 						</File>
 						<File Id="337029874" Language="SFX">
 							<ShortName>Cube_Movement_02.wav</ShortName>
-							<Path>SFX\Cube_Movement_02_10C4C929.wem</Path>
+							<Path>SFX/Cube_Movement_02_10C4C929.wem</Path>
 						</File>
 						<File Id="416225587" Language="SFX">
 							<ShortName>Cube_Movement_04.wav</ShortName>
-							<Path>SFX\Cube_Movement_04_10C4C929.wem</Path>
+							<Path>SFX/Cube_Movement_04_10C4C929.wem</Path>
 						</File>
 						<File Id="823154544" Language="SFX">
 							<ShortName>Cube_Movement_01.wav</ShortName>
-							<Path>SFX\Cube_Movement_01_10C4C929.wem</Path>
+							<Path>SFX/Cube_Movement_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -128,51 +167,51 @@
 					<IncludedMemoryFiles>
 						<File Id="30157072" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_01.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_01_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_01_10C4C929.wem</Path>
 						</File>
 						<File Id="55532973" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_03.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_03_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_03_10C4C929.wem</Path>
 						</File>
 						<File Id="75149900" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_01.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_01_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_01_10C4C929.wem</Path>
 						</File>
 						<File Id="427195042" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_03.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_03_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_03_10C4C929.wem</Path>
 						</File>
 						<File Id="607834779" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_04.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_04_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_04_10C4C929.wem</Path>
 						</File>
 						<File Id="648969644" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_03.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_03_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_03_10C4C929.wem</Path>
 						</File>
 						<File Id="692782014" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_04.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_04_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_04_10C4C929.wem</Path>
 						</File>
 						<File Id="848395372" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_04.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
 						</File>
 						<File Id="876759871" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_01.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_01_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_01_10C4C929.wem</Path>
 						</File>
 						<File Id="1003307367" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_02.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_02_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_02_10C4C929.wem</Path>
 						</File>
 						<File Id="1027396423" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_02.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_02_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_02_10C4C929.wem</Path>
 						</File>
 						<File Id="1044968183" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_02.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -183,19 +222,19 @@
 					<IncludedMemoryFiles>
 						<File Id="261185651" Language="SFX">
 							<ShortName>Eye_Impact_02.wav</ShortName>
-							<Path>SFX\Eye_Impact_02_10C4C929.wem</Path>
+							<Path>SFX/Eye_Impact_02_10C4C929.wem</Path>
 						</File>
 						<File Id="419690396" Language="SFX">
 							<ShortName>Eye_Impact_03.wav</ShortName>
-							<Path>SFX\Eye_Impact_03_10C4C929.wem</Path>
+							<Path>SFX/Eye_Impact_03_10C4C929.wem</Path>
 						</File>
 						<File Id="436634046" Language="SFX">
 							<ShortName>Eye_Impact_01.wav</ShortName>
-							<Path>SFX\Eye_Impact_01_10C4C929.wem</Path>
+							<Path>SFX/Eye_Impact_01_10C4C929.wem</Path>
 						</File>
 						<File Id="719797406" Language="SFX">
 							<ShortName>Eye_Impact_04.wav</ShortName>
-							<Path>SFX\Eye_Impact_04_10C4C929.wem</Path>
+							<Path>SFX/Eye_Impact_04_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -203,15 +242,15 @@
 					<IncludedMemoryFiles>
 						<File Id="249206915" Language="SFX">
 							<ShortName>Ambiences_3D_FirePlace_03.wav</ShortName>
-							<Path>SFX\Ambiences_3D_FirePlace_03_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_3D_FirePlace_03_10C4C929.wem</Path>
 						</File>
 						<File Id="636149935" Language="SFX">
 							<ShortName>Ambiences_3D_FirePlace_02.wav</ShortName>
-							<Path>SFX\Ambiences_3D_FirePlace_02_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_3D_FirePlace_02_10C4C929.wem</Path>
 						</File>
 						<File Id="980379078" Language="SFX">
 							<ShortName>Ambiences_3D_FirePlace_01.wav</ShortName>
-							<Path>SFX\Ambiences_3D_FirePlace_01_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_3D_FirePlace_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -219,115 +258,115 @@
 					<IncludedMemoryFiles>
 						<File Id="77153870" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_11.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_11_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_11_10C4C929.wem</Path>
 						</File>
 						<File Id="89521839" Language="SFX">
 							<ShortName>FS_Asphalt_01.wav</ShortName>
-							<Path>SFX\FS_Asphalt_01_10C4C929.wem</Path>
+							<Path>SFX/FS_Asphalt_01_10C4C929.wem</Path>
 						</File>
 						<File Id="216427900" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_09.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_09_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_09_10C4C929.wem</Path>
 						</File>
 						<File Id="265513247" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_04.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_04_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_04_10C4C929.wem</Path>
 						</File>
 						<File Id="266083498" Language="SFX">
 							<ShortName>FS_Asphalt_05.wav</ShortName>
-							<Path>SFX\FS_Asphalt_05_10C4C929.wem</Path>
+							<Path>SFX/FS_Asphalt_05_10C4C929.wem</Path>
 						</File>
 						<File Id="350975809" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_07.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_07_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_07_10C4C929.wem</Path>
 						</File>
 						<File Id="352251700" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_10.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_10_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_10_10C4C929.wem</Path>
 						</File>
 						<File Id="456798219" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_06.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_06_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_06_10C4C929.wem</Path>
 						</File>
 						<File Id="470665331" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_08.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_08_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_08_10C4C929.wem</Path>
 						</File>
 						<File Id="474768175" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_12.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_12_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_12_10C4C929.wem</Path>
 						</File>
 						<File Id="488106250" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_11.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_11_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_11_10C4C929.wem</Path>
 						</File>
 						<File Id="489123100" Language="SFX">
 							<ShortName>FS_Asphalt_03.wav</ShortName>
-							<Path>SFX\FS_Asphalt_03_10C4C929.wem</Path>
+							<Path>SFX/FS_Asphalt_03_10C4C929.wem</Path>
 						</File>
 						<File Id="517099856" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_05.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_05_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_05_10C4C929.wem</Path>
 						</File>
 						<File Id="551190759" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_09.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_09_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_09_10C4C929.wem</Path>
 						</File>
 						<File Id="579724359" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_03.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_03_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_03_10C4C929.wem</Path>
 						</File>
 						<File Id="636819685" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_05.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_05_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_05_10C4C929.wem</Path>
 						</File>
 						<File Id="763489660" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_08.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_08_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_08_10C4C929.wem</Path>
 						</File>
 						<File Id="776619155" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_02.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_02_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_02_10C4C929.wem</Path>
 						</File>
 						<File Id="808939324" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_10.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_10_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_10_10C4C929.wem</Path>
 						</File>
 						<File Id="821963603" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_01.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_01_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_01_10C4C929.wem</Path>
 						</File>
 						<File Id="825389961" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_07.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_07_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_07_10C4C929.wem</Path>
 						</File>
 						<File Id="833342183" Language="SFX">
 							<ShortName>FS_Asphalt_04.wav</ShortName>
-							<Path>SFX\FS_Asphalt_04_10C4C929.wem</Path>
+							<Path>SFX/FS_Asphalt_04_10C4C929.wem</Path>
 						</File>
 						<File Id="940648715" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_04.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_04_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Carpet_04_10C4C929.wem</Path>
 						</File>
 						<File Id="948898698" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_02.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_02_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_02_10C4C929.wem</Path>
 						</File>
 						<File Id="985033293" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_03.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_03_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_03_10C4C929.wem</Path>
 						</File>
 						<File Id="993682168" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_01.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_01_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_01_10C4C929.wem</Path>
 						</File>
 						<File Id="997402142" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_06.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_06_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_06_10C4C929.wem</Path>
 						</File>
 						<File Id="1023747984" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_12.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Metal_12_10C4C929.wem</Path>
+							<Path>SFX/Player_Footsteps_Metal_12_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{02E275B7-15CD-4327-8B5A-9895E68E8ED9}</DefaultSwitchValue>
@@ -389,55 +428,55 @@
 					<IncludedMemoryFiles>
 						<File Id="30157072" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_01.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_01_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_01_10C4C929.wem</Path>
 						</File>
 						<File Id="55532973" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_03.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_03_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_03_10C4C929.wem</Path>
 						</File>
 						<File Id="75149900" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_01.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_01_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_01_10C4C929.wem</Path>
 						</File>
 						<File Id="427195042" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_03.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_03_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_03_10C4C929.wem</Path>
 						</File>
 						<File Id="607834779" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_04.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_04_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_04_10C4C929.wem</Path>
 						</File>
 						<File Id="648969644" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_03.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_03_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_03_10C4C929.wem</Path>
 						</File>
 						<File Id="692782014" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_04.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_04_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_04_10C4C929.wem</Path>
 						</File>
 						<File Id="848395372" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_04.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_04_10C4C929.wem</Path>
 						</File>
 						<File Id="857811186" Language="SFX">
 							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V05.wav</ShortName>
-							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V05_10C4C929.wem</Path>
+							<Path>SFX/SFX_Cutscene_Arrow_Demonstartion_V05_10C4C929.wem</Path>
 						</File>
 						<File Id="876759871" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_01.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_01_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_01_10C4C929.wem</Path>
 						</File>
 						<File Id="1003307367" Language="SFX">
 							<ShortName>Dunegon_01_Layer_03_02.wav</ShortName>
-							<Path>SFX\Dunegon_01_Layer_03_02_10C4C929.wem</Path>
+							<Path>SFX/Dunegon_01_Layer_03_02_10C4C929.wem</Path>
 						</File>
 						<File Id="1027396423" Language="SFX">
 							<ShortName>Dungeon_01_Layer_02_02.wav</ShortName>
-							<Path>SFX\Dungeon_01_Layer_02_02_10C4C929.wem</Path>
+							<Path>SFX/Dungeon_01_Layer_02_02_10C4C929.wem</Path>
 						</File>
 						<File Id="1044968183" Language="SFX">
 							<ShortName>Ambiences_2D_Dungeon1_02.wav</ShortName>
-							<Path>SFX\Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
+							<Path>SFX/Ambiences_2D_Dungeon1_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -448,7 +487,7 @@
 					<IncludedMemoryFiles>
 						<File Id="919698874" Language="SFX">
 							<ShortName>SFX_Objects_Cannon_Reload_01.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_01_10C4C929.wem</Path>
+							<Path>SFX/SFX_Objects_Cannon_Reload_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -456,23 +495,23 @@
 					<IncludedMemoryFiles>
 						<File Id="50648789" Language="SFX">
 							<ShortName>Waterdrop_01.wav</ShortName>
-							<Path>SFX\Waterdrop_01_10C4C929.wem</Path>
+							<Path>SFX/Waterdrop_01_10C4C929.wem</Path>
 						</File>
 						<File Id="136446839" Language="SFX">
 							<ShortName>Waterdrop_05.wav</ShortName>
-							<Path>SFX\Waterdrop_05_10C4C929.wem</Path>
+							<Path>SFX/Waterdrop_05_10C4C929.wem</Path>
 						</File>
 						<File Id="360760542" Language="SFX">
 							<ShortName>Waterdrop_04.wav</ShortName>
-							<Path>SFX\Waterdrop_04_10C4C929.wem</Path>
+							<Path>SFX/Waterdrop_04_10C4C929.wem</Path>
 						</File>
 						<File Id="886490584" Language="SFX">
 							<ShortName>Waterdrop_03.wav</ShortName>
-							<Path>SFX\Waterdrop_03_10C4C929.wem</Path>
+							<Path>SFX/Waterdrop_03_10C4C929.wem</Path>
 						</File>
 						<File Id="1026445588" Language="SFX">
 							<ShortName>Waterdrop_02.wav</ShortName>
-							<Path>SFX\Waterdrop_02_10C4C929.wem</Path>
+							<Path>SFX/Waterdrop_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>

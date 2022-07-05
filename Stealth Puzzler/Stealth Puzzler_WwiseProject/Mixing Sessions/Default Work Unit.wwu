@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0BAFB018-D931-4EC5-8071-CF2875D21461}" SchemaVersion="103">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{0BAFB018-D931-4EC5-8071-CF2875D21461}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0BAFB018-D931-4EC5-8071-CF2875D21461}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="MarkTest" ID="{F9E3C5A0-0242-4AFA-AF99-BB9181A13F85}">
+					<ObjectList>
+						<ObjectRef Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

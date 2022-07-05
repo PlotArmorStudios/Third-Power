@@ -47,6 +47,13 @@
 							<ReferenceList/>
 							<ChildrenList>
 								<EventActionException Name="" ID="{0E1CD242-6F5E-4BA9-97F4-82713B13F5C4}"/>
+								<EventActionException Name="" ID="{EE9168C2-8845-48A6-9C8B-375306B2425B}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
 							</ChildrenList>
 						</Action>
 						<Action Name="" ID="{DE3E171B-F243-405B-A15E-7A3C16C1FB6D}" ShortID="850539192">
@@ -218,6 +225,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Music" ID="{9DD2CC35-5971-4A57-8B37-2ACBBD45DA1A}" ShortID="884244263">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}">
+							<ChildrenList>
+								<Action Name="" ID="{EFE86A22-2CBF-4DFC-B448-FAEB2DB8AE87}" ShortID="765008831">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Music" ID="{8EE6056F-3C94-4F09-B3A1-F6FB88597EE3}">
+							<ChildrenList>
+								<Action Name="" ID="{9BB4CC09-33BE-4A49-884A-DA5EAC523529}" ShortID="525321012">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

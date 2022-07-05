@@ -22,10 +22,12 @@ namespace AK
         static const AkUniqueID PLAY_EYE_IMPACT = 2423728726U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
         static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -48,11 +50,13 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CUTSCENE = 1182958561U;
+        static const AkUniqueID LEVELNUMBER = 3941060586U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID MUSIC_BANK = 1546231383U;
         static const AkUniqueID NEW_SOUNDBANK = 4072029455U;
     } // namespace BANKS
 
