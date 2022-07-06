@@ -8,18 +8,22 @@ public class ControllerManager : MonoBehaviour
 {
     public static event Action<int> OnSwitchFocalPoints;
     [SerializeField] private InputActionReference _switch;
+    [SerializeField] private InputActionReference _airborneSwitch;
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private CubeController _cubeController;
     [SerializeField] private ActiveController _startingController = ActiveController.Player;
     [SerializeField] private GameObject _poofObject;
-    [SerializeField][Tooltip("For adjusting height after switch")] private LayerMask _groundLayerMask;
+
+    [SerializeField] [Tooltip("For adjusting height after switch")]
+    private LayerMask _groundLayerMask;
+
     public List<Transform> FocalPoints;
     public static ControllerManager Instance;
     private ParticleSystem _poofEffect;
 
     private ActiveController _activeController = ActiveController.Player;
     public bool PlayerIsActive { get; set; }
-    public bool SwitchingBlocked = false;    
+    public bool SwitchingBlocked = false;
 
     private void Awake()
     {
@@ -29,11 +33,13 @@ public class ControllerManager : MonoBehaviour
     private void OnEnable()
     {
         _switch.action.Enable();
+        _airborneSwitch.action.Enable();
     }
 
     private void OnDisable()
     {
         _switch.action.Disable();
+        _airborneSwitch.action.Disable();
     }
 
     private void Start()
@@ -46,14 +52,14 @@ public class ControllerManager : MonoBehaviour
     public void InitializeControllers(Camera main)
     {
         var controllers = GetComponentsInChildren<Controller>();
-        
+
         foreach (var controller in controllers)
         {
             Debug.Log("Initialized cam: " + main);
             controller.InitializeCam(main);
         }
     }
-    
+
     private void SetStartingController()
     {
         if (_startingController == ActiveController.Player)
@@ -72,10 +78,9 @@ public class ControllerManager : MonoBehaviour
     private void Update()
     {
         if (_switch.action.triggered)
-        {
-            if (SwitchControllers())
-                AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject);
-        }
+            SwitchControllers();
+        if (_airborneSwitch.action.triggered)
+            AirborneSwitch();
     }
 
     //true if successful, false if unable to switch
@@ -85,6 +90,7 @@ public class ControllerManager : MonoBehaviour
         {
             return false;
         }
+
         var currentControllerPosition = Vector3.zero;
 
         switch (_activeController)
@@ -98,6 +104,7 @@ public class ControllerManager : MonoBehaviour
                 break;
         }
 
+        AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject);
         _poofEffect.transform.position = currentControllerPosition;
         _poofEffect.gameObject.SetActive(true);
         _poofEffect.Play();
@@ -108,7 +115,7 @@ public class ControllerManager : MonoBehaviour
     {
         Vector3 currentControllerPosition;
         var distance = Vector3.Distance(_playerController.transform.position,
-_playerController.CubeCalibratorTransform.position);
+            _playerController.CubeCalibratorTransform.position);
 
         _playerController.transform.position = _cubeController.transform.position +
                                                (Vector3.up * distance);
@@ -139,18 +146,30 @@ _playerController.CubeCalibratorTransform.position);
     //Y position after switch must be adjusted to avoid cube sticking in floor
     private void AdjustPosition(ref Vector3 position, GameObject activeController)
     {
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f, _groundLayerMask))
             position = hit.point;
     }
 
+    public void AirborneSwitch()
+    {
+        if (!_playerController.GroundCheck.IsGrounded())
+        {
+            SwitchControllers();
+            _cubeController.Drop.AerialDrop();
+        }
+    }
+
+    /// <summary>
+    /// Used to deparent both controllers when exiting moving platforms regardless
+    /// of active controller.
+    /// </summary>
     public void DeparentControllers()
     {
         _playerController.transform.SetParent(null);
         _cubeController.transform.SetParent(null);
     }
-    
+
     public void DeactivateControllers()
     {
         _playerController.GetComponent<ToggleComponents>().ToggleOffComponents();
@@ -170,6 +189,7 @@ _playerController.CubeCalibratorTransform.position);
     {
         PlayerIsActive = true;
     }
+
     public void DeactivatePlayer()
     {
         PlayerIsActive = false;

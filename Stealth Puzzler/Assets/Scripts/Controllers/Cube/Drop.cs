@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CrushEnemies : MonoBehaviour
+public class Drop : MonoBehaviour
 {
     [SerializeField] private InputActionReference _drop;
     [SerializeField] private float _dropSpeed;
@@ -36,12 +36,8 @@ public class CrushEnemies : MonoBehaviour
 
     private void Update()
     {
-        if (!_cubeController.IsTouchingGround())
-            if (_drop.action.triggered)
-            {
-                _dropping = true;
-                _particleController.PlayDropVFX(transform.position);
-            }
+        if (_drop.action.triggered && !_dropping)
+            AerialDrop();
 
         if (_dropping)
         {
@@ -62,5 +58,22 @@ public class CrushEnemies : MonoBehaviour
         var crushableObject = collision.gameObject.GetComponent<Crushable>();
         if (!crushableObject) return;
         crushableObject.Crush();
+    }
+
+    public void AerialDrop()
+    {
+        if (!_cubeController.IsTouchingGround())
+        {
+            StopCoroutine(PerformDrop());
+            StartCoroutine(PerformDrop());
+        }
+    }
+
+    private IEnumerator PerformDrop()
+    {
+        _cubeController.Rigidbody.velocity = Vector3.zero;
+        yield return new WaitForSeconds(.4f);
+        _dropping = true;
+        _particleController.PlayDropVFX(transform.position);
     }
 }

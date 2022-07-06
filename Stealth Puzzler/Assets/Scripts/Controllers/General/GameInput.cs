@@ -64,9 +64,18 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""SwitchController"",
+                    ""name"": ""Switch Controller"",
                     ""type"": ""Button"",
                     ""id"": ""28fd1235-b7a4-4232-900f-195853f75777"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Airborne Switch Controller"",
+                    ""type"": ""Button"",
+                    ""id"": ""5546e90a-2d49-4530-ada8-5c0796bf7c86"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -408,7 +417,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""SwitchController"",
+                    ""action"": ""Switch Controller"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -475,6 +484,17 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""TurnRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f636271-24e5-434a-9e4e-fb1a56f99e55"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Airborne Switch Controller"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1086,7 +1106,8 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
-        m_Player_SwitchController = m_Player.FindAction("SwitchController", throwIfNotFound: true);
+        m_Player_SwitchController = m_Player.FindAction("Switch Controller", throwIfNotFound: true);
+        m_Player_AirborneSwitchController = m_Player.FindAction("Airborne Switch Controller", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
@@ -1171,6 +1192,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_SwitchController;
+    private readonly InputAction m_Player_AirborneSwitchController;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Scroll;
@@ -1187,6 +1209,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @SwitchController => m_Wrapper.m_Player_SwitchController;
+        public InputAction @AirborneSwitchController => m_Wrapper.m_Player_AirborneSwitchController;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
@@ -1218,6 +1241,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @SwitchController.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
                 @SwitchController.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
                 @SwitchController.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwitchController;
+                @AirborneSwitchController.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAirborneSwitchController;
+                @AirborneSwitchController.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAirborneSwitchController;
+                @AirborneSwitchController.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAirborneSwitchController;
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
@@ -1258,6 +1284,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @SwitchController.started += instance.OnSwitchController;
                 @SwitchController.performed += instance.OnSwitchController;
                 @SwitchController.canceled += instance.OnSwitchController;
+                @AirborneSwitchController.started += instance.OnAirborneSwitchController;
+                @AirborneSwitchController.performed += instance.OnAirborneSwitchController;
+                @AirborneSwitchController.canceled += instance.OnAirborneSwitchController;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
@@ -1448,6 +1477,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnSwitchController(InputAction.CallbackContext context);
+        void OnAirborneSwitchController(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);

@@ -29,14 +29,14 @@ public class CinemachineScroll : MonoBehaviour
 
     private void ReadScrollInput()
     {
-        if (_scroll > 0)
+        if (_scroll < 0)
         {
             _vCam.m_Orbits[0].m_Radius -= _scrollSensitivity;
             _vCam.m_Orbits[1].m_Radius -= _scrollSensitivity;
             _vCam.m_Orbits[2].m_Radius -= _scrollSensitivity;
         }
 
-        if (_scroll < 0)
+        if (_scroll > 0)
         {
             _vCam.m_Orbits[0].m_Radius += _scrollSensitivity;
             _vCam.m_Orbits[1].m_Radius += _scrollSensitivity;
