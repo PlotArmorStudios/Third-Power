@@ -54,11 +54,13 @@ public class Drop : MonoBehaviour
         if (!_dropping) return;
         _particleController.StopDropVFX();
         _particleController.PlayDropImpactVFX(transform.position);
+        PlayDropImpactSound();
         _dropping = false;
         var crushableObject = collision.gameObject.GetComponent<Crushable>();
         if (!crushableObject) return;
         crushableObject.Crush();
     }
+
 
     public void AerialDrop()
     {
@@ -75,5 +77,16 @@ public class Drop : MonoBehaviour
         yield return new WaitForSeconds(.4f);
         _dropping = true;
         _particleController.PlayDropVFX(transform.position);
+        PlayDropSound();
+    }
+
+    private void PlayDropSound()
+    {
+        //Implement drop sound here
+    }
+
+    private void PlayDropImpactSound()
+    {
+        //Implement drop impact sound here
     }
 }

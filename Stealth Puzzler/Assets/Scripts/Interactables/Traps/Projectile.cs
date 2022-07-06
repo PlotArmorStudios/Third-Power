@@ -69,7 +69,7 @@ public class Projectile : MonoBehaviour
             var wallNormal = other.contacts[0].normal;
             var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
             _rigidbody.velocity = bounceDirection * Speed;
-            _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection);
+            _rigidbody.transform.rotation = Quaternion.LookRotation(bounceDirection.normalized);
             PlayReflectSound();
         }
         else if (enemy)
@@ -101,5 +101,11 @@ public class Projectile : MonoBehaviour
     private void PlayReflectSound()
     {
         //Implement projectile reflect sound here
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(_rigidbody.transform.position, 1f);
     }
 }
