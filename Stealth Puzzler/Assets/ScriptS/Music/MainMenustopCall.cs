@@ -7,8 +7,13 @@ public class MainMenustopCall : MonoBehaviour
 
     public AK.Wwise.Event Stop_Music;
 
+    private WwiseMusic _wwiseMusic;
+
     void Start()
     {
-        Stop_Music.Post(gameObject);
+        _wwiseMusic = GetComponent<WwiseMusic>();
+
+        if (_wwiseMusic.IsPlaying == true)
+            Stop_Music.Post(gameObject);
     }
 }

@@ -4400,6 +4400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 161549411}
   - component: {fileID: 161549410}
+  - component: {fileID: 161549412}
   m_Layer: 0
   m_Name: Music Object
   m_TagString: Untagged
@@ -4435,6 +4436,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &161549412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161549409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8b34e7b54cf4208b8b0dd0066b2bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Play_Music:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0ba3adaf7e82d41c5948b8b82fb19c9b,
+      type: 2}
+  IsPlaying: 0
+  BankIsLoaded: 0
 --- !u!1001 &162976007
 PrefabInstance:
   m_ObjectHideFlags: 0

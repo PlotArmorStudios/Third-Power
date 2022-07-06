@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" ShortID="721401199">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="65"/>
 					</PropertyList>
 					<ReferenceList>
@@ -19,6 +24,11 @@
 						<MusicSegment Name="MainGameplay" ID="{9120ED51-9118-468E-A292-BD6F583C8C1D}" ShortID="527096842">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="57367.9379258944"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Tempo" Type="Real64" Value="65"/>
 							</PropertyList>
 							<ReferenceList>
