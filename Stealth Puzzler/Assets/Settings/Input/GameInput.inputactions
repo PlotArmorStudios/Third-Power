@@ -42,9 +42,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchController",
+                    "name": "Switch Controller",
                     "type": "Button",
                     "id": "28fd1235-b7a4-4232-900f-195853f75777",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Airborne Switch Controller",
+                    "type": "Button",
+                    "id": "5546e90a-2d49-4530-ada8-5c0796bf7c86",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -386,7 +395,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "SwitchController",
+                    "action": "Switch Controller",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -453,6 +462,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "TurnRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f636271-24e5-434a-9e4e-fb1a56f99e55",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Airborne Switch Controller",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

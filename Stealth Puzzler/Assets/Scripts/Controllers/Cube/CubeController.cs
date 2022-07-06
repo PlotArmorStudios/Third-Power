@@ -29,6 +29,7 @@ public class CubeController : Controller
 
     private GroundCheck _groundCheck { get; set; }
     private Grid _grid;
+    public Drop Drop { get; set; }
 
     public float FallTimer { get; set; }
     [field: SerializeField] public bool IsFalling { get; set; }
@@ -47,7 +48,7 @@ public class CubeController : Controller
         _turnRight.action.performed += TurnRight;
         SnapToGrid();
     }
-
+    
     private void TurnLeft(InputAction.CallbackContext context)
     {
         if (_isMoving) return;
@@ -94,7 +95,8 @@ public class CubeController : Controller
     {
         Rigidbody = GetComponent<Rigidbody>();
         Cam = Camera.main;
-        
+        Drop = GetComponent<Drop>();
+
         //Initialize directions to snap to
         _directions.Add(Vector3.forward);
         _directions.Add(Vector3.back);
