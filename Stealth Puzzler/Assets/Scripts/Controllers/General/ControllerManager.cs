@@ -153,7 +153,7 @@ public class ControllerManager : MonoBehaviour
 
     public void AirborneSwitch()
     {
-        if (_cubeController.IsTouchingGround())
+        if (!_playerController.GroundCheck.IsGrounded())
         {
             SwitchControllers();
             _cubeController.Drop.AerialDrop();

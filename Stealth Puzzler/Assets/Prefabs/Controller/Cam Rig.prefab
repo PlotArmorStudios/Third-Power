@@ -155,7 +155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623622010709062605}
   m_LocalRotation: {x: 0.38415456, y: -0.31444356, z: 0.2850518, w: 0.81993663}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.997735, y: 4.863, z: 1.1648607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -259,11 +259,11 @@ MonoBehaviour:
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 13.04
-    m_Radius: -10.23
+    m_Radius: -3.23
   - m_Height: 3.96
-    m_Radius: -15
+    m_Radius: -8
   - m_Height: -0.27
-    m_Radius: -17.26
+    m_Radius: -10.26
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 623622012151952701}
@@ -283,18 +283,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 1
   m_IgnoreTag: 
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
   m_MinimumDistanceFromTarget: 0.1
-  m_AvoidObstacles: 0
+  m_AvoidObstacles: 1
   m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
+  m_MinimumOcclusionTime: 7.44
   m_CameraRadius: 0.1
-  m_Strategy: 1
-  m_MaximumEffort: 4
+  m_Strategy: 0
+  m_MaximumEffort: 1
   m_SmoothingTime: 0
   m_Damping: 0
   m_DampingWhenOccluded: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3.96, z: -15}
+  m_FollowOffset: {x: 0, y: 3.96, z: -8}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3.96, z: -15}
+  m_FollowOffset: {x: 0, y: 3.96, z: -8}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3.96, z: -15}
+  m_FollowOffset: {x: 0, y: 3.96, z: -8}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -845,7 +845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623622011667152610}
   m_LocalRotation: {x: 0.21179458, y: 0.34931594, z: 0.09504649, w: 0.90779275}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.997735, y: 4.863, z: 1.1648607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
