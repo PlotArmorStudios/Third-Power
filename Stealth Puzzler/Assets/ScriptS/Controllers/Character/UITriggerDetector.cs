@@ -8,7 +8,6 @@ namespace UITrigger
     {
         [SerializeField] protected GameObject _referenceInteractable;
         [SerializeField] private GameObject _canvasObject;
-        [SerializeField] private string _interactableText;
         
         private GameObject _uiObject;
         protected float _dot;
@@ -24,11 +23,11 @@ namespace UITrigger
             if (_referenceInteractable)
                 transform.rotation = _referenceInteractable.transform.rotation;
 
-            var canvas = Instantiate(_canvasObject, transform.position, Quaternion.identity);
-            canvas.transform.parent = transform;
-            canvas.GetComponent<CanvasObject>().InteractText.text = _interactableText;
-            _uiObject = canvas;
-            canvas.gameObject.SetActive(false);
+            // var canvas = Instantiate(_canvasObject, transform.position, Quaternion.identity);
+            // canvas.transform.parent = transform;
+            // canvas.GetComponent<CanvasObject>().InteractText.text = _interactableText;
+            _uiObject = _canvasObject;
+            _uiObject.gameObject.SetActive(false);
         }
 
         private void OnTriggerExit(Collider other)
