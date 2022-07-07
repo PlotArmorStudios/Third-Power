@@ -62,7 +62,6 @@ public class ArrowTrap : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
-        arrow.transform.parent = transform;
 
         PlayShootSound();
     }
@@ -71,10 +70,15 @@ public class ArrowTrap : MonoBehaviour
     public void ShootArrowNoReload()
     {
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
-        arrow.transform.parent = transform;
-
-        //PlayShootSound();
     }
+
+    [ContextMenu("Single Shot")]
+    public void SingleShot()
+    {
+        StopCoroutine(ShootArrow());
+        StartCoroutine(ShootArrow());
+    }
+    
     private void PlayReloadSound()
     {
         //Implement arrow reload sound here

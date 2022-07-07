@@ -7,8 +7,8 @@ using UnityEngine;
 public class WayPoints : MonoBehaviour
 {
     [Range(0f, 2f)] [SerializeField] private float _wayPointSize = 1f;
-    private Func<Transform, int> getNext = w => w.GetSiblingIndex() + 1;
 
+    private Func<Transform, int> getNext = w => w.GetSiblingIndex() + 1;
 
     public Transform GetNextWayPoint(Transform currentWaypoint, WaypointObject.Mode mode = WaypointObject.Mode.Loop)
     {
@@ -16,6 +16,7 @@ public class WayPoints : MonoBehaviour
         {
             return transform.GetChild(0);
         }
+
         int currentIndex = getNext(currentWaypoint);
         if (currentIndex < transform.childCount &&
             currentIndex >= 0)
@@ -34,6 +35,7 @@ public class WayPoints : MonoBehaviour
                 case WaypointObject.Mode.Once:
                     return currentWaypoint;
             }
+
         return null;
     }
 

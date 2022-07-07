@@ -13,7 +13,9 @@ public class WaypointObject : MonoBehaviour
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private float _delayAtPoints = 0;
     
+    [Tooltip("Allows object to move to next waypoint at shorter or farther distances. Allows for curved movement.")]
     [SerializeField] private float _distanceThreshold = .1f;
+    
     private Transform _currentWayPoint;
     private bool waiting;
 
