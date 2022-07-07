@@ -25,10 +25,6 @@ public class Projectile : MonoBehaviour
     private void OnEnable()
     {
         _timeActive = 0;
-    }
-
-    private void Start()
-    {
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.velocity = _rigidbody.transform.forward * Speed;
     }
@@ -41,6 +37,12 @@ public class Projectile : MonoBehaviour
     private void FixedUpdate()
     {
         CalculateReflectionRay();
+    }
+
+    public void SetSpeed(float speed)
+    {
+        Debug.Log("Set arrow speed");
+        _rigidbody.velocity = _rigidbody.transform.forward * speed;
     }
 
     private void CalculateReflectionRay()
