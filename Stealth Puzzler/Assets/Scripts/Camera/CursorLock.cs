@@ -35,6 +35,7 @@ public class CursorLock : MonoBehaviour
 
     private void HandleDisableCursorLock()
     {
+        Cursor.lockState = CursorLockMode.None;
         _cursorLock.action.Disable();
     }
 
