@@ -28,6 +28,7 @@ public class AltarInput : MonoBehaviour
     private void OnEnable()
     {
         Interact.action.started += OnInteract;
+        Interact.action.Disable();
     }
 
     private void OnDisable()
