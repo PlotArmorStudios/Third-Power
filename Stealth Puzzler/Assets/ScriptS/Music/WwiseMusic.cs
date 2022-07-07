@@ -45,11 +45,4 @@ public class WwiseMusic : MonoBehaviour
         Play_Music.Post(gameObject);
         IsPlaying = true;
     }
-
-
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.N))
-    //        Play_Music.Post(gameObject);
-    //}
 }
