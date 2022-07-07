@@ -45,6 +45,11 @@ public class WaypointObject : MonoBehaviour
             }
         }
     }
+
+    public void ToggleActivate()
+    {
+        IsActive = !IsActive;
+    }
     
     public void Activate()
     {

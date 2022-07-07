@@ -64,6 +64,9 @@ public class ButtonLever : Obstacle
 
         if (cube || player)
             _animator.SetBool("Pressed", false);
+        else
+            return;
+        
         PlayButtonPressUpSound();
     }
 
