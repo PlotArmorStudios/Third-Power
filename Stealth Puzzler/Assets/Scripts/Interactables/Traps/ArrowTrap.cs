@@ -72,9 +72,7 @@ public class ArrowTrap : MonoBehaviour
         PlayReloadSound();
 
         yield return new WaitForSeconds(2f);
-        Debug.Log("Shoot arrow");
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
-        Debug.Log("should set speed");
         arrow.SetSpeed(_arrowSpeed);
         
         PlayShootSound();
@@ -111,7 +109,6 @@ public class ArrowTrap : MonoBehaviour
     private void PlayReloadSound()
     {
         //Implement arrow reload sound here
-        Debug.Log("Play reload sound");
         AkSoundEngine.PostEvent("Play_Trap_Reload", gameObject);
     }
 
