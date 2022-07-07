@@ -12,7 +12,7 @@ public class CursorLock : MonoBehaviour
 
     private List<AltarInput> _altars;
 
-    private void Start()
+    private void OnEnable()
     {
         _cursorLock.action.Enable();
         _altars = FindObjectsOfType<AltarInput>().ToList();
