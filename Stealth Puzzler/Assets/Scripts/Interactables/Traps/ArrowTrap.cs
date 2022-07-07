@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class ArrowTrap : MonoBehaviour
 {
-    [SerializeField] private GameObject _arrow;
+    [SerializeField] private Projectile _arrow;
     [SerializeField] private Transform _spawnPoint;
-
+    [SerializeField] private float _arrowSpeed;
+    
     [Tooltip("The delay between shots")] public float SpawnDelay;
 
     [Tooltip("The delay between the start of the level and the first shot")]
@@ -37,12 +38,23 @@ public class ArrowTrap : MonoBehaviour
 
         if (_currentSpawnTime >= SpawnDelay)
         {
-            StopCoroutine(ShootArrow());
-            StartCoroutine(ShootArrow());
+            Shoot();
             _currentSpawnTime = 0;
         }
     }
 
+    private void Shoot()
+    {
+        StopCoroutine(ShootArrow());
+        StartCoroutine(ShootArrow());
+    }
+
+    private void Shoot(float shootSpeed)
+    {
+        StopCoroutine(ShootArrow(shootSpeed));
+        StartCoroutine(ShootArrow(shootSpeed));
+    }
+    
     [ContextMenu("Activate")]
     public void Activate()
     {
@@ -62,10 +74,23 @@ public class ArrowTrap : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
-
+        arrow.Speed = _arrowSpeed;
+        
         PlayShootSound();
     }
+    
+    private IEnumerator ShootArrow(float shootSpeed)
+    {
+        PlayReloadSound();
 
+        yield return new WaitForSeconds(2f);
+
+        var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
+        arrow.Speed = shootSpeed;
+        
+        PlayShootSound();
+    }
+    
     [ContextMenu("Shoot Arrow No Reload")]
     public void ShootArrowNoReload()
     {
@@ -75,10 +100,13 @@ public class ArrowTrap : MonoBehaviour
     [ContextMenu("Single Shot")]
     public void SingleShot()
     {
-        StopCoroutine(ShootArrow());
-        StartCoroutine(ShootArrow());
+        Shoot();
     }
-    
+
+    public void SingleShot(float shootSpeed)
+    {
+        Shoot(shootSpeed);
+    }
     private void PlayReloadSound()
     {
         //Implement arrow reload sound here
