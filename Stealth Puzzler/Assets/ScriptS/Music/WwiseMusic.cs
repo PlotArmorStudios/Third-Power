@@ -14,6 +14,8 @@ public class WwiseMusic : MonoBehaviour
     [HideInInspector]
     public bool BankIsLoaded = false;
 
+    //private int _levelNumber;
+
     private void Awake()
     {
         if(_instance == null)
@@ -38,7 +40,26 @@ public class WwiseMusic : MonoBehaviour
                 IsPlaying = true;
         if (BankIsLoaded == false)
             AkBankManager.LoadBank("Music_Bank", false, false);
+
+        //_levelNumber = FindObjectOfType<LevelData>().LevelIndex;
     }
+
+    //private void OnEnable()
+    //{
+    //    SceneManager.sceneLoaded += OnSceneLoaded;
+    //}
+
+    //private void OnDisable()
+    //{
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //}
+
+    //private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    //{
+    //    if (SceneManager.GetActiveScene().name != "Main Menu")
+    //        AkSoundEngine.SetRTPCValue("LevelNumber", _levelNumber);
+    //    Debug.Log("For Mark: Level is Number " + _levelNumber);
+    //}
 
     public void PlayMusic()
     {
