@@ -71,6 +71,13 @@ public class ArrowTrap : MonoBehaviour
     {
         var arrow = Instantiate(_arrow, _spawnPoint.position, transform.rotation);
     }
+
+    [ContextMenu("Single Shot")]
+    public void SingleShot()
+    {
+        StopCoroutine(ShootArrow());
+        StartCoroutine(ShootArrow());
+    }
     
     private void PlayReloadSound()
     {
