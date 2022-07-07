@@ -17,7 +17,11 @@ public class BlueEye : MonoBehaviour
     [SerializeField] private int _numberOfTriggers = 1;
     
     private Color _emissionColor;
-    
+    private void OnEnable()
+    {
+        GetComponent<MeshRenderer>().material = Instantiate<Material>(GetComponent<MeshRenderer>().material);
+        _emissionMaterial = GetComponent<MeshRenderer>().material;
+    }
     private void Start()
     {
         _emissionColor = _emissionMaterial.color;
