@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private InputActionReference _pause;
     [SerializeField] private InputActionReference _resume;
+    [SerializeField] private InputActionReference _interact;
     public static PlayerInput PlayerInput;
 
     public static bool IsPaused { get; private set; }
@@ -63,6 +64,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
         PlayerInput.SwitchCurrentActionMap("Player");
+        _interact.action.Disable();
         IsPaused = false;
     }
 
