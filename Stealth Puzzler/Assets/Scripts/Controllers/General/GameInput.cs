@@ -143,6 +143,15 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cursor Lock"",
+                    ""type"": ""Button"",
+                    ""id"": ""9ecda1fe-b6c4-4c4d-908a-08393714dbb1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -495,6 +504,17 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Airborne Switch Controller"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""faee60b5-f1fd-484b-95ad-89336cc590fa"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cursor Lock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1115,6 +1135,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_TurnLeft = m_Player.FindAction("TurnLeft", throwIfNotFound: true);
         m_Player_TurnRight = m_Player.FindAction("TurnRight", throwIfNotFound: true);
+        m_Player_CursorLock = m_Player.FindAction("Cursor Lock", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1200,6 +1221,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_TurnLeft;
     private readonly InputAction m_Player_TurnRight;
+    private readonly InputAction m_Player_CursorLock;
     public struct PlayerActions
     {
         private @GameInput m_Wrapper;
@@ -1217,6 +1239,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @TurnLeft => m_Wrapper.m_Player_TurnLeft;
         public InputAction @TurnRight => m_Wrapper.m_Player_TurnRight;
+        public InputAction @CursorLock => m_Wrapper.m_Player_CursorLock;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1265,6 +1288,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @TurnRight.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnRight;
                 @TurnRight.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnRight;
                 @TurnRight.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurnRight;
+                @CursorLock.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorLock;
+                @CursorLock.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorLock;
+                @CursorLock.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorLock;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1308,6 +1334,9 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 @TurnRight.started += instance.OnTurnRight;
                 @TurnRight.performed += instance.OnTurnRight;
                 @TurnRight.canceled += instance.OnTurnRight;
+                @CursorLock.started += instance.OnCursorLock;
+                @CursorLock.performed += instance.OnCursorLock;
+                @CursorLock.canceled += instance.OnCursorLock;
             }
         }
     }
@@ -1485,6 +1514,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnTurnLeft(InputAction.CallbackContext context);
         void OnTurnRight(InputAction.CallbackContext context);
+        void OnCursorLock(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
