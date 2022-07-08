@@ -52,7 +52,7 @@ public class ButtonLever : Obstacle
 
     private void PlayButtonPressDownSound()
     {
-        //Implement button press down sound here
+        AkSoundEngine.PostEvent("Play_puzzle_button_and_door_open", gameObject);
     }
 
     private void OnTriggerExit(Collider other)

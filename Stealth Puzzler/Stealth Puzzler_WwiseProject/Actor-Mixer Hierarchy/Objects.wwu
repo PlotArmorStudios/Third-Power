@@ -103,6 +103,117 @@
 				</RandomSequenceContainer>
 				<WorkUnit Name="Eye" ID="{D4972D92-0C1C-4CB5-8A90-1B68B9F98CA3}" PersistMode="Reference"/>
 				<WorkUnit Name="Arrow Trap" ID="{DCE57691-448D-4D09-97FE-FCE5CC10EF58}" PersistMode="Reference"/>
+				<RandomSequenceContainer Name="puzzle_button" ID="{2EE850AD-0948-4A27-9755-CF9D5E97026C}" ShortID="190435382">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="30m" ID="{A2B73156-CBC4-489E-B50C-DC2E0B2B901B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="puzzle_button_press_01" ID="{1B1361FB-B3AF-413B-9FA6-6BDCAB795626}" ShortID="366766233">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="puzzle_button_press_01" ID="{9EA6AE28-E804-4A09-8921-0E670774752C}">
+									<Language>SFX</Language>
+									<AudioFile>puzzle_button_press_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="640773662"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="puzzle_button_press_01" ID="{9EA6AE28-E804-4A09-8921-0E670774752C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="puzzle_button_press_02" ID="{8713A813-E3D8-4D7A-A195-3945BB479022}" ShortID="293116362">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="puzzle_button_press_02" ID="{3337B2D3-50FE-4C01-AA96-340C3AD484B6}">
+									<Language>SFX</Language>
+									<AudioFile>puzzle_button_press_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="952034166"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="puzzle_button_press_02" ID="{3337B2D3-50FE-4C01-AA96-340C3AD484B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="puzzle_button_press_03" ID="{8DDC8E14-41E2-4CED-AB05-E54EA311E0CA}" ShortID="89674068">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="puzzle_button_press_03" ID="{1FC37CE9-3501-4DA8-84FE-F6606A201EF1}">
+									<Language>SFX</Language>
+									<AudioFile>puzzle_button_press_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="669772526"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="puzzle_button_press_03" ID="{1FC37CE9-3501-4DA8-84FE-F6606A201EF1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="puzzle_button_press_04" ID="{3FB77674-4821-4EF4-8A7C-7E9C62F66D17}" ShortID="201873161">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="puzzle_button_press_04" ID="{A823EAE4-D992-46AA-A947-15220B0E57F6}">
+									<Language>SFX</Language>
+									<AudioFile>puzzle_button_press_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="672151268"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="puzzle_button_press_04" ID="{A823EAE4-D992-46AA-A947-15220B0E57F6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

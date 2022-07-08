@@ -255,6 +255,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_puzzle_button_and_door_open" ID="{32307A18-2078-4D37-BB41-BFE43A952318}">
+					<ChildrenList>
+						<Action Name="" ID="{CD62D25D-C63D-4331-B339-55061415E91A}" ShortID="454371813">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="puzzle_button" ID="{2EE850AD-0948-4A27-9755-CF9D5E97026C}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
