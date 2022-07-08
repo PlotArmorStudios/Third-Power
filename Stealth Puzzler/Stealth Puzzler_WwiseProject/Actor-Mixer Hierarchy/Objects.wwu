@@ -214,6 +214,118 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="door_open" ID="{063BC995-CA7F-4A20-8F85-555057D7D3D5}" ShortID="602115378">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="30m" ID="{A2B73156-CBC4-489E-B50C-DC2E0B2B901B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="door_open_01" ID="{715E9717-9F2B-43AA-A7C6-E2DA8564D4B4}" ShortID="599260346">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_open_01" ID="{48A3A9F3-AD05-44A6-9A3C-544873EEB749}">
+									<Language>SFX</Language>
+									<AudioFile>door_open_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="902460954"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_open_01" ID="{48A3A9F3-AD05-44A6-9A3C-544873EEB749}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="door_open_02" ID="{8B4ADD5E-B91F-47A2-B4D7-9CD614C4F52E}" ShortID="605471908">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_open_02" ID="{3DB3D4C5-CC2F-4805-A82A-4B02FC60E018}">
+									<Language>SFX</Language>
+									<AudioFile>door_open_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="516576875"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_open_02" ID="{3DB3D4C5-CC2F-4805-A82A-4B02FC60E018}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="door_open_03" ID="{04B7BF3B-828F-4399-9836-95F9FE476A6E}" ShortID="136490067">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_open_03" ID="{FCF37222-604D-4891-9FBB-581062BE4681}">
+									<Language>SFX</Language>
+									<AudioFile>door_open_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="645845857"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_open_03" ID="{FCF37222-604D-4891-9FBB-581062BE4681}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="door_open_04" ID="{4A770773-7EE6-409B-929B-E88D40BA1D66}" ShortID="592109755">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_open_04" ID="{4E55F641-FE98-4507-947F-BBEE8EDE14F0}">
+									<Language>SFX</Language>
+									<AudioFile>door_open_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="179283079"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_open_04" ID="{4E55F641-FE98-4507-947F-BBEE8EDE14F0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

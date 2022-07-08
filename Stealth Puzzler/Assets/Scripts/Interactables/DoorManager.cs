@@ -32,6 +32,7 @@ public class DoorManager : Obstacle
     private void PlayOpenDoorSound()
     {
         //Implement open door sound here
+        AkSoundEngine.PostEvent("Play_door_open", gameObject);
     }
 
     public void CloseDoor()
