@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="1917834988">
+		<SoundBank Id="4072029455" Language="SFX" Hash="2891187897">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -444,7 +444,7 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.5" DurationMax="0.75">
+				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" MaxAttenuation="15." DurationType="OneShot" DurationMin="0.5" DurationMax="0.75">
 					<IncludedMemoryFiles>
 						<File Id="19793225" Language="SFX">
 							<ShortName>player_voice_death_06.wav</ShortName>

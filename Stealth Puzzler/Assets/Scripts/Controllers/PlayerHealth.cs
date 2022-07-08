@@ -21,5 +21,6 @@ public class PlayerHealth : Health
         ControllerManager.Instance.DeactivatePlayer();
         StartCoroutine(RestartLevel());
         CamRig.Instance.UnsetFollow();
+        AkSoundEngine.PostEvent("Play_player_voice_death", gameObject);
     }
 }
