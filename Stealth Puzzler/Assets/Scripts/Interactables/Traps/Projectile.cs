@@ -66,18 +66,16 @@ public class Projectile : MonoBehaviour
         var enemy = other.gameObject.GetComponent<WolfAI>();
         var player = other.gameObject.GetComponent<PlayerController>();
 
-       // Debug.Log(other.gameObject);
-
         if (reflector)
         {
             var directionToTarget = Vector3.Normalize(transform.position - reflector.transform.position);
             var dot = Vector3.Dot(reflector.transform.forward, directionToTarget);
         
-            Debug.Log("Dot product: " + dot);
+            Debug.Log("Detected reflector. Dot product: " + dot);
             
             if (!(dot > _infrontValue))
             {
-                if (_timeActive < .8f) return;
+                if (_timeActive < .3f) return;
                 AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
                 gameObject.SetActive(false);
                 return;
@@ -102,7 +100,7 @@ public class Projectile : MonoBehaviour
         }
         else
         {
-            if (_timeActive < .8f) return;
+            if (_timeActive < .3f) return;
             AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
             gameObject.SetActive(false);
         }
