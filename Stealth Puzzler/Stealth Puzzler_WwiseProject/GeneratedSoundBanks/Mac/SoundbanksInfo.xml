@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="1386244639">
+		<SoundBank Id="4072029455" Language="SFX" Hash="1245516562">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -162,6 +162,26 @@
 					<AuxBusSends>
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="1660008929" Name="Play_door_open" ObjectPath="\Events\Default Work Unit\Play_door_open" MaxAttenuation="30." DurationType="OneShot" DurationMin="2.25" DurationMax="2.25">
+					<IncludedMemoryFiles>
+						<File Id="179283079" Language="SFX">
+							<ShortName>door_open_04.wav</ShortName>
+							<Path>SFX\door_open_04_10C4C929.wem</Path>
+						</File>
+						<File Id="516576875" Language="SFX">
+							<ShortName>door_open_02.wav</ShortName>
+							<Path>SFX\door_open_02_10C4C929.wem</Path>
+						</File>
+						<File Id="645845857" Language="SFX">
+							<ShortName>door_open_03.wav</ShortName>
+							<Path>SFX\door_open_03_10C4C929.wem</Path>
+						</File>
+						<File Id="902460954" Language="SFX">
+							<ShortName>door_open_01.wav</ShortName>
+							<Path>SFX\door_open_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1533459680" Name="Play_Dungeon_1" ObjectPath="\Events\Default Work Unit\Play_Dungeon_1" DurationType="Infinite">
 					<IncludedMemoryFiles>
