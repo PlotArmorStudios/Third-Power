@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="1245516562">
+		<SoundBank Id="4072029455" Language="SFX" Hash="2891187897">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -443,6 +443,50 @@
 					<AuxBusSends>
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" MaxAttenuation="15." DurationType="OneShot" DurationMin="0.5" DurationMax="0.75">
+					<IncludedMemoryFiles>
+						<File Id="19793225" Language="SFX">
+							<ShortName>player_voice_death_06.wav</ShortName>
+							<Path>SFX\player_voice_death_06_10C4C929.wem</Path>
+						</File>
+						<File Id="181073124" Language="SFX">
+							<ShortName>player_voice_death_05.wav</ShortName>
+							<Path>SFX\player_voice_death_05_10C4C929.wem</Path>
+						</File>
+						<File Id="314468601" Language="SFX">
+							<ShortName>player_voice_death_03.wav</ShortName>
+							<Path>SFX\player_voice_death_03_10C4C929.wem</Path>
+						</File>
+						<File Id="320572895" Language="SFX">
+							<ShortName>player_voice_death_04.wav</ShortName>
+							<Path>SFX\player_voice_death_04_10C4C929.wem</Path>
+						</File>
+						<File Id="365444483" Language="SFX">
+							<ShortName>player_voice_death_08.wav</ShortName>
+							<Path>SFX\player_voice_death_08_10C4C929.wem</Path>
+						</File>
+						<File Id="660143082" Language="SFX">
+							<ShortName>player_voice_death_10.wav</ShortName>
+							<Path>SFX\player_voice_death_10_10C4C929.wem</Path>
+						</File>
+						<File Id="784728297" Language="SFX">
+							<ShortName>player_voice_death_02.wav</ShortName>
+							<Path>SFX\player_voice_death_02_10C4C929.wem</Path>
+						</File>
+						<File Id="830924598" Language="SFX">
+							<ShortName>player_voice_death_07.wav</ShortName>
+							<Path>SFX\player_voice_death_07_10C4C929.wem</Path>
+						</File>
+						<File Id="928353006" Language="SFX">
+							<ShortName>player_voice_death_09.wav</ShortName>
+							<Path>SFX\player_voice_death_09_10C4C929.wem</Path>
+						</File>
+						<File Id="948873116" Language="SFX">
+							<ShortName>player_voice_death_01.wav</ShortName>
+							<Path>SFX\player_voice_death_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1296866981" Name="Play_puzzle_button_and_door_open" ObjectPath="\Events\Default Work Unit\Play_puzzle_button_and_door_open" MaxAttenuation="30." DurationType="OneShot" DurationMin="1.4375" DurationMax="1.625">
 					<IncludedMemoryFiles>
