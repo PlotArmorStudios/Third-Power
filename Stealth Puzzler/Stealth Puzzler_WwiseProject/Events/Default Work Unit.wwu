@@ -277,6 +277,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_player_voice_death" ID="{E8C7A859-0F93-42E3-ABCD-BBD7D85CF8D1}">
+					<ChildrenList>
+						<Action Name="" ID="{940A974C-DAF3-498A-8B87-E42C6049F4C2}" ShortID="411472743">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_voice_death" ID="{C326FD1A-EE74-44A5-B0DF-B394296BB091}" WorkUnitID="{11E5495F-FC89-4DEE-B0F6-B67CE688D8E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
