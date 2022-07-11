@@ -197,7 +197,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585440664494775808
+    m_lastTime: -8585440660374775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -239,7 +239,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585440664674775808
+    m_lastTime: -8585440608894775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -448,6 +448,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_player_death
+      guid: c8cd879354f1234d94c4a8fd21bd1abe
+      id: 1835085974
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_player_death
+        ObjectType: 3
+        guid: c8cd879354f1234d94c4a8fd21bd1abe
+      Path: Events\Default Work Unit\Play_player_death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_player_voice_death
       guid: 59a8c7e8930fe342abcdbbd7d85cf8d1
       id: 908551697
@@ -463,8 +480,8 @@ MonoBehaviour:
         guid: 59a8c7e8930fe342abcdbbd7d85cf8d1
       Path: Events\Default Work Unit\Play_player_voice_death
       maxAttenuation: 15
-      maxDuration: 0.75
-      minDuration: 0.5
+      maxDuration: 2
+      minDuration: 2
     - name: Play_player_voice_jump
       guid: 7f4acdb64c903742abfa9f4705a8d886
       id: 712660841
