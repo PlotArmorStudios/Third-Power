@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4016767635710629737}
   - component: {fileID: 4986797438163148}
   - component: {fileID: 2879278174687898630}
-  - component: {fileID: 898628608}
+  - component: {fileID: 985766393103958174}
   m_Layer: 0
   m_Name: BrokenCeiling
   m_TagString: Untagged
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &898628608
-MeshCollider:
+--- !u!65 &985766393103958174
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,7 +95,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6349497404779363362, guid: a63ecf408699e494b871a7468f8394c1, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.70459, y: 0.69, z: 6.05369}
+  m_Center: {x: 0.23129892, y: 0.27, z: -0.02684486}

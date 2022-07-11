@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4133561780077309056}
   - component: {fileID: 1077071817651036965}
   - component: {fileID: 2960677317476374511}
+  - component: {fileID: 4576144912792330630}
   m_Layer: 0
   m_Name: Stair module
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3609226243202086458}
-  m_Mesh: {fileID: 4579454407841743219, guid: 4be8063fcf144204488a601dba2a5ecf, type: 3}
+  m_Mesh: {fileID: 6416302070336371891, guid: 4be8063fcf144204488a601dba2a5ecf, type: 3}
 --- !u!23 &2960677317476374511
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4576144912792330630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609226243202086458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.166081, y: 1.1638387, z: 6}
+  m_Center: {x: 0.13396123, y: 0.5819189, z: 0.00000011920929}

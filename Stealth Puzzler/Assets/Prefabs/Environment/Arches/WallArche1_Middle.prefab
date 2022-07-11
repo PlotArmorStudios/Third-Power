@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6644175418108730875}
   - component: {fileID: 7753793117858288222}
   - component: {fileID: 5512395548098766484}
-  - component: {fileID: 3323945280318745951}
+  - component: {fileID: 2534011932852134385}
+  - component: {fileID: 6422832654894574078}
   m_Layer: 0
   m_Name: WallArche1_Middle
   m_TagString: Untagged
@@ -84,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3323945280318745951
-MeshCollider:
+--- !u!65 &2534011932852134385
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +95,19 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6994476983107341176, guid: 0561146bf18f41f40972e9fbe1893865, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.8917326, y: 5.6374583, z: 0.93}
+  m_Center: {x: -0.000000044703484, y: 2.8187292, z: 0}
+--- !u!65 &6422832654894574078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6304770079706875713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8917326, y: 2.43, z: 4.5025744}
+  m_Center: {x: -0.000000044703484, y: 4.45, z: -0.0017163754}

@@ -101,8 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wayPoints: {fileID: 0}
   _moveSpeed: 2
+  _delayAtPoints: 0
   _distanceThreshold: 0.1
   IsActive: 1
+  mode: 0
 --- !u!114 &1629757682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +141,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8228862714402804623, guid: 2511796c2a7ca984b8aabbf6646e2019, type: 3}
