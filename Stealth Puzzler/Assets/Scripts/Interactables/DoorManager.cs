@@ -19,6 +19,8 @@ public class DoorManager : Obstacle
     [ContextMenu("Open Door")]
     public void OpenDoor()
     {
+        if (_isOpen) return;
+        
         _animator.ResetTrigger("Close");
         _animator.SetTrigger("Open");
         _isOpen = true;
