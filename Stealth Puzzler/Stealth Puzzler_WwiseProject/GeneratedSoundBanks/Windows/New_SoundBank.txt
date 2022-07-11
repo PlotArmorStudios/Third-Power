@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	112147695	Play_Cannon_Idle_Steam			\Default Work Unit\Play_Cannon_Idle_Steam	
+	574883145	stop_puzzle_time_running_out			\Default Work Unit\stop_puzzle_time_running_out	
 	712207333	Play_Cannon			\Default Work Unit\Play_Cannon	
 	712660841	Play_player_voice_jump			\Default Work Unit\Play_player_voice_jump	
 	908551697	Play_player_voice_death			\Default Work Unit\Play_player_voice_death	
@@ -16,6 +17,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2774595811	Play_Cube_Movement			\Default Work Unit\Play_Cube_Movement	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 	3919960416	Play_Arrow_In_Air			\Default Work Unit\Play_Arrow_In_Air	
+	4219761939	Play_puzzle_time_running_out			\Default Work Unit\Play_puzzle_time_running_out	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3865314626	Material			\Default Work Unit\Material	
@@ -27,9 +29,11 @@ Switch	ID	Name	Switch Group			Notes
 	3725073853	Cement	Material			
 
 Effect plug-ins	ID	Name	Type				Notes
+	1198215643	Boomerang	Wwise Tremolo			
 	3354577677	Fast_LF_Tremolo	Wwise Tremolo			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	10604314	puzzle_time_running_out_clock	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\puzzle_time_running_out_clock_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle\puzzle_time_running_out_clock		921664
 	14735164	player_death_2D_01	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_death_2D_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\death\player_death_2D\player_death_2D_01		384064
 	19793225	player_voice_death_06	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_voice_death_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_death\player_voice_death_06		144064
 	30157072	Ambiences_2D_Dungeon1_01	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Ambiences_2D_Dungeon1_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\2D\Dungeon_1_Layer_01\Ambiences_2D_Dungeon1_01		936064

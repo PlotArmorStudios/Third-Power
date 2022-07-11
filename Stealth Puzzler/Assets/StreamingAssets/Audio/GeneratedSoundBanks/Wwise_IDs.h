@@ -27,11 +27,13 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_VOICE_DEATH = 908551697U;
         static const AkUniqueID PLAY_PLAYER_VOICE_JUMP = 712660841U;
         static const AkUniqueID PLAY_PUZZLE_BUTTON_AND_DOOR_OPEN = 1296866981U;
+        static const AkUniqueID PLAY_PUZZLE_TIME_RUNNING_OUT = 4219761939U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
         static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
+        static const AkUniqueID STOP_PUZZLE_TIME_RUNNING_OUT = 574883145U;
     } // namespace EVENTS
 
     namespace SWITCHES

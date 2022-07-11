@@ -324,6 +324,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_puzzle_time_running_out" ID="{64768EC8-7872-4E4C-BEC7-4681B330B547}">
+					<ChildrenList>
+						<Action Name="" ID="{ED0C17F0-ADAB-46DB-9B09-2E10DB8BC5FB}" ShortID="393153675">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="puzzle_time_running_out_clock" ID="{3CBF85C8-38EA-4D2B-AF36-4016E27C22DF}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_puzzle_time_running_out" ID="{1A9C6C2A-AFB4-47FD-AECB-787429D79644}">
+					<ChildrenList>
+						<Action Name="" ID="{ADC80205-723A-4C5D-8E2B-7878EE1F26B1}" ShortID="828393719">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="puzzle_time_running_out_clock" ID="{3CBF85C8-38EA-4D2B-AF36-4016E27C22DF}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

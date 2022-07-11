@@ -18,7 +18,9 @@ public class TimerObject : MonoBehaviour
     IEnumerator StartTimer()
     {
         _timerStart?.Invoke();
+        AkSoundEngine.PostEvent("Play_puzzle_time_running_out", gameObject);
         yield return new WaitForSeconds(_timerDuration);
         _timerEnd?.Invoke();
+        AkSoundEngine.PostEvent("stop_puzzle_time_running_out", gameObject);
     }
 }

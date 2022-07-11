@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="3259976034">
+		<SoundBank Id="4072029455" Language="SFX" Hash="3685953866">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -568,6 +568,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="10604314" Language="SFX">
+							<ShortName>puzzle_time_running_out_clock.wav</ShortName>
+							<Path>SFX\puzzle_time_running_out_clock_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="30157072" Language="SFX">
@@ -663,6 +671,7 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="1384937390" Name="Stop_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Stop_Arrow_In_Air" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="574883145" Name="stop_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\stop_puzzle_time_running_out" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{13610534-0166-4A86-B21E-F167063AA6D2}">
