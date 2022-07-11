@@ -286,6 +286,20 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{18F0A246-C7FC-4B4C-A554-AE2D39EFD5B9}" ShortID="1045113605">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_death_2D" ID="{BCEC1F36-05B0-4EAE-979F-B3BEC54219C7}" WorkUnitID="{77E65292-BB79-4FEC-AC66-C976F378186D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{09E6368B-F63D-4AED-BE07-6E8241704F51}" ShortID="1041056265">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_death_3D" ID="{2403BBE3-DD40-4817-85EC-F130BF00C2FA}" WorkUnitID="{77E65292-BB79-4FEC-AC66-C976F378186D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_player_voice_jump" ID="{B6CD4A7F-904C-4237-ABFA-9F4705A8D886}">
@@ -294,6 +308,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="player_voice_jump" ID="{F44FB605-985B-4B9E-BC2B-19FFD064C19E}" WorkUnitID="{11E5495F-FC89-4DEE-B0F6-B67CE688D8E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_player_death" ID="{9387CDC8-F154-4D23-94C4-A8FD21BD1ABE}">
+					<ChildrenList>
+						<Action Name="" ID="{3FF992F9-B542-498F-817C-17CD6792A2CA}" ShortID="970951022">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_death_3D" ID="{2403BBE3-DD40-4817-85EC-F130BF00C2FA}" WorkUnitID="{77E65292-BB79-4FEC-AC66-C976F378186D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
