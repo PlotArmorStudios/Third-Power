@@ -197,7 +197,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585440660374775808
+    m_lastTime: -8585440251014775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -239,7 +239,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585440608894775808
+    m_lastTime: -8585440244674775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -479,7 +479,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 59a8c7e8930fe342abcdbbd7d85cf8d1
       Path: Events\Default Work Unit\Play_player_voice_death
-      maxAttenuation: 15
+      maxAttenuation: 0
       maxDuration: 2
       minDuration: 2
     - name: Play_player_voice_jump
@@ -516,6 +516,23 @@ MonoBehaviour:
       maxAttenuation: 30
       maxDuration: 1.625
       minDuration: 1.4375
+    - name: Play_puzzle_time_running_out
+      guid: c88e766472784c4ebec74681b330b547
+      id: 4219761939
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_puzzle_time_running_out
+        ObjectType: 3
+        guid: c88e766472784c4ebec74681b330b547
+      Path: Events\Default Work Unit\Play_puzzle_time_running_out
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_SFX_Cutscene_Arrow_Demonstartion
       guid: 4b8f354a8e04b24a87946d6646466544
       id: 2170308490
@@ -601,6 +618,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6f05e68e943c094fb3a1f6fb88597ee3
       Path: Events\Default Work Unit\Music\Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: stop_puzzle_time_running_out
+      guid: 2a6c9c1ab4affd47aecb787429d79644
+      id: 574883145
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: stop_puzzle_time_running_out
+        ObjectType: 3
+        guid: 2a6c9c1ab4affd47aecb787429d79644
+      Path: Events\Default Work Unit\stop_puzzle_time_running_out
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
