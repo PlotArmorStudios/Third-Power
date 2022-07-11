@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8474506425319094977}
   - component: {fileID: 4770619483119678820}
   - component: {fileID: 7336454421292188078}
+  - component: {fileID: 7447262956476696975}
   m_Layer: 0
   m_Name: wallStoneBreaker2
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7447262956476696975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137995084541239419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4254882, y: 2.8508472, z: 1.2598851}
+  m_Center: {x: -0.08279064, y: -0.62954766, z: 0}

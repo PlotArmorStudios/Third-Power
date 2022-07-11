@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2858881022903199594}
   - component: {fileID: 1153786485104650447}
   - component: {fileID: 4028441245513669637}
+  - component: {fileID: 4000862616894800120}
   m_Layer: 0
   m_Name: Border breaker withWallPlug
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4000862616894800120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235582929932418512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9350802, y: 2.7745972, z: 1.331385}
+  m_Center: {x: 0, y: -0.639734, z: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6611960504590427516}
   - component: {fileID: 7813108295468149465}
   - component: {fileID: 5442964984417590803}
+  - component: {fileID: 3256375246697367171}
   m_Layer: 0
   m_Name: PIllar arch support
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3256375246697367171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803371494876004294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.518533, y: 4, z: 1.5118957}
+  m_Center: {x: 0.23718184, y: -2, z: 0}

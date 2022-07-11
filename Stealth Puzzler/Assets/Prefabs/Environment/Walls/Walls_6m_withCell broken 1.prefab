@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 800721049455196242}
   - component: {fileID: 4373945319620835319}
   - component: {fileID: 1970209740322210621}
+  - component: {fileID: 2288506669520042584}
   m_Layer: 0
   m_Name: Walls_6m_withCell broken 1
   m_TagString: Untagged
@@ -87,3 +88,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2288506669520042584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24606115912491752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.000003, y: 5.9999995, z: 0.58}
+  m_Center: {x: -0.0000013113022, y: 2.9999993, z: -0.10113081}
