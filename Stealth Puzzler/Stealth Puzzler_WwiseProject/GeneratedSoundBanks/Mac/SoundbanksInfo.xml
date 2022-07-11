@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="2891187897">
+		<SoundBank Id="4072029455" Language="SFX" Hash="1922953146">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -485,6 +485,58 @@
 						<File Id="948873116" Language="SFX">
 							<ShortName>player_voice_death_01.wav</ShortName>
 							<Path>SFX\player_voice_death_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="712660841" Name="Play_player_voice_jump" ObjectPath="\Events\Default Work Unit\Play_player_voice_jump" DurationType="OneShot" DurationMin="0.25" DurationMax="0.40625">
+					<IncludedMemoryFiles>
+						<File Id="53300425" Language="SFX">
+							<ShortName>player_voice_jump_05.wav</ShortName>
+							<Path>SFX\player_voice_jump_05_10C4C929.wem</Path>
+						</File>
+						<File Id="197124467" Language="SFX">
+							<ShortName>player_voice_jump_09.wav</ShortName>
+							<Path>SFX\player_voice_jump_09_10C4C929.wem</Path>
+						</File>
+						<File Id="232776546" Language="SFX">
+							<ShortName>player_voice_jump_11.wav</ShortName>
+							<Path>SFX\player_voice_jump_11_10C4C929.wem</Path>
+						</File>
+						<File Id="387499734" Language="SFX">
+							<ShortName>player_voice_jump_06.wav</ShortName>
+							<Path>SFX\player_voice_jump_06_10C4C929.wem</Path>
+						</File>
+						<File Id="446790239" Language="SFX">
+							<ShortName>player_voice_jump_01.wav</ShortName>
+							<Path>SFX\player_voice_jump_01_10C4C929.wem</Path>
+						</File>
+						<File Id="540466279" Language="SFX">
+							<ShortName>player_voice_jump_02.wav</ShortName>
+							<Path>SFX\player_voice_jump_02_10C4C929.wem</Path>
+						</File>
+						<File Id="549170739" Language="SFX">
+							<ShortName>player_voice_jump_12.wav</ShortName>
+							<Path>SFX\player_voice_jump_12_10C4C929.wem</Path>
+						</File>
+						<File Id="757827395" Language="SFX">
+							<ShortName>player_voice_jump_10.wav</ShortName>
+							<Path>SFX\player_voice_jump_10_10C4C929.wem</Path>
+						</File>
+						<File Id="793661109" Language="SFX">
+							<ShortName>player_voice_jump_04.wav</ShortName>
+							<Path>SFX\player_voice_jump_04_10C4C929.wem</Path>
+						</File>
+						<File Id="861802049" Language="SFX">
+							<ShortName>player_voice_jump_07.wav</ShortName>
+							<Path>SFX\player_voice_jump_07_10C4C929.wem</Path>
+						</File>
+						<File Id="944709620" Language="SFX">
+							<ShortName>player_voice_jump_08.wav</ShortName>
+							<Path>SFX\player_voice_jump_08_10C4C929.wem</Path>
+						</File>
+						<File Id="1044904676" Language="SFX">
+							<ShortName>player_voice_jump_03.wav</ShortName>
+							<Path>SFX\player_voice_jump_03_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

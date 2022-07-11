@@ -272,7 +272,7 @@ public class PlayerController : Controller
 
     private void PlayJumpSound()
     {
-        //Implement jump sound
+        AkSoundEngine.PostEvent("Play_player_voice_jump", gameObject);
     }
 
     private void ApplyGravity()

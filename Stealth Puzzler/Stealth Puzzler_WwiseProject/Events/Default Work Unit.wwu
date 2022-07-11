@@ -288,6 +288,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_player_voice_jump" ID="{B6CD4A7F-904C-4237-ABFA-9F4705A8D886}">
+					<ChildrenList>
+						<Action Name="" ID="{D06B1FD3-1B7A-4FD5-AF38-D38114CF315F}" ShortID="640446428">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_voice_jump" ID="{F44FB605-985B-4B9E-BC2B-19FFD064C19E}" WorkUnitID="{11E5495F-FC89-4DEE-B0F6-B67CE688D8E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
