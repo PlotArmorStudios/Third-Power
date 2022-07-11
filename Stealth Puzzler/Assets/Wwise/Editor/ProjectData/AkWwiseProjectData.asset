@@ -197,7 +197,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585442904574775808
+    m_lastTime: -8585440664494775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -239,7 +239,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585442904574775808
+    m_lastTime: -8585440664674775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -465,6 +465,23 @@ MonoBehaviour:
       maxAttenuation: 15
       maxDuration: 0.75
       minDuration: 0.5
+    - name: Play_player_voice_jump
+      guid: 7f4acdb64c903742abfa9f4705a8d886
+      id: 712660841
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_player_voice_jump
+        ObjectType: 3
+        guid: 7f4acdb64c903742abfa9f4705a8d886
+      Path: Events\Default Work Unit\Play_player_voice_jump
+      maxAttenuation: 0
+      maxDuration: 0.40625
+      minDuration: 0.25
     - name: Play_puzzle_button_and_door_open
       guid: 187a30327820374dbb41bfe43a952318
       id: 1296866981
