@@ -353,6 +353,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Cube_Deflect" ID="{4C22A7A1-8AA7-4170-B8CB-C2B61F541057}">
+					<ChildrenList>
+						<Action Name="" ID="{50EB3C68-3532-4815-A488-5C869D55CF05}" ShortID="948837351">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cube_Deflect" ID="{5CD45B5C-60A6-42CF-A905-4087478CC128}" WorkUnitID="{8DD81968-D22C-46F4-B383-0AE86EF56226}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

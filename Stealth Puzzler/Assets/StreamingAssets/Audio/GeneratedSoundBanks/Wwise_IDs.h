@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_CANNON = 712207333U;
         static const AkUniqueID PLAY_CANNON_IDLE_STEAM = 112147695U;
         static const AkUniqueID PLAY_CHARACTER_CUBE_TRANSFORM = 1769817372U;
+        static const AkUniqueID PLAY_CUBE_DEFLECT = 2012852765U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
         static const AkUniqueID PLAY_DUNGEON_1 = 1533459680U;
