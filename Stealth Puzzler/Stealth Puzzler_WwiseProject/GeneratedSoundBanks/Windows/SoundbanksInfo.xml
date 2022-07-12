@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="3685953866">
+		<SoundBank Id="4072029455" Language="SFX" Hash="429745091">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -139,6 +139,22 @@
 					<AuxBusSends>
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="2012852765" Name="Play_Cube_Deflect" ObjectPath="\Events\Default Work Unit\Play_Cube_Deflect" MaxAttenuation="30." DurationType="OneShot" DurationMin="2.921875" DurationMax="3.25">
+					<IncludedMemoryFiles>
+						<File Id="720381874" Language="SFX">
+							<ShortName>cube_deflect_03.wav</ShortName>
+							<Path>SFX\cube_deflect_03_10C4C929.wem</Path>
+						</File>
+						<File Id="908947686" Language="SFX">
+							<ShortName>cube_deflect_02.wav</ShortName>
+							<Path>SFX\cube_deflect_02_10C4C929.wem</Path>
+						</File>
+						<File Id="1012295690" Language="SFX">
+							<ShortName>cube_deflect_01.wav</ShortName>
+							<Path>SFX\cube_deflect_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2774595811" Name="Play_Cube_Movement" ObjectPath="\Events\Default Work Unit\Play_Cube_Movement" DurationType="OneShot" DurationMin="0.471937" DurationMax="0.56284">
 					<IncludedMemoryFiles>
