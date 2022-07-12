@@ -61,7 +61,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="3970487019">
+		<SoundBank Id="4072029455" Language="SFX" Hash="964933255">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -512,7 +512,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="712660841" Name="Play_player_voice_jump" ObjectPath="\Events\Default Work Unit\Play_player_voice_jump" DurationType="OneShot" DurationMin="0.25" DurationMax="0.40625">
+				<Event Id="712660841" Name="Play_player_voice_jump" ObjectPath="\Events\Default Work Unit\Play_player_voice_jump" MaxAttenuation="15." DurationType="OneShot" DurationMin="0.25" DurationMax="0.40625">
 					<IncludedMemoryFiles>
 						<File Id="53300425" Language="SFX">
 							<ShortName>player_voice_jump_05.wav</ShortName>
