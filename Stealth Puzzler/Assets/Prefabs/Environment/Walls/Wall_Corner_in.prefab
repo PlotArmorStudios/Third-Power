@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4934949160337439569}
   - component: {fileID: 5528834392780123079}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7722818887977150736}
   - component: {fileID: 4996859941018900158}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7615230289973796420}
   - component: {fileID: 4417993012909818099}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Wall_Corner_in
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,6 +205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_Corner_In
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 339b989da2d78544c8c02c4242cac919,
+        type: 3}
+      propertyPath: m_Layer
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 339b989da2d78544c8c02c4242cac919,
         type: 3}

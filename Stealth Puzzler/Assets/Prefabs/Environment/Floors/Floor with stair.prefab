@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9089047305146371261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor with stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,6 +184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stair module
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4be8063fcf144204488a601dba2a5ecf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4be8063fcf144204488a601dba2a5ecf,
         type: 3}
