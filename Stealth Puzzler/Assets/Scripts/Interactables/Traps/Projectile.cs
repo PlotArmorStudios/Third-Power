@@ -115,7 +115,7 @@ public class Projectile : MonoBehaviour
 
     private void PlayReflectSound()
     {
-        //Implement projectile reflect sound here
+        AkSoundEngine.PostEvent("Play_Cube_Deflect", gameObject);
     }
 
     private void OnDrawGizmos()
