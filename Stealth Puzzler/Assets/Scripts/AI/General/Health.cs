@@ -10,6 +10,7 @@ public abstract class Health : MonoBehaviour
 
     private int _currentNumberOfHits;
     protected Animator _animator;
+    protected bool _dead;
     
     protected virtual void Start()
     {
@@ -22,6 +23,7 @@ public abstract class Health : MonoBehaviour
         _currentNumberOfHits--;
         if (_currentNumberOfHits <= 0)
         {
+            if (_dead) return;
             Die();
         }
     }

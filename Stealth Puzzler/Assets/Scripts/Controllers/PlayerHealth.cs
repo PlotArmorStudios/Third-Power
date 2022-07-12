@@ -7,7 +7,7 @@ public class PlayerHealth : Health
 {
     public static event Action OnPlayerDie;
     [SerializeField] private float _levelRestartDelay = 2f;
-    
+
     private IEnumerator RestartLevel()
     {
         yield return new WaitForSeconds(_levelRestartDelay);
@@ -16,6 +16,7 @@ public class PlayerHealth : Health
 
     protected override void Die()
     {
+        _dead = true;
         TriggerOnDie();
         OnPlayerDie?.Invoke();
         ControllerManager.Instance.DeactivatePlayer();
