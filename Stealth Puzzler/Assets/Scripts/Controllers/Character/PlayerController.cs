@@ -249,6 +249,7 @@ public class PlayerController : Controller
     {
         if (_triggerJump)
         {
+            PlayJumpSound();
             _animator.ResetTrigger("Land");
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY
                                                                          | RigidbodyConstraints.FreezeRotationZ;
@@ -265,7 +266,6 @@ public class PlayerController : Controller
             }
 
             _animator.SetTrigger("Jump");
-            PlayJumpSound();
             _triggerJump = false;
         }
     }

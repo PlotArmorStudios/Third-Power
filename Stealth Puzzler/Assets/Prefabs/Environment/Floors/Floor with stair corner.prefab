@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2767245388272963630}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor with stair corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,6 +182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7550857e96d65264ab891471877fb171,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7550857e96d65264ab891471877fb171,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -199,19 +204,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4803161103769649309}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &6581737881901229508
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5650091474552159692}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.7170033, y: 1.1638379, z: 1.28}
-  m_Center: {x: -2.6414979, y: 0.58191895, z: 3.12}
 --- !u!65 &3498819718000800319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -225,3 +217,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.1638379, z: 6.7170033}
   m_Center: {x: 0.1, y: 0.58191895, z: 0.35850093}
+--- !u!65 &6581737881901229508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650091474552159692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7170033, y: 1.1638379, z: 1.28}
+  m_Center: {x: -2.6414979, y: 0.58191895, z: 3.12}
