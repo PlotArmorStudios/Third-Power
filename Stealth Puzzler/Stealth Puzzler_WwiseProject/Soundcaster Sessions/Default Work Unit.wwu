@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{740663C0-913D-46A1-B744-DA98C9ECD3EB}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{740663C0-913D-46A1-B744-DA98C9ECD3EB}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{740663C0-913D-46A1-B744-DA98C9ECD3EB}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Mark Music Trnasition Test" ID="{725D418D-BDF4-477C-9F23-C0504B80B41B}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Tension" ID="{AF2EBA96-0A7D-4030-82B7-A3A94C45FF2B}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Cutscene" ID="{9586EEEC-A6BE-40D8-ACB3-1FB8DAB249CB}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="LevelNumber" ID="{192FF86B-6E73-40F0-8A02-9997A2516EFD}"/>
+							<Value>8.248</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Carpet" ID="{521D00FB-FCE5-47B8-9696-9C1CB9B32487}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
