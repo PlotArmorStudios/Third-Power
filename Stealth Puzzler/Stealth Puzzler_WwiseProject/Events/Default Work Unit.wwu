@@ -251,6 +251,71 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{9899DEE2-74EF-43B9-89C9-76680788E859}" ShortID="843289612">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tension" ID="{A8603511-36F3-47F2-B9BD-6A296E53CFA0}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6C918E56-25AC-4CBC-8109-339B2F6D5783}" ShortID="641439416">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tension Frills" ID="{1825170C-034A-4F7B-8732-E4AE9B4C3CF3}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tension" ID="{AF2EBA96-0A7D-4030-82B7-A3A94C45FF2B}">
+							<ChildrenList>
+								<Action Name="" ID="{2B67A2EE-AB99-4546-BEDF-BEFDB9FAD7B9}" ShortID="852061679">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cymbal_Swell_to_Tension" ID="{D2DF177B-03D3-40D3-A4D7-D840A35548DD}" WorkUnitID="{373802B1-1B79-4226-BB36-1B46F9481008}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{36C4EC96-5C5B-427E-9622-EF6FBDC31867}" ShortID="310341173">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3D70E923-7510-43FF-A640-E8A029D57437}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B68F915D-5925-4E47-897C-F458011F29F6}" ShortID="672532871">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tension" ID="{A8603511-36F3-47F2-B9BD-6A296E53CFA0}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C30ABA99-454E-4E1C-A66A-94D8B6B3D0FD}" ShortID="97641926">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tension Frills" ID="{1825170C-034A-4F7B-8732-E4AE9B4C3CF3}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
