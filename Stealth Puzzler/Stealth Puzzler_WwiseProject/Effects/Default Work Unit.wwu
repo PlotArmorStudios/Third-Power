@@ -39,6 +39,14 @@
 	<GameParameter Name="Cutscene" ID="{9586EEEC-A6BE-40D8-ACB3-1FB8DAB249CB}"/>
 </PluginData>
 				</Effect>
+				<Effect Name="PuzzleSoundMeter" ID="{E338FBE9-4F62-4122-8633-C73A13FF3A4C}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="MeterMode" Type="int32" Value="1"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}"/>
+</PluginData>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

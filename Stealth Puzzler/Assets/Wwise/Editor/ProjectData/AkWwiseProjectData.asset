@@ -38,8 +38,48 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585450735074775808
+    m_lastTime: -8585438708434775808
     List:
+    - name: 3D Objects
+      guid: 30978c6d834b0846be523a5ae92a1c82
+      id: 1625135012
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SC Bus
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
+      - ElementName: 3D Objects
+        ObjectType: 2
+        guid: 30978c6d834b0846be523a5ae92a1c82
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SC Bus\3D Objects
+    - name: Ambience
+      guid: 116101a8cc4cb04c9345944416169955
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SC Bus
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 116101a8cc4cb04c9345944416169955
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SC Bus\Ambience
     - name: Arrow_Trap
       guid: 90035e356b03dd4593796c01bbd2942c
       id: 1780485226
@@ -131,6 +171,47 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 1baf7c06f1465a46b403b590dfa30a66
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SC Bus
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
+      - ElementName: Music
+        ObjectType: 2
+        guid: 1baf7c06f1465a46b403b590dfa30a66
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SC Bus\Music
+    - name: Puzzle Sound
+      guid: 1b901bdbb6d8004db859f6875bb5e85a
+      id: 938749676
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SC Bus
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
+      - ElementName: Puzzle Sound
+        ObjectType: 2
+        guid: 1b901bdbb6d8004db859f6875bb5e85a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SC Bus\Puzzle
+        Sound
     - name: Reverb_Dungeon_01
       guid: d76ff04cbe9ef7459a1a418c6ed275e1
       id: 2580481396
@@ -171,6 +252,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: f9d3b257b4f5594a81e333d77aa0a0ea
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\SC
+    - name: SC Bus
+      guid: 4880dec47fca5741be39ade2a5fb531d
+      id: 1119518085
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc11e1e386d23441bf0fe5bdbe8bf4be
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SC Bus
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SC Bus
     - name: sfxAmbient
       guid: fe7a8bee9f88e540904dc4d825d060dc
       id: 3850048146
@@ -197,7 +295,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585439534494775808
+    m_lastTime: -8585438719914775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -239,7 +337,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585439534514775808
+    m_lastTime: -8585438720034775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -533,6 +631,23 @@ MonoBehaviour:
       maxAttenuation: 30
       maxDuration: 1.625
       minDuration: 1.4375
+    - name: Play_puzzle_solved
+      guid: 023accbfcc692843ab1144afb2638555
+      id: 2759903158
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_puzzle_solved
+        ObjectType: 3
+        guid: 023accbfcc692843ab1144afb2638555
+      Path: Events\Default Work Unit\Play_puzzle_solved
+      maxAttenuation: 0
+      maxDuration: 7
+      minDuration: 7
     - name: Play_puzzle_time_running_out
       guid: c88e766472784c4ebec74681b330b547
       id: 4219761939
@@ -667,7 +782,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585444156454775808
+    m_lastTime: -8585438708434775808
     List:
     - name: Cutscene
       guid: ecee8695bea6d840acb31fb8dab249cb
@@ -697,6 +812,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 6bf82f19736ef0408a029997a2516efd
       Path: Game Parameters\Default Work Unit\LevelNumber
+    - name: puzzle_sound
+      guid: 32ea65f2017fb84abbacd5060c62b706
+      id: 2794761965
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8d7f87f94dbf14a978b4f7c63429dd2
+      - ElementName: puzzle_sound
+        ObjectType: 13
+        guid: 32ea65f2017fb84abbacd5060c62b706
+      Path: Game Parameters\Default Work Unit\puzzle_sound
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:

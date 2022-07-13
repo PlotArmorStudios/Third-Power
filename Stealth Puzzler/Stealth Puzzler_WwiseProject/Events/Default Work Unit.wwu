@@ -364,6 +364,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_puzzle_solved" ID="{BFCC3A02-69CC-4328-AB11-44AFB2638555}">
+					<ChildrenList>
+						<Action Name="" ID="{20649631-BA3F-412C-9FA2-EC8A9FA14BC0}" ShortID="110402513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="puzzle_solved" ID="{6F44975B-07E2-4C0B-96BE-E477F4A40758}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -37,6 +37,36 @@
 						<ActiveSource Name="puzzle_time_running_out_clock" ID="{081DFA97-5A3A-4C41-A5C2-198179D56762}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="puzzle_solved" ID="{6F44975B-07E2-4C0B-96BE-E477F4A40758}" ShortID="387036667">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Puzzle Sound" ID="{DB1B901B-D8B6-4D00-B859-F6875BB5E85A}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="puzzle_solved" ID="{632B339D-6F3D-4A03-8887-4AF29A53D54B}">
+							<Language>SFX</Language>
+							<AudioFile>puzzle_solved.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="391519029"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="puzzle_solved" ID="{632B339D-6F3D-4A03-8887-4AF29A53D54B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
