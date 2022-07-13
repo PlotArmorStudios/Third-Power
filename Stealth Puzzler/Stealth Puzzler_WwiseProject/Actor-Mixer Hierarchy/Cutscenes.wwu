@@ -4,6 +4,13 @@
 		<WorkUnit Name="Cutscenes" ID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}" OwnerID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" PersistMode="Nested">
 			<ChildrenList>
 				<Sound Name="SFX_Cutscene_Arrow_Demonstartion_V05" ID="{F8173FF4-DDFC-4972-A5DB-5B9AE2753104}" ShortID="1062472195">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>

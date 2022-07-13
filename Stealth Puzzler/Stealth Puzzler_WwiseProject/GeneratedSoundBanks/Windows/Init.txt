@@ -1,14 +1,20 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1182958561	Cutscene			\Default Work Unit\Cutscene	
+	2794761965	puzzle_sound			\Default Work Unit\puzzle_sound	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\SC Bus\Ambience	
+	938749676	Puzzle Sound			\Default Work Unit\Master Audio Bus\SC Bus\Puzzle Sound	
 	1044284324	Binaural_Bus			\Default Work Unit\Binaural_Bus	
+	1119518085	SC Bus			\Default Work Unit\Master Audio Bus\SC Bus	
 	1182958561	Cutscene			\Default Work Unit\Master Audio Bus\Auro_Binaural\SC\Cutscene	
 	1368310311	Auro_Binaural			\Default Work Unit\Master Audio Bus\Auro_Binaural	
 	1584861543	SC			\Default Work Unit\Master Audio Bus\Auro_Binaural\SC	
+	1625135012	3D Objects			\Default Work Unit\Master Audio Bus\SC Bus\3D Objects	
 	1780485226	Arrow_Trap			\Default Work Unit\Master Audio Bus\Auro_Binaural\SC\Arrow_Trap	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3850048146	sfxAmbient			\Default Work Unit\sfxAmbient	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\SC Bus\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2580481396	Reverb_Dungeon_01			\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01	
@@ -17,6 +23,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	16119108	Dry_AHP	Auro Headphone			
 	780838069	New_Wwise_Meter	Wwise Meter			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2173220397	PuzzleSoundMeter	Wwise Meter			
 	3442768367	Hall_Large_Dark	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

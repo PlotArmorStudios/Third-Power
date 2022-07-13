@@ -36,7 +36,6 @@
 									<ObjectLists/>
 								</AuxBus>
 								<Bus Name="SC" ID="{57B2D3F9-F5B4-4A59-81E3-33D77AA0A0EA}">
-									<ReferenceList/>
 									<ChildrenList>
 										<Bus Name="Cutscene" ID="{4DE11964-8818-4C33-BB1F-5E4B607677F9}">
 											<ReferenceList>
@@ -92,6 +91,100 @@
 											<ObjectLists/>
 										</Bus>
 									</ChildrenList>
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="SC Bus" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
+							<ChildrenList>
+								<Bus Name="Puzzle Sound" ID="{DB1B901B-D8B6-4D00-B859-F6875BB5E85A}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<ObjectRef Name="PuzzleSoundMeter" ID="{E338FBE9-4F62-4122-8633-C73A13FF3A4C}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Ambience" ID="{A8016111-4CCC-4CB0-9345-944416169955}">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{4D9218BF-0985-4C20-AAE0-20D107C75CAA}" ShortID="3042016">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{A0F98C38-DB33-42CB-A3E8-95B756F89230}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>-0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>-34.90909</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Music" ID="{067CAF1B-46F1-465A-B403-B590DFA30A66}">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{C245EC5A-8F5A-48F2-8C39-3FABC9BFFF1A}" ShortID="1067846142">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{57EB0AE0-2E99-40F8-A4B3-363C21F56BA7}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>-0.06707</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>-34.90909</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}">
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>

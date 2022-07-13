@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_VOICE_DEATH = 908551697U;
         static const AkUniqueID PLAY_PLAYER_VOICE_JUMP = 712660841U;
         static const AkUniqueID PLAY_PUZZLE_BUTTON_AND_DOOR_OPEN = 1296866981U;
+        static const AkUniqueID PLAY_PUZZLE_SOLVED = 2759903158U;
         static const AkUniqueID PLAY_PUZZLE_TIME_RUNNING_OUT = 4219761939U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
         static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
@@ -58,6 +59,7 @@ namespace AK
     {
         static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID LEVELNUMBER = 3941060586U;
+        static const AkUniqueID PUZZLE_SOUND = 2794761965U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -69,12 +71,17 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID _3D_OBJECTS = 1625135012U;
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID ARROW_TRAP = 1780485226U;
         static const AkUniqueID AURO_BINAURAL = 1368310311U;
         static const AkUniqueID BINAURAL_BUS = 1044284324U;
         static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PUZZLE_SOUND = 938749676U;
         static const AkUniqueID SC = 1584861543U;
+        static const AkUniqueID SC_BUS = 1119518085U;
         static const AkUniqueID SFXAMBIENT = 3850048146U;
     } // namespace BUSSES
 

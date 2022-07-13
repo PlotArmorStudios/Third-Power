@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2844038624">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3536839696">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -20,9 +20,10 @@
 			</IncludedAuxBusses>
 			<GameParameters>
 				<GameParameter Id="1182958561" Name="Cutscene" ObjectPath="\Game Parameters\Default Work Unit\Cutscene"/>
+				<GameParameter Id="2794761965" Name="puzzle_sound" ObjectPath="\Game Parameters\Default Work Unit\puzzle_sound"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1546231383" Language="SFX" Hash="14891635">
+		<SoundBank Id="1546231383" Language="SFX" Hash="3461259575">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_Bank</ObjectPath>
 			<ShortName>Music_Bank</ShortName>
 			<Path>Music_Bank.bnk</Path>
@@ -61,7 +62,7 @@
 				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="964933255">
+		<SoundBank Id="4072029455" Language="SFX" Hash="1403931848">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -581,6 +582,14 @@
 						<File Id="952034166" Language="SFX">
 							<ShortName>puzzle_button_press_02.wav</ShortName>
 							<Path>SFX\puzzle_button_press_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="7." DurationMax="7.">
+					<IncludedMemoryFiles>
+						<File Id="391519029" Language="SFX">
+							<ShortName>puzzle_solved.wav</ShortName>
+							<Path>SFX\puzzle_solved_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
