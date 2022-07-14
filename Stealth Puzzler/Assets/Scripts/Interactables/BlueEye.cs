@@ -15,13 +15,18 @@ public class BlueEye : MonoBehaviour
     [SerializeField] private float _frequency = 1f;
 
     [SerializeField] private int _numberOfTriggers = 1;
-    
+
     private Color _emissionColor;
+
+    [SerializeField] private bool _playPuzzleSolveSound;
+    [SerializeField] private float _puzzleSoundWaitTime;
+
     private void OnEnable()
     {
         GetComponent<MeshRenderer>().material = Instantiate<Material>(GetComponent<MeshRenderer>().material);
         _emissionMaterial = GetComponent<MeshRenderer>().material;
     }
+
     private void Start()
     {
         _emissionColor = _emissionMaterial.color;
@@ -72,22 +77,24 @@ public class BlueEye : MonoBehaviour
     {
         _isActive = true;
     }
-    
+
     public void Deactivate()
     {
         _isActive = false;
     }
-    
+
     private void OnCollisionEnter(Collision other)
     {
         var projectile = other.gameObject.GetComponent<Projectile>();
         if (!projectile) return;
         if (!_isActive) return;
-        
+
         _collisionEvent?.Invoke();
         StartCoroutine(OscillateEmission());
-        PlayPuzzleSolvedSound();
         PlayEyeGlowSound();
+
+        if (_playPuzzleSolveSound)
+            StartCoroutine(PlayPuzzleSolvedSound());
     }
 
     private void PlayEyeGlowSound()
@@ -96,12 +103,12 @@ public class BlueEye : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
     }
 
-    private void PlayPuzzleSolvedSound()
+    private IEnumerator PlayPuzzleSolvedSound()
     {
         //Implement puzzle solved sound
         //Let this be a sound that fires off immediately.
         //The programmers may play around with the timing of the sound later
-
+        yield return new WaitForSeconds(_puzzleSoundWaitTime);
         AkSoundEngine.PostEvent("Play_puzzle_solved", gameObject);
     }
 }
