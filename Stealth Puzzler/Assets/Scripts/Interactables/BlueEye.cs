@@ -9,10 +9,11 @@ public class BlueEye : MonoBehaviour
     [SerializeField] private bool _isActive = true;
     [SerializeField] private UnityEvent _collisionEvent;
     [SerializeField] private Material _emissionMaterial;
-    [SerializeField] private float _stayOnTime = 1f;
+    [SerializeField] private float _litOnTime = 1f;
     [SerializeField] private float _emissionMax = 4f;
     [SerializeField] private float _emissionMin = 1.4f;
     [SerializeField] private float _lightingTime = 1f;
+    [SerializeField] private bool _useTimer = false;
     public bool IsLit { get; private set; }
     public static event Action OnEyeHit;
     private Color _emissionColor;
@@ -27,6 +28,44 @@ public class BlueEye : MonoBehaviour
         _emissionMaterial.SetColor("_EmissionColor", _emissionColor * _emissionMin);
     }
 
+    public IEnumerator OscillateEmissionTimer()
+    {
+        Deactivate();
+        IsLit = true;
+        OnEyeHit?.Invoke();
+        float timeElapsed = 0f;
+        float currentEmission = _emissionMin;
+
+        while (timeElapsed < _litOnTime)
+        {
+            currentEmission = Mathf.Lerp(currentEmission, _emissionMax, timeElapsed / _lightingTime);
+            timeElapsed += Time.deltaTime;
+            _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
+#if DebugTimeTransition
+            Debug.Log("Lerp progress: " + timeElasped / _frequency);
+            Debug.Log("Time Elapsed: " + timeElasped);
+            Debug.Log("Time: " + Time.deltaTime);
+            Debug.Log("Current emission" + currentEmission);
+#endif
+            yield return null;
+        }
+
+        timeElapsed = 0;
+
+        while (timeElapsed < _lightingTime)
+        {
+            currentEmission = Mathf.Lerp(currentEmission, _emissionMin, timeElapsed / _lightingTime);
+            timeElapsed += Time.deltaTime;
+            _emissionMaterial.SetColor("_EmissionColor", _emissionColor * currentEmission);
+#if DebugTimeTransition
+            Debug.Log(timeElasped / _frequency);
+            Debug.Log(currentEmission);
+#endif
+            yield return null;
+        }
+        IsLit = false;
+        Activate();
+    }
     public IEnumerator OscillateEmission()
     {
         Deactivate();
@@ -35,7 +74,7 @@ public class BlueEye : MonoBehaviour
         float timeElapsed = 0f;
         float currentEmission = _emissionMin;
 
-        while (timeElapsed < _stayOnTime)
+        while (timeElapsed < _litOnTime)
         {
             currentEmission = Mathf.Lerp(currentEmission, _emissionMax, timeElapsed / _lightingTime);
             timeElapsed += Time.deltaTime;
@@ -66,10 +105,11 @@ public class BlueEye : MonoBehaviour
         Activate();
     }
 
+
     [ContextMenu("Oscillate Emission")]
     private void TestOscRoutine()
     {
-        StartCoroutine(OscillateEmission());
+        StartCoroutine(OscillateEmissionTimer());
     }
 
     public void Activate()
@@ -89,7 +129,15 @@ public class BlueEye : MonoBehaviour
         if (!_isActive) return;
         
         _collisionEvent?.Invoke();
-        StartCoroutine(OscillateEmission());
+        if (_useTimer)
+        {
+            StartCoroutine(OscillateEmissionTimer());
+        }
+        else
+        {
+            StartCoroutine(OscillateEmission());
+        }
+        
         PlayPuzzleSolvedSound();
         PlayEyeGlowSound();
     }
