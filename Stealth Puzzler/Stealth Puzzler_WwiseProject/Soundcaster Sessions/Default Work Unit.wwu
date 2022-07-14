@@ -6,11 +6,11 @@
 				<SoundcasterSession Name="Mark Music Trnasition Test" ID="{725D418D-BDF4-477C-9F23-C0504B80B41B}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<ObjectRef Name="Play_Early_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Tension" ID="{AF2EBA96-0A7D-4030-82B7-A3A94C45FF2B}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<ObjectRef Name="Play_Later_Music" ID="{AF2EBA96-0A7D-4030-82B7-A3A94C45FF2B}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
@@ -21,7 +21,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LevelNumber" ID="{192FF86B-6E73-40F0-8A02-9997A2516EFD}"/>
-							<Value>8.248</Value>
+							<Value>7</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
