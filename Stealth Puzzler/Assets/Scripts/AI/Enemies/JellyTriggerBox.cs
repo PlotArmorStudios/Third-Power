@@ -15,11 +15,13 @@ public class JellyTriggerBox : MonoBehaviour
         if (other.gameObject.GetComponent<CubeController>())
         {
             _jellyRb.useGravity = true;
+            _jellyRb.isKinematic = true;
             _jellyRb.AddForce(Vector3.down * _initialForceMultiplier);
         }
         else if (other.gameObject.GetComponent<PlayerController>())
         {
             _jellyRb.useGravity = true;
+            _jellyRb.isKinematic = true;
             _jellyRb.AddForce(Vector3.down * _initialForceMultiplier);
         }
     }
