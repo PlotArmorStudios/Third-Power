@@ -1705,7 +1705,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1468631894}
+      - m_Target: {fileID: 843771661}
         m_TargetAssemblyTypeName: WwiseMusic, Assembly-CSharp
         m_MethodName: PlayMusic
         m_Mode: 1
@@ -2470,6 +2470,110 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 157427088}
   _creditsMask: {fileID: 2112852241}
+--- !u!1001 &843771658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.868486
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.1200733
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76.54173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038973, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758274495655038975, guid: 6ab8be20bc7024ed6b6844b79828f531,
+        type: 3}
+      propertyPath: m_Name
+      value: Music Object
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ab8be20bc7024ed6b6844b79828f531, type: 3}
+--- !u!1 &843771659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4758274495655038975, guid: 6ab8be20bc7024ed6b6844b79828f531,
+    type: 3}
+  m_PrefabInstance: {fileID: 843771658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &843771660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843771659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5773a12c7f1845d2a660a08101f57fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stop_Music:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a9a3e20206a4748ea8d361576dfeefea,
+      type: 2}
+--- !u!114 &843771661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4758274495655038947, guid: 6ab8be20bc7024ed6b6844b79828f531,
+    type: 3}
+  m_PrefabInstance: {fileID: 843771658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843771659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8b34e7b54cf4208b8b0dd0066b2bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &876299331
 GameObject:
   m_ObjectHideFlags: 0
@@ -5709,75 +5813,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09000149f8e102f45b9370d3cd62061e, type: 3}
---- !u!1 &1468631892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1468631893}
-  - component: {fileID: 1468631894}
-  - component: {fileID: 1468631895}
-  m_Layer: 0
-  m_Name: MusicObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1468631893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468631892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.868486, y: -3.1200733, z: 76.54173}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1468631894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468631892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc8b34e7b54cf4208b8b0dd0066b2bbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Play_Music:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0ba3adaf7e82d41c5948b8b82fb19c9b,
-      type: 2}
-  IsPlaying: 0
-  BankIsLoaded: 0
---- !u!114 &1468631895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468631892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5773a12c7f1845d2a660a08101f57fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Stop_Music:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a9a3e20206a4748ea8d361576dfeefea,
-      type: 2}
 --- !u!1 &1483272395
 GameObject:
   m_ObjectHideFlags: 0

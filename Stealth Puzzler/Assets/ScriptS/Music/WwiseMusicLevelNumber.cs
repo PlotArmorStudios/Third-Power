@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WwiseMusicLevelNumber : MonoBehaviour
 {
-    [SerializeField]
-    private int _levelNumber;
+
+    public int levelNumber;
 
     void Start()
     {
-        AkSoundEngine.SetRTPCValue("LevelNumber", _levelNumber);
+        AkSoundEngine.SetRTPCValue("LevelNumber", levelNumber);
     }
 }

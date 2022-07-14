@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
         PlayerSpawnLocation.y = CurrentPosition[1];
         PlayerSpawnLocation.z = CurrentPosition[2];
 
+        WwiseMusic.MusicInstance.PlayMusic();
+
         Debug.Log("Should Load Game. Level to load: " + CurrentLevel);
         SceneLoader.Instance.LoadScene("Level " + CurrentLevel);
     }

@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WwiseMusic : MonoBehaviour
 {
-    private static WwiseMusic _instance;
+    public static WwiseMusic MusicInstance;
 
-    public AK.Wwise.Event Play_Music;
+    private WwiseMusicLevelNumber _wwiseLevelNumber;
+
+    public AK.Wwise.Event Play_Early_Music;
+    public AK.Wwise.Event Play_Later_Music;
 
     [HideInInspector]
     public bool IsPlaying  = false;
@@ -18,9 +19,9 @@ public class WwiseMusic : MonoBehaviour
 
     private void Awake()
     {
-        if(_instance == null)
+        if(MusicInstance == null)
         {
-            _instance = this;
+            MusicInstance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -34,15 +35,42 @@ public class WwiseMusic : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().name != "Main Menu")
-            if (IsPlaying == false)
-                Play_Music.Post(gameObject); 
-                IsPlaying = true;
         if (BankIsLoaded == false)
             AkBankManager.LoadBank("Music_Bank", false, false);
 
+        _wwiseLevelNumber = FindObjectOfType<WwiseMusicLevelNumber>();
+
+        //This should just be for in engine music. Starting directly in a scene
+        if (SceneManager.GetActiveScene().name != "Main Menu")
+            if (IsPlaying == false)
+                if (_wwiseLevelNumber.levelNumber < 7)
+                {
+                    Play_Early_Music.Post(gameObject);
+                    IsPlaying = true;
+                }
+                else if (_wwiseLevelNumber.levelNumber >= 7)
+                {
+                    Play_Later_Music.Post(gameObject);
+                    IsPlaying = true;
+                }
         //_levelNumber = FindObjectOfType<LevelData>().LevelIndex;
     }
+
+    public void PlayMusic()
+    {
+        //Called from Play in MainMenu and in GameManager's OnSceneLoaded
+        if (GameManager.Instance.CurrentLevel < 7)
+        {
+            Play_Early_Music.Post(gameObject);
+            IsPlaying = true;
+        }
+        else if(GameManager.Instance.CurrentLevel >= 7)
+        {
+            Play_Later_Music.Post(gameObject);
+            IsPlaying = true;
+        }
+    }
+
 
     //private void OnEnable()
     //{
@@ -60,10 +88,4 @@ public class WwiseMusic : MonoBehaviour
     //        AkSoundEngine.SetRTPCValue("LevelNumber", _levelNumber);
     //    Debug.Log("For Mark: Level is Number " + _levelNumber);
     //}
-
-    public void PlayMusic()
-    {
-        Play_Music.Post(gameObject);
-        IsPlaying = true;
-    }
 }
