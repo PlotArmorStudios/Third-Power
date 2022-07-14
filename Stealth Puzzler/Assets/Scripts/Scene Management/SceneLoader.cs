@@ -15,7 +15,7 @@ namespace Helpers
         [Min(0.001f)][SerializeField] private float _transitionSpeed = 1f;
 
         [Header("Loading Screen UI")]
-        [SerializeField] private Image _loadingBar;
+        [SerializeField] private Slider _loadingBar;
         [SerializeField] private Canvas _loadScreenCanvas;
 
         [Header("GameObjects to be disabled while scene loading")]
@@ -99,11 +99,11 @@ namespace Helpers
 
             while (asyncLoad.progress < 0.9f)
             {
-                Debug.Log("Progress: " + asyncLoad.progress + " | Bar: " + _loadingBar.fillAmount);
-                _loadingBar.fillAmount = asyncLoad.progress + 0.01f;
+                Debug.Log("Progress: " + asyncLoad.progress + " | Bar: " + _loadingBar.value);
+                _loadingBar.value = asyncLoad.progress + 0.01f;
                 yield return null;
             }
-            _loadingBar.fillAmount = 1;
+            _loadingBar.value = 1;
             yield return new WaitForSeconds(_loadWaitTime);
             
             asyncLoad.allowSceneActivation = true;
