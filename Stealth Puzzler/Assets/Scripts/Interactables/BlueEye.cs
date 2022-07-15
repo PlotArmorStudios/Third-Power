@@ -141,7 +141,6 @@ public class BlueEye : MonoBehaviour
             StartCoroutine(OscillateEmission());
         }
         
-        PlayPuzzleSolvedSound();
         PlayEyeGlowSound();
 
         if (_playPuzzleSolveSound)
