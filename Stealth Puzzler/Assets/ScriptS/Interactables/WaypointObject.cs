@@ -49,6 +49,7 @@ public class WaypointObject : MonoBehaviour
     public void ToggleActivate()
     {
         IsActive = !IsActive;
+        Debug.Log("Toggled active state: " + IsActive);
     }
     
     public void Activate()
