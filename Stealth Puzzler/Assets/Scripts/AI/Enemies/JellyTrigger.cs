@@ -70,7 +70,9 @@ public class JellyTrigger : MonoBehaviour
         if (_switchController.action.triggered)
         {
             _isInvincible = true;
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * _jellyUpwardForce, ForceMode.Impulse);
+            Rigidbody _rb = GetComponent<Rigidbody>();
+            if (_rb)
+                _rb.AddForce(Vector3.up * _jellyUpwardForce, ForceMode.Impulse);
         }
     }
 }
