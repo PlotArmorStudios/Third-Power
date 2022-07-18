@@ -13,7 +13,8 @@ public class PlayerController : Controller
     [SerializeField] private InputActionReference _look;
     [SerializeField] private InputActionReference _run;
 
-    [Header("Movement")] [SerializeField] private float _maxMovementSpeed = 5f;
+    [Header("Movement")] [SerializeField] private float _maxWalkSpeed = 5f;
+    [SerializeField] private float _runSpeedMultiplier = 1.5f;
     [SerializeField] private float _jumpHeight = 10f;
     [SerializeField] private float _weight = 2f;
 
@@ -196,7 +197,7 @@ public class PlayerController : Controller
             _currentMovementSpeed -= Time.deltaTime;
         }
 
-        _currentMovementSpeed = Mathf.Clamp(_currentMovementSpeed, 3.8f, _maxMovementSpeed);
+        _currentMovementSpeed = Mathf.Clamp(_currentMovementSpeed, 3.8f, _maxWalkSpeed);
     }
 
     private void CalculateMovementDirection()
@@ -225,7 +226,7 @@ public class PlayerController : Controller
 
         var moving = Vector3.zero;
 
-        if (_isRunning) moving = moveDir.normalized * (_currentMovementSpeed * 1.5f);
+        if (_isRunning) moving = moveDir.normalized * (_currentMovementSpeed * _runSpeedMultiplier);
         else moving = moveDir.normalized * _currentMovementSpeed;
 
         //how to have character face direction you are moving

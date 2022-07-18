@@ -225,22 +225,31 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: a604deb4545b4c542be7e856f38d4ec1,
+    m_Motion: {fileID: -203655887218126122, guid: b754f90d52b22d34aa31d7c4421acfe9,
       type: 3}
-    m_Threshold: 0.5
+    m_Threshold: 0.33333334
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: f4fea40895539c14a9f0a8e019887ea6,
+    m_Motion: {fileID: -203655887218126122, guid: 297e1c10767c92644955392d5f1ab3df,
       type: 3}
-    m_Threshold: 1
+    m_Threshold: 0.6666667
     m_Position: {x: -0.96, y: 0.26}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: 2b993a2712cd96c4a86ba227305d4e6d,
+      type: 3}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Movement
     m_Mirror: 0
   m_BlendParameter: Movement
   m_BlendParameterY: MovementY
