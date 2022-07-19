@@ -117,6 +117,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("OnSceneLoaded: " + scene.name);
         Instance.CurrentLevel = FindObjectOfType<LevelData>().LevelIndex;
+        WwiseMusic.MusicInstance.PlayMusic();
     }
 
     public void AddObstacleBoolean(string obstacleID, bool isOpen)
