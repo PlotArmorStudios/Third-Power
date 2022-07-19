@@ -343,6 +343,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Podium_Activate" ID="{BBA39581-FDF5-4023-B4D6-C007893E46DB}" ShortID="319756233">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -363,6 +370,36 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Podium_Activate" ID="{335F7836-4C9D-47EB-BB06-C9626F5D92D6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Podium_Deactivate" ID="{6DE9F7D0-0368-4659-A08E-0A09A3E8AD8F}" ShortID="904268557">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Podium_Deactivate" ID="{3C9E47F4-BC62-482F-900B-A317B4277AC0}">
+									<Language>SFX</Language>
+									<AudioFile>Podium_Deactivate.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="941701877"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Podium_Deactivate" ID="{3C9E47F4-BC62-482F-900B-A317B4277AC0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

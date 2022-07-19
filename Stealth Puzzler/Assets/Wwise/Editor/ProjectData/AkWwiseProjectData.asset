@@ -295,7 +295,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585434497434775808
+    m_lastTime: -8585434133214775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -337,7 +337,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585434497434775808
+    m_lastTime: -8585434133214775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -634,6 +634,40 @@ MonoBehaviour:
       maxAttenuation: 15
       maxDuration: 0.40625
       minDuration: 0.25
+    - name: Play_Podium_Activate
+      guid: ce5f0999f0157641a9982b07202fb0a5
+      id: 1424347858
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Podium_Activate
+        ObjectType: 3
+        guid: ce5f0999f0157641a9982b07202fb0a5
+      Path: Events\Default Work Unit\Play_Podium_Activate
+      maxAttenuation: 0
+      maxDuration: 5
+      minDuration: 5
+    - name: Play_Podium_Deactivate
+      guid: 5aa322f53a2a07478bb7854d8e0f68eb
+      id: 3133941571
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_Podium_Deactivate
+        ObjectType: 3
+        guid: 5aa322f53a2a07478bb7854d8e0f68eb
+      Path: Events\Default Work Unit\Play_Podium_Deactivate
+      maxAttenuation: 0
+      maxDuration: 2.53125
+      minDuration: 2.53125
     - name: Play_puzzle_button_and_door_open
       guid: 187a30327820374dbb41bfe43a952318
       id: 1296866981

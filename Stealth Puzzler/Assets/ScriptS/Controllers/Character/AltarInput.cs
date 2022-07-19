@@ -90,12 +90,12 @@ public class AltarInput : MonoBehaviour
 
     private void PlayAltarEngageSound()
     {
-        //Implement altar interact sound
+        AkSoundEngine.PostEvent("Play_Podium_Activate", gameObject);
     }
 
     private void PlayAltarDisengageSound()
     {
-        //Implement altar disengage sound
+        AkSoundEngine.PostEvent("Play_Podium_Deactivate", gameObject);
     }
     
     private void PlayActivateUISound()
