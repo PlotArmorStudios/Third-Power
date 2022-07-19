@@ -39,9 +39,11 @@ public class AltarInput : MonoBehaviour
     private void OnInteract(InputAction.CallbackContext obj)
     {
         Debug.Log("Interacting");
+        PlayAltarEngageSound();
         StartCoroutine(ActivateAltarUI());
         DeactivateInteractInput();
     }
+
 
     private void DeactivateInteractInput()
     {
@@ -61,7 +63,9 @@ public class AltarInput : MonoBehaviour
         
         yield return new WaitForSeconds(_timeToActivateUI);
         _altarUI.gameObject.SetActive(true);
+        PlayActivateUISound();
     }
+
 
     public void DeactivateAltarUi()
     {
@@ -71,13 +75,36 @@ public class AltarInput : MonoBehaviour
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("Player");
         _altarTriggerBox.SetActive(true);
+        PlayAltarDisengageSound();
         StartCoroutine(DeactivateUI());
     }
+
 
     private IEnumerator DeactivateUI()
     {
         yield return new WaitForSeconds(_timeToDeactivateUI);
         _altarUI.gameObject.SetActive(false);
         OnActivateCamInput?.Invoke();
+        PlayDeactivateUISound();
+    }
+
+    private void PlayAltarEngageSound()
+    {
+        //Implement altar interact sound
+    }
+
+    private void PlayAltarDisengageSound()
+    {
+        //Implement altar disengage sound
+    }
+    
+    private void PlayActivateUISound()
+    {
+        //Implement altar ui activate sound
+    }
+    
+    private void PlayDeactivateUISound()
+    {
+        //Implement altar ui deactivate sound
     }
 }
