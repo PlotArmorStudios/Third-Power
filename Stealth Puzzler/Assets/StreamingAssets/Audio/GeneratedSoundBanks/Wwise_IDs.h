@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_LATER_MUSIC = 1010497036U;
         static const AkUniqueID PLAY_PLAYER_VOICE_DEATH = 908551697U;
         static const AkUniqueID PLAY_PLAYER_VOICE_JUMP = 712660841U;
+        static const AkUniqueID PLAY_PODIUM_ACTIVATE = 1424347858U;
         static const AkUniqueID PLAY_PUZZLE_BUTTON_AND_DOOR_OPEN = 1296866981U;
         static const AkUniqueID PLAY_PUZZLE_SOLVED = 2759903158U;
         static const AkUniqueID PLAY_PUZZLE_TIME_RUNNING_OUT = 4219761939U;

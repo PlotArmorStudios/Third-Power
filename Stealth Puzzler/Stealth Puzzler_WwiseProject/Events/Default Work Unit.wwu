@@ -440,6 +440,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Podium_Activate" ID="{99095FCE-15F0-4176-A998-2B07202FB0A5}">
+					<ChildrenList>
+						<Action Name="" ID="{D355A0D0-D282-4EC7-8885-495CCFBEC86A}" ShortID="124903806">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Podium_Activate" ID="{BBA39581-FDF5-4023-B4D6-C007893E46DB}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
