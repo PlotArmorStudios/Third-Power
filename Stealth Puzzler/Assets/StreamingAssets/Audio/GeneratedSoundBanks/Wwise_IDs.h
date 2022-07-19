@@ -41,6 +41,22 @@ namespace AK
         static const AkUniqueID STOP_PUZZLE_TIME_RUNNING_OUT = 574883145U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace LEVELSTATE
+        {
+            static const AkUniqueID GROUP = 3473087568U;
+
+            namespace STATE
+            {
+                static const AkUniqueID EARLY = 3881926874U;
+                static const AkUniqueID LATER = 3445868577U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace LEVELSTATE
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
         namespace MATERIAL
