@@ -61,10 +61,6 @@ public class PlayerController : Controller
         _vulnerableTime = 0;
     }
 
-    private void OnDisable()
-    {
-    }
-
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
@@ -132,7 +128,13 @@ public class PlayerController : Controller
             _animator.SetBool("Airborne", false);
             _animator.ResetTrigger("Jump");
             _animator.SetTrigger("Land");
+            PlayLandSound();
         }
+    }
+
+    private void PlayLandSound()
+    {
+        //Implement land sound
     }
 
     private void ApplyMovementInputToAnimator()
