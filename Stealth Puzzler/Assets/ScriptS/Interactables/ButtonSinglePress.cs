@@ -46,9 +46,6 @@ public class ButtonSinglePress : Obstacle
         _pressEvent?.Invoke();
         _isPressed = true;
 
-        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
-        GameManager.Instance.AddObstacleBoolean(_obstacleID, _isPressed);
-
         PlayButtonPressDownSound();
     }
 
