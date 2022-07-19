@@ -332,6 +332,42 @@
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<WorkUnit Name="Cube" ID="{8DD81968-D22C-46F4-B383-0AE86EF56226}" PersistMode="Reference"/>
+				<ActorMixer Name="Podium" ID="{56D8FDCA-3634-49BE-BE42-1A80BD06B2D9}" ShortID="361612813">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Podium_Activate" ID="{BBA39581-FDF5-4023-B4D6-C007893E46DB}" ShortID="319756233">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Podium_Activate" ID="{335F7836-4C9D-47EB-BB06-C9626F5D92D6}">
+									<Language>SFX</Language>
+									<AudioFile>Podium_Activate.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="893176847"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Podium_Activate" ID="{335F7836-4C9D-47EB-BB06-C9626F5D92D6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
