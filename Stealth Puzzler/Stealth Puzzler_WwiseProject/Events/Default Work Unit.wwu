@@ -451,6 +451,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Podium_Deactivate" ID="{F522A35A-2A3A-4707-8BB7-854D8E0F68EB}">
+					<ChildrenList>
+						<Action Name="" ID="{FDD9124F-9048-4BE5-A7B4-E67C671C3314}" ShortID="1016297707">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Podium_Deactivate" ID="{6DE9F7D0-0368-4659-A08E-0A09A3E8AD8F}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
