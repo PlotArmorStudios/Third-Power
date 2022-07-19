@@ -23,7 +23,7 @@
 				<GameParameter Id="2794761965" Name="puzzle_sound" ObjectPath="\Game Parameters\Default Work Unit\puzzle_sound"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1546231383" Language="SFX" Hash="1651866161">
+		<SoundBank Id="1546231383" Language="SFX" Hash="1021724028">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_Bank</ObjectPath>
 			<ShortName>Music_Bank</ShortName>
 			<Path>Music_Bank.bnk</Path>
@@ -103,14 +103,6 @@
 						<ActionTriggerEntry Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
 					</ActionTrigger>
 				</Event>
-				<Event Id="3133941571" Name="Play_Podium_Deactivate" ObjectPath="\Events\Default Work Unit\Play_Podium_Deactivate" DurationType="OneShot" DurationMin="2.53125" DurationMax="2.53125">
-					<IncludedMemoryFiles>
-						<File Id="941701877" Language="SFX">
-							<ShortName>Podium_Deactivate.wav</ShortName>
-							<Path>SFX\Podium_Deactivate_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<GameParameters>
@@ -120,7 +112,7 @@
 				<Trigger Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
 			</Triggers>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="406265849">
+		<SoundBank Id="4072029455" Language="SFX" Hash="1821956891">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -349,7 +341,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.238872" DurationMax="0.561231">
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" MaxAttenuation="15." DurationType="OneShot" DurationMin="0.238872" DurationMax="0.561231">
 					<IncludedMemoryFiles>
 						<File Id="77153870" Language="SFX">
 							<ShortName>Player_Footsteps_Metal_11.wav</ShortName>
@@ -628,6 +620,14 @@
 						<File Id="893176847" Language="SFX">
 							<ShortName>Podium_Activate.wav</ShortName>
 							<Path>SFX\Podium_Activate_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3133941571" Name="Play_Podium_Deactivate" ObjectPath="\Events\Default Work Unit\Play_Podium_Deactivate" DurationType="OneShot" DurationMin="2.53125" DurationMax="2.53125">
+					<IncludedMemoryFiles>
+						<File Id="941701877" Language="SFX">
+							<ShortName>Podium_Deactivate.wav</ShortName>
+							<Path>SFX\Podium_Deactivate_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
