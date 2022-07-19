@@ -172,7 +172,7 @@ public class WolfAI : MonoBehaviour
 
     private void TriggerPatrol()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * _homeRadius;
+        Vector3 randomDirection = Random.insideUnitCircle * _homeRadius;
         randomDirection += _startPosition;
 
         NavMeshHit hit;

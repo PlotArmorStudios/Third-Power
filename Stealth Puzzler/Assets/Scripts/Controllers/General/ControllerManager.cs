@@ -183,7 +183,7 @@ public class ControllerManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Used to toggle an enemy's ability to detect player (on death).
+    /// Used to toggle an enemy's ability to detect player.
     /// </summary>
     public void ActivatePlayer()
     {

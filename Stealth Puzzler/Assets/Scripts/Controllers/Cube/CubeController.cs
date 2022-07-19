@@ -46,9 +46,15 @@ public class CubeController : Controller
         _move.action.Enable();
         _turnLeft.action.performed += TurnLeft;
         _turnRight.action.performed += TurnRight;
+        ControllerManager.Instance.DeactivatePlayer();
         SnapToGrid();
     }
-    
+
+    private void OnDisable()
+    {
+        ControllerManager.Instance.ActivatePlayer();
+    }
+
     private void TurnLeft(InputAction.CallbackContext context)
     {
         if (_isMoving) return;
@@ -189,6 +195,7 @@ public class CubeController : Controller
     #if UNITY_EDITOR 
         float currTime = Time.time; 
     #endif
+        ControllerManager.Instance.ActivatePlayer();
         _isMoving = true;
         float rotationRemaining = 90;
 
@@ -202,6 +209,7 @@ public class CubeController : Controller
 
         SnapToGrid();
         _isMoving = false;
+        ControllerManager.Instance.DeactivatePlayer();
     #if UNITY_EDITOR && DEBUGLOG 
         Debug.Log("Roll took " + (Time.time - currTime) + "seconds");
     #endif
