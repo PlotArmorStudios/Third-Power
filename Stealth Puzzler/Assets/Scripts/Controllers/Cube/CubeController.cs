@@ -13,16 +13,16 @@ public class CubeController : Controller
     [SerializeField] private InputActionReference _turnRight;
     [SerializeField] private float _rollSpeed = 5;
     [SerializeField] private float _rotationDuration = 0.2f;
-    
-    [Header("Grid Snapping")]
-    [SerializeField] private float _snapSpeed = .3f;
+
+    [Header("Grid Snapping")] [SerializeField]
+    private float _snapSpeed = .3f;
 
     [Tooltip("Transform for syncing cube and player position on switch.")]
     public Transform PlayerCalibratorTransform;
 
-    [Header("Ground Check")]
-    [SerializeField] private LayerMask _groundLayerMask;
-    
+    [Header("Ground Check")] [SerializeField]
+    private LayerMask _groundLayerMask;
+
     public Rigidbody Rigidbody;
     private List<Vector3> _directions = new List<Vector3>();
     private Vector3 _newdirection;
@@ -33,13 +33,18 @@ public class CubeController : Controller
 
     public float FallTimer { get; set; }
     [field: SerializeField] public bool IsFalling { get; set; }
-    
+
     private float _horizontal;
     private float _vertical;
     private bool _isMoving;
     private float _weight;
     private bool _touchingGround;
     private bool _rotated45 = false;
+
+    private bool _touchingWallNorth;
+    private bool _touchingWallSouth;
+    private bool _touchingWallEast;
+    private bool _touchingWallWest;
 
     private void OnEnable()
     {
@@ -82,6 +87,7 @@ public class CubeController : Controller
             transform.rotation = Quaternion.Lerp(startingRot, targetRot, counter / _rotationDuration);
             yield return null;
         }
+
         transform.rotation = targetRot;
         _isMoving = false;
     }
@@ -113,9 +119,10 @@ public class CubeController : Controller
     private void Update()
     {
         ReadInput();
+
         if (_isMoving) return;
         //if cube is at a 45° rotation, turn instead of moving
-        if (_rotated45) 
+        if (_rotated45)
         {
             ResetRotation();
             return;
@@ -145,7 +152,17 @@ public class CubeController : Controller
 
     private void FixedUpdate()
     {
+        CheckWallCollision();
         IsTouchingGround();
+    }
+
+    private void CheckWallCollision()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Vector3 sensorAngle =
+                Quaternion.AngleAxis((i / 4) * 90, transform.right) * transform.up;
+        }
     }
 
     public bool IsTouchingGround()
@@ -157,7 +174,7 @@ public class CubeController : Controller
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        
+
         Gizmos.DrawRay(Rigidbody.transform.position, Vector3.down * 1.3f);
     }
 
@@ -192,10 +209,13 @@ public class CubeController : Controller
 
     private IEnumerator Roll(Vector3 anchor, Vector3 axis)
     {
-    #if UNITY_EDITOR 
-        float currTime = Time.time; 
-    #endif
+#if UNITY_EDITOR
+        float currTime = Time.time;
+#endif
+
+        //enable the ability to be detected by enemies
         ControllerManager.Instance.ActivatePlayer();
+
         _isMoving = true;
         float rotationRemaining = 90;
 
@@ -209,10 +229,12 @@ public class CubeController : Controller
 
         SnapToGrid();
         _isMoving = false;
+
+        //disable the ability to be detected by enemies
         ControllerManager.Instance.DeactivatePlayer();
-    #if UNITY_EDITOR && DEBUGLOG 
+#if UNITY_EDITOR && DEBUGLOG
         Debug.Log("Roll took " + (Time.time - currTime) + "seconds");
-    #endif
+#endif
     }
 
     private void PlayTumbleSound()
@@ -237,5 +259,14 @@ public class CubeController : Controller
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawRay(Cam.transform.position, Cam.transform.forward * 10);
+        
+        for (int i = 0; i < 4; i++)
+        {
+            Gizmos.color = Color.cyan;
+
+            Vector3 sensorAngle =
+                Quaternion.AngleAxis((i / 4) * 90, transform.right) * transform.up;
+            Gizmos.DrawRay(transform.position, sensorAngle * 4);
+        }
     }
 }

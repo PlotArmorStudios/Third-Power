@@ -174,12 +174,14 @@ public class ControllerManager : MonoBehaviour
     {
         _playerController.GetComponent<ToggleComponents>().ToggleOffComponents();
         _cubeController.GetComponent<ToggleComponents>().ToggleOffComponents();
+        _switch.action.Disable();
     }
 
     public void ActivateControllers()
     {
         _playerController.GetComponent<ToggleComponents>().ToggleOnComponents();
         _cubeController.GetComponent<ToggleComponents>().ToggleOnComponents();
+        _switch.action.Enable();
     }
 
     /// <summary>
