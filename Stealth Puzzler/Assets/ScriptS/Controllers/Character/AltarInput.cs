@@ -15,6 +15,7 @@ public class AltarInput : MonoBehaviour
     [SerializeField] private float _timeToDeactivateUI = 1f;
     [SerializeField] private UIAltar _altarUI;
     [SerializeField] private GameObject _altarTriggerBox;
+    [SerializeField] private GameObject _boxVolume;
 
     [SerializeField] private LayerMask _viewUIMask;
     [SerializeField] private LayerMask _noViewUIMask;
@@ -59,6 +60,7 @@ public class AltarInput : MonoBehaviour
         _mainCamera.cullingMask = _noViewUIMask;
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("UI");
+        _boxVolume.SetActive(true);
         _altarTriggerBox.SetActive(false);
         
         yield return new WaitForSeconds(_timeToActivateUI);
@@ -74,6 +76,7 @@ public class AltarInput : MonoBehaviour
         _mainCamera.cullingMask = _viewUIMask;
         
         PauseMenu.PlayerInput.SwitchCurrentActionMap("Player");
+        _boxVolume.SetActive(false);
         _altarTriggerBox.SetActive(true);
         PlayAltarDisengageSound();
         StartCoroutine(DeactivateUI());
