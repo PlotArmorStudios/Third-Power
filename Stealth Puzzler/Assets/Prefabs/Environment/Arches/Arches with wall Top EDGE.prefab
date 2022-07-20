@@ -45,11 +45,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallArche1_Edges (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 370852423575251312, guid: 8600ee973640508478ad24744f283efa,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 1039866407115551690, guid: 8600ee973640508478ad24744f283efa,
         type: 3}
       propertyPath: m_RootOrder
@@ -105,8 +100,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2777354685822627616, guid: 8600ee973640508478ad24744f283efa, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8600ee973640508478ad24744f283efa, type: 3}
 --- !u!4 &558102870052200644 stripped
 Transform:
@@ -114,25 +108,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 707240404422857486}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &933678022457178750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 370852423575251312, guid: 8600ee973640508478ad24744f283efa,
-    type: 3}
-  m_PrefabInstance: {fileID: 707240404422857486}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &3684812766235762914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933678022457178750}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.89173263, y: 5.6374583, z: 0.94}
-  m_Center: {x: 0, y: 2.8187292, z: 0}
 --- !u!1001 &5375161541615070047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,7 +195,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5069084095188014606}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d1cb137257531fd44b2eebff37e77f78, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
