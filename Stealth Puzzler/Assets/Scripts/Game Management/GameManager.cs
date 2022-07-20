@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     {
         GameData data = SaveSystem.LoadGame();
 
+        if (data == null) return;
+        
         LoadedFromSave = true;
         CurrentLevel = data.CurrentLevel;
         CurrentPosition = data.CurrentPosition;
@@ -68,6 +70,11 @@ public class GameManager : MonoBehaviour
         SceneLoader.Instance.LoadScene("Level " + CurrentLevel);
     }
 
+    public void DeleteSave()
+    {
+        SaveSystem.DeleteSave();
+    }
+    
     public void SpawnPlayer(Transform defaultSpawn)
     {
         if (Instance.LoadedFromSave)

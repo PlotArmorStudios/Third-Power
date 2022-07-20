@@ -31,6 +31,17 @@ public class DoorManager : Obstacle
         GameManager.Instance.AddObstacleBoolean(_obstacleID, _isOpen);
     }
 
+    public void OpenDoorNoSave()
+    {
+        if (_isOpen) return;
+        
+        _animator.ResetTrigger("Close");
+        _animator.SetTrigger("Open");
+        _isOpen = true;
+
+        PlayOpenDoorSound();
+    }
+    
     private void PlayOpenDoorSound()
     {
         //Implement open door sound here
