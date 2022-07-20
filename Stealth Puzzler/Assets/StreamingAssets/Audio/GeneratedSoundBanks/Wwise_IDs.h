@@ -20,7 +20,6 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_DEFLECT = 2012852765U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
-        static const AkUniqueID PLAY_DUNGEON_1 = 1533459680U;
         static const AkUniqueID PLAY_EARLY_MUSIC = 886887759U;
         static const AkUniqueID PLAY_EYE_IMPACT = 2423728726U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
@@ -33,6 +32,7 @@ namespace AK
         static const AkUniqueID PLAY_PUZZLE_BUTTON_AND_DOOR_OPEN = 1296866981U;
         static const AkUniqueID PLAY_PUZZLE_SOLVED = 2759903158U;
         static const AkUniqueID PLAY_PUZZLE_TIME_RUNNING_OUT = 4219761939U;
+        static const AkUniqueID PLAY_ROOM_01 = 1048203955U;
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
         static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
@@ -112,6 +112,8 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID REVERB_DUNGEON_01 = 2580481396U;
+        static const AkUniqueID REVERB_LARGE_HALL = 4182780889U;
+        static const AkUniqueID REVERB_NARROW_HALLWAY = 4103686030U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

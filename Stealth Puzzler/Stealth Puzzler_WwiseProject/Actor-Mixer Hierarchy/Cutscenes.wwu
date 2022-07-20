@@ -5,9 +5,15 @@
 			<ChildrenList>
 				<Sound Name="SFX_Cutscene_Arrow_Demonstartion_V05" ID="{F8173FF4-DDFC-4972-A5DB-5B9AE2753104}" ShortID="1062472195">
 					<PropertyList>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-18</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
