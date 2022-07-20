@@ -70,15 +70,17 @@ public class WwiseMusic : MonoBehaviour
                     Play_Later_Music.Post(gameObject);
                     IsPlaying = true;
                 }
-            else if (IsPlaying == true)
+            if (IsPlaying == true)
                 {
-                    if (GameManager.Instance.CurrentLevel >= 7)
+                    if (GameManager.Instance.CurrentLevel == 7 || GameManager.Instance.CurrentLevel > 7)
                     {
                         Play_Later_Music.Post(gameObject);
-                        IsPlaying = true;
+                        Debug.Log("Music transitioned.");
                     }
                     else
-                        return;
+                        Debug.Log("Music didn't transition");
                 }
+            else
+                Debug.Log("Music wut");
     }
 }
