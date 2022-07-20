@@ -428,6 +428,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Room_01" ID="{EDE6A12E-DB92-4E0C-A8E5-20CDA51504A6}">
+					<ChildrenList>
+						<Action Name="" ID="{A903FBD9-45BE-453B-8326-054EA5CCBFE2}" ShortID="325827676">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Room_01" ID="{2784822F-23F1-4811-8501-4D502819CC3B}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

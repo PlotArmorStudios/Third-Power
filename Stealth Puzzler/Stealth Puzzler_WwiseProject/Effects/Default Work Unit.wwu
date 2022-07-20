@@ -47,6 +47,32 @@
 	<GameParameter Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}"/>
 </PluginData>
 				</Effect>
+				<Effect Name="Reverb_Room_01" ID="{45EE61CD-0EE4-456A-8D05-0760971CE78E}" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">					<PluginData>
+	<ConvolutionData>
+		<CurveList Version="1">
+			<CurveInfo Name="IRGraphicEQ">
+				<Curve Name="" ID="{CEEE3CBA-F915-4085-B1FB-6E96F178E905}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="19"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>20</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>20000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+	</ConvolutionData>
+</PluginData>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
