@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void OnPlayClicked()
     {
+        GameManager.Instance.DeleteSave();
         SceneLoader.Instance.LoadScene("Level 1");
     }
 

@@ -43,6 +43,16 @@ public static class SaveSystem
             return null;
         }
     }
+
+    public static void DeleteSave()
+    {
+        string path = Application.persistentDataPath + "/game.txt";
+            
+        if (File.Exists((path)))
+        {
+            File.Delete((path));
+        }
+    }
 }
 
 // A class must be serializable to be converted to and from JSON by JsonUtility.
@@ -53,7 +63,7 @@ public class GameData
     public float[] CurrentPosition;
 
     public Dictionary<string, bool> TrapBooleans;
-    
+
     public GameData(GameManager gameManager)
     {
         CurrentLevel = gameManager.CurrentLevel;
