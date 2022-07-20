@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3495499860894830431}
   - component: {fileID: 517167456517570810}
   - component: {fileID: 2362611095959483440}
+  - component: {fileID: -733566616241024752}
   m_Layer: 0
   m_Name: Brick2
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-733566616241024752
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308064910901777893}
+  m_Material: {fileID: 13400000, guid: d1cb137257531fd44b2eebff37e77f78, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7097278, y: 0.71390665, z: 1.4673295}
+  m_Center: {x: -0.048924446, y: -0.06108646, z: 0.2126179}
