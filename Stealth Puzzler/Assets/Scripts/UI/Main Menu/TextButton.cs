@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Button : MonoBehaviour
+public class TextButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _buttonText;
     [SerializeField] private float _onHoverTextSize;
