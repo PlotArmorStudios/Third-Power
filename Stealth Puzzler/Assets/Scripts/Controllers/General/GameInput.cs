@@ -432,6 +432,17 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""07c927d3-8892-4ab9-a017-50a20e6e1f09"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Switch Controller"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d1e5746c-dcd4-489f-a499-ca51fdbd3995"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
@@ -445,6 +456,17 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""68a4e1c0-c219-46b3-ab59-eac67cf64548"",
                     ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f038606-fb27-4e70-8275-167bce8ee651"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
