@@ -8,6 +8,7 @@ public class ButtonLever : Obstacle
 {
     [SerializeField] private bool _isActive = true;
     [SerializeField] private UnityEvent _pressEvent;
+    [SerializeField] private bool _loadFromSave;
     
     private Animator _animator;
     private bool _isPressed;
@@ -16,7 +17,7 @@ public class ButtonLever : Obstacle
     {
         _animator = GetComponent<Animator>();
 
-        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID))
+        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID) && _loadFromSave)
         {
             _isPressed = true;   
             _isActive = false;
