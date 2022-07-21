@@ -5051,8 +5051,8 @@ GameObject:
   - component: {fileID: 506752854}
   - component: {fileID: 506752853}
   - component: {fileID: 506752852}
-  - component: {fileID: 506752855}
   - component: {fileID: 506752856}
+  - component: {fileID: 506752857}
   m_Layer: 5
   m_Name: New Game
   m_TagString: Untagged
@@ -5093,7 +5093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5102,10 +5102,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+    m_PressedColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5126,7 +5126,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 157427090}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnPlayClicked
+        m_MethodName: OnLoadClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5136,7 +5136,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 506752855}
+      - m_Target: {fileID: 7139015532568153035}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnPointerExit
         m_Mode: 1
@@ -5186,22 +5186,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506752850}
   m_CullTransparentMesh: 1
---- !u!114 &506752855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506752850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6ca32d787b058469238fceb623fec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _buttonText: {fileID: 591852393657561158, guid: 015636570d5b6bd4b8800c36e9a12536,
-    type: 3}
-  _onHoverTextSize: 65
-  _textSizeDefault: 60
 --- !u!114 &506752856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,8 +5203,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 506752855}
-          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        - m_Target: {fileID: 506752857}
+          m_TargetAssemblyTypeName: ImageTween, Assembly-CSharp
           m_MethodName: OnPointerEnter
           m_Mode: 1
           m_Arguments:
@@ -5235,8 +5219,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 506752855}
-          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        - m_Target: {fileID: 506752857}
+          m_TargetAssemblyTypeName: ImageTween, Assembly-CSharp
           m_MethodName: OnPointerExit
           m_Mode: 1
           m_Arguments:
@@ -5247,6 +5231,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &506752857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506752850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57009ee6b106a8d4c96bacc2da1274ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onHoverSize: 1.2
+  _defaultSize: 1
 --- !u!1 &510415054
 GameObject:
   m_ObjectHideFlags: 0
@@ -19314,7 +19312,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -250}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 390.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702649211
 MonoBehaviour:
@@ -23448,7 +23446,7 @@ PrefabInstance:
     - target: {fileID: 2299499900614336441, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 262.5
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336441, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
@@ -23871,7 +23869,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -450}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 146.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2299499900133355644
 MonoBehaviour:
@@ -24250,7 +24248,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -150}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 326.43, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7139015532568153037
 GameObject:
