@@ -41,6 +41,8 @@ namespace Helpers
 
         public void LoadScene(string scene)
         {
+            Time.timeScale = 1f;
+            
             if (_transitionToggle)
                 StartCoroutine(PlayTransition(scene));
             else
@@ -61,7 +63,7 @@ namespace Helpers
 
             while (alpha < 1)
             {
-                alpha += _transitionSpeed * Time.deltaTime;
+                alpha += _transitionSpeed * Time.unscaledDeltaTime;
                 var newColor = new Color(0, 0, 0, alpha);
                 _fadeScreen.color = newColor;
                 yield return null;
@@ -111,7 +113,7 @@ namespace Helpers
             }
 
             _loadingBar.value = 1;
-            yield return new WaitForSeconds(_loadWaitTime);
+            yield return new WaitForSecondsRealtime(_loadWaitTime);
 
             asyncLoad.allowSceneActivation = true;
         }
