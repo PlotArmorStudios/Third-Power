@@ -7,9 +7,9 @@ using System;
 
 public class OnCreditsEnd : MonoBehaviour
 {
-    [SerializeField] private GameObject _mainMenu;
-    [SerializeField] private GameObject _creditsMask;
+    [SerializeField] private GameObject _creditsPanel;
     [SerializeField] private InputActionReference _select;
+    [SerializeField] private Button _newGameButton;
     private void OnEnable()
     {
         _select.action.started += ExitToMain;
@@ -29,7 +29,7 @@ public class OnCreditsEnd : MonoBehaviour
 
     public void OnCreditsEnding()
     {
-        _creditsMask.SetActive(false);
-        _mainMenu.SetActive(true);
+        _creditsPanel.SetActive(false);
+        _newGameButton.Select();
     }
 }
