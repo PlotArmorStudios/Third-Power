@@ -8,7 +8,6 @@ public class AutoSelectButton : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(Wait());
-        print(gameObject);
     }
     private IEnumerator Wait()
     {
