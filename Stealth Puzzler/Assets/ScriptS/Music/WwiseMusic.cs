@@ -5,8 +5,6 @@ public class WwiseMusic : MonoBehaviour
 {
     public static WwiseMusic MusicInstance;
 
-    private WwiseMusicLevelNumber _wwiseLevelNumber;
-
     public AK.Wwise.Event Play_Early_Music;
     public AK.Wwise.Event Play_Later_Music;
 
@@ -35,23 +33,6 @@ public class WwiseMusic : MonoBehaviour
     {
         if (BankIsLoaded == false)
             AkBankManager.LoadBank("Music_Bank", false, false);
-
-        _wwiseLevelNumber = FindObjectOfType<WwiseMusicLevelNumber>();
-
-        //This should just be for in engine music. Starting directly in a scene
-        //if (SceneManager.GetActiveScene().name != "Main Menu")
-        //    if (IsPlaying == false)
-        //        if (_wwiseLevelNumber.levelNumber < 7)
-        //        {
-        //            Play_Early_Music.Post(gameObject);
-        //            IsPlaying = true;
-        //        }
-        //        else if (_wwiseLevelNumber.levelNumber >= 7)
-        //        {
-        //            Play_Early_Music.Post(gameObject);
-        //            Play_Later_Music.Post(gameObject);
-        //            IsPlaying = true;
-        //        }
     }
 
     //Called from Play in MainMenu and in GameManager's OnSceneLoaded
@@ -59,12 +40,12 @@ public class WwiseMusic : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Main Menu")
             if (IsPlaying == false)
-                if (GameManager.Instance.CurrentLevel < 7)
+                if (GameManager.Instance.CurrentLevel < 9)
                 {
                     Play_Early_Music.Post(gameObject);
                     IsPlaying = true;
                 }
-                else if(GameManager.Instance.CurrentLevel >= 7)
+                else if(GameManager.Instance.CurrentLevel >= 9)
                 {
                     Play_Early_Music.Post(gameObject);
                     Play_Later_Music.Post(gameObject);
@@ -72,13 +53,13 @@ public class WwiseMusic : MonoBehaviour
                 }
             if (IsPlaying == true)
                 {
-                    if (GameManager.Instance.CurrentLevel == 7 || GameManager.Instance.CurrentLevel > 7)
+                    if (GameManager.Instance.CurrentLevel == 9 || GameManager.Instance.CurrentLevel > 9)
                     {
                         Play_Later_Music.Post(gameObject);
-                        Debug.Log("Music transitioned.");
+                        //Debug.Log("Music transitioned.");
                     }
-                    else
-                        Debug.Log("Music didn't transition");
+                    //else
+                        //Debug.Log("Music didn't transition");
                 }
             else
                 Debug.Log("Music wut");
