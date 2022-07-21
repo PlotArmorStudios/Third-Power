@@ -13,6 +13,14 @@
 							<ObjectRef Name="Play_Later_Music" ID="{AF2EBA96-0A7D-4030-82B7-A3A94C45FF2B}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Start_With_Later_Music" ID="{B6791E7D-CD9D-4573-898B-F782D24B883D}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Music" ID="{8EE6056F-3C94-4F09-B3A1-F6FB88597EE3}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<Position X="3" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -21,11 +29,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="LevelNumber" ID="{192FF86B-6E73-40F0-8A02-9997A2516EFD}"/>
-							<Value>7</Value>
+							<Value>9</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Later" ID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}"/>
+						<CurrentStateRef Name="Early" ID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Carpet" ID="{521D00FB-FCE5-47B8-9696-9C1CB9B32487}"/>

@@ -7,6 +7,7 @@ public class WwiseMusic : MonoBehaviour
 
     public AK.Wwise.Event Play_Early_Music;
     public AK.Wwise.Event Play_Later_Music;
+    public AK.Wwise.Event Start_With_Later_Music;
 
     [HideInInspector]
     public bool IsPlaying  = false;
@@ -35,7 +36,7 @@ public class WwiseMusic : MonoBehaviour
             AkBankManager.LoadBank("Music_Bank", false, false);
     }
 
-    //Called from Play in MainMenu and in GameManager's OnSceneLoaded
+    //Called from GameManager's OnSceneLoaded
     public void PlayMusic()
     {
         if (SceneManager.GetActiveScene().name != "Main Menu")
@@ -47,8 +48,7 @@ public class WwiseMusic : MonoBehaviour
                 }
                 else if(GameManager.Instance.CurrentLevel >= 9)
                 {
-                    Play_Early_Music.Post(gameObject);
-                    Play_Later_Music.Post(gameObject);
+                    Start_With_Later_Music.Post(gameObject);
                     IsPlaying = true;
                 }
             if (IsPlaying == true)
@@ -61,7 +61,5 @@ public class WwiseMusic : MonoBehaviour
                     //else
                         //Debug.Log("Music didn't transition");
                 }
-            else
-                Debug.Log("Music wut");
     }
 }

@@ -36,6 +36,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
         static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
+        static const AkUniqueID START_WITH_LATER_MUSIC = 1142029413U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_PUZZLE_TIME_RUNNING_OUT = 574883145U;
