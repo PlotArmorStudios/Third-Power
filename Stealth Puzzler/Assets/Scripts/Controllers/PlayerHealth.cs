@@ -23,5 +23,6 @@ public class PlayerHealth : Health
         StartCoroutine(RestartLevel());
         CamRig.Instance.UnsetFollow();
         AkSoundEngine.PostEvent("Play_player_voice_death", gameObject);
+        AkSoundEngine.PostEvent("stop_puzzle_time_running_out", gameObject);
     }
 }

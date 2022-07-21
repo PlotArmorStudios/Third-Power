@@ -203,6 +203,16 @@
 					<ChildrenList>
 						<Event Name="Play_Early_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}">
 							<ChildrenList>
+								<Action Name="" ID="{F8D9815C-87F4-4201-8812-9D22FFEAA3E2}" ShortID="1036821629">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Early" ID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}" WorkUnitID="{49ACF7D6-F99D-41B8-B0B2-18B367CC7899}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{EFE86A22-2CBF-4DFC-B448-FAEB2DB8AE87}" ShortID="765008831">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -222,6 +232,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B1CAB493-2C70-4998-B17B-DC90D3C0D44D}" ShortID="630438615">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Early" ID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}" WorkUnitID="{49ACF7D6-F99D-41B8-B0B2-18B367CC7899}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -253,6 +273,27 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Later" ID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}" WorkUnitID="{49ACF7D6-F99D-41B8-B0B2-18B367CC7899}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Start_With_Later_Music" ID="{B6791E7D-CD9D-4573-898B-F782D24B883D}">
+							<ChildrenList>
+								<Action Name="" ID="{5E89C74C-BCF0-456B-AF0D-8A8D46AAFFF7}" ShortID="449271835">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Later" ID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}" WorkUnitID="{49ACF7D6-F99D-41B8-B0B2-18B367CC7899}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F7D91733-AC83-4AEE-9833-96813F373CA7}" ShortID="233309004">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

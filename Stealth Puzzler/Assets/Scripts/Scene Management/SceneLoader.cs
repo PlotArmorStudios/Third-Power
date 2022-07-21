@@ -78,8 +78,8 @@ namespace Helpers
             {
                 _isSceneLoading = true;
                 StartCoroutine(AsyncLoad(scene));
-            }
-            else
+                AkSoundEngine.PostEvent("stop_puzzle_time_running_out", gameObject);
+            } else
             {
                 Debug.Log("Tried to load new scene but a scene load is already in progress.");
             }
