@@ -1645,7 +1645,6 @@ RectTransform:
   - {fileID: 591852393537595343}
   - {fileID: 2299499900133355643}
   - {fileID: 405676831}
-  - {fileID: 413534288}
   m_Father: {fileID: 919637724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2166,6 +2165,7 @@ GameObject:
   - component: {fileID: 233606782}
   - component: {fileID: 233606781}
   - component: {fileID: 233606780}
+  - component: {fileID: 233606783}
   m_Layer: 5
   m_Name: Scroll Background
   m_TagString: Untagged
@@ -2281,6 +2281,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233606778}
   m_CullTransparentMesh: 1
+--- !u!114 &233606783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233606778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc967d9d1a07a904ba1fffb65f79d45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &233938883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,12 +3549,12 @@ RectTransform:
   - {fileID: 1285440240}
   - {fileID: 199375455}
   - {fileID: 1399022559}
-  m_Father: {fileID: 157427089}
-  m_RootOrder: 6
+  m_Father: {fileID: 919637724}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -644.1838, y: -205.40811}
+  m_AnchoredPosition: {x: -82.18384, y: -26.408081}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413534289
@@ -3557,8 +3569,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec777ef7b4b3c6748ad6bfd540841120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainMenu: {fileID: 157427088}
   _creditsPanel: {fileID: 413534287}
-  _select: {fileID: -3881282097253871717, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+  _exitToMain: {fileID: 100507535337746552, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
   _newGameButton: {fileID: 506752852}
 --- !u!1 &419899485
@@ -8728,6 +8741,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 157427089}
+  - {fileID: 413534288}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20185,7 +20199,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086793388}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 

@@ -7,16 +7,17 @@ using System;
 
 public class OnCreditsEnd : MonoBehaviour
 {
+    [SerializeField] private GameObject _mainMenu;
     [SerializeField] private GameObject _creditsPanel;
-    [SerializeField] private InputActionReference _select;
+    [SerializeField] private InputActionReference _exitToMain;
     [SerializeField] private Button _newGameButton;
     private void OnEnable()
     {
-        _select.action.started += ExitToMain;
+        _exitToMain.action.started += ExitToMain;
     }
     private void OnDisable()
     {
-        _select.action.started -= ExitToMain;
+        _exitToMain.action.started -= ExitToMain;
     }
 
     private void ExitToMain(InputAction.CallbackContext context)
@@ -30,6 +31,6 @@ public class OnCreditsEnd : MonoBehaviour
     public void OnCreditsEnding()
     {
         _creditsPanel.SetActive(false);
-        _newGameButton.Select();
+        _mainMenu.SetActive(true);
     }
 }
