@@ -5184,7 +5184,7 @@ MonoBehaviour:
   _timeToDeactivateUI: 2
   _altarUI: {fileID: 7679365271575183685}
   _altarTriggerBox: {fileID: 4555872939979106373}
-  _boxVolume: {fileID: 0}
+  _boxVolume: {fileID: 804725058}
   _viewUIMask:
     serializedVersion: 2
     m_Bits: 2147483647
@@ -5546,6 +5546,18 @@ PrefabInstance:
     - target: {fileID: 2084986649, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
       propertyPath: m_Layer
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084986650, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084986650, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084986650, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.397
       objectReference: {fileID: 0}
     - target: {fileID: 2084986652, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
