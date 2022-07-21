@@ -77,6 +77,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CUTSCENE = 1182958561U;
+        static const AkUniqueID DEATHSOUND = 3742375894U;
         static const AkUniqueID LEVELNUMBER = 3941060586U;
         static const AkUniqueID PUZZLE_SOUND = 2794761965U;
     } // namespace GAME_PARAMETERS
@@ -101,6 +102,7 @@ namespace AK
         static const AkUniqueID AURO_BINAURAL = 1368310311U;
         static const AkUniqueID BINAURAL_BUS = 1044284324U;
         static const AkUniqueID CUTSCENE = 1182958561U;
+        static const AkUniqueID DEATHSOUND = 3742375894U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PUZZLE_SOUND = 938749676U;

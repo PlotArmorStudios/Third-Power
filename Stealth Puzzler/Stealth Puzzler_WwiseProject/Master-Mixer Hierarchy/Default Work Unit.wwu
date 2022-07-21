@@ -110,6 +110,41 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<RTPCList>
+												<RTPC Name="" ID="{21D1901F-2B85-4F19-9F1F-9184EDF7CF00}" ShortID="693018968">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{C4BA6CEE-3E35-4D5C-9383-9BFCFA70A180}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.17619</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>-47.999</XPos>
+																<YPos>-0.17619</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-25.06931</XPos>
+																<YPos>-8.83913</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-9.86219</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
 												<RTPC Name="" ID="{4D9218BF-0985-4C20-AAE0-20D107C75CAA}" ShortID="3042016">
 													<ReferenceList>
 														<Reference Name="ControlInput">
@@ -173,8 +208,63 @@
 																<SegmentShape>Log2</SegmentShape>
 															</Point>
 															<Point>
+																<XPos>-29.94059</XPos>
+																<YPos>-0.02168</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-25.0099</XPos>
+																<YPos>-5.91657</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
 																<XPos>0</XPos>
-																<YPos>-0.03413</YPos>
+																<YPos>-6.78589</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+												<RTPC Name="" ID="{97745B7C-8FAB-4414-97B4-C5A8D60E6FB8}" ShortID="10174253">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{0D82DAFF-5188-4BFA-A213-86D77FAA6010}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.03495</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-47.999</XPos>
+																<YPos>-0.03495</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-25.78217</XPos>
+																<YPos>-4.7856</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-21.86139</XPos>
+																<YPos>-7.92398</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-7.92399</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
@@ -186,6 +276,14 @@
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="DeathSound" ID="{8FB50937-45BE-48E5-BBFD-395D1EFAD167}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<ObjectRef Name="DeathSoundMeter" ID="{73A12BC8-32E9-4248-9B05-7AB5E850B2DC}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
+										</Reference>
+									</ReferenceList>
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>
