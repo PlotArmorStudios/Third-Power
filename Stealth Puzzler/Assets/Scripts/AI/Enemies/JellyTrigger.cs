@@ -47,6 +47,7 @@ public class JellyTrigger : MonoBehaviour
             _move.action.Disable();
             _invicibilityTimeLeft = _invicibilityTimeInitial;
             ExpandJelly();
+            AkSoundEngine.PostEvent("Play_Jelly_Impact_Cube", gameObject);
         }
         else if (other.gameObject.GetComponent<PlayerController>() && _invicibilityTimeLeft <= 0)
         {
