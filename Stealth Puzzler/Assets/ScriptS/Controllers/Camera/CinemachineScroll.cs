@@ -31,16 +31,16 @@ public class CinemachineScroll : MonoBehaviour
     {
         if (_scroll < 0)
         {
-            _vCam.m_Orbits[0].m_Radius -= _scrollSensitivity;
-            _vCam.m_Orbits[1].m_Radius -= _scrollSensitivity;
-            _vCam.m_Orbits[2].m_Radius -= _scrollSensitivity;
+            _vCam.m_Orbits[0].m_Radius -= _scrollSensitivity * Mathf.Abs(_scroll);
+            _vCam.m_Orbits[1].m_Radius -= _scrollSensitivity * Mathf.Abs(_scroll);
+            _vCam.m_Orbits[2].m_Radius -= _scrollSensitivity * Mathf.Abs(_scroll);
         }
 
         if (_scroll > 0)
         {
-            _vCam.m_Orbits[0].m_Radius += _scrollSensitivity;
-            _vCam.m_Orbits[1].m_Radius += _scrollSensitivity;
-            _vCam.m_Orbits[2].m_Radius += _scrollSensitivity;
+            _vCam.m_Orbits[0].m_Radius += _scrollSensitivity * Mathf.Abs(_scroll);
+            _vCam.m_Orbits[1].m_Radius += _scrollSensitivity * Mathf.Abs(_scroll);
+            _vCam.m_Orbits[2].m_Radius += _scrollSensitivity * Mathf.Abs(_scroll);
         }
     }
 }
