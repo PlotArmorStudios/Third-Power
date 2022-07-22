@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAY_EYE_IMPACT = 2423728726U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_JELLY_IMPACT_CUBE = 1035938309U;
         static const AkUniqueID PLAY_LATER_MUSIC = 1010497036U;
         static const AkUniqueID PLAY_PLAYER_VOICE_DEATH = 908551697U;
         static const AkUniqueID PLAY_PLAYER_VOICE_JUMP = 712660841U;

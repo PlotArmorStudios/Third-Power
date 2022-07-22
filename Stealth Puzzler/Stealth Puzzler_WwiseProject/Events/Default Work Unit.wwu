@@ -454,6 +454,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Jelly_Impact_Cube" ID="{3A0FF354-22F8-4E9F-B18B-8EFFADAC05C8}">
+					<ChildrenList>
+						<Action Name="" ID="{699EE8E8-5500-40CB-BAAE-D9B0EB5B110D}" ShortID="131726026">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jelly_Impact_Cube" ID="{10F5C28A-09B9-462A-9EEA-6D7AE1746A83}" WorkUnitID="{5A99F848-9733-4AE5-93C9-DEAD55368B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
