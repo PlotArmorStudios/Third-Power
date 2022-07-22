@@ -17,17 +17,20 @@ public class JellyTrigger : MonoBehaviour
     [SerializeField] private float _invicibilityTimeLeft;
 
     [SerializeField] private float _jellyUpwardForce = 7f;
+    [SerializeField] private LayerMask _jellyInteractsWith;
+    private bool _hasHitGround;
 
     private void Start()
     {
         _invicibilityTimeLeft = 0;
+        print(_jellyInteractsWith.value);
     }
     private void Update()
     {
-        InvicibilityCheck();
+        InvincibilityCheck();
     }
 
-    private void InvicibilityCheck()
+    private void InvincibilityCheck()
     {
         if (_isInvincible)
         {
@@ -41,7 +44,6 @@ public class JellyTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
         if (other.gameObject.GetComponent<CubeController>())
         {
             _move.action.Disable();
@@ -54,6 +56,11 @@ public class JellyTrigger : MonoBehaviour
             print("humanoid hit");
             other.gameObject.GetComponent<Health>().TakeHit();
             ExpandJelly();
+        }
+        else if ((_jellyInteractsWith.value & (1 << other.gameObject.layer)) > 0 && !_hasHitGround)
+        {
+            _hasHitGround = true;
+            Debug.Log("hitting ground sound");
         }
     }
 
