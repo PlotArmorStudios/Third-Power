@@ -61,6 +61,7 @@ public class JellyTrigger : MonoBehaviour
         {
             _hasHitGround = true;
             Debug.Log("hitting ground sound");
+            AkSoundEngine.PostEvent("Play_Jelly_Impact_Cube", gameObject);
         }
     }
 

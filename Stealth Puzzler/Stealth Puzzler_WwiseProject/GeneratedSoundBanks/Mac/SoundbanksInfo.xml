@@ -36,7 +36,7 @@
 				<GameParameter Id="3742375894" Name="deathSound" ObjectPath="\Game Parameters\Default Work Unit\deathSound"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1546231383" Language="SFX" Hash="4225506498">
+		<SoundBank Id="1546231383" Language="SFX" Hash="1877007686">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_Bank</ObjectPath>
 			<ShortName>Music_Bank</ShortName>
 			<Path>Music_Bank.bnk</Path>
@@ -248,7 +248,7 @@
 				<Trigger Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
 			</Triggers>
 		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX" Hash="2388149101">
+		<SoundBank Id="4072029455" Language="SFX" Hash="941520632">
 			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
@@ -953,11 +953,19 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="1035938309" Name="Play_Jelly_Impact_Cube" ObjectPath="\Events\Default Work Unit\Play_Jelly_Impact_Cube" MaxAttenuation="30." DurationType="OneShot" DurationMin="1.796875" DurationMax="1.796875">
+				<Event Id="1035938309" Name="Play_Jelly_Impact_Cube" ObjectPath="\Events\Default Work Unit\Play_Jelly_Impact_Cube" MaxAttenuation="10." DurationType="OneShot" DurationMin="1.457298" DurationMax="1.849527">
 					<IncludedMemoryFiles>
-						<File Id="427361293" Language="SFX">
-							<ShortName>Jelly_Impact_cube_01.wav</ShortName>
-							<Path>SFX\Jelly_Impact_cube_01_10C4C929.wem</Path>
+						<File Id="3195471" Language="SFX">
+							<ShortName>Jelly_Impact_floor_03.wav</ShortName>
+							<Path>SFX\Jelly_Impact_floor_03_10C4C929.wem</Path>
+						</File>
+						<File Id="257049191" Language="SFX">
+							<ShortName>Jelly_Impact_floor_01.wav</ShortName>
+							<Path>SFX\Jelly_Impact_floor_01_10C4C929.wem</Path>
+						</File>
+						<File Id="997757585" Language="SFX">
+							<ShortName>Jelly_Impact_floor_02.wav</ShortName>
+							<Path>SFX\Jelly_Impact_floor_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

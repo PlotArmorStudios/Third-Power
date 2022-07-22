@@ -6,25 +6,71 @@
 				<RandomSequenceContainer Name="Jelly_Impact_Cube" ID="{10F5C28A-09B9-462A-9EEA-6D7AE1746A83}" ShortID="688644985">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{4680226B-73DA-4976-9DD8-AB4D4668B017}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E115FC10-482F-46B4-A85D-E9B3DEE813A8}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-9</Value>
+								<Value>-12</Value>
 							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{5255C8C9-DBFA-4FFE-BA1D-7FD3D8122F7F}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="30m" ID="{A2B73156-CBC4-489E-B50C-DC2E0B2B901B}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+							<ObjectRef Name="Jelly" ID="{EB5B51E3-6A20-4A68-BAF2-80E5572CAF5D}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+							<ObjectRef Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Jelly_Impact_cube_01" ID="{50E8E892-E96E-4088-8DA6-8BA7850B1E76}" ShortID="262335640">
+						<Sound Name="Jelly_Impact_floor_01" ID="{369E0419-D28C-47C4-8414-EC8186AC15CF}" ShortID="254660950">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -34,17 +80,63 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Jelly_Impact_cube_01" ID="{6DD0C299-700E-4ED1-A898-0E7DDD9AC16F}">
+								<AudioFileSource Name="Jelly_Impact_floor_01" ID="{CB3990E5-3AE8-46B0-845D-CDC6E18E6FCA}">
 									<Language>SFX</Language>
-									<AudioFile>Jelly_Impact_cube_01.wav</AudioFile>
+									<AudioFile>Jelly_Impact_floor_01.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="427361293"/>
+										<MediaID ID="257049191"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Jelly_Impact_cube_01" ID="{6DD0C299-700E-4ED1-A898-0E7DDD9AC16F}" Platform="Linked"/>
+								<ActiveSource Name="Jelly_Impact_floor_01" ID="{CB3990E5-3AE8-46B0-845D-CDC6E18E6FCA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Jelly_Impact_floor_02" ID="{6FFFB672-D092-42DA-B398-1090935E0829}" ShortID="1052234644">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jelly_Impact_floor_02" ID="{02B3B6FE-2ED7-458A-964A-797882D06ACA}">
+									<Language>SFX</Language>
+									<AudioFile>Jelly_Impact_floor_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="997757585"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Jelly_Impact_floor_02" ID="{02B3B6FE-2ED7-458A-964A-797882D06ACA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Jelly_Impact_floor_03" ID="{C72FF116-780B-47D8-83EA-12A5C14C9DD3}" ShortID="84245850">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jelly_Impact_floor_03" ID="{974AB5E7-C565-412D-91B7-14DEFA11142B}">
+									<Language>SFX</Language>
+									<AudioFile>Jelly_Impact_floor_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="3195471"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Jelly_Impact_floor_03" ID="{974AB5E7-C565-412D-91B7-14DEFA11142B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
