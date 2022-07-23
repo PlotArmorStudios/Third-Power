@@ -82,7 +82,10 @@ namespace AK
         static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID DEATHSOUND = 3742375894U;
         static const AkUniqueID LEVELNUMBER = 3941060586U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID PUZZLE_SOUND = 2794761965U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS
