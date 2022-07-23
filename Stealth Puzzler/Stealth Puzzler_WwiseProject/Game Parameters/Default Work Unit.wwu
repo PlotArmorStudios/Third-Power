@@ -34,6 +34,25 @@
 						<Property Name="Min" Type="Real64" Value="-48"/>
 					</PropertyList>
 				</GameParameter>
+				<Folder Name="Volume" ID="{44D9912D-2A09-421A-9FEB-3BE96DC15FD6}" ShortID="295003278">
+					<ChildrenList>
+						<GameParameter Name="MasterVolume" ID="{C1DBA47C-C7E4-478A-9499-81504BA3DF0A}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="75"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="MusicVolume" ID="{90E6524C-9FA5-4EB8-92A3-1625C9BD548E}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="75"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="SFXVolume" ID="{559E5BDE-CFCD-4D9C-9FD6-4832894D4F67}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="75"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

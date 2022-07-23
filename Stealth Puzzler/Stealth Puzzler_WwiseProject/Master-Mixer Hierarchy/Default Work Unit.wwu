@@ -4,6 +4,36 @@
 		<WorkUnit Name="Default Work Unit" ID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{1A58CA68-631A-4E60-861F-7923703B651F}" ShortID="73729020">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="MasterVolume" ID="{C1DBA47C-C7E4-478A-9499-81504BA3DF0A}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{3C65A22C-B35A-4A23-97D0-16E18E8D497D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>3</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
@@ -265,6 +295,30 @@
 															<Point>
 																<XPos>0</XPos>
 																<YPos>-7.92399</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+												<RTPC Name="" ID="{07B3DFDF-0839-4015-B92B-DF6EAA839D94}" ShortID="752521058">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="MusicVolume" ID="{90E6524C-9FA5-4EB8-92A3-1625C9BD548E}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{27409596-26F6-4091-8310-AF279277F88D}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>3</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
