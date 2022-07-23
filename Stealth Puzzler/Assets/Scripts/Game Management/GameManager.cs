@@ -72,6 +72,9 @@ public class GameManager : MonoBehaviour
 
     public void DeleteSave()
     {
+        LoadedFromSave = false;
+        CurrentLevel = 1;
+        ObstacleBooleans.Clear();
         SaveSystem.DeleteSave();
     }
     

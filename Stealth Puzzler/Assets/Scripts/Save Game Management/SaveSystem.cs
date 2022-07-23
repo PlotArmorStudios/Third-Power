@@ -50,6 +50,7 @@ public static class SaveSystem
             
         if (File.Exists((path)))
         {
+            Debug.Log("Game save deleted. Path: " + path);
             File.Delete((path));
         }
     }
