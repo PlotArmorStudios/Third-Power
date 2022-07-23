@@ -465,6 +465,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_StalgaticPlatform_Idle" ID="{E554FF43-1A22-486F-8BED-8FA4B1C9A00C}">
+					<ChildrenList>
+						<Action Name="" ID="{D72BB867-791C-43C6-A626-9D48DB320F35}" ShortID="515004894">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Idle" ID="{61C82340-8479-402D-A329-4D74A63CBCE4}" WorkUnitID="{5AEF7E10-E714-4615-9902-C999A9D21A09}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B77FE4C-E071-4FEB-AF5E-7E87004C0C60}" ShortID="810412139">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Magic" ID="{796F0F07-A61F-4E8E-BB77-31B9510E5A46}" WorkUnitID="{5AEF7E10-E714-4615-9902-C999A9D21A09}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

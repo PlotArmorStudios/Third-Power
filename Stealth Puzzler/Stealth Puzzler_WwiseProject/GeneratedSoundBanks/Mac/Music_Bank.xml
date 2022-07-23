@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="1546231383" Language="SFX" Hash="1877007686">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_Bank</ObjectPath>
+			<ShortName>Music_Bank</ShortName>
+			<Path>Music_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="886887759" Name="Play_Early_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Early_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="4907375" Language="SFX">
+							<ShortName>SP_Tension_Trombone_solo_v1_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Trombone_solo_v1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="29585292" Language="SFX">
+							<ShortName>SP_StringHarmonics_65.wav</ShortName>
+							<Path>SFX\SP_StringHarmonics_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="115399189" Language="SFX">
+							<ShortName>SP_Ambience_65.wav</ShortName>
+							<Path>SFX\SP_Ambience_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="277662678" Language="SFX">
+							<ShortName>SP_Tension_HarpGlock_v3_65.wav</ShortName>
+							<Path>SFX\SP_Tension_HarpGlock_v3_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="308425292" Language="SFX">
+							<ShortName>SP_ShakerPerc_PU1_65_wTail.wav</ShortName>
+							<Path>SFX\SP_ShakerPerc_PU1_65_wTail_D79FB2B7.wem</Path>
+						</File>
+						<File Id="382374005" Language="SFX">
+							<ShortName>SP_Tension_TubularBells_v4_65.wav</ShortName>
+							<Path>SFX\SP_Tension_TubularBells_v4_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="419687084" Language="SFX">
+							<ShortName>SP_Glockenspiel_65.wav</ShortName>
+							<Path>SFX\SP_Glockenspiel_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="446084114" Language="SFX">
+							<ShortName>SP_StringPlucks_65.wav</ShortName>
+							<Path>SFX\SP_StringPlucks_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="506083832" Language="SFX">
+							<ShortName>SP_Tension_Trum_Tromb_v1_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Trum_Tromb_v1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="565349409" Language="SFX">
+							<ShortName>SP_BuildToTension_65.wav</ShortName>
+							<Path>SFX\SP_BuildToTension_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="623345063" Language="SFX">
+							<ShortName>SP_Tension_Trumpet_solo_v1_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Trumpet_solo_v1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="817707529" Language="SFX">
+							<ShortName>SP_Tension_HarpSolo_v3_65.wav</ShortName>
+							<Path>SFX\SP_Tension_HarpSolo_v3_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="829363806" Language="SFX">
+							<ShortName>SP_HandPerc_PU1_65.wav</ShortName>
+							<Path>SFX\SP_HandPerc_PU1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="945880659" Language="SFX">
+							<ShortName>SP_Cymbal_Transition_65_2bPU.wav</ShortName>
+							<Path>SFX\SP_Cymbal_Transition_65_2bPU_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1019522718" Language="SFX">
+							<ShortName>SP_Tension_Bed_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Bed_65_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="3881926874" Name="Early" ObjectPath="\States\Default Work Unit\LevelState\Early"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1010497036" Name="Play_Later_Music" ObjectPath="\Events\Default Work Unit\Music\Play_Later_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3445868577" Name="Later" ObjectPath="\States\Default Work Unit\LevelState\Later"/>
+					</ActionSetState>
+					<ActionTrigger>
+						<ActionTriggerEntry Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="1142029413" Name="Start_With_Later_Music" ObjectPath="\Events\Default Work Unit\Music\Start_With_Later_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="4907375" Language="SFX">
+							<ShortName>SP_Tension_Trombone_solo_v1_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Trombone_solo_v1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="29585292" Language="SFX">
+							<ShortName>SP_StringHarmonics_65.wav</ShortName>
+							<Path>SFX\SP_StringHarmonics_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="115399189" Language="SFX">
+							<ShortName>SP_Ambience_65.wav</ShortName>
+							<Path>SFX\SP_Ambience_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="277662678" Language="SFX">
+							<ShortName>SP_Tension_HarpGlock_v3_65.wav</ShortName>
+							<Path>SFX\SP_Tension_HarpGlock_v3_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="308425292" Language="SFX">
+							<ShortName>SP_ShakerPerc_PU1_65_wTail.wav</ShortName>
+							<Path>SFX\SP_ShakerPerc_PU1_65_wTail_D79FB2B7.wem</Path>
+						</File>
+						<File Id="382374005" Language="SFX">
+							<ShortName>SP_Tension_TubularBells_v4_65.wav</ShortName>
+							<Path>SFX\SP_Tension_TubularBells_v4_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="419687084" Language="SFX">
+							<ShortName>SP_Glockenspiel_65.wav</ShortName>
+							<Path>SFX\SP_Glockenspiel_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="446084114" Language="SFX">
+							<ShortName>SP_StringPlucks_65.wav</ShortName>
+							<Path>SFX\SP_StringPlucks_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="506083832" Language="SFX">
+							<ShortName>SP_Tension_Trum_Tromb_v1_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Trum_Tromb_v1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="565349409" Language="SFX">
+							<ShortName>SP_BuildToTension_65.wav</ShortName>
+							<Path>SFX\SP_BuildToTension_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="623345063" Language="SFX">
+							<ShortName>SP_Tension_Trumpet_solo_v1_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Trumpet_solo_v1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="817707529" Language="SFX">
+							<ShortName>SP_Tension_HarpSolo_v3_65.wav</ShortName>
+							<Path>SFX\SP_Tension_HarpSolo_v3_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="829363806" Language="SFX">
+							<ShortName>SP_HandPerc_PU1_65.wav</ShortName>
+							<Path>SFX\SP_HandPerc_PU1_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="945880659" Language="SFX">
+							<ShortName>SP_Cymbal_Transition_65_2bPU.wav</ShortName>
+							<Path>SFX\SP_Cymbal_Transition_65_2bPU_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1019522718" Language="SFX">
+							<ShortName>SP_Tension_Bed_65.wav</ShortName>
+							<Path>SFX\SP_Tension_Bed_65_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}">
+							<Media>
+								<File Id="29585292"/>
+								<File Id="115399189"/>
+								<File Id="308425292"/>
+								<File Id="419687084"/>
+								<File Id="446084114"/>
+								<File Id="565349409"/>
+								<File Id="829363806"/>
+								<File Id="945880659"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B5426414-98F3-4AD0-BB04-1953EC52FF52}">
+							<Media>
+								<File Id="29585292"/>
+								<File Id="115399189"/>
+								<File Id="308425292"/>
+								<File Id="419687084"/>
+								<File Id="446084114"/>
+								<File Id="565349409"/>
+								<File Id="829363806"/>
+								<File Id="945880659"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}">
+							<Media>
+								<File Id="4907375"/>
+								<File Id="277662678"/>
+								<File Id="382374005"/>
+								<File Id="506083832"/>
+								<File Id="623345063"/>
+								<File Id="817707529"/>
+								<File Id="1019522718"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="3445868577" Name="Later" ObjectPath="\States\Default Work Unit\LevelState\Later"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="3881926874" Name="Early" ObjectPath="\States\Default Work Unit\LevelState\Early"/>
+					</ActionSetState>
+				</Event>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="3941060586" Name="LevelNumber" ObjectPath="\Game Parameters\Default Work Unit\LevelNumber"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3445868577" Name="Later" ObjectPath="\States\Default Work Unit\LevelState\Later" GUID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3473087568" Name="LevelState" ObjectPath="\States\Default Work Unit\LevelState" GUID="{7818E82C-3CE5-411C-95B4-9E4263974BF9}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\LevelState\None" GUID="{B5426414-98F3-4AD0-BB04-1953EC52FF52}"/>
+						<State Id="3881926874" Name="Early" ObjectPath="\States\Default Work Unit\LevelState\Early" GUID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}"/>
+						<State Id="3445868577" Name="Later" ObjectPath="\States\Default Work Unit\LevelState\Later" GUID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3881926874" Name="Early" ObjectPath="\States\Default Work Unit\LevelState\Early" GUID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}">
+					<States/>
+				</StateGroup>
+			</StateGroups>
+			<Triggers>
+				<Trigger Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
+			</Triggers>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
