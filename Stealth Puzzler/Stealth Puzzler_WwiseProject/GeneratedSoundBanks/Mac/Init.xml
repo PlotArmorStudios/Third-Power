@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2302657773">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Auro_Binaural\Reverb_Dungeon_01"/>
+				<AuxBus Id="4103686030" Name="Reverb_Narrow_Hallway" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Narrow_Hallway"/>
+				<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Large_Hall"/>
+			</IncludedAuxBusses>
+			<ExcludedMemoryFiles>
+				<File Id="162018684" Language="SFX">
+					<ShortName>AK_Factory_IR\Halls\AK Berlin Teldex.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AK_Factory_IR\Halls\AK Berlin Teldex_FC26480D.wem</Path>
+				</File>
+				<File Id="654850748" Language="SFX">
+					<ShortName>AK_Factory_IR\Halls\AK Berlin Teldex.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AK_Factory_IR\Halls\AK Berlin Teldex_C0D9797E.wem</Path>
+				</File>
+			</ExcludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="1182958561" Name="Cutscene" ObjectPath="\Game Parameters\Default Work Unit\Cutscene"/>
+				<GameParameter Id="2794761965" Name="puzzle_sound" ObjectPath="\Game Parameters\Default Work Unit\puzzle_sound"/>
+				<GameParameter Id="3742375894" Name="deathSound" ObjectPath="\Game Parameters\Default Work Unit\deathSound"/>
+			</GameParameters>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

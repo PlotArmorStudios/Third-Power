@@ -349,7 +349,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585431241094775808
+    m_lastTime: -8585430766494775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -391,7 +391,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585431241194775808
+    m_lastTime: -8585430727374775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -824,6 +824,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 6.904792
       minDuration: 6.904792
+    - name: Play_StalgaticPlatform_Idle
+      guid: 43ff54e5221a6f488bed8fa4b1c9a00c
+      id: 4030910502
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_StalgaticPlatform_Idle
+        ObjectType: 3
+        guid: 43ff54e5221a6f488bed8fa4b1c9a00c
+      Path: Events\Default Work Unit\Play_StalgaticPlatform_Idle
+      maxAttenuation: 20
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Trap_Reload
       guid: 9afb7bd5f740c74183e7c1a4217f7176
       id: 2607723329
@@ -1226,7 +1243,7 @@ MonoBehaviour:
         guid: 7b17dfd2d303d340a4d7d840a35548dd
       Path: Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0700000008000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
