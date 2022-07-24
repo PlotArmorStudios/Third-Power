@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}" SchemaVersion="103" RootDocumentID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" ParentDocumentID="{33B41D82-D3E5-4801-B003-B1D726BE6612}">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}" OwnerID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Sound Name="UI_Enemy_Alert" ID="{1E364ABC-8B6F-4C7F-9126-4EB72C15DADF}" ShortID="383641632">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+							<ObjectRef Name="Fast_LF_Tremolo" ID="{3B09A271-D9D4-4A4E-B545-F681E8313E5F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+							<ObjectRef Name="LR_Slap_with_CrossFeed" ID="{30319A92-C5AC-437A-9864-430059762933}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cell Phone Vibrate Alert Normal" ID="{7C759314-5885-4856-AA45-C8B9E786D8E9}">
+							<Language>SFX</Language>
+							<AudioFile>Cell Phone Vibrate Alert Normal.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="715418491"/>
+							</MediaIDList>
+						</AudioFileSource>
+						<SourcePlugin Name="SoundSeed Air Wind" ID="{E3DCCD92-EB82-40D9-803D-959FDC60A590}" ShortID="929967344" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+							<PropertyList>
+								<Property Name="AverageVelocity" Type="Real32">
+									<RTPCList>
+										<RTPC Name="" ID="{DBB57D8F-6A3F-40F4-A866-ACA8EB2DC874}" ShortID="333340420">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="DangerLevel" ID="{89080069-4778-4E1F-A22D-76AE8D345701}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{69852778-77C5-4AD0-8B85-9F65692782A7}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-2400</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>1039.79849</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Duration" Type="Real64" Value="1"/>
+								<Property Name="PlaybackRate" Type="Real32" Value="0.1"/>
+								<Property Name="Variability" Type="Real32" Value="0.3"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<PluginData>
+	<CurveList Version="1">
+		<CurveInfo Name="GainOffset">
+			<Curve Name="" ID="{34137C17-66A3-45E8-919B-01E8D6A136C4}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>1</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+	</CurveList>
+</PluginData>
+							<PluginInnerObjectList>
+								<List Name="Deflectors">
+									<PluginInnerObject Name="" ID="{28E5E12D-AA06-4769-BDB4-E9FFAA04BECC}" PluginName="Deflector" CompanyID="0" PluginID="121">
+										<PropertyList>
+											<Property Name="Frequency" Type="Real32" Value="587"/>
+											<Property Name="PanX" Type="Real64" Value="-0.519480519480527"/>
+											<Property Name="PanY" Type="Real64" Value="2.66453525910038E-15"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
+						</SourcePlugin>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="SoundSeed Air Wind" ID="{E3DCCD92-EB82-40D9-803D-959FDC60A590}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -22,6 +22,8 @@ public class AlertUI : MonoBehaviour
         _playerHealth.OnDie += SetInactiveAlertUI;
         _playerHealth.OnDie += ToggleDeath;
         MainCamera = Camera.main;
+        AkSoundEngine.PostEvent("Play_UI_Enemy_Alert", gameObject);
+        AkSoundEngine.SetRTPCValue("DangerLevel", 0.0f);
     }
 
     private void ToggleDeath()
@@ -33,6 +35,7 @@ public class AlertUI : MonoBehaviour
     {
         _playerHealth.OnDie -= SetInactiveAlertUI;
         _playerHealth.OnDie -= ToggleDeath;
+        AkSoundEngine.SetRTPCValue("DangerLevel", 0.0f);
     }
 
     // Update is called once per frame
@@ -52,31 +55,38 @@ public class AlertUI : MonoBehaviour
         if (!PlayerInLowDanger) //No danger
         {
             SetInactiveAlertUI();
+            AkSoundEngine.SetRTPCValue("DangerLevel", 0.0f);
             return;
         }
         if (PlayerInLowDanger && !PlayerInMediumDanger && !PlayerInHighDanger) //low danger
         {
             _lowDangerIcon.SetActive(true);
             _lowDangerIcon.transform.LookAt(MainCamera.transform.position);
+            AkSoundEngine.SetRTPCValue("DangerLevel", 40.0f);
         }
         else
             _lowDangerIcon.SetActive(false);
+  
 
         if (PlayerInMediumDanger && !PlayerInHighDanger) //med danger
         {
             _medDangerIcon.SetActive(true);
             _medDangerIcon.transform.LookAt(MainCamera.transform.position);
+            AkSoundEngine.SetRTPCValue("DangerLevel", 70.0f);
         }
         else
-            _medDangerIcon.SetActive(false);
-        
+        _medDangerIcon.SetActive(false);
+    
+
         if (PlayerInHighDanger) //high danger
         {
             _highDangerIcon.SetActive(true);
             _highDangerIcon.transform.LookAt(MainCamera.transform.position);
+            AkSoundEngine.SetRTPCValue("DangerLevel", 100.0f);
         }
         else
-            _highDangerIcon.SetActive(false);
+        _highDangerIcon.SetActive(false);
+        
     }
 
     private void SetInactiveAlertUI()
