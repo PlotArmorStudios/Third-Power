@@ -486,6 +486,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_UI_Enemy_Alert" ID="{F52AC043-9AFC-4F8A-9017-551C6D0AA47F}">
+					<ChildrenList>
+						<Action Name="" ID="{0AC8CA8D-62A8-4DE8-A839-A9F4A2B168C8}" ShortID="543915812">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Enemy_Alert" ID="{1E364ABC-8B6F-4C7F-9126-4EB72C15DADF}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

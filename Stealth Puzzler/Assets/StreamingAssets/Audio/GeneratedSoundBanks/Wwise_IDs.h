@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_CUTSCENE_ARROW_DEMONSTARTION = 2170308490U;
         static const AkUniqueID PLAY_STALGATICPLATFORM_IDLE = 4030910502U;
         static const AkUniqueID PLAY_TRAP_RELOAD = 2607723329U;
+        static const AkUniqueID PLAY_UI_ENEMY_ALERT = 2281088486U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID START_WITH_LATER_MUSIC = 1142029413U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
@@ -80,12 +81,23 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CUTSCENE = 1182958561U;
+        static const AkUniqueID DANGERLEVEL = 1316067302U;
         static const AkUniqueID DEATHSOUND = 3742375894U;
         static const AkUniqueID LEVELNUMBER = 3941060586U;
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID PUZZLE_SOUND = 2794761965U;
         static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID SS_AIR_FEAR = 1351367891U;
+        static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
+        static const AkUniqueID SS_AIR_FURY = 1029930033U;
+        static const AkUniqueID SS_AIR_MONTH = 2648548617U;
+        static const AkUniqueID SS_AIR_PRESENCE = 3847924954U;
+        static const AkUniqueID SS_AIR_RPM = 822163944U;
+        static const AkUniqueID SS_AIR_SIZE = 3074696722U;
+        static const AkUniqueID SS_AIR_STORM = 3715662592U;
+        static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
+        static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS
