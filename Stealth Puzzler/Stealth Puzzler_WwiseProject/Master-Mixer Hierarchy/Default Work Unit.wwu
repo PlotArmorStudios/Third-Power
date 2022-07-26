@@ -127,6 +127,36 @@
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="SC Bus" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{B8E68619-77A7-47E8-8B59-593369FA2FAF}" ShortID="200840543">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SFXVolume" ID="{559E5BDE-CFCD-4D9C-9FD6-4832894D4F67}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{42071C1E-8DF7-4C80-9AA2-AF51240DF9ED}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>3</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Bus Name="Puzzle Sound" ID="{DB1B901B-D8B6-4D00-B859-F6875BB5E85A}">
 									<ReferenceList>
@@ -210,125 +240,6 @@
 									</PropertyList>
 									<ObjectLists/>
 								</Bus>
-								<Bus Name="Music" ID="{067CAF1B-46F1-465A-B403-B590DFA30A66}">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<RTPCList>
-												<RTPC Name="" ID="{C245EC5A-8F5A-48F2-8C39-3FABC9BFFF1A}" ShortID="1067846142">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{57EB0AE0-2E99-40F8-A4B3-363C21F56BA7}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>-48</XPos>
-																<YPos>-0.10279</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Exp1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-44.82988</XPos>
-																<YPos>0</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Log2</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-29.94059</XPos>
-																<YPos>-0.02168</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Log1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-25.0099</XPos>
-																<YPos>-5.91657</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Exp1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-6.78589</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-												<RTPC Name="" ID="{97745B7C-8FAB-4414-97B4-C5A8D60E6FB8}" ShortID="10174253">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{0D82DAFF-5188-4BFA-A213-86D77FAA6010}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>-48</XPos>
-																<YPos>0.03495</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Exp1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-47.999</XPos>
-																<YPos>-0.03495</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Log1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-25.78217</XPos>
-																<YPos>-4.7856</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Log1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-21.86139</XPos>
-																<YPos>-7.92398</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Exp1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-7.92399</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-												<RTPC Name="" ID="{07B3DFDF-0839-4015-B92B-DF6EAA839D94}" ShortID="752521058">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="MusicVolume" ID="{90E6524C-9FA5-4EB8-92A3-1625C9BD548E}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{27409596-26F6-4091-8310-AF279277F88D}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-200</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>3</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
-									</PropertyList>
-									<ObjectLists/>
-								</Bus>
 								<Bus Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}">
 									<ObjectLists/>
 								</Bus>
@@ -359,6 +270,125 @@
 							</ReferenceList>
 							<ObjectLists/>
 						</AuxBus>
+						<Bus Name="Music" ID="{067CAF1B-46F1-465A-B403-B590DFA30A66}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{C245EC5A-8F5A-48F2-8C39-3FABC9BFFF1A}" ShortID="1067846142">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{57EB0AE0-2E99-40F8-A4B3-363C21F56BA7}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>-0.10279</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-44.82988</XPos>
+														<YPos>0</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-29.94059</XPos>
+														<YPos>-0.02168</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-25.0099</XPos>
+														<YPos>-5.91657</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-6.78589</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{97745B7C-8FAB-4414-97B4-C5A8D60E6FB8}" ShortID="10174253">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{0D82DAFF-5188-4BFA-A213-86D77FAA6010}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0.03495</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-47.999</XPos>
+														<YPos>-0.03495</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-25.78217</XPos>
+														<YPos>-4.7856</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-21.86139</XPos>
+														<YPos>-7.92398</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-7.92399</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{07B3DFDF-0839-4015-B92B-DF6EAA839D94}" ShortID="752521058">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="MusicVolume" ID="{90E6524C-9FA5-4EB8-92A3-1625C9BD548E}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{27409596-26F6-4091-8310-AF279277F88D}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>3</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
