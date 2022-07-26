@@ -4,10 +4,20 @@ using UnityEngine;
 public class CinemachineScroll : MonoBehaviour
 {
     [SerializeField] private float _scrollSensitivity = .1f;
-    
+
+    [SerializeField] private float _topRigMaxScroll = 20f;
+    [SerializeField] private float _topRigMinScroll = 8f;
+    [SerializeField] private float _midRigMaxScroll = 25f;
+    [SerializeField] private float _midRigMinScroll = 10f;
+    [SerializeField] private float _bottomRigMaxScroll = 20f;
+    [SerializeField] private float _bottomRigMinScroll = 8f;
     private CinemachineFreeLook _vCam;
     private GameInput _input;
     private float _scroll;
+
+    private float _topScroll;
+    private float _midScroll;
+    private float _bottomScroll;
 
     private void Awake()
     {
@@ -22,25 +32,32 @@ public class CinemachineScroll : MonoBehaviour
         _vCam = GetComponent<CinemachineFreeLook>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         ReadScrollInput();
+        _topScroll = Mathf.Clamp(_topScroll, _topRigMinScroll, _topRigMaxScroll);
+        _midScroll = Mathf.Clamp(_midScroll, _midRigMinScroll, _midRigMaxScroll);
+        _bottomScroll = Mathf.Clamp(_bottomScroll, _bottomRigMinScroll, _bottomRigMaxScroll);
     }
 
     private void ReadScrollInput()
     {
         if (_scroll < 0)
         {
-            _vCam.m_Orbits[0].m_Radius -= _scrollSensitivity * Mathf.Abs(_scroll);
-            _vCam.m_Orbits[1].m_Radius -= _scrollSensitivity * Mathf.Abs(_scroll);
-            _vCam.m_Orbits[2].m_Radius -= _scrollSensitivity * Mathf.Abs(_scroll);
+            _topScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
+            _midScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
+            _bottomScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
         }
 
         if (_scroll > 0)
         {
-            _vCam.m_Orbits[0].m_Radius += _scrollSensitivity * Mathf.Abs(_scroll);
-            _vCam.m_Orbits[1].m_Radius += _scrollSensitivity * Mathf.Abs(_scroll);
-            _vCam.m_Orbits[2].m_Radius += _scrollSensitivity * Mathf.Abs(_scroll);
+            _topScroll += _scrollSensitivity * Mathf.Abs(_scroll);
+            _midScroll += _scrollSensitivity * Mathf.Abs(_scroll);
+            _bottomScroll += _scrollSensitivity * Mathf.Abs(_scroll);
         }
+
+        _vCam.m_Orbits[0].m_Radius = _topScroll;
+        _vCam.m_Orbits[1].m_Radius = _midScroll;
+        _vCam.m_Orbits[2].m_Radius = _bottomScroll;
     }
 }

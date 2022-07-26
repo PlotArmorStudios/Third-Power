@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class ConfineCam : MonoBehaviour
 {
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Colliding");
         var contact = collision.GetContact(0);
         var vector = contact.point.normalized;
-        
     }
 }
