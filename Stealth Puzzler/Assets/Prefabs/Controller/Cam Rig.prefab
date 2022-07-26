@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623622010663484605}
   - component: {fileID: 1306474044}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Cam Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,8 @@ GameObject:
   - component: {fileID: 623622010709062600}
   - component: {fileID: 623622010709062603}
   - component: {fileID: 641806289}
-  m_Layer: 0
+  - component: {fileID: 5701903347740483021}
+  m_Layer: 23
   m_Name: CM FreeLook1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,8 +77,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623622010709062605}
-  m_LocalRotation: {x: 0.38415456, y: -0.31444356, z: 0.2850518, w: 0.81993663}
-  m_LocalPosition: {x: -1.1755099, y: 4.473, z: 6.4396663}
+  m_LocalRotation: {x: -0.0519836, y: -0.64065593, z: 0.34251517, w: -0.6852306}
+  m_LocalPosition: {x: 1.6863921, y: 0.15742737, z: 0.48204142}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 1.27
+    m_MaxSpeed: 1
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 150
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -178,11 +179,11 @@ MonoBehaviour:
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 13.04
-    m_Radius: -0.23
+    m_Radius: 20
   - m_Height: 3.96
-    m_Radius: -5
+    m_Radius: 25
   - m_Height: -2.31
-    m_Radius: -2.56
+    m_Radius: 20
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 0}
@@ -202,21 +203,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 3146753
+    m_Bits: 7341057
   m_IgnoreTag: 
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
-  m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 7.44
-  m_CameraRadius: 0.1
+  m_DistanceLimit: 293.4
+  m_MinimumOcclusionTime: 24
+  m_CameraRadius: 1.86
   m_Strategy: 0
   m_MaximumEffort: 1
   m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_Damping: 2.7
+  m_DampingWhenOccluded: 2.9
   m_OptimalTargetDistance: 0
 --- !u!114 &623622010709062607
 MonoBehaviour:
@@ -262,6 +263,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scrollSensitivity: 1
+  _topRigMaxScroll: 20
+  _topRigMinScroll: 4
+  _midRigMaxScroll: 25
+  _midRigMinScroll: 5
+  _bottomRigMaxScroll: 20
+  _bottomRigMinScroll: 4
 --- !u!114 &641806289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +281,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c92317592a9c964a9d17ebc3ca6f5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &5701903347740483021
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623622010709062605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &623622011667152610
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +312,8 @@ GameObject:
   - component: {fileID: 9025056035924759693}
   - component: {fileID: 1624826082}
   - component: {fileID: 1624826083}
-  m_Layer: 0
+  - component: {fileID: 1458134001}
+  m_Layer: 23
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -306,8 +327,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623622011667152610}
-  m_LocalRotation: {x: 0.17037208, y: -0.96451, z: 0.1747778, w: -0.10072988}
-  m_LocalPosition: {x: -1.1755099, y: 4.473, z: 6.4396663}
+  m_LocalRotation: {x: -0.20338537, y: -0, z: -0, w: 0.97909886}
+  m_LocalPosition: {x: -3.76, y: -36.093166, z: -69.41828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -345,7 +366,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 7602167
+    m_Bits: 32767991
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -509,5 +530,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af3a231bb2c0c854b846c059f2b6b6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1458134001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623622011667152610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0804d7c31c5e954db5f4eee93a21423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
