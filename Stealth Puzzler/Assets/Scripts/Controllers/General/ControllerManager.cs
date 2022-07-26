@@ -46,7 +46,12 @@ public class ControllerManager : MonoBehaviour
     {
         PlayerIsActive = true;
         _poofEffect = _poofObject.GetComponentInChildren<ParticleSystem>();
-        //SetStartingController();
+        _playerController.GetComponent<PlayerHealth>().OnDie += HandleDisableSwitch;
+    }
+
+    private void HandleDisableSwitch()
+    {
+        enabled = false;
     }
 
     public void InitializeControllers(Camera main)
