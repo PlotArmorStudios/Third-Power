@@ -59,6 +59,18 @@ namespace AK
             } // namespace STATE
         } // namespace LEVELSTATE
 
+        namespace MENU
+        {
+            static const AkUniqueID GROUP = 2607556080U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MENU_ACTIVE = 3927860621U;
+                static const AkUniqueID MENU_INACTIVE = 4115671616U;
+                static const AkUniqueID NEW_STATE = 2021425847U;
+            } // namespace STATE
+        } // namespace MENU
+
     } // namespace STATES
 
     namespace SWITCHES

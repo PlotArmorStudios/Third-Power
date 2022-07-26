@@ -10,6 +10,27 @@
 						<State Name="Later" ID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Menu" ID="{E620E139-FEB6-4099-9D6F-6BA9AFD0220E}">
+					<ChildrenList>
+						<State Name="New_State" ID="{0582C43D-B025-48DD-BE21-ADD0E5D344A7}"/>
+						<State Name="Menu_Active" ID="{8BA13586-FAE0-4B08-BBB8-DB1758707077}"/>
+						<State Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Menu_Active" ID="{8BA13586-FAE0-4B08-BBB8-DB1758707077}"/>
+							<EndState Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
+							<EndState Name="Menu_Active" ID="{8BA13586-FAE0-4B08-BBB8-DB1758707077}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
