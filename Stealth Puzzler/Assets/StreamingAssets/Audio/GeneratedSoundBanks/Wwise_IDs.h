@@ -68,6 +68,7 @@ namespace AK
                 static const AkUniqueID MENU_ACTIVE = 3927860621U;
                 static const AkUniqueID MENU_INACTIVE = 4115671616U;
                 static const AkUniqueID NEW_STATE = 2021425847U;
+                static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MENU
 

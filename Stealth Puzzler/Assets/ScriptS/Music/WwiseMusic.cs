@@ -8,6 +8,7 @@ public class WwiseMusic : MonoBehaviour
     public AK.Wwise.Event Play_Early_Music;
     public AK.Wwise.Event Play_Later_Music;
     public AK.Wwise.Event Start_With_Later_Music;
+    public AK.Wwise.Event Stop_Music;
 
     [HideInInspector]
     public bool IsPlaying  = false;
@@ -39,6 +40,13 @@ public class WwiseMusic : MonoBehaviour
     //Called from GameManager's OnSceneLoaded
     public void PlayMusic()
     {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (IsPlaying == true)
+            {
+                Stop_Music.Post(gameObject);
+                IsPlaying = false;
+            }
+
         if (SceneManager.GetActiveScene().name != "Main Menu")
             if (IsPlaying == false)
                 if (GameManager.Instance.CurrentLevel < 9)
