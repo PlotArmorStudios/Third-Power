@@ -12,6 +12,8 @@ public class ControllerManager : MonoBehaviour
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private CubeController _cubeController;
     [SerializeField] private ActiveController _startingController = ActiveController.Player;
+
+    [SerializeField] private float _switchDelay = .5f;
     [SerializeField] private GameObject _poofObject;
 
     [SerializeField] [Tooltip("For adjusting height after switch")]
@@ -24,6 +26,7 @@ public class ControllerManager : MonoBehaviour
     private ActiveController _activeController = ActiveController.Player;
     public bool PlayerIsActive { get; set; }
     public bool SwitchingBlocked = false;
+    private float _currentSwitchTime;
 
     private void Awake()
     {
@@ -82,8 +85,14 @@ public class ControllerManager : MonoBehaviour
 
     private void Update()
     {
-        if (_switch.action.triggered)
+        _currentSwitchTime += Time.deltaTime;
+
+        if (_switch.action.triggered && _currentSwitchTime > _switchDelay)
+        {
             SwitchControllers();
+            _currentSwitchTime = 0;
+        }
+
         if (_airborneSwitch.action.triggered)
             AirborneSwitch();
     }
