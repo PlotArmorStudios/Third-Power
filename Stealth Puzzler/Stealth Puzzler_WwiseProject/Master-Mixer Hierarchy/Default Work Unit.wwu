@@ -360,6 +360,33 @@
 							<ObjectLists/>
 						</AuxBus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{E620E139-FEB6-4099-9D6F-6BA9AFD0220E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="New_State" ID="{0582C43D-B025-48DD-BE21-ADD0E5D344A7}"/>
+								<CustomState Name="" ID="{B2E286C9-51AD-461B-9517-45FAB6E2AB52}" ShortID="503972337"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Menu_Active" ID="{8BA13586-FAE0-4B08-BBB8-DB1758707077}"/>
+								<CustomState Name="" ID="{B8401CBE-7085-4CE3-8AE8-6B415B88593F}" ShortID="1000477399">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="-6"/>
+										<Property Name="Highpass" Type="int16" Value="27"/>
+										<Property Name="Lowpass" Type="int16" Value="65"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
+								<CustomState Name="" ID="{FAF5CC90-8DAF-4D55-946A-5D9273BB193F}" ShortID="1046584965"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 				</Bus>
 				<Bus Name="sfxAmbient" ID="{EE8B7AFE-889F-40E5-904D-C4D825D060DC}">

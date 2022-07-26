@@ -24,12 +24,14 @@ public class PauseMenu : MonoBehaviour
     {
         _pause.action.started += PauseGame;
         _resume.action.started += ResumeGame;
+        
     }
 
     private void OnDisable()
     {
         _pause.action.started -= PauseGame;
         _resume.action.started -= ResumeGame;
+        AkSoundEngine.SetState("Menu", "Menu_Inactive");
     }
 
     public void Update()
@@ -48,6 +50,7 @@ public class PauseMenu : MonoBehaviour
             _pauseMenu.SetActive(true);
             PlayerInput.SwitchCurrentActionMap("UI");
             IsPaused = true;
+            AkSoundEngine.SetState("Menu", "Menu_Active");
         }
     }
 
@@ -56,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         if (obj.started)
         {
             Resume();
+            AkSoundEngine.SetState("Menu", "Menu_Inactive");
         }
     }
 
@@ -66,6 +70,7 @@ public class PauseMenu : MonoBehaviour
         PlayerInput.SwitchCurrentActionMap("Player");
         _interact.action.Disable();
         IsPaused = false;
+        AkSoundEngine.SetState("Menu", "Menu_Inactive");
     }
 
     public void Save()

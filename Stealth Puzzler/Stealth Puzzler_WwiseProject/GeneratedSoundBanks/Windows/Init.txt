@@ -1,10 +1,17 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	2607556080	Menu			\Default Work Unit\Menu	
 	3473087568	LevelState			\Default Work Unit\LevelState	
 
 State	ID	Name	State Group			Notes
+	2021425847	New_State	Menu			
+	3927860621	Menu_Active	Menu			
+	4115671616	Menu_Inactive	Menu			
 	748895195	None	LevelState			
 	3445868577	Later	LevelState			
 	3881926874	Early	LevelState			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	1000477399	Menu_Active	Menu	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1182958561	Cutscene			\Default Work Unit\Cutscene	
