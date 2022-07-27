@@ -11,7 +11,7 @@ public class FieldOfView : MonoBehaviour
     [Range(0, 360)]
     public float Angle;
 
-    public PlayerController Target { get; private set; }
+    public Controller Target { get; set; }
 
     public LayerMask ObstructionMask;
 
@@ -47,10 +47,15 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
-        Target = FindObjectOfType<PlayerController>();
+        Target = FindObjectOfType<Controller>();
         StartCoroutine(FOVRoutine());
     }
 
+    public void UpdateTarget(Controller target)
+    {
+        Target = target;
+    }
+    
     private IEnumerator FOVRoutine()
     {
         WaitForSeconds wait = new WaitForSeconds(0.2f);

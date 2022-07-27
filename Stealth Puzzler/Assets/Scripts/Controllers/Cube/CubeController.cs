@@ -41,7 +41,7 @@ public class CubeController : Controller
 
     private float _horizontal;
     private float _vertical;
-    private bool _isMoving;
+    public bool IsMoving { get; set; }
     private float _weight;
     private bool _touchingGround;
     private bool _rotated45 = false;
@@ -72,20 +72,20 @@ public class CubeController : Controller
 
     private void TurnLeft(InputAction.CallbackContext context)
     {
-        if (_isMoving) return;
+        if (IsMoving) return;
         StartCoroutine(RotateCube(-45));
     }
 
     private void TurnRight(InputAction.CallbackContext context)
     {
-        if (_isMoving) return;
+        if (IsMoving) return;
         StartCoroutine(RotateCube(45));
     }
 
     private IEnumerator RotateCube(int degrees)
     {
-        if (_isMoving) yield break;
-        _isMoving = true;
+        if (IsMoving) yield break;
+        IsMoving = true;
         PlayTumbleSound();
         _rotated45 = !_rotated45;
         Quaternion startingRot = transform.rotation;
@@ -99,7 +99,7 @@ public class CubeController : Controller
         }
 
         transform.rotation = targetRot;
-        _isMoving = false;
+        IsMoving = false;
     }
 
     private void OnValidate()
@@ -130,7 +130,7 @@ public class CubeController : Controller
     {
         ReadInput();
 
-        if (_isMoving) return;
+        if (IsMoving) return;
         //if cube is at a 45° rotation, turn instead of moving
         if (_rotated45)
         {
@@ -149,7 +149,7 @@ public class CubeController : Controller
 
     public bool GetIsMoving()
     {
-        return _isMoving;
+        return IsMoving;
     }
 
     private void ResetRotation()
@@ -233,7 +233,7 @@ public class CubeController : Controller
         //enable the ability to be detected by enemies
         ControllerManager.Instance.ActivatePlayer();
 
-        _isMoving = true;
+        IsMoving = true;
         float rotationRemaining = 90;
 
         while (rotationRemaining > 0)
@@ -245,7 +245,7 @@ public class CubeController : Controller
         }
 
         SnapToGrid();
-        _isMoving = false;
+        IsMoving = false;
 
         //disable the ability to be detected by enemies
         ControllerManager.Instance.DeactivatePlayer();

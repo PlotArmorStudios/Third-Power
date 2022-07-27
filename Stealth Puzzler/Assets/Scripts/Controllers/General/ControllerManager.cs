@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class ControllerManager : MonoBehaviour
 {
     public static event Action<int> OnSwitchFocalPoints;
+
     [SerializeField] private InputActionReference _switch;
     [SerializeField] private InputActionReference _airborneSwitch;
     [SerializeField] private PlayerController _playerController;
@@ -122,9 +123,31 @@ public class ControllerManager : MonoBehaviour
         _poofEffect.transform.position = currentControllerPosition;
         _poofEffect.gameObject.SetActive(true);
         _poofEffect.Play();
+        AssignTargets();
         return true;
     }
 
+    public void ForceSwitch()
+    {
+        var currentControllerPosition = Vector3.zero;
+
+        switch (_activeController)
+        {
+            case ActiveController.Player:
+                currentControllerPosition = ForceCube();
+                break;
+            case ActiveController.Cube:
+                _cubeController.IsMoving = false;
+                currentControllerPosition = ForceHuman();
+                break;
+        }
+
+        AkSoundEngine.PostEvent("Play_Character_Cube_Transform", gameObject);
+        _poofEffect.transform.position = currentControllerPosition;
+        _poofEffect.gameObject.SetActive(true);
+        _poofEffect.Play();
+        AssignTargets();
+    }
     public Vector3 ForceHuman()
     {
         Vector3 currentControllerPosition;
@@ -209,5 +232,21 @@ public class ControllerManager : MonoBehaviour
     public void DeactivatePlayer()
     {
         PlayerIsActive = false;
+    }
+
+    /// <summary>
+    /// Assign all active AI with the appropriate active controller.
+    /// </summary>
+    private void AssignTargets()
+    {
+        var fieldOfViews = FindObjectsOfType<FieldOfView>();
+        
+        foreach (var fieldOfView in fieldOfViews)
+        {
+            if (_playerController.isActiveAndEnabled)
+                fieldOfView.Target = _playerController;
+            else if (_cubeController.isActiveAndEnabled)
+                fieldOfView.Target = _cubeController;
+        }
     }
 }
