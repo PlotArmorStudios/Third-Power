@@ -2127,6 +2127,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 3026206245099696091, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+          type: 3}
+        m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+        m_MethodName: PlayUINormalClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &199375457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4516,6 +4529,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 551842787}
+        m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+        m_MethodName: PlayUIStartGameSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &506752853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4574,6 +4599,18 @@ MonoBehaviour:
         - m_Target: {fileID: 506752857}
           m_TargetAssemblyTypeName: ImageTween, Assembly-CSharp
           m_MethodName: Selected
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 551842787}
+          m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+          m_MethodName: PlayUIHoverSound
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4898,6 +4935,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd972df49b46444dac001843f64faae, type: 3}
+--- !u!114 &551842787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3026206245099696091, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+    type: 3}
+  m_PrefabInstance: {fileID: 3026206244573027384}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2d5387d5fc881479244b21882ddf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576178107
 GameObject:
   m_ObjectHideFlags: 0
@@ -16875,7 +16924,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: b8ecf712-e5f5-431e-98a1-413b8adfc904
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1663585336
@@ -17290,6 +17339,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 551842787}
+          m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+          m_MethodName: PlayUIHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 10
     callback:
       m_PersistentCalls:
@@ -17368,6 +17429,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1410310192}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: DeleteSave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 551842787}
+        m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+        m_MethodName: PlayUINormalClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20708,7 +20781,27 @@ PrefabInstance:
     - target: {fileID: 2299499900614336442, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336442, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 551842787}
+    - target: {fileID: 2299499900614336442, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUINormalClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336442, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: WwiseSfxManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336442, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336443, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
@@ -20769,13 +20862,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 551842787}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 551842787}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Selected
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUIHoverSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Deselected
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUIHoverSound
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
@@ -20789,13 +20932,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: WwiseSfxManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TextButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
         type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: WwiseSfxManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299499900614336447, guid: 8060ef7ad38f2594aa3d64cb239ccf42,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8060ef7ad38f2594aa3d64cb239ccf42, type: 3}
@@ -21100,6 +21263,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 551842787}
+          m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+          m_MethodName: PlayUIHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 10
     callback:
       m_PersistentCalls:
@@ -21148,6 +21323,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b47cfc1edac664fb66d1b19d4e2b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &3026206244573027384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3026206245099696090, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_Name
+      value: UI Audio Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 92.389114
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.96612
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 102.83218
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026206245099696092, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2a3b0a47e356ef4d9378b93b457bc94, type: 3}
 --- !u!1001 &3730202989285513312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21466,6 +21710,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 551842787}
+          m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+          m_MethodName: PlayUIHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 10
     callback:
       m_PersistentCalls:
@@ -21675,6 +21931,18 @@ MonoBehaviour:
       - m_Target: {fileID: 157427090}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OnLoadClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 551842787}
+        m_TargetAssemblyTypeName: WwiseSfxManager, Assembly-CSharp
+        m_MethodName: PlayUIStartGameSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

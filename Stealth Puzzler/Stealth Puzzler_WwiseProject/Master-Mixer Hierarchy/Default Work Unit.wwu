@@ -43,90 +43,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="Auro_Binaural" ID="{5FB6FB8E-10CB-4025-AFFA-08C79AD1069B}">
-							<PropertyList>
-								<Property Name="BusChannelConfig" Type="int32">
-									<ValueList>
-										<Value>528</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Auro Headphone" CompanyID="263" PluginID="1100" PluginType="3">
-									<ObjectRef Name="Dry_AHP" ID="{CCF3E23C-865B-4F0B-BD70-B5F62D29652B}" WorkUnitID="{B3C352EE-53F0-4C95-BAA9-B8ECC0034D25}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AuxBus Name="Reverb_Dungeon_01" ID="{4CF06FD7-9EBE-45F7-9A1A-418C6ED275E1}">
-									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Hall_Large_Dark" ID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-									</ReferenceList>
-									<ObjectLists/>
-								</AuxBus>
-								<Bus Name="SC" ID="{57B2D3F9-F5B4-4A59-81E3-33D77AA0A0EA}">
-									<ChildrenList>
-										<Bus Name="Cutscene" ID="{4DE11964-8818-4C33-BB1F-5E4B607677F9}">
-											<ReferenceList>
-												<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-													<ObjectRef Name="New_Wwise_Meter" ID="{63EDD9DA-5E4B-4DE7-9138-F74A16ED2250}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
-												</Reference>
-											</ReferenceList>
-											<ObjectLists/>
-										</Bus>
-										<Bus Name="Arrow_Trap" ID="{355E0390-036B-45DD-9379-6C01BBD2942C}">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<RTPCList>
-														<RTPC Name="" ID="{85EAE90A-26CC-404B-8BE4-036B979654A5}" ShortID="171640500">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="Cutscene" ID="{9586EEEC-A6BE-40D8-ACB3-1FB8DAB249CB}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{29751AC2-E331-4E46-B9AA-83DC32B3757F}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-48</XPos>
-																		<YPos>0.08558</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>-44.93943</XPos>
-																		<YPos>-0.04036</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>Log2</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>-25.19872</XPos>
-																		<YPos>-12.41223</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>Exp2</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<ObjectLists/>
-										</Bus>
-									</ChildrenList>
-									<ObjectLists/>
-								</Bus>
-							</ChildrenList>
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="SC Bus" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
+						<Bus Name="Sfx" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
@@ -251,6 +168,22 @@
 									</ReferenceList>
 									<ObjectLists/>
 								</Bus>
+								<Bus Name="Cutscene" ID="{4DE11964-8818-4C33-BB1F-5E4B607677F9}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<ObjectRef Name="New_Wwise_Meter" ID="{63EDD9DA-5E4B-4DE7-9138-F74A16ED2250}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Bus>
+								<AuxBus Name="Reverb_Dungeon_01" ID="{4CF06FD7-9EBE-45F7-9A1A-418C6ED275E1}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Hall_Large_Dark" ID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
 							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
