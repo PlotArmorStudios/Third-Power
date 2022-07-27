@@ -422,7 +422,7 @@
                 {
                     "name": "",
                     "id": "21a64d9e-cef3-4582-833e-4e9a284ae7e8",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -466,7 +466,7 @@
                 {
                     "name": "",
                     "id": "07c927d3-8892-4ab9-a017-50a20e6e1f09",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -581,6 +581,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Cursor Lock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "258425e4-299c-46e3-8a20-f87b93ec19c1",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Airborne Switch Controller",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
