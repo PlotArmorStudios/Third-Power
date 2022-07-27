@@ -119,6 +119,7 @@ public class WolfAI : MonoBehaviour
     private void Chase()
     {
         _patrolling = false;
+        _animator.SetBool("Running", true);
         _navAgent.SetDestination(_fieldOfView.Target.transform.position);
     }
 
@@ -218,6 +219,7 @@ public class WolfAI : MonoBehaviour
     {
         if (_fieldOfView.CanSeePlayer)
         {
+            _animator.SetBool("Running", false);
             GetComponent<BoxCollider>().enabled = false;
             var targetDirection = (location - transform.position).normalized;
             var targetPosition = location + (targetDirection * _chaseDistance);
