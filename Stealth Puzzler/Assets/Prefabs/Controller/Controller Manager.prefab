@@ -120,6 +120,7 @@ MonoBehaviour:
   _playerController: {fileID: 2397874376897209057}
   _cubeController: {fileID: 2397874377432550287}
   _startingController: 0
+  _switchDelay: 0.5
   _poofObject: {fileID: 1745354067485366688}
   _groundLayerMask:
     serializedVersion: 2
@@ -322,6 +323,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 248410742, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290069603, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.91848826
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290069603, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1542608273, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -329,6 +342,18 @@ PrefabInstance:
     - target: {fileID: 1896561885, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984816182, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984816182, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984816182, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.14971161
       objectReference: {fileID: 0}
     - target: {fileID: 1988960545, guid: e20857ff8a62d8443b1b18ed7159f83a, type: 3}
       propertyPath: m_Layer
