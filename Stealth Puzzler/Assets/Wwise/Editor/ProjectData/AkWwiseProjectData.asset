@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585429469634775808
+    m_lastTime: -8585426826634775808
     List:
     - name: 3D Objects
       guid: 30978c6d834b0846be523a5ae92a1c82
@@ -349,7 +349,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585429455334775808
+    m_lastTime: -8585426828714775808
     List:
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
@@ -365,9 +365,9 @@ MonoBehaviour:
         ObjectType: 7
         guid: 14dead06e2bf4d41adb8d0948c04e230
       Path: SoundBanks\Default Work Unit\Music_Bank
-    - name: New_SoundBank
+    - name: Sfx
       guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
-      id: 4072029455
+      id: 393239870
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -375,10 +375,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 0d9cc7fe7c781e418be540ee4599b958
-      - ElementName: New_SoundBank
+      - ElementName: Sfx
         ObjectType: 7
         guid: ed4e613eeeccfb4db14e3a5e5b0f3e78
-      Path: SoundBanks\Default Work Unit\New_SoundBank
+      Path: SoundBanks\Default Work Unit\Sfx
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -391,7 +391,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585429455454775808
+    m_lastTime: -8585426825074775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -873,8 +873,76 @@ MonoBehaviour:
         guid: 43c02af5fc9a8a4f9017551c6d0aa47f
       Path: Events\Default Work Unit\Play_UI_Enemy_Alert
       maxAttenuation: 0
-      maxDuration: 15.5
-      minDuration: 15.5
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_UI_Hover
+      guid: efdeb5c78a5ddf46b18b953090d7a6b5
+      id: 1339559671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_UI_Hover
+        ObjectType: 3
+        guid: efdeb5c78a5ddf46b18b953090d7a6b5
+      Path: Events\Default Work Unit\Play_UI_Hover
+      maxAttenuation: 0
+      maxDuration: 1.367619
+      minDuration: 1.297755
+    - name: Play_UI_MainMenu
+      guid: 0f4ea1410330164687bf93594af2ceeb
+      id: 2882732749
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_UI_MainMenu
+        ObjectType: 3
+        guid: 0f4ea1410330164687bf93594af2ceeb
+      Path: Events\Default Work Unit\Play_UI_MainMenu
+      maxAttenuation: 0
+      maxDuration: 5.1125
+      minDuration: 5.1125
+    - name: Play_UI_NormalClick
+      guid: 405f48dff6b9e945b8c490355c69517e
+      id: 737378190
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_UI_NormalClick
+        ObjectType: 3
+        guid: 405f48dff6b9e945b8c490355c69517e
+      Path: Events\Default Work Unit\Play_UI_NormalClick
+      maxAttenuation: 0
+      maxDuration: 2.357312
+      minDuration: 2.357312
+    - name: Play_UI_StartGame
+      guid: 50d8ec60ae95c44f9dcd5af5f85cd919
+      id: 1473547871
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_UI_StartGame
+        ObjectType: 3
+        guid: 50d8ec60ae95c44f9dcd5af5f85cd919
+      Path: Events\Default Work Unit\Play_UI_StartGame
+      maxAttenuation: 0
+      maxDuration: 4.539208
+      minDuration: 4.539208
     - name: Play_WaterDroplets
       guid: 0bd1e1ee441e9641b4cfd23003caa4d7
       id: 2298613774
@@ -978,7 +1046,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585429423914775808
+    m_lastTime: -8585429421354775808
     List:
     - name: Cutscene
       guid: ecee8695bea6d840acb31fb8dab249cb
@@ -1126,7 +1194,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585486269054775808
+    m_lastTime: -8585429421354775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -1280,7 +1348,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6f7ac499df9b841b0b218b367cc7899
     GuidInternal: 
-    m_lastTime: -8585431241094775808
+    m_lastTime: -8585426847414775808
     List:
     - name: LevelState
       guid: 2ce81878e53c1c4195b49e4263974bf9
@@ -1345,6 +1413,88 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: 146442b5f398d04abb041953ec52ff52
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Menu
+      guid: 39e120e6b6fe99409d6f6ba9afd0220e
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d6f7ac499df9b841b0b218b367cc7899
+      - ElementName: Menu
+        ObjectType: 9
+        guid: 39e120e6b6fe99409d6f6ba9afd0220e
+      Path: States\Default Work Unit\Menu
+      values:
+      - name: Menu_Active
+        guid: 8635a18be0fa084bbbb8db1758707077
+        id: 3927860621
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d6f7ac499df9b841b0b218b367cc7899
+        - ElementName: Menu
+          ObjectType: 9
+          guid: 39e120e6b6fe99409d6f6ba9afd0220e
+        - ElementName: Menu_Active
+          ObjectType: 8
+          guid: 8635a18be0fa084bbbb8db1758707077
+      - name: Menu_Inactive
+        guid: c63bd8a4bbfd784da8c366ab073eda1f
+        id: 4115671616
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d6f7ac499df9b841b0b218b367cc7899
+        - ElementName: Menu
+          ObjectType: 9
+          guid: 39e120e6b6fe99409d6f6ba9afd0220e
+        - ElementName: Menu_Inactive
+          ObjectType: 8
+          guid: c63bd8a4bbfd784da8c366ab073eda1f
+      - name: New_State
+        guid: 3dc4820525b0dd48be21add0e5d344a7
+        id: 2021425847
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d6f7ac499df9b841b0b218b367cc7899
+        - ElementName: Menu
+          ObjectType: 9
+          guid: 39e120e6b6fe99409d6f6ba9afd0220e
+        - ElementName: New_State
+          ObjectType: 8
+          guid: 3dc4820525b0dd48be21add0e5d344a7
+      - name: None
+        guid: 24646338ef8699439ef0d549c73b8327
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d6f7ac499df9b841b0b218b367cc7899
+        - ElementName: Menu
+          ObjectType: 9
+          guid: 39e120e6b6fe99409d6f6ba9afd0220e
+        - ElementName: None
+          ObjectType: 8
+          guid: 24646338ef8699439ef0d549c73b8327
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1492,7 +1642,7 @@ MonoBehaviour:
         guid: 7b17dfd2d303d340a4d7d840a35548dd
       Path: Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 2e0000002f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

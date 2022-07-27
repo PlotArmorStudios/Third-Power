@@ -133,6 +133,9 @@
 				<Event Name="Play_Dungeon_1" ID="{17984AD9-DE29-4405-A0A4-C564D086D246}">
 					<ChildrenList>
 						<Action Name="" ID="{864BF895-36C8-470A-A3DA-F76619A7CB58}" ShortID="736071220">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Dungeon_1_Layer_01" ID="{955CC5D2-9003-4263-A383-4F44F0A71BC1}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
@@ -140,6 +143,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{C513E81F-68F4-43C9-B888-868D28298288}" ShortID="271559842">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Dungeon_1_Layer_02" ID="{2263062C-3E32-42BE-8494-F50955326E17}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
@@ -147,6 +153,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{A3D121D2-00FD-4B38-92B0-376DE53900B6}" ShortID="981195845">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Dungeon_1_Layer_03" ID="{4104E4F2-08AB-42BE-8E8E-4FED87751075}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
@@ -492,6 +501,57 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="UI_Enemy_Alert" ID="{1E364ABC-8B6F-4C7F-9126-4EB72C15DADF}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Hover" ID="{C7B5DEEF-5D8A-46DF-B18B-953090D7A6B5}">
+					<ChildrenList>
+						<Action Name="" ID="{D8A0C8FB-6B62-49E0-BE3C-C6ACB3D2514F}" ShortID="928398503">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Hover" ID="{DBA92E10-77FC-4621-9FDB-E3094D533A25}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_MainMenu" ID="{41A14E0F-3003-4616-87BF-93594AF2CEEB}">
+					<ChildrenList>
+						<Action Name="" ID="{97D51B0A-7E65-4850-B3C4-155DF5AE1342}" ShortID="398853930">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_MainMenu" ID="{A849CDC3-9D11-496B-9CD6-21930E78169A}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_StartGame" ID="{60ECD850-95AE-4FC4-9DCD-5AF5F85CD919}">
+					<ChildrenList>
+						<Action Name="" ID="{E6A2A913-FF86-4EB7-A715-58AF4D6DAA6A}" ShortID="276590950">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_StartGame" ID="{8D39E1B2-91EB-478B-BB5D-6257A7D351AA}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1AEF4201-5B4C-4425-87FD-40662F821ACF}" ShortID="969680815">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_NormalClick" ID="{DAB17830-0596-445E-BCAA-EAAAD056A899}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_NormalClick" ID="{DF485F40-B9F6-45E9-B8C4-90355C69517E}">
+					<ChildrenList>
+						<Action Name="" ID="{FF49D459-9B56-4A78-9BEA-C468ED7B1667}" ShortID="731743462">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_NormalClick" ID="{DAB17830-0596-445E-BCAA-EAAAD056A899}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

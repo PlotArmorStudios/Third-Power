@@ -6769,6 +6769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705183702}
   - component: {fileID: 705183701}
+  - component: {fileID: 705183703}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -6817,6 +6818,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &705183703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705183700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07593f0ec0ea8df44a8f1d3ed38b733a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 671e52a5598ab144c9d733f850387c75,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!43 &707853069
 Mesh:
   m_ObjectHideFlags: 0
@@ -17269,9 +17295,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DELETE SAVE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 149da0a92d6c3ca4bb4eba4a31162f81, type: 2}
-  m_sharedMaterial: {fileID: 385846457413938847, guid: 149da0a92d6c3ca4bb4eba4a31162f81,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20817,9 +20842,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 149da0a92d6c3ca4bb4eba4a31162f81, type: 2}
-  m_sharedMaterial: {fileID: 385846457413938847, guid: 149da0a92d6c3ca4bb4eba4a31162f81,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21433,9 +21457,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: LOAD GAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 149da0a92d6c3ca4bb4eba4a31162f81, type: 2}
-  m_sharedMaterial: {fileID: 385846457413938847, guid: 149da0a92d6c3ca4bb4eba4a31162f81,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
