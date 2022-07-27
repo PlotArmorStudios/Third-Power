@@ -526,6 +526,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{3C3A0635-8230-4BD1-BB81-30648B5E4164}" ShortID="866452983">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_NormalClick" ID="{DAB17830-0596-445E-BCAA-EAAAD056A899}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_UI_StartGame" ID="{60ECD850-95AE-4FC4-9DCD-5AF5F85CD919}">
@@ -554,6 +561,26 @@
 									<ObjectRef Name="UI_NormalClick" ID="{DAB17830-0596-445E-BCAA-EAAAD056A899}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Everything" ID="{1876BFA8-6C9F-4533-8722-CFBEAD60FEF5}">
+					<ChildrenList>
+						<Action Name="" ID="{F296DDE8-14A0-46DA-9EFF-244A0C7179A2}" ShortID="357888335">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{2B4B623C-23D3-4CF5-8856-65C7B0F909A4}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
 						</Action>
 					</ChildrenList>
 				</Event>
