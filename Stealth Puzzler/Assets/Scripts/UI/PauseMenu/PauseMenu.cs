@@ -60,6 +60,7 @@ public class PauseMenu : MonoBehaviour
         {
             Resume();
             AkSoundEngine.SetState("Menu", "Menu_Inactive");
+            
         }
     }
 
@@ -71,10 +72,12 @@ public class PauseMenu : MonoBehaviour
         _interact.action.Disable();
         IsPaused = false;
         AkSoundEngine.SetState("Menu", "Menu_Inactive");
+        AkSoundEngine.PostEvent("Play_UI_NormalClick", gameObject);
     }
 
     public void Save()
     {
         GameManager.Instance.SaveGame();
+        AkSoundEngine.PostEvent("Play_UI_NormalClick", gameObject);
     }
 }

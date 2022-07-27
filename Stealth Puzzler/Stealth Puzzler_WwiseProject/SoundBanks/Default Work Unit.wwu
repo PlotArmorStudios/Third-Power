@@ -3,7 +3,7 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{FEC79C0D-787C-411E-8BE5-40EE4599B958}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="New_SoundBank" ID="{3E614EED-CCEE-4DFB-B14E-3A5E5B0F3E78}">
+				<SoundBank Name="Sfx" ID="{3E614EED-CCEE-4DFB-B14E-3A5E5B0F3E78}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Cannon" ID="{8EE52293-E38A-4047-AFF2-CD36F6FBF622}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Reverb_Narrow_Hallway" ID="{9A9C7C93-38E6-413D-B5DC-8BC58FED30DE}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}" Origin="Manual" Filter="7"/>
@@ -16,7 +16,10 @@
 						<ObjectRef Name="Play_puzzle_solved" ID="{BFCC3A02-69CC-4328-AB11-44AFB2638555}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Cannon_Idle_Steam" ID="{81ACB0A2-0713-43C3-A0FF-91EDE832EC1C}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_NormalClick" ID="{DF485F40-B9F6-45E9-B8C4-90355C69517E}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_MainMenu" ID="{41A14E0F-3003-4616-87BF-93594AF2CEEB}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Arrow_In_Air" ID="{2F896DE2-6B79-4633-B135-0D0AD8901B39}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_Hover" ID="{C7B5DEEF-5D8A-46DF-B18B-953090D7A6B5}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Podium_Deactivate" ID="{F522A35A-2A3A-4707-8BB7-854D8E0F68EB}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Character_Cube_Transform" ID="{854723A8-87F3-475D-A8FD-9F82DB3016A8}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="stop_puzzle_time_running_out" ID="{1A9C6C2A-AFB4-47FD-AECB-787429D79644}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
@@ -33,6 +36,7 @@
 						<ObjectRef Name="Play_Jelly_Impact_Cube" ID="{3A0FF354-22F8-4E9F-B18B-8EFFADAC05C8}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UI_Enemy_Alert" ID="{F52AC043-9AFC-4F8A-9017-551C6D0AA47F}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Eye_Impact" ID="{C8D87DF2-89B8-4FB6-88AE-D4BBE1C0FB75}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI_StartGame" ID="{60ECD850-95AE-4FC4-9DCD-5AF5F85CD919}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
