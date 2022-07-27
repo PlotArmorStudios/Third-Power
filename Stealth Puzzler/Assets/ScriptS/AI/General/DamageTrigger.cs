@@ -6,9 +6,12 @@ public class DamageTrigger : MonoBehaviour
     {
         var player = other.gameObject.GetComponent<PlayerController>();
         var cube = other.gameObject.GetComponent<CubeController>();
-        
+
         if (cube)
-            ControllerManager.Instance.SwitchControllers();
+        {
+            ControllerManager.Instance.ForceSwitch();
+            Debug.Log("Hit cube");
+        }
         if (player && player.IsVulnerable)
             player.GetComponent<Health>().TakeHit();
     }
