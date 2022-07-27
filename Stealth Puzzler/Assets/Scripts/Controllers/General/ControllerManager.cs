@@ -37,13 +37,13 @@ public class ControllerManager : MonoBehaviour
     private void OnEnable()
     {
         _switch.action.Enable();
-        _airborneSwitch.action.Enable();
+        //_airborneSwitch.action.Enable();
     }
 
     private void OnDisable()
     {
         _switch.action.Disable();
-        _airborneSwitch.action.Disable();
+        //_airborneSwitch.action.Disable();
     }
 
     private void Start()
@@ -94,8 +94,8 @@ public class ControllerManager : MonoBehaviour
             _currentSwitchTime = 0;
         }
 
-        if (_airborneSwitch.action.triggered)
-            AirborneSwitch();
+        //if (_airborneSwitch.action.triggered)
+            //AirborneSwitch();
     }
 
     //true if successful, false if unable to switch
