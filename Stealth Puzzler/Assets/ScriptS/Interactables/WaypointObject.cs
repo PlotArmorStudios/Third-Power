@@ -38,6 +38,7 @@ public class WaypointObject : MonoBehaviour
         if (Vector3.Distance(transform.position, _currentWayPoint.position) < _distanceThreshold)
         {
             _currentWayPoint = _wayPoints.GetNextWayPoint(_currentWayPoint, mode);
+            
             if (_delayAtPoints > 0)
             {
                 waiting = true;

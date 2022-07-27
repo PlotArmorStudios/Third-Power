@@ -1,5 +1,6 @@
 ﻿//#define DebugStates
 //#define PatrolDebug
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private State _currentState;
     [SerializeField] private Animator _animator;
     [SerializeField] private bool _togglePatrol = true;
-    
+
     private LayerMask _enemyLayer;
     private LayerMask _playerLayer;
 
@@ -43,11 +44,16 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private float _attackRange;
 
     private bool _inRange => Vector3.Distance(transform.position, _player.transform.position) < _attackRange;
-    
+
     //Wind Up
     [SerializeField] private float _resetWindUpTime = .5f;
     [SerializeField] private float _windUpTime = .5f;
+    [SerializeField] private bool _useWayPoints;
 
+    
+    //Way points
+    private WaypointAI _waypoints;
+    
     void Start()
     {
         _navAgent = GetComponent<NavMeshAgent>();
@@ -138,7 +144,7 @@ public class WolfAI : MonoBehaviour
         //play idle animation
 
         if (!_togglePatrol) return;
-        
+
         if (_timeToStayIdle < 0)
         {
             _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);
@@ -159,7 +165,10 @@ public class WolfAI : MonoBehaviour
         if (_patrolTime >= _timeToPatrol)
         {
             _timeToPatrol = Random.Range(2, 12);
-            TriggerPatrol();
+            if (_useWayPoints)
+                TriggerWaypointPatrol();
+            else
+                TriggerPatrol();
             _patrolTime = 0;
         }
 
@@ -168,6 +177,14 @@ public class WolfAI : MonoBehaviour
             _animator.SetBool("Running", false);
             _patrolling = false;
         }
+    }
+
+    private void TriggerWaypointPatrol()
+    {
+        _newDestination = _waypoints.CurrentWayPoint.position;
+        _navAgent.destination = _waypoints.CurrentWayPoint.position;
+        _animator.SetBool("Running", true);
+        _patrolling = true;
     }
 
     private void TriggerPatrol()
