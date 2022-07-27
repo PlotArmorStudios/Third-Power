@@ -56,6 +56,7 @@ public class WolfAI : MonoBehaviour
     
     void Start()
     {
+        _waypoints = GetComponent<WaypointAI>();
         _navAgent = GetComponent<NavMeshAgent>();
         _currentState = State.Idle;
         _timeToStayIdle = RandomTime(_minTimeToStayIdle, _maxTimeToStayIdle);

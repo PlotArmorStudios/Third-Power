@@ -36,11 +36,14 @@ public class WaypointAI : MonoBehaviour
     private void Update()
     {
         if (!IsActive || waiting) return;
+        Debug.Log("Ai position: " + transform.position);
+        Debug.Log("RIgidbody position: " + _rigidbody.transform.position);
+        Debug.Log("Waypoint position: " + _currentWayPoint.position);
         
         if (Vector3.Distance(_rigidbody.transform.position, _currentWayPoint.position) < _distanceThreshold)
         {
             _currentWayPoint = _wayPoints.GetNextWayPoint(_currentWayPoint, mode);
-            
+            Debug.Log("Should change waypoints");
             if (_delayAtPoints > 0)
             {
                 waiting = true;
