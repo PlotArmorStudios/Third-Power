@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class TimerObject : MonoBehaviour
 {
     [SerializeField] private UnityEvent _timerStart;
     [SerializeField] private UnityEvent _timerEnd;
-    
     [SerializeField] private float _timerDuration;
+    [SerializeField] private bool _IsOpeningDoor;
+    public static Action<float> OnSendDoorTime;
     
     public void TriggerTimer()
     {
         StartCoroutine(StartTimer());
+        if (_IsOpeningDoor)
+        {
+            OnSendDoorTime?.Invoke(_timerDuration);
+        }
     }
     
     IEnumerator StartTimer()
