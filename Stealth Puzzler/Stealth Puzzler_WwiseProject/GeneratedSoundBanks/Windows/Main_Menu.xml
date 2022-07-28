@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="2005704188" Language="SFX" Hash="1103585716">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_Menu</ObjectPath>
+			<ShortName>Main_Menu</ShortName>
+			<Path>Main_Menu.bnk</Path>
+			<IncludedEvents>
+				<Event Id="599813207" Name="Play_MainMenu_Ambience" ObjectPath="\Events\Default Work Unit\Play_MainMenu_Ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="111814647" Language="SFX">
+							<ShortName>Top_Layer_4.wav</ShortName>
+							<Path>SFX\Top_Layer_4_10C4C929.wem</Path>
+						</File>
+						<File Id="241627807" Language="SFX">
+							<ShortName>Top_Layer_3.wav</ShortName>
+							<Path>SFX\Top_Layer_3_10C4C929.wem</Path>
+						</File>
+						<File Id="405575915" Language="SFX">
+							<ShortName>Top_Layer_1.wav</ShortName>
+							<Path>SFX\Top_Layer_1_10C4C929.wem</Path>
+						</File>
+						<File Id="434679198" Language="SFX">
+							<ShortName>Base_Layer_2.wav</ShortName>
+							<Path>SFX\Base_Layer_2_10C4C929.wem</Path>
+						</File>
+						<File Id="765420740" Language="SFX">
+							<ShortName>AK_Factory_IR\Rooms\AK Luna Studio.wav</ShortName>
+							<Path>Plugins\Wwise Convolution Reverb\AK_Factory_IR\Rooms\AK Luna Studio_3D88A375.wem</Path>
+						</File>
+						<File Id="782761765" Language="SFX">
+							<ShortName>Base_Layer_3.wav</ShortName>
+							<Path>SFX\Base_Layer_3_10C4C929.wem</Path>
+						</File>
+						<File Id="807394192" Language="SFX">
+							<ShortName>Base_Layer_1.wav</ShortName>
+							<Path>SFX\Base_Layer_1_10C4C929.wem</Path>
+						</File>
+						<File Id="946863776" Language="SFX">
+							<ShortName>Top_Layer_2.wav</ShortName>
+							<Path>SFX\Top_Layer_2_10C4C929.wem</Path>
+						</File>
+						<File Id="968401930" Language="SFX">
+							<ShortName>Base_Layer_4.wav</ShortName>
+							<Path>SFX\Base_Layer_4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
+					</AuxBusSends>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

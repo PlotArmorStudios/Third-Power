@@ -8,6 +8,7 @@ public class WwiseSfxManager : MonoBehaviour
     public AK.Wwise.Event Play_UI_MainMenu;
     public AK.Wwise.Event Play_UI_NormalClick;
     public AK.Wwise.Event Play_UI_Hover;
+    public AK.Wwise.Event StopMainMenu_Ambience;
 
    public void PlayUIStartGameSound()
     {
@@ -28,5 +29,9 @@ public class WwiseSfxManager : MonoBehaviour
         Play_UI_Hover.Post(gameObject);
     }
 
+    public void StopMainMenuAmbience()
+    {
+        StopMainMenu_Ambience.Post(gameObject);
+    }
 
 }

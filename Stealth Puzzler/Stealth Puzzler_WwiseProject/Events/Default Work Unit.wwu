@@ -515,6 +515,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{4E909D0B-8BE3-47B8-B4BA-65B9D9D8DFC1}" ShortID="100902301">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Hover_02" ID="{6E8F92E6-DBE8-4C85-AC3E-25F675B43A13}" WorkUnitID="{838D14F4-E0E7-4F4A-B963-BFB85AE00D6C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_UI_MainMenu" ID="{41A14E0F-3003-4616-87BF-93594AF2CEEB}">
@@ -581,6 +588,36 @@
 									</ReferenceList>
 								</EventActionException>
 							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MainMenu_Ambience" ID="{63724A01-082E-41AB-967B-B210B8FAC696}">
+					<ChildrenList>
+						<Action Name="" ID="{FEEA17D1-4617-4EB5-B4F1-0D92FB4C9B45}" ShortID="523186617">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{29EB8F57-C000-48F3-9935-5CD97528C7B4}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MainMenu_Ambience" ID="{27A6F4C4-A943-49EE-A4B0-CC4BAC5AC60C}">
+					<ChildrenList>
+						<Action Name="" ID="{A69F9CC1-E9D6-43BE-80CB-FB1F5637E8C1}" ShortID="879658045">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{29EB8F57-C000-48F3-9935-5CD97528C7B4}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>

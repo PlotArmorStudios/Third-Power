@@ -20,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2281088486	Play_UI_Enemy_Alert			\Default Work Unit\Play_UI_Enemy_Alert	
 	2298613774	Play_WaterDroplets			\Default Work Unit\Play_WaterDroplets	
 	2423728726	Play_Eye_Impact			\Default Work Unit\Play_Eye_Impact	
+	2582003065	Stop_MainMenu_Ambience			\Default Work Unit\Stop_MainMenu_Ambience	
 	2607723329	Play_Trap_Reload			\Default Work Unit\Play_Trap_Reload	
 	2759903158	Play_puzzle_solved			\Default Work Unit\Play_puzzle_solved	
 	2774595811	Play_Cube_Movement			\Default Work Unit\Play_Cube_Movement	
@@ -39,16 +40,30 @@ Switch	ID	Name	Switch Group			Notes
 	2473969246	Metal	Material			
 	3725073853	Cement	Material			
 
+State Group	ID	Name			Wwise Object Path	Notes
+	2607556080	Menu			\Default Work Unit\Menu	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Menu			
+	2021425847	New_State	Menu			
+	3927860621	Menu_Active	Menu			
+	4115671616	Menu_Inactive	Menu			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	848240171	Menu_Active	Menu	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx		
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	SFXVolume			\Default Work Unit\Volume\SFXVolume	
 	1316067302	DangerLevel			\Default Work Unit\DangerLevel	
 	2918011349	MasterVolume			\Default Work Unit\Volume\MasterVolume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	Sfx			\Default Work Unit\Master Audio Bus\Sfx	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	4103686030	Reverb_Narrow_Hallway			\Default Work Unit\Master Audio Bus\Reverb_Narrow_Hallway	
-	4182780889	Reverb_Large_Hall			\Default Work Unit\Master Audio Bus\Reverb_Large_Hall	
+	4103686030	Reverb_Narrow_Hallway			\Default Work Unit\Master Audio Bus\Sfx\Reverb_Narrow_Hallway	
+	4182780889	Reverb_Large_Hall			\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall	
 
 Effect plug-ins	ID	Name	Type				Notes
 	361504441	Large_Bright_Space_Stereo	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 6ms
@@ -91,6 +106,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	179283079	door_open_04	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\door_open_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\door_open\door_open_04		432064
 	180549212	Player_Footsteps_Stone61	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone61_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone61		231040
 	181073124	player_voice_death_05	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_voice_death_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_death\player_voice_death_05		120064
+	184841919	UI_Hover_02	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\UI_Hover_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Hover_02		252064
 	208962673	Player_Footsteps_Stone02	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone02		231040
 	212658823	Player_Footsteps_Stone57	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone57_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone57		232036
 	216427900	Player_Footsteps_Carpet_09	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Carpet_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Carpet\Player_Footsteps_Carpet_09		96064
