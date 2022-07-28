@@ -15,12 +15,12 @@ public class UIDoorTimer : MonoBehaviour
 
     private void OnEnable()
     {
-        TimerObject.OnSendTime += ShowDoorTimer;
+        TimerObject.OnSendDoorTime += ShowDoorTimer;
     }
 
     private void OnDisable()
     {
-        TimerObject.OnSendTime -= ShowDoorTimer;
+        TimerObject.OnSendDoorTime -= ShowDoorTimer;
     }
 
     private IEnumerator TimerDot()

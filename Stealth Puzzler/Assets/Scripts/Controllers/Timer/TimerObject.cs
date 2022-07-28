@@ -8,14 +8,17 @@ public class TimerObject : MonoBehaviour
 {
     [SerializeField] private UnityEvent _timerStart;
     [SerializeField] private UnityEvent _timerEnd;
-    
     [SerializeField] private float _timerDuration;
-    public static Action<float> OnSendTime;
+    [SerializeField] private bool _IsOpeningDoor;
+    public static Action<float> OnSendDoorTime;
     
     public void TriggerTimer()
     {
         StartCoroutine(StartTimer());
-        OnSendTime?.Invoke(_timerDuration);
+        if (_IsOpeningDoor)
+        {
+            OnSendDoorTime?.Invoke(_timerDuration);
+        }
     }
     
     IEnumerator StartTimer()
