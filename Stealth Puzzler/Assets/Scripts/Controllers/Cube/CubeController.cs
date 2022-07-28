@@ -67,6 +67,8 @@ public class CubeController : Controller
 
     private void OnDisable()
     {
+        _turnLeft.action.performed -= TurnLeft;
+        _turnRight.action.performed -= TurnRight;
         ControllerManager.Instance.ActivatePlayer();
     }
 

@@ -15,9 +15,10 @@ public class WolfAI : MonoBehaviour
     [SerializeField] private FieldOfView _fieldOfView;
     [SerializeField] private State _currentState;
     [SerializeField] private Animator _animator;
-    
-    [Header("Patrolling")]
-    [SerializeField] private bool _togglePatrol = true;
+
+    [Header("Patrolling")] [SerializeField]
+    private bool _togglePatrol = true;
+
     [SerializeField] private bool _useWayPoints;
 
 
@@ -36,20 +37,21 @@ public class WolfAI : MonoBehaviour
     private Vector3 _newDestination;
     private Vector3 _startPosition;
 
-    //Chase
+    [Header("Chasing")]
     [SerializeField] private float _chaseSpeed = 5f;
     [SerializeField] private float _chaseAcceleration = 12f;
     [SerializeField] private float _chaseDistance = 5f;
 
     [SerializeField] private float _attackRange;
 
-    private bool _inRange => Vector3.Distance(transform.position, _fieldOfView.Target.transform.position) < _attackRange;
+    private bool _inRange =>
+        Vector3.Distance(transform.position, _fieldOfView.Target.transform.position) < _attackRange;
 
-    //Wind Up
+    [Header("Wind Up")]
     [SerializeField] private float _resetWindUpTime = .5f;
     [SerializeField] private float _windUpTime = .5f;
 
-    
+
     //Way points
     private WaypointAI _waypoints;
 
@@ -217,16 +219,20 @@ public class WolfAI : MonoBehaviour
 
     void Tackle(Vector3 location)
     {
+        var targetDirection = (location - transform.position).normalized;
+        var targetPosition = location + (targetDirection * _chaseDistance);
         if (_fieldOfView.CanSeePlayer)
         {
             _animator.SetBool("Running", false);
             GetComponent<BoxCollider>().enabled = false;
-            var targetDirection = (location - transform.position).normalized;
-            var targetPosition = location + (targetDirection * _chaseDistance);
-            _navAgent.SetDestination(targetPosition);
             _animator.CrossFade("Forward Chase", .25f, 0);
             _navAgent.speed = _chaseSpeed;
             _navAgent.acceleration = _chaseAcceleration;
+            
+            Debug.Log("Player location is: " + location);
+            Debug.Log("Target location is: " + targetPosition);
+            
+            _navAgent.SetDestination(targetPosition);
         }
         else
         {
@@ -237,7 +243,6 @@ public class WolfAI : MonoBehaviour
     private void RevertDirection()
     {
         transform.rotation = Quaternion.LookRotation(_fieldOfView.Target.transform.position - transform.position);
-
         _currentState = State.Idle;
     }
 
