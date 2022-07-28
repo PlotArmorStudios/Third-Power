@@ -1365,7 +1365,7 @@
 				<Trigger Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
 			</Triggers>
 		</SoundBank>
-		<SoundBank Id="2005704188" Language="SFX" Hash="1103585716">
+		<SoundBank Id="2005704188" Language="SFX" Hash="2621138773">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Menu</ObjectPath>
 			<ShortName>Main_Menu</ShortName>
 			<Path>Main_Menu.bnk</Path>
@@ -1413,6 +1413,7 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="2582003065" Name="Stop_MainMenu_Ambience" ObjectPath="\Events\Default Work Unit\Stop_MainMenu_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
