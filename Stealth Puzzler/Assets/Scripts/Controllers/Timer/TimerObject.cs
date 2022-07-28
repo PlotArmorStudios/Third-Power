@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class TimerObject : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class TimerObject : MonoBehaviour
     [SerializeField] private UnityEvent _timerEnd;
     
     [SerializeField] private float _timerDuration;
+    public static Action<float> OnSendTime;
     
     public void TriggerTimer()
     {
         StartCoroutine(StartTimer());
+        OnSendTime?.Invoke(_timerDuration);
     }
     
     IEnumerator StartTimer()
