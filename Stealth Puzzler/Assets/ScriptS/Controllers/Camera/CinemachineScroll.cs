@@ -5,18 +5,21 @@ public class CinemachineScroll : MonoBehaviour
 {
     [SerializeField] private float _scrollSensitivity = .1f;
 
-    [Header("Top Rig Scroll")]
-    [SerializeField] private float _topRigMaxScroll = 20f;
+    [Header("Top Rig Scroll")] [SerializeField]
+    private float _topRigMaxScroll = 20f;
+
     [SerializeField] private float _topRigMinScroll = 8f;
-    
-    [Header("Middle Rig Scroll")]
-    [SerializeField] private float _midRigMaxScroll = 25f;
+
+    [Header("Middle Rig Scroll")] [SerializeField]
+    private float _midRigMaxScroll = 25f;
+
     [SerializeField] private float _midRigMinScroll = 10f;
-    
-    [Header("Bottom Rig Scroll")]
-    [SerializeField] private float _bottomRigMaxScroll = 20f;
+
+    [Header("Bottom Rig Scroll")] [SerializeField]
+    private float _bottomRigMaxScroll = 20f;
+
     [SerializeField] private float _bottomRigMinScroll = 8f;
-    
+
     private CinemachineFreeLook _vCam;
     private GameInput _input;
     private float _scroll;
@@ -50,16 +53,22 @@ public class CinemachineScroll : MonoBehaviour
     {
         if (_scroll < 0)
         {
-            _topScroll += _scrollSensitivity * Mathf.Abs(_scroll);
-            _midScroll += _scrollSensitivity * Mathf.Abs(_scroll);
-            _bottomScroll += _scrollSensitivity * Mathf.Abs(_scroll);
+            if (_topScroll != _topRigMaxScroll)
+                _topScroll += _scrollSensitivity * Mathf.Abs(_scroll);
+            if (_midScroll != _midRigMaxScroll)
+                _midScroll += _scrollSensitivity * Mathf.Abs(_scroll);
+            if (_bottomScroll != _bottomRigMaxScroll)
+                _bottomScroll += _scrollSensitivity * Mathf.Abs(_scroll);
         }
 
         if (_scroll > 0)
         {
-            _topScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
-            _midScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
-            _bottomScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
+            if (_topScroll != _topRigMinScroll)
+                _topScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
+            if (_midScroll != _midRigMinScroll)
+                _midScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
+            if (_bottomScroll != _bottomRigMinScroll)
+                _bottomScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
         }
 
         _vCam.m_Orbits[0].m_Radius = _topScroll;
