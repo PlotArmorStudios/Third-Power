@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.Instance.DeleteSave();
         SceneLoader.Instance.LoadScene("Level 1");
+        AkSoundEngine.PostEvent("Stop_MainMenu_Ambience", gameObject);
     }
 
     public void OnLoadClicked()

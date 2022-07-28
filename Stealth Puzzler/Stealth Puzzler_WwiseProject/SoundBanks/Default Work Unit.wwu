@@ -25,6 +25,7 @@
 						<ObjectRef Name="stop_puzzle_time_running_out" ID="{1A9C6C2A-AFB4-47FD-AECB-787429D79644}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StalgaticPlatform_Idle" ID="{E554FF43-1A22-486F-8BED-8FA4B1C9A00C}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FirePlace" ID="{DBFF8910-B0EC-49A9-8C8A-D9C3B9788001}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_MainMenu_Ambience" ID="{27A6F4C4-A943-49EE-A4B0-CC4BAC5AC60C}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Arrow_In_Air" ID="{44C92443-A288-4A7A-8DA3-065BD34F4AAB}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps" ID="{A4787A65-F0E5-4AAF-9123-ED8CA7D81F28}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SFX_Cutscene_Arrow_Demonstartion" ID="{4A358F4B-048E-4AB2-8794-6D6646466544}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
@@ -47,6 +48,14 @@
 						<ObjectRef Name="Start_With_Later_Music" ID="{B6791E7D-CD9D-4573-898B-F782D24B883D}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Early_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Music" ID="{8EE6056F-3C94-4F09-B3A1-F6FB88597EE3}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Main_Menu" ID="{8D0FB584-26C5-422A-BAFF-FEBBB8EDF5AD}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_MainMenu_Ambience" ID="{63724A01-082E-41AB-967B-B210B8FAC696}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_MainMenu_Ambience" ID="{27A6F4C4-A943-49EE-A4B0-CC4BAC5AC60C}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

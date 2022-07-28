@@ -184,6 +184,22 @@
 									</ReferenceList>
 									<ObjectLists/>
 								</AuxBus>
+								<AuxBus Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+											<ObjectRef Name="Large_Bright_Space_Stereo" ID="{550CC1B9-D5A2-4E69-BC22-8EF3C4F0645C}" WorkUnitID="{9D68BE5F-8CA6-43E0-BCE2-C7D59F63E582}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
+								<AuxBus Name="Reverb_Narrow_Hallway" ID="{9A9C7C93-38E6-413D-B5DC-8BC58FED30DE}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+											<ObjectRef Name="Lecture_Hall_Stereo" ID="{59FC4298-964A-41B4-9CE3-8D4514B508D1}" WorkUnitID="{9D68BE5F-8CA6-43E0-BCE2-C7D59F63E582}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
 							</ChildrenList>
 							<StateInfo>
 								<StateGroupList>
@@ -214,22 +230,6 @@
 							</StateInfo>
 							<ObjectLists/>
 						</Bus>
-						<AuxBus Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}">
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
-									<ObjectRef Name="Large_Bright_Space_Stereo" ID="{550CC1B9-D5A2-4E69-BC22-8EF3C4F0645C}" WorkUnitID="{9D68BE5F-8CA6-43E0-BCE2-C7D59F63E582}"/>
-								</Reference>
-							</ReferenceList>
-							<ObjectLists/>
-						</AuxBus>
-						<AuxBus Name="Reverb_Narrow_Hallway" ID="{9A9C7C93-38E6-413D-B5DC-8BC58FED30DE}">
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
-									<ObjectRef Name="Lecture_Hall_Stereo" ID="{59FC4298-964A-41B4-9CE3-8D4514B508D1}" WorkUnitID="{9D68BE5F-8CA6-43E0-BCE2-C7D59F63E582}"/>
-								</Reference>
-							</ReferenceList>
-							<ObjectLists/>
-						</AuxBus>
 						<Bus Name="Music" ID="{067CAF1B-46F1-465A-B403-B590DFA30A66}">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">

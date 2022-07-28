@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JELLY_IMPACT_CUBE = 1035938309U;
         static const AkUniqueID PLAY_LATER_MUSIC = 1010497036U;
+        static const AkUniqueID PLAY_MAINMENU_AMBIENCE = 599813207U;
         static const AkUniqueID PLAY_PLAYER_VOICE_DEATH = 908551697U;
         static const AkUniqueID PLAY_PLAYER_VOICE_JUMP = 712660841U;
         static const AkUniqueID PLAY_PODIUM_ACTIVATE = 1424347858U;
@@ -45,6 +46,7 @@ namespace AK
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
         static const AkUniqueID START_WITH_LATER_MUSIC = 1142029413U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
+        static const AkUniqueID STOP_MAINMENU_AMBIENCE = 2582003065U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_PUZZLE_TIME_RUNNING_OUT = 574883145U;
     } // namespace EVENTS
@@ -125,6 +127,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID MAIN_MENU = 2005704188U;
         static const AkUniqueID MUSIC_BANK = 1546231383U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS

@@ -494,6 +494,7 @@ IR Pre-delay: 8ms
 </Comment>
 							<PropertyList>
 								<Property Name="CenterLevel" Type="Real32" Value="-12"/>
+								<Property Name="DryLevel" Type="Real32" Value="0"/>
 								<Property Name="IRConvolutionSmooth" Type="Real32" Value="11"/>
 								<Property Name="IRConvolutionStop" Type="Real64" Value="1.49983182565789"/>
 								<Property Name="IRConvolutionThreshold" Type="Real32">
@@ -504,6 +505,7 @@ IR Pre-delay: 8ms
 								<Property Name="IRLevel" Type="Real32" Value="-23"/>
 								<Property Name="IRStretch" Type="Real32" Value="96"/>
 								<Property Name="PreDelay" Type="Real32" Value="11"/>
+								<Property Name="WetLevel" Type="Real32" Value="-18"/>
 							</PropertyList>
 							<ChildrenList>
 								<PluginMediaSource Name="AK Luna Studio" ID="{F0214EF8-B9F1-4513-9BF0-2C17DB934FD5}">

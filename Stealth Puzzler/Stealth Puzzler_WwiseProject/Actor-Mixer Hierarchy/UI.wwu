@@ -111,9 +111,19 @@
 				</Sound>
 				<RandomSequenceContainer Name="UI_Hover" ID="{DBA92E10-77FC-4621-9FDB-E3094D533A25}" ShortID="966093437">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>52</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6F65CE0F-CEA3-4884-81C0-977FB61BE0A0}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-21</Value>
+								<Value>-18</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -286,6 +296,36 @@
 					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="UI_NormalClick" ID="{446D1493-CDD0-4265-ACBD-2AAA2262A88D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="UI_Hover_02" ID="{6E8F92E6-DBE8-4C85-AC3E-25F675B43A13}" ShortID="380142284">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Hover_02" ID="{B7F8F642-9068-4754-A86B-BD4A27C983A6}">
+							<Language>SFX</Language>
+							<AudioFile>UI_Hover_02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="184841919"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Hover_02" ID="{B7F8F642-9068-4754-A86B-BD4A27C983A6}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

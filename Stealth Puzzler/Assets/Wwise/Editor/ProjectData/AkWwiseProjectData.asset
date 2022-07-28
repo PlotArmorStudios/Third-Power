@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585426416554775808
+    m_lastTime: -8585425775974775808
     List:
     - name: 3D Objects
       guid: 30978c6d834b0846be523a5ae92a1c82
@@ -219,10 +219,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Sfx
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
       - ElementName: Reverb_Large_Hall
         ObjectType: 1
         guid: 4f97a29268fe6a43952fbb87aa6de4af
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Large_Hall
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall
     - name: Reverb_Narrow_Hallway
       guid: 937c9c9ae6383d41b5dc8bc58fed30de
       id: 4103686030
@@ -236,10 +239,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Sfx
+        ObjectType: 2
+        guid: 4880dec47fca5741be39ade2a5fb531d
       - ElementName: Reverb_Narrow_Hallway
         ObjectType: 1
         guid: 937c9c9ae6383d41b5dc8bc58fed30de
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb_Narrow_Hallway
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Narrow_Hallway
     - name: Sfx
       guid: 4880dec47fca5741be39ade2a5fb531d
       id: 393239870
@@ -283,8 +289,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585426828714775808
+    m_lastTime: -8585425722334775808
     List:
+    - name: Main_Menu
+      guid: 84b50f8dc5262a42bafffebbb8edf5ad
+      id: 2005704188
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0d9cc7fe7c781e418be540ee4599b958
+      - ElementName: Main_Menu
+        ObjectType: 7
+        guid: 84b50f8dc5262a42bafffebbb8edf5ad
+      Path: SoundBanks\Default Work Unit\Main_Menu
     - name: Music_Bank
       guid: 14dead06e2bf4d41adb8d0948c04e230
       id: 1546231383
@@ -325,7 +345,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585426410794775808
+    m_lastTime: -8585425730314775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -588,6 +608,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_MainMenu_Ambience
+      guid: 014a72632e08ab41967bb210b8fac696
+      id: 599813207
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Play_MainMenu_Ambience
+        ObjectType: 3
+        guid: 014a72632e08ab41967bb210b8fac696
+      Path: Events\Default Work Unit\Play_MainMenu_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_player_death
       guid: c8cd879354f1234d94c4a8fd21bd1abe
       id: 1835085974
@@ -825,7 +862,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\Play_UI_Hover
       maxAttenuation: 0
       maxDuration: 1.367619
-      minDuration: 1.297755
+      minDuration: 1.3125
     - name: Play_UI_MainMenu
       guid: 0f4ea1410330164687bf93594af2ceeb
       id: 2882732749
@@ -948,6 +985,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_MainMenu_Ambience
+      guid: c4f4a62743a9ee49a4b0cc4bac5ac60c
+      id: 2582003065
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Stop_MainMenu_Ambience
+        ObjectType: 3
+        guid: c4f4a62743a9ee49a4b0cc4bac5ac60c
+      Path: Events\Default Work Unit\Stop_MainMenu_Ambience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Music
       guid: 6f05e68e943c094fb3a1f6fb88597ee3
       id: 2837384057
@@ -1593,7 +1647,7 @@ MonoBehaviour:
         guid: 7b17dfd2d303d340a4d7d840a35548dd
       Path: Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 3100000032000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
