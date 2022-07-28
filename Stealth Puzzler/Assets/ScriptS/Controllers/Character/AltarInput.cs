@@ -26,12 +26,6 @@ public class AltarInput : MonoBehaviour
 
     private Camera _mainCamera;
 
-    private void OnEnable()
-    {
-        Interact.action.started += OnInteract;
-        Interact.action.Disable();
-    }
-
     private void OnDisable()
     {
         Interact.action.started -= OnInteract;
@@ -45,8 +39,13 @@ public class AltarInput : MonoBehaviour
         DeactivateInteractInput();
     }
 
+    public void ActivateInteractInput()
+    {
+        Interact.action.started += OnInteract;
+        Interact.action.Enable();
+    }
 
-    private void DeactivateInteractInput()
+    public void DeactivateInteractInput()
     {
         Interact.action.Disable();
     }
@@ -110,4 +109,5 @@ public class AltarInput : MonoBehaviour
     {
         //Implement altar ui deactivate sound
     }
+
 }
