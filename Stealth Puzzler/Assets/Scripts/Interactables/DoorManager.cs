@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorManager : Obstacle
 {
     private Animator _animator;
+    [SerializeField] private bool _openOnLoadSave = true;
 
     private bool _isOpen { get; set; }
 
@@ -12,7 +13,7 @@ public class DoorManager : Obstacle
     {
         _animator = GetComponent<Animator>();
 
-        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID))
+        if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID) && _openOnLoadSave)
             OpenDoor();
     }
 
