@@ -1200,6 +1200,90 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
+								<MusicSegment Name="SP_Tension_Rips_65" ID="{1112D89D-19B1-43F9-B2D1-DC5805BC4128}" ShortID="186821194">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="16326.0208333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="SP_Tension_Rips_65" ID="{79DDC58E-D52D-40C6-8163-4FB988943D0C}" ShortID="610420301">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SP_Tension_Rips_65" ID="{8E913667-4357-419F-8E6F-CD9AEA9D5E43}">
+													<Language>SFX</Language>
+													<AudioFile>SP_Tension_Rips_65.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="513522960"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{746E7D87-05ED-48D5-8153-CCDBD4BACF2B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{E1D73490-29E7-42CD-840A-2FC4ABBC013E}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="SP_Tension_Rips_65" ID="{F60BB89C-197E-4DD3-A7A8-437C85B4B779}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16326.0208333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="SP_Tension_Rips_65" ID="{8E913667-4357-419F-8E6F-CD9AEA9D5E43}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{9B111DC7-A469-44F4-B534-34D7804073F3}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{97FB12F1-2CA7-469F-AAE0-783184A6E266}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="16326.0208333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
 						</Folder>
 						<MusicSegment Name="SP_BuildToTension_65" ID="{9BE274B6-5E85-4214-9230-6339EEDFDB1E}" ShortID="38727024">
@@ -1816,6 +1900,13 @@
 														<MediaID ID="419687084"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="SP_Glock_Crystal_Only_65" ID="{CB90C361-97BE-4AD9-B23B-5741CB5628C8}">
+													<Language>SFX</Language>
+													<AudioFile>SP_Glock_Crystal_Only_65.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="261623985"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
 												<MusicTransition Name="Root" ID="{6AC495DC-D1F3-4B9B-AD33-AE49BF3EE9E8}">
@@ -1897,6 +1988,29 @@
 													<Reference>
 														<Local>
 															<MusicTrackSequence Name="" ID="{F5DBB4DC-2B23-4E50-A039-AF37E9B7A22F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="SP_Glock_Crystal_Only_65" ID="{C6330886-7ED3-4A8B-9078-20084478A776}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="33230.7708333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="923.076923076923"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="SP_Glock_Crystal_Only_65" ID="{CB90C361-97BE-4AD9-B23B-5741CB5628C8}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C85ED37D-BC3B-4300-B199-36AD57AC941D}">
 																<ObjectLists/>
 															</MusicTrackSequence>
 														</Local>
@@ -2500,6 +2614,13 @@
 														<MediaID ID="382374005"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="SP_Tension_Rips_65" ID="{433668FE-3A5A-4776-9169-68489ACA18C7}">
+													<Language>SFX</Language>
+													<AudioFile>SP_Tension_Rips_65.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="513522960"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
 												<MusicTransition Name="Root" ID="{9D89D878-7C03-49B9-9DED-992DA0A0FF42}">
@@ -2643,6 +2764,28 @@
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{EE402BC0-FD21-4BA4-931B-5762A8A59723}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="SP_Tension_Rips_65" ID="{7F9A2AE7-D37A-4AE0-9D69-FB25CF613558}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16326.0208333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="SP_Tension_Rips_65" ID="{433668FE-3A5A-4776-9169-68489ACA18C7}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
@@ -2708,6 +2851,11 @@
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="9150.30833899432"/>
 								<Property Name="Tempo" Type="Real64" Value="65"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
