@@ -60,7 +60,6 @@ public class PauseMenu : MonoBehaviour
         {
             Resume();
             AkSoundEngine.SetState("Menu", "Menu_Inactive");
-            
         }
     }
 

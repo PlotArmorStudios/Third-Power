@@ -39,6 +39,12 @@ namespace Helpers
             SceneManager.LoadScene(currentScene.name);
         }
 
+        public void ResetLevel()
+        {
+            var currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
+        }
+        
         public void LoadScene(string scene)
         {
             Time.timeScale = 1f;
