@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         Instance.CurrentLevel = FindObjectOfType<LevelData>().LevelIndex;
         WwiseMusic.MusicInstance.PlayMusic();
+        AkSoundEngine.SetRTPCValue("LevelNumber", Instance.CurrentLevel);
     }
 
     public void AddObstacleBoolean(string obstacleID, bool isOpen)
