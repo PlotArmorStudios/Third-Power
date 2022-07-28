@@ -16,9 +16,19 @@ namespace UITrigger
         protected override void OnTriggerStay(Collider other)
         {
             base.OnTriggerStay(other);
+            var player = other.GetComponent<Controller>();
+            if (!player) return;
             
-            if (_dot > -0.5) _altar.Interact.action.Enable();
-            else _altar.Interact.action.Disable();
+            if (_dot > -0.5)
+            {
+                Debug.Log("Activate altar input");
+                _altar.ActivateInteractInput();
+            }
+            else
+            {
+                Debug.Log("DeActivate altar input");
+                _altar.DeactivateInteractInput();
+            }
         }
 
         private void OnDisable()
