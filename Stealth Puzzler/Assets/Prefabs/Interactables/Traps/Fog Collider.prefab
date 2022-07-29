@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8495275671373093502}
   - component: {fileID: 8495275671373093472}
-  - component: {fileID: 8495275671373093473}
+  - component: {fileID: 1438437014446748715}
   m_Layer: 0
   m_Name: Fog Collider (1)
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8495275671373093503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02860691, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.020960592, z: 1}
   m_Center: {x: 0, y: 0.07951966, z: 0}
---- !u!114 &8495275671373093473
+--- !u!114 &1438437014446748715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8495275671373093503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5624f1f0b2d42e096b98684ed88510b, type: 3}
+  m_Script: {fileID: 11500000, guid: 32d03fb63e384f31bc816995a6e1c465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8495275672392168188
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8495275672392168189}
   - component: {fileID: 8495275672392168163}
-  - component: {fileID: 8495275672392168162}
+  - component: {fileID: 2498434075961642790}
   m_Layer: 0
   m_Name: Fog Collider
   m_TagString: Untagged
@@ -105,7 +105,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.020960592, z: 1}
   m_Center: {x: 0, y: 0.07951966, z: 0}
---- !u!114 &8495275672392168162
+--- !u!114 &2498434075961642790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,6 +114,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8495275672392168188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5624f1f0b2d42e096b98684ed88510b, type: 3}
+  m_Script: {fileID: 11500000, guid: 32d03fb63e384f31bc816995a6e1c465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
