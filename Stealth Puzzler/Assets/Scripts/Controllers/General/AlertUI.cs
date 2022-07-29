@@ -35,6 +35,7 @@ public class AlertUI : MonoBehaviour
     {
         _playerHealth.OnDie -= SetInactiveAlertUI;
         _playerHealth.OnDie -= ToggleDeath;
+        SetInactiveAlertUI();
         AkSoundEngine.SetRTPCValue("DangerLevel", 0.0f);
     }
 
