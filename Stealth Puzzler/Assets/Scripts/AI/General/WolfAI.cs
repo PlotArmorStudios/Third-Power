@@ -25,10 +25,11 @@ public class WolfAI : MonoBehaviour
     private NavMeshAgent _navAgent;
     private Rigidbody _rigidbody;
 
-    //Patrolling
     [SerializeField] private float _homeRadius = 5f;
     [SerializeField] private float _minTimeToStayIdle;
     [SerializeField] private float _maxTimeToStayIdle;
+    [SerializeField] private float _minPatrolTime = 1f;
+    [SerializeField] private float _maxPatrolTime = 3f;
 
     private bool _patrolling;
     private float _timeToStayIdle;
@@ -169,7 +170,7 @@ public class WolfAI : MonoBehaviour
 
         if (_patrolTime >= _timeToPatrol)
         {
-            _timeToPatrol = Random.Range(2, 12);
+            _timeToPatrol = Random.Range(_minPatrolTime, _maxPatrolTime);
             if (_useWayPoints)
                 TriggerWaypointPatrol();
             else
