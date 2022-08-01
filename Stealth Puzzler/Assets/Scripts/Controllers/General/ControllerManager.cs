@@ -29,6 +29,8 @@ public class ControllerManager : MonoBehaviour
     public bool PlayerIsActive { get; set; }
     public bool SwitchingBlocked = false;
     private float _currentSwitchTime;
+    public static event Action OnSwitchToCube;
+    public static event Action OnSwitchToHuman;
 
     private void Awake()
     {
@@ -113,10 +115,12 @@ public class ControllerManager : MonoBehaviour
         {
             case ActiveController.Player:
                 currentControllerPosition = ForceCube();
+                OnSwitchToCube?.Invoke();
                 break;
             case ActiveController.Cube:
                 if (_cubeController.GetIsMoving()) return false;
                 currentControllerPosition = ForceHuman();
+                OnSwitchToHuman?.Invoke();
                 break;
         }
 
