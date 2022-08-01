@@ -53,21 +53,21 @@ public class CinemachineScroll : MonoBehaviour
     {
         if (_scroll < 0)
         {
-            if (_topScroll != _topRigMaxScroll)
+            if (_topScroll <= _topRigMaxScroll - _scrollSensitivity * Mathf.Abs(_scroll))
                 _topScroll += _scrollSensitivity * Mathf.Abs(_scroll);
-            if (_midScroll != _midRigMaxScroll)
+            if (_midScroll <= _midRigMaxScroll - _scrollSensitivity * Mathf.Abs(_scroll))
                 _midScroll += _scrollSensitivity * Mathf.Abs(_scroll);
-            if (_bottomScroll != _bottomRigMaxScroll)
+            if (_bottomScroll <= _bottomRigMaxScroll - _scrollSensitivity * Mathf.Abs(_scroll))
                 _bottomScroll += _scrollSensitivity * Mathf.Abs(_scroll);
         }
 
         if (_scroll > 0)
         {
-            if (_topScroll != _topRigMinScroll)
+            if (_topScroll >= _topRigMinScroll + _scrollSensitivity * Mathf.Abs(_scroll))
                 _topScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
-            if (_midScroll != _midRigMinScroll)
+            if (_midScroll >= _midRigMinScroll + _scrollSensitivity * Mathf.Abs(_scroll))
                 _midScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
-            if (_bottomScroll != _bottomRigMinScroll)
+            if (_bottomScroll >= _bottomRigMinScroll + _scrollSensitivity * Mathf.Abs(_scroll))
                 _bottomScroll -= _scrollSensitivity * Mathf.Abs(_scroll);
         }
 
