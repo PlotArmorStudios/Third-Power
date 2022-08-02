@@ -7,12 +7,14 @@ public class UIEndLogo : MonoBehaviour
     [SerializeField] private RectTransform _UICanvas;
     [SerializeField] private float _logoShowTime = 7f;
     [SerializeField] private string _sceneToLoadAfterLogo;
+    [SerializeField] private float _timeToReturnToMenuAfterLogo = 3f;
 
     private IEnumerator Start()
     {
         ShowUI();
         yield return new WaitForSeconds(_logoShowTime);
         HideUI();
+        yield return new WaitForSeconds(_timeToReturnToMenuAfterLogo);
         SceneLoader.Instance.LoadScene(_sceneToLoadAfterLogo);
     }
 
