@@ -250,4 +250,18 @@ public class ControllerManager : MonoBehaviour
                 fieldOfView.Target = _cubeController;
         }
     }
+
+    public Vector3 GetPlayerPosition()
+    {
+        Vector3 currentControllerPosition = Vector3.zero;
+        if (_activeController == ActiveController.Player)
+        {
+            currentControllerPosition = GetComponentInChildren<PlayerController>().transform.position;
+        }
+        else if (_activeController == ActiveController.Cube)
+        {
+            currentControllerPosition = GetComponentInChildren<CubeController>().transform.position;
+        }
+        return currentControllerPosition;
+    }
 }
