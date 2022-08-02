@@ -9,11 +9,11 @@ public class SetTransforms : MonoBehaviour
     [SerializeField] private bool _setLookAt;
     [SerializeField] private bool _setFollow;
 
-    private CinemachineFreeLook _vCam;
+    private CinemachineVirtualCamera _vCam;
 
     private IEnumerator Start()
     {
-        _vCam = GetComponent<CinemachineFreeLook>();
+        _vCam = GetComponent<CinemachineVirtualCamera>();
         yield return new WaitForSeconds(2f);
         if (_setLookAt)
             _vCam.m_LookAt = FindObjectOfType<CubeController>(true).gameObject.transform;
