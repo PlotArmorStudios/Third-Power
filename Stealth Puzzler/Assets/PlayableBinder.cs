@@ -21,6 +21,5 @@ public class PlayableBinder : MonoBehaviour
         Debug.Log("Tracks assigned");
         var controllerManger = FindObjectOfType<ControllerManager>();
         _playableDirector.SetGenericBinding(controllerTrack, controllerManger);
-
     }
 }

@@ -15,8 +15,9 @@ namespace Helpers
         [SerializeField] private bool _transitionToggle;
         [Min(0.001f)] [SerializeField] private float _transitionSpeed = 1f;
 
-        [Header("Loading Screen UI")] [SerializeField]
-        private Slider _loadingBar;
+        [Header("Loading Screen UI")] 
+        [SerializeField] private bool _useLoadingScreen = true;
+        [SerializeField] private Slider _loadingBar;
 
         [SerializeField] private Canvas _loadScreenCanvas;
 
@@ -28,6 +29,7 @@ namespace Helpers
 
         public static SceneLoader Instance;
 
+        
         private void Awake()
         {
             Instance = this;
@@ -80,12 +82,17 @@ namespace Helpers
 
         private void TransitionScene(string scene)
         {
-            if (!_isSceneLoading)
+            if (!_isSceneLoading && _useLoadingScreen)
             {
                 _isSceneLoading = true;
                 StartCoroutine(AsyncLoad(scene));
                 AkSoundEngine.PostEvent("stop_puzzle_time_running_out", gameObject);
-            } else
+            } 
+            else if (!_useLoadingScreen)
+            {
+                SceneManager.LoadScene(scene);
+            }
+            else if(_isSceneLoading)
             {
                 Debug.Log("Tried to load new scene but a scene load is already in progress.");
             }
