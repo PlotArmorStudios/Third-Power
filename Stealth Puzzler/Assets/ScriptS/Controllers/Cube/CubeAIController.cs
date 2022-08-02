@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CubeAIController : MonoBehaviour
 {
+    [Header ("Roll Control")]
     public float VerticalInput;
     [SerializeField] private float _rollSpeed = 5;
+    [SerializeField] private float _rollDelay;
 
     [Header("Grid Snapping")] [SerializeField]
     private float _snapSpeed = .3f;
@@ -15,6 +17,7 @@ public class CubeAIController : MonoBehaviour
     private Vector3 _newdirection;
 
     private Grid _grid;
+    private float _currentRollTime;
     public Drop Drop { get; set; }
 
     public float FallTimer { get; set; }
@@ -53,7 +56,16 @@ public class CubeAIController : MonoBehaviour
     {
         if (IsMoving) return;
 
-        if (VerticalInput >= 0.1f) Tumble(Vector3.right);
+        if (VerticalInput >= 0.1f)
+        {
+            _currentRollTime += Time.deltaTime;
+            if (_currentRollTime > _rollDelay)
+            {
+                Tumble(Vector3.right);
+                _currentRollTime = 0;
+            }
+        }
+
         if (IsFalling) FallTimer += Time.deltaTime;
         else FallTimer = 0;
     }
@@ -67,7 +79,7 @@ public class CubeAIController : MonoBehaviour
     {
         VerticalInput = 0;
     }
-    
+
     private void Tumble(Vector3 dir)
     {
         float largestDot = 0;
@@ -144,5 +156,10 @@ public class CubeAIController : MonoBehaviour
     public void StopCube()
     {
         VerticalInput = 0;
+    }
+
+    public void SetRollDelay(float delay)
+    {
+        _rollDelay = delay;
     }
 }

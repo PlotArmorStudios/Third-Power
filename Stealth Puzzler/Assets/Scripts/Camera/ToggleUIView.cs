@@ -6,6 +6,7 @@ public class ToggleUIView : MonoBehaviour
 {
     [SerializeField] private LayerMask _viewUIMask;
     [SerializeField] private LayerMask _viewNoUIMask;
+    [SerializeField] private LayerMask _cutsceneView;
 
     public void SwitchOnUI()
     {
@@ -15,5 +16,10 @@ public class ToggleUIView : MonoBehaviour
     public void SwitchOffUI()
     {
         Camera.main.cullingMask = _viewNoUIMask;
+    }
+
+    public void InitiateCutsceneView()
+    {
+        Camera.main.cullingMask = _cutsceneView;
     }
 }

@@ -206,6 +206,11 @@ public class ControllerManager : MonoBehaviour
         _cubeController.GetComponent<CubeAIController>().StopCube();
     }
 
+    public void SetCubeRollDelay(float delay)
+    {
+        _cubeController.GetComponent<CubeAIController>().SetRollDelay(delay);
+    }
+    
     #endregion
     //Y position after switch must be adjusted to avoid cube sticking in floor
     private void AdjustPosition(ref Vector3 position, GameObject activeController)
