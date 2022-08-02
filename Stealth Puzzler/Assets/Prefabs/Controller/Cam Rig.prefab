@@ -62,7 +62,6 @@ GameObject:
   - component: {fileID: 623622010709062600}
   - component: {fileID: 623622010709062603}
   - component: {fileID: 641806289}
-  - component: {fileID: 6225329186733826953}
   m_Layer: 23
   m_Name: CM FreeLook1
   m_TagString: Untagged
@@ -107,7 +106,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_CommonLens: 1
   m_Lens:
-    FieldOfView: 50
+    FieldOfView: 45
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -115,7 +114,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.598652, y: 1}
+    m_SensorSize: {x: 1.6003373, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -178,10 +177,10 @@ MonoBehaviour:
   m_BindingMode: 5
   m_SplineCurvature: 0
   m_Orbits:
-  - m_Height: 1.35
-    m_Radius: 4
-  - m_Height: 0.7
-    m_Radius: 4
+  - m_Height: 2.5
+    m_Radius: 0.8
+  - m_Height: 1.5
+    m_Radius: 3
   - m_Height: -0.5
     m_Radius: 4
   m_LegacyHeadingBias: 3.4028235e+38
@@ -211,13 +210,13 @@ MonoBehaviour:
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
   m_DistanceLimit: 293.4
-  m_MinimumOcclusionTime: 24
+  m_MinimumOcclusionTime: 0
   m_CameraRadius: 0.1
   m_Strategy: 0
   m_MaximumEffort: 1
-  m_SmoothingTime: 0.75
-  m_Damping: 3.79
-  m_DampingWhenOccluded: 5.32
+  m_SmoothingTime: 0.1
+  m_Damping: 1
+  m_DampingWhenOccluded: 1
   m_OptimalTargetDistance: 0
 --- !u!114 &623622010709062607
 MonoBehaviour:
@@ -263,15 +262,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scrollSensitivity: 1
-  _topRigMaxScroll: 10.1
-  _topRigMinScroll: 3.8
+  _topRigMaxScroll: 0.8
+  _topRigMinScroll: 0.8
   _midRigMaxScroll: 10.1
-  _midRigMinScroll: 3.8
+  _midRigMinScroll: 2.8
   _bottomRigMaxScroll: 10.1
   _bottomRigMinScroll: 3.8
   _zoomSpeed: 0.25
   _scrollInput: {fileID: -220115308505253418, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
+  _topHeightZoomSize: 0.75
+  _midHeightZoomSize: 0.5
 --- !u!114 &641806289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,23 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c92317592a9c964a9d17ebc3ca6f5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6225329186733826953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623622010709062605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ConfineMode: 1
-  m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
-  m_ConfineScreenEdges: 1
-  m_Damping: 0
 --- !u!1 &623622011667152610
 GameObject:
   m_ObjectHideFlags: 0
