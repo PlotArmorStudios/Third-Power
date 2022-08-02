@@ -105,9 +105,7 @@ public class ControllerManager : MonoBehaviour
     public bool SwitchControllers()
     {
         if (SwitchingBlocked)
-        {
             return false;
-        }
 
         var currentControllerPosition = Vector3.zero;
 
@@ -185,6 +183,30 @@ public class ControllerManager : MonoBehaviour
         return currentControllerPosition;
     }
 
+    #region Cutscene Methods
+
+    public void ForceCubeSwtich()
+    {
+        if (_activeController == ActiveController.Player)
+            SwitchControllers();
+        SwitchingBlocked = true;
+    }
+    public void EnableCubeAI()
+    {
+        _cubeController.GetComponent<CubeAIController>().enabled = true;
+        _cubeController.enabled = false;
+    }
+    public void StartCubeAI()
+    {
+        _cubeController.GetComponent<CubeAIController>().StartCube();
+    }
+
+    public void StopCubeAI()
+    {
+        _cubeController.GetComponent<CubeAIController>().StopCube();
+    }
+
+    #endregion
     //Y position after switch must be adjusted to avoid cube sticking in floor
     private void AdjustPosition(ref Vector3 position, GameObject activeController)
     {
