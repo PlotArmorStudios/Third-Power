@@ -36,9 +36,9 @@ RectTransform:
   m_Father: {fileID: 9049616828328569715}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 614, y: 199}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -406.1382, y: 199}
   m_SizeDelta: {x: 600, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750009267892379397
@@ -1008,6 +1008,7 @@ MonoBehaviour:
   _fadeScreen: {fileID: 8100600449376674273}
   _transitionToggle: 1
   _transitionSpeed: 3
+  _useLoadingScreen: 1
   _loadingBar: {fileID: 1750009267892379397}
   _loadScreenCanvas: {fileID: 2105812558757592594}
   _objectsToDisable: []

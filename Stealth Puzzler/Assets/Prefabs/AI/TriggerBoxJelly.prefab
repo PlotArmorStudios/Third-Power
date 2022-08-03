@@ -71,8 +71,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6486048745067535006}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0.83333325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -80,7 +80,7 @@ Transform:
   - {fileID: 6486048745630651275}
   m_Father: {fileID: 6486048746804382717}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!54 &6486048745067534998
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,8 +108,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6582699, y: 1.2237887, z: 1.6868912}
-  m_Center: {x: 0, y: 0.58353305, z: 0.02862066}
+  m_Size: {x: 1.5524187, y: 1.2237887, z: 1.5587554}
+  m_Center: {x: -0.0027861595, y: 0.58353305, z: 0.042548537}
 --- !u!114 &6486048745067534997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +256,7 @@ MonoBehaviour:
   _jellyController: {fileID: 6486048745067535006}
   _jellyRb: {fileID: 6486048745067534998}
   _initialForceMultiplier: 500
+  _flipTime: 0.6
 --- !u!1001 &736400066890611445
 PrefabInstance:
   m_ObjectHideFlags: 0
