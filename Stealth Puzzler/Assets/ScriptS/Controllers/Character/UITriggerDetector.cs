@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering;
 
 namespace UITrigger
@@ -11,6 +12,9 @@ namespace UITrigger
         
         private GameObject _uiObject;
         protected float _dot;
+
+        [SerializeField] private UnityEvent _triggerEnter;
+        [SerializeField] private UnityEvent _triggerExit;
 
         private void OnValidate()
         {
@@ -33,6 +37,7 @@ namespace UITrigger
         private void OnTriggerExit(Collider other)
         {
             _uiObject.gameObject.SetActive(false);
+            _triggerExit.Invoke();
         }
 
         protected virtual void OnTriggerStay(Collider other)
@@ -50,6 +55,11 @@ namespace UITrigger
 
             if (_dot > -0.5) _uiObject.gameObject.SetActive(true);
             else _uiObject.gameObject.SetActive(false);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            _triggerEnter?.Invoke();
         }
     }
 }
