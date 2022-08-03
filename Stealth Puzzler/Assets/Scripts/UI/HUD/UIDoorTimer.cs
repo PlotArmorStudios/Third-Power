@@ -45,8 +45,10 @@ public class UIDoorTimer : MonoBehaviour
 
     private void ResetDots()
     {
+        StopAllCoroutines();
         foreach (var _dot in _timerDots)
         {
+            LeanTween.cancel(_dot.gameObject);
             _dot.gameObject.transform.localScale = Vector3.one * _initialDotScale;
         }
     }
