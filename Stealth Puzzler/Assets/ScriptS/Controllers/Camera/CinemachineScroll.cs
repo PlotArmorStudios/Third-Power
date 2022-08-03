@@ -23,7 +23,7 @@ public class CinemachineScroll : MonoBehaviour
 
     [SerializeField] private float _bottomRigMinScroll = 4f;
 
-    [SerializeField] private float _zoomSpeed = 0.25f;
+    
 
     private CinemachineFreeLook _vCam;
     private GameInput _input;
@@ -40,8 +40,8 @@ public class CinemachineScroll : MonoBehaviour
     [SerializeField] private float _topHeightZoomSize = 0.75f;
     [SerializeField] private float _midHeightZoomSize = 0.5f;
 
-    [SerializeField] private float _zoomRepeatRate = 0.25f;
-    [SerializeField] private int _timeUntilRepeat = 250;
+    [SerializeField] private float _zoomSpeed = 0.1f;
+    [SerializeField] private int _timeUntilRepeat = 100;
 
     private void Awake()
     {
@@ -60,16 +60,6 @@ public class CinemachineScroll : MonoBehaviour
         _scrollInput.action.performed -= ReadScrollValue;
     }
 
-    private void LateUpdate()
-    {
-        
-        //_timeUntilRepeat -= Time.deltaTime;
-        //if (_timeUntilRepeat < 0)
-        //{
-        //    Zoom();
-        //    _timeUntilRepeat = _zoomRepeatRate;
-        //}
-    }
     private async void ReadScrollValue(InputAction.CallbackContext context)
     {
         _scroll = context.ReadValue<float>();
@@ -78,19 +68,6 @@ public class CinemachineScroll : MonoBehaviour
             Zoom();
             await Task.Delay(_timeUntilRepeat);
         }
-        
-        //float z = context.ReadValue<float>();
-        //if (z > 0)
-        //{
-        //    _scroll = z;
-        //    Zoom();
-        //}
-
-        //else if (z < 0)
-        //{
-        //    _scroll = z;
-        //    Zoom();
-        //}
     }
     private void Start()
     {
