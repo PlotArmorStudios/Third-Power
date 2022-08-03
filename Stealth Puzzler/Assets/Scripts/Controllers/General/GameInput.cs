@@ -102,11 +102,11 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Scroll"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""bb3641f5-ea69-4ba2-b099-72716a0b3d16"",
+                    ""id"": ""3b65291e-3565-48d9-805c-0f1a1bae6af3"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Drop"",
@@ -292,7 +292,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""id"": ""3d4c5df5-082a-42c9-b8db-ad68ef5f533d"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=0.8,y=0.5)"",
                     ""groups"": ""Keyboard&Mouse;Touch"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -303,7 +303,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": ""StickDeadzone,ScaleVector2(x=16,y=5)"",
                     ""groups"": "";Gamepad"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -374,50 +374,6 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8e578ec3-1e7f-492c-9434-a2c082796374"",
-                    ""path"": ""<Mouse>/scroll/y"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=0.01)"",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Scroll"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""c07de70f-98a4-4283-a743-8806954dfb90"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=0.1)"",
-                    ""groups"": """",
-                    ""action"": ""Scroll"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""0c694aac-1b86-4234-9b9f-0ace29673957"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Scroll"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""9762ad32-a6bc-4d28-9cb1-314ff9786241"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Scroll"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -616,6 +572,50 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""action"": ""Airborne Switch Controller"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6f22e65-78df-4067-ba18-dd9f7cb758e5"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""e590e0f9-81d0-4609-a555-6f71cd748e4a"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""f5277653-6727-4962-8e5d-de1a3b623136"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""98e953ac-3d3c-4227-8c79-9fab56dc73d6"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
