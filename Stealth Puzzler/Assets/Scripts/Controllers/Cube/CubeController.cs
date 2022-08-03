@@ -206,7 +206,6 @@ public class CubeController : Controller
             }
         }
 
-
         _newdirection = _directions[closestAxis];
 
         if (_touchingWallNorth && _newdirection == Vector3.forward) return;
