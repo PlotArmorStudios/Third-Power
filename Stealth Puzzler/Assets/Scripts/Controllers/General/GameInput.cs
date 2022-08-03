@@ -292,7 +292,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""id"": ""3d4c5df5-082a-42c9-b8db-ad68ef5f533d"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=0.8,y=0.5)"",
                     ""groups"": ""Keyboard&Mouse;Touch"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
