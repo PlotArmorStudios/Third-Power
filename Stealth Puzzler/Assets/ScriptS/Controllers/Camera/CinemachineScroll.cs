@@ -2,6 +2,7 @@ using Cinemachine;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Threading.Tasks;
 
 public class CinemachineScroll : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class CinemachineScroll : MonoBehaviour
     [SerializeField] private float _topHeightZoomSize = 0.75f;
     [SerializeField] private float _midHeightZoomSize = 0.5f;
 
+    [SerializeField] private float _zoomRepeatRate = 0.25f;
+    [SerializeField] private int _timeUntilRepeat = 250;
+
     private void Awake()
     {
         _topScroll = _topRigMinScroll;
@@ -55,20 +59,38 @@ public class CinemachineScroll : MonoBehaviour
     {
         _scrollInput.action.performed -= ReadScrollValue;
     }
-    private void ReadScrollValue(InputAction.CallbackContext context)
+
+    private void LateUpdate()
     {
-        float z = context.ReadValue<float>();
-        if (z > 0)
+        
+        //_timeUntilRepeat -= Time.deltaTime;
+        //if (_timeUntilRepeat < 0)
+        //{
+        //    Zoom();
+        //    _timeUntilRepeat = _zoomRepeatRate;
+        //}
+    }
+    private async void ReadScrollValue(InputAction.CallbackContext context)
+    {
+        _scroll = context.ReadValue<float>();
+        while (_scroll != 0)
         {
-            _scroll = z;
-            ReadScrollInput();
+            Zoom();
+            await Task.Delay(_timeUntilRepeat);
         }
-            
-        else if (z < 0)
-        {
-            _scroll = z;
-            ReadScrollInput();
-        }
+        
+        //float z = context.ReadValue<float>();
+        //if (z > 0)
+        //{
+        //    _scroll = z;
+        //    Zoom();
+        //}
+
+        //else if (z < 0)
+        //{
+        //    _scroll = z;
+        //    Zoom();
+        //}
     }
     private void Start()
     {
@@ -77,9 +99,8 @@ public class CinemachineScroll : MonoBehaviour
         _midHeight = _vCam.m_Orbits[1].m_Height;
     }
 
-    private void ReadScrollInput()
+    private void Zoom()
     {
-        //var _tempTopVar = _topScroll;
         var _tempMidRadiusVar = _midScroll;
         var _tempBottomRadiusVar = _bottomScroll;
 
@@ -89,10 +110,8 @@ public class CinemachineScroll : MonoBehaviour
         {
             if (_midScroll + _scrollSensitivity <= _midRigMaxScroll)
             {
-                //_topScroll += _scrollSensitivity;
                 _midScroll += _scrollSensitivity;
                 _bottomScroll += _scrollSensitivity;
-                //LeanTween.value(_vCam.gameObject, SetTopCallback, _tempTopVar, _topScroll, _zoomSpeed);
                 LeanTween.value(_vCam.gameObject, SetMidRadiusCallback, _tempMidRadiusVar, _midScroll, _zoomSpeed);
                 LeanTween.value(_vCam.gameObject, SetBotRadiusCallback, _tempBottomRadiusVar, _bottomScroll, _zoomSpeed);
 
@@ -107,10 +126,8 @@ public class CinemachineScroll : MonoBehaviour
         {
             if (_midScroll - _scrollSensitivity >= _midRigMinScroll)
             {
-                //_topScroll -= _scrollSensitivity;
                 _midScroll -= _scrollSensitivity;
                 _bottomScroll -= _scrollSensitivity;
-                //LeanTween.value(_vCam.gameObject, SetTopCallback, _tempTopVar, _topScroll, _zoomSpeed);
                 LeanTween.value(_vCam.gameObject, SetMidRadiusCallback, _tempMidRadiusVar, _midScroll, _zoomSpeed);
                 LeanTween.value(_vCam.gameObject, SetBotRadiusCallback, _tempBottomRadiusVar, _bottomScroll, _zoomSpeed);
 
@@ -121,11 +138,6 @@ public class CinemachineScroll : MonoBehaviour
             }
         }
     }
-
-    //private void SetTopCallback(float c)
-    //{
-    //    _vCam.m_Orbits[0].m_Radius = c;
-    //}
     private void SetMidRadiusCallback(float c)
     {
         _vCam.m_Orbits[1].m_Radius = c;
