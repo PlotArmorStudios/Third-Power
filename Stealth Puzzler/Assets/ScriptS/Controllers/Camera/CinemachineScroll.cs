@@ -45,9 +45,7 @@ public class CinemachineScroll : MonoBehaviour
 
     private void Awake()
     {
-        _topScroll = _topRigMinScroll;
-        _midScroll = _midRigMinScroll;
-        _bottomScroll = _bottomRigMinScroll;
+
     }
 
     private void OnEnable()
@@ -74,6 +72,10 @@ public class CinemachineScroll : MonoBehaviour
         _vCam = GetComponent<CinemachineFreeLook>();
         _topHeight = _vCam.m_Orbits[0].m_Height;
         _midHeight = _vCam.m_Orbits[1].m_Height;
+
+        _topScroll = _vCam.m_Orbits[0].m_Radius;
+        _midScroll = _vCam.m_Orbits[1].m_Radius;
+        _bottomScroll = _vCam.m_Orbits[2].m_Radius;
     }
 
     private void Zoom()
