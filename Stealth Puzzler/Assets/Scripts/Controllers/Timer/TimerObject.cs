@@ -14,6 +14,8 @@ public class TimerObject : MonoBehaviour
     
     public void TriggerTimer()
     {
+        //insert code to stop all timer sounds
+        StopAllCoroutines();
         StartCoroutine(StartTimer());
         if (_IsOpeningDoor)
         {
