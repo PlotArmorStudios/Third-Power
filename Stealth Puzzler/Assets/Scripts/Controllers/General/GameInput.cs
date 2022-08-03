@@ -103,7 +103,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""name"": ""Scroll"",
                     ""type"": ""PassThrough"",
                     ""id"": ""3b65291e-3565-48d9-805c-0f1a1bae6af3"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -303,7 +303,7 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": ""StickDeadzone,ScaleVector2(x=16,y=5)"",
                     ""groups"": "";Gamepad"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
