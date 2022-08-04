@@ -15,8 +15,8 @@ public class DisplayDeviceUI : MonoBehaviour
             (eventPtr, device) =>
             {
             // Ignore anything that isn't a state event.
-                if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
-                    return;
+                //if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
+                    //return;
                 var gamepad = device as Gamepad;
                 var keyboard = device as Keyboard;
                 if (gamepad != null)
