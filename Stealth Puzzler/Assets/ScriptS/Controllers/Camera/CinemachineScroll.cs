@@ -23,10 +23,7 @@ public class CinemachineScroll : MonoBehaviour
 
     [SerializeField] private float _bottomRigMinScroll = 4f;
 
-    
-
     private CinemachineFreeLook _vCam;
-    private GameInput _input;
     private float _scroll;
 
     private float _topScroll;
@@ -42,13 +39,6 @@ public class CinemachineScroll : MonoBehaviour
 
     [SerializeField] private float _zoomSpeed = 0.1f;
     [SerializeField] private int _timeUntilRepeat = 100;
-
-    private void Awake()
-    {
-        _topScroll = _topRigMinScroll;
-        _midScroll = _midRigMinScroll;
-        _bottomScroll = _bottomRigMinScroll;
-    }
 
     private void OnEnable()
     {
@@ -74,6 +64,10 @@ public class CinemachineScroll : MonoBehaviour
         _vCam = GetComponent<CinemachineFreeLook>();
         _topHeight = _vCam.m_Orbits[0].m_Height;
         _midHeight = _vCam.m_Orbits[1].m_Height;
+
+        _topScroll = _vCam.m_Orbits[0].m_Radius;
+        _midScroll = _vCam.m_Orbits[1].m_Radius;
+        _bottomScroll = _vCam.m_Orbits[2].m_Radius;
     }
 
     private void Zoom()
