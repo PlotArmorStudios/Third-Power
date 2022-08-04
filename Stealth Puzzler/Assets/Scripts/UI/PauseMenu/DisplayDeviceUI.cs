@@ -19,12 +19,13 @@ public class DisplayDeviceUI : MonoBehaviour
                     //return;
                 var gamepad = device as Gamepad;
                 var keyboard = device as Keyboard;
+                var mouse = device as Mouse;
                 if (gamepad != null)
                 {
                     _keyboardControls.SetActive(false);
                     _gamepadControls.SetActive(true);
                 }
-                if (keyboard != null)
+                if (keyboard != null || mouse != null)
                 {
                     _gamepadControls.SetActive(false);
                     _keyboardControls.SetActive(true);
