@@ -25,4 +25,13 @@ public class ManageGraphics : MonoBehaviour
     {
         LeanTween.alphaCanvas(_canvasGroup, 0, _tweenTime).setIgnoreTimeScale(true);
     }
+
+    public void FlyInTop(CanvasGroup _canvasGroup, Transform _center)
+    {
+        LeanTween.move(_canvasGroup.gameObject, _center.position, _tweenTime).setIgnoreTimeScale(true); ;
+    }
+    public void FlyOutBottom(CanvasGroup _canvasGroup, Transform _offScreen)
+    {
+        LeanTween.move(_canvasGroup.gameObject, _offScreen.position, _tweenTime).setIgnoreTimeScale(true); ;
+    }
 }
