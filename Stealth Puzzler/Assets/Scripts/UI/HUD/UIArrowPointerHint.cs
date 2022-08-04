@@ -12,6 +12,7 @@ public class UIArrowPointerHint : MonoBehaviour
 
     public void PlayAnimation() 
     {
+        LeanTween.cancel(this.gameObject);
         LeanTween.alpha(this.gameObject, 1, 0.75f);
         LeanTween.move(this.gameObject, _position2.position, _halfCycleTime).setFrom(_position1.position).setLoopPingPong().setRepeat(-1);
     }
