@@ -1,37 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.UI;
+
 
 public class ManageGraphics : MonoBehaviour
 {
-    private float _tweenTime = .25f;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _keyboardControls;
+    [SerializeField] private GameObject _gamepadControls;
+    private void OnEnable()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void FadeImageIn(CanvasGroup _canvasGroup)
-    {
-        LeanTween.alphaCanvas(_canvasGroup, 1, _tweenTime).setIgnoreTimeScale(true);
-    }
-    public void FadeImageOut(CanvasGroup _canvasGroup)
-    {
-        LeanTween.alphaCanvas(_canvasGroup, 0, _tweenTime).setIgnoreTimeScale(true);
-    }
-
-    public void FlyInTop(CanvasGroup _canvasGroup, Transform _center)
-    {
-        LeanTween.move(_canvasGroup.gameObject, _center.position, _tweenTime).setIgnoreTimeScale(true); ;
-    }
-    public void FlyOutBottom(CanvasGroup _canvasGroup, Transform _offScreen)
-    {
-        LeanTween.move(_canvasGroup.gameObject, _offScreen.position, _tweenTime).setIgnoreTimeScale(true); ;
+        InputSystem.onEvent +=
+            (eventPtr, device) =>
+            {
+            // Ignore anything that isn't a state event.
+                if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
+                    return;
+                var gamepad = device as Gamepad;
+                var keyboard = device as Keyboard;
+                if (gamepad != null)
+                {
+                    _keyboardControls.SetActive(false);
+                    _gamepadControls.SetActive(true);
+                }
+                if (keyboard != null)
+                {
+                    _gamepadControls.SetActive(false);
+                    _keyboardControls.SetActive(true);
+                }
+            };
     }
 }
