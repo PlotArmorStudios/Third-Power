@@ -49,6 +49,12 @@ namespace AK
         static const AkUniqueID STOP_MAINMENU_AMBIENCE = 2582003065U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_PUZZLE_TIME_RUNNING_OUT = 574883145U;
+        static const AkUniqueID VO1 = 543693981U;
+        static const AkUniqueID VO2 = 543693982U;
+        static const AkUniqueID VO3 = 543693983U;
+        static const AkUniqueID VO4 = 543693976U;
+        static const AkUniqueID VO5 = 543693977U;
+        static const AkUniqueID VO6 = 543693978U;
     } // namespace EVENTS
 
     namespace STATES
@@ -130,6 +136,7 @@ namespace AK
         static const AkUniqueID MAIN_MENU = 2005704188U;
         static const AkUniqueID MUSIC_BANK = 1546231383U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID VOS = 543694047U;
     } // namespace BANKS
 
     namespace BUSSES
