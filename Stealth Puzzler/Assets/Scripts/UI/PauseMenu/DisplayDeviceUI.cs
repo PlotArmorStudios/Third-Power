@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.UI;
 
-
-public class ManageGraphics : MonoBehaviour
+public class DisplayDeviceUI : MonoBehaviour
 {
     [SerializeField] private GameObject _keyboardControls;
     [SerializeField] private GameObject _gamepadControls;
