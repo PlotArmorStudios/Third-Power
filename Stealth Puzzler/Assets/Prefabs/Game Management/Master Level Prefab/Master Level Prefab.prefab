@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5426489256087273539}
   - component: {fileID: 8167827859160079647}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Gamepad Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,12 +88,12 @@ GameObject:
   - component: {fileID: 6926118823037191301}
   - component: {fileID: 4720590351938381223}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Keyboard Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7405618341367803097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -931,6 +931,7 @@ GameObject:
   - component: {fileID: 5353987118820779786}
   - component: {fileID: 3087467422249834514}
   - component: {fileID: 996308577287259096}
+  - component: {fileID: 8376473729247738376}
   m_Layer: 5
   m_Name: UICubeCanvas
   m_TagString: Untagged
@@ -1033,6 +1034,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UICanvas: {fileID: 1308502598866490951}
+--- !u!114 &8376473729247738376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648197065146108323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9430838fc55ea743a75c2b3b0f63ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyboardControls: {fileID: 1246458273754495675}
+  _gamepadControls: {fileID: 556703464960552903}
 --- !u!1 &7887199913072454220
 GameObject:
   m_ObjectHideFlags: 0
