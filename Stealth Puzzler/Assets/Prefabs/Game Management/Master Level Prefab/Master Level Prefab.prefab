@@ -1732,17 +1732,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 6666214799983420318}
-    - target: {fileID: 6791301911024737411, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791301911024737411, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8503215343022578605}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -1772,7 +1762,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 6139380764701273498}
+      objectReference: {fileID: 6961877492700581909}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1782,7 +1772,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 6139380764701273498}
+      objectReference: {fileID: 6961877492700581909}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
@@ -1939,9 +1929,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 92.88358
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6791301911024737414, guid: 6666ee167a632fd4ba8da6ad3ba0cb58, type: 3}
-    - {fileID: 6791301911024737411, guid: 6666ee167a632fd4ba8da6ad3ba0cb58, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6666ee167a632fd4ba8da6ad3ba0cb58, type: 3}
 --- !u!1 &1058077749964186155 stripped
 GameObject:
@@ -1987,56 +1975,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 216233275933760828}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6719293815152771516 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6791301911024737408, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+--- !u!114 &6961877492700581909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7178097570195049769, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
     type: 3}
   m_PrefabInstance: {fileID: 216233275933760828}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6139380764701273498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6719293815152771516}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57009ee6b106a8d4c96bacc2da1274ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onHoverSize: 1.2
-  _defaultSize: 1
---- !u!114 &6666214799983420318
+--- !u!114 &8503215343022578605 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8431101657510938257, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+    type: 3}
+  m_PrefabInstance: {fileID: 216233275933760828}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6719293815152771516}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6a18f9327ffa9046953ffe87ea6aa3f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!224 &8937012868785496683 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9153164776026373975, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
