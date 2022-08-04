@@ -621,6 +621,118 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="VOs" ID="{8C7BF685-5724-4891-B411-ADC90C5BB670}" ShortID="274669571">
+					<ChildrenList>
+						<Event Name="VO1" ID="{518C028D-4454-4193-AEF3-403E91E77437}">
+							<ChildrenList>
+								<Action Name="" ID="{CC1885FD-2146-466C-9598-AF5A9B414DBC}" ShortID="632487055">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO1_You" ID="{59833AF5-B160-4258-AF0B-189EF0AD7F1F}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{21845B4F-8CBB-4C20-9169-2310B464E800}" ShortID="900947162">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO1_You_Delay" ID="{D80FF229-140A-4F8D-A9BF-1A68FB580834}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="VO2" ID="{B22F84D2-B75D-4DE8-BB85-7CEF63D4E643}">
+							<ChildrenList>
+								<Action Name="" ID="{54807560-54AC-497D-96AE-22FFC15097F4}" ShortID="732857773">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO2_Creation" ID="{40F56989-09C8-4E90-9D2A-7D8B6CFF2C56}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{50290E53-7E52-47DF-ABE2-92DEB2BD8EA8}" ShortID="775431059">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO2_Creation_Delay" ID="{D3BC4689-9DB8-4A04-A39B-CC5AD318EE2B}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="VO3" ID="{AC40CE59-946B-4356-8801-CFE2CE40197A}">
+							<ChildrenList>
+								<Action Name="" ID="{98B761E3-1258-48A0-AF1A-2D3DF4E0CC3B}" ShortID="735142774">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO3_Celebration" ID="{EB1E33E2-C1E9-42E0-BE83-F2ECB9C5D0F9}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F92123ED-D4BD-4A8B-BD1B-04A99DBC2035}" ShortID="761355129">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO3_Celebration_Delay" ID="{2E4FF93C-C9CF-422C-A523-7F27F9CB4323}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="VO4" ID="{0D744F92-B94B-40EC-A6BF-EFF5FFAEA6C1}">
+							<ChildrenList>
+								<Action Name="" ID="{E388F20A-FB1F-4623-8A29-C13C784961A8}" ShortID="495555817">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO4_Consuming" ID="{C7D7A788-1FD1-472A-918B-5CFBB1148FDF}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{695BAAFB-6360-4F1C-A9F1-3D37719964CF}" ShortID="1069261470">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO4_Consuming_Delay" ID="{A746CD2B-F50E-41D7-93FD-0DC7256A89F1}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="VO5" ID="{5913639B-AEB8-45FD-8EDB-74E5A7484AB9}">
+							<ChildrenList>
+								<Action Name="" ID="{335939F5-5402-4579-916E-6D4593C9A0CC}" ShortID="948404621">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO5_Imprisonment" ID="{FDA5D846-98D2-4C9A-BF62-0A035DD6160E}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9619F86B-98FC-42E5-9BF8-F75FB17BE6FB}" ShortID="1043652410">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO5_Imprisonment_Delay" ID="{DE41EA37-C3C6-4FC2-A607-E2B7DF7299A5}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="VO6" ID="{FD3B884D-3A7E-465D-8AB7-715F6E2F1DE2}">
+							<ChildrenList>
+								<Action Name="" ID="{BBBC95E0-700C-4DA8-8EBC-24E279D2FDBA}" ShortID="538260037">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO6_FinalPlea" ID="{66A28A1A-2632-4CE9-8930-F707866F0D5D}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B59073E6-48BF-42BB-8364-513A753B2654}" ShortID="848481235">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TP_VO6_FinalPlea_Delay" ID="{A07C4780-749D-4C80-A14B-C6B130C8DCCB}" WorkUnitID="{1457D35E-5FB4-41D4-97E0-D438C94590EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
