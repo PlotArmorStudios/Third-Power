@@ -33,14 +33,12 @@ public class SwitchDeviceUI : MonoBehaviour
 
         if (gamepad != null)
         {
-            print("gamepad");
             _keyboardControls.SetActive(false);
             _gamepadControls.SetActive(true);
         }
 
         if ((keyboard != null || mouse != null))
         {
-            print("keyboard and mouse");
             _gamepadControls.SetActive(false);
             _keyboardControls.SetActive(true);
         }
