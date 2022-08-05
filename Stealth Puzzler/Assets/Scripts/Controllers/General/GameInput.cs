@@ -1282,6 +1282,17 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                     ""action"": ""ExitMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c36b60f-1bc2-4e8b-b6b4-19c0d2d119ce"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ExitMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
