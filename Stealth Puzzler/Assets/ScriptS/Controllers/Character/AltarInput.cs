@@ -25,6 +25,8 @@ public class AltarInput : MonoBehaviour
     [SerializeField] private InputActionReference _resume;
     [SerializeField] private InputActionReference _exitAltarPopup;
 
+    private bool IsActive = false;
+
     private RectTransform _altarRectTransform;
 
     private Camera _mainCamera;
@@ -41,7 +43,7 @@ public class AltarInput : MonoBehaviour
     }
     private void CloseAltarUI(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && IsActive)
         {
             DeactivateAltarUi();
         }
@@ -49,6 +51,7 @@ public class AltarInput : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext obj)
     {
+        IsActive = true;
         _pause.action.Disable();
         _resume.action.Disable();
         Debug.Log("Interacting");
@@ -89,6 +92,7 @@ public class AltarInput : MonoBehaviour
 
     public void DeactivateAltarUi()
     {
+        IsActive = false;
         OnDeactivateUI?.Invoke();
         _mainCamera = Camera.main;
         _mainCamera.cullingMask = _viewUIMask;
