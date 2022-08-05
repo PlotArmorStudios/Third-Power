@@ -17,24 +17,21 @@ public class SwitchDeviceUI : MonoBehaviour
             (eventPtr, device) =>
             {
             // Ignore anything that isn't a state event.
-                //if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
-                    //return;
+                if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
+                    return;
                 var gamepad = device as Gamepad;
                 var keyboard = device as Keyboard;
                 var mouse = device as Mouse;
                 
-                
-                if (gamepad != null && _lastInput == gamepad)
+                if (gamepad != null)
                 {
                     print("gamepad");
-                    _lastInput = gamepad;
                     _keyboardControls.SetActive(false);
                     _gamepadControls.SetActive(true);
                 }
-                if ((keyboard != null || mouse != null) && (_lastInput == keyboard || _lastInput == mouse))
+                if ((keyboard != null || mouse != null))
                 {
                     print("keyboard and mouse");
-                    _lastInput = keyboard;
                     _gamepadControls.SetActive(false);
                     _keyboardControls.SetActive(true);
                 }
