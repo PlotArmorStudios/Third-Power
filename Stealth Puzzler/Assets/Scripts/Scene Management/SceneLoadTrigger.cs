@@ -17,6 +17,8 @@ public class SceneLoadTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        var player = other.gameObject.GetComponent<PlayerController>();
+        if (!player) return;
         _sceneLoader.LoadScene(_sceneToLoad);
     }
 }
