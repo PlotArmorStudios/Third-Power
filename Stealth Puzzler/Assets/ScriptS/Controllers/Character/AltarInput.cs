@@ -21,6 +21,8 @@ public class AltarInput : MonoBehaviour
     [SerializeField] private LayerMask _noViewUIMask;
     
     public InputActionReference Interact;
+    [SerializeField] private InputActionReference _pause;
+    [SerializeField] private InputActionReference _resume;
 
     private RectTransform _altarRectTransform;
 
@@ -33,10 +35,13 @@ public class AltarInput : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext obj)
     {
+        _pause.action.Disable();
+        _resume.action.Disable();
         Debug.Log("Interacting");
         PlayAltarEngageSound();
-        StartCoroutine(ActivateAltarUI());
         DeactivateInteractInput();
+        StopAllCoroutines();
+        StartCoroutine(ActivateAltarUI());
     }
 
     public void ActivateInteractInput()
@@ -52,12 +57,11 @@ public class AltarInput : MonoBehaviour
 
     private IEnumerator ActivateAltarUI()
     {
+
         OnActivateUI?.Invoke();
         OnDeactivateCamInput?.Invoke();
-        
         _mainCamera = Camera.main;
         _mainCamera.cullingMask = _noViewUIMask;
-        
         PauseMenu.PlayerInput.SwitchCurrentActionMap("UI");
         _boxVolume.SetActive(true);
         _altarTriggerBox.SetActive(false);
@@ -65,6 +69,7 @@ public class AltarInput : MonoBehaviour
         yield return new WaitForSeconds(_timeToActivateUI);
         _altarUI.gameObject.SetActive(true);
         PlayActivateUISound();
+        
     }
 
 
@@ -78,6 +83,7 @@ public class AltarInput : MonoBehaviour
         _boxVolume.SetActive(false);
         _altarTriggerBox.SetActive(true);
         PlayAltarDisengageSound();
+        StopAllCoroutines();
         StartCoroutine(DeactivateUI());
     }
 
