@@ -77,6 +77,7 @@ public class BlueEye : MonoBehaviour
     }
     public IEnumerator OscillateEmission()
     {
+        Deactivate();
         float timeElasped = 0f;
         float currentEmission = _emissionMin;
 
