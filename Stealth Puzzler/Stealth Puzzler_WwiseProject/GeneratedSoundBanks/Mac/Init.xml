@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3197032043">
+		<SoundBank Id="1355168291" Language="SFX" Hash="667627261">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -17,6 +17,16 @@
 				<AuxBus Id="4103686030" Name="Reverb_Narrow_Hallway" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Narrow_Hallway"/>
 				<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
 			</IncludedAuxBusses>
+			<ExcludedMemoryFiles>
+				<File Id="162018684" Language="SFX">
+					<ShortName>AK_Factory_IR\Halls\AK Berlin Teldex.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AK_Factory_IR\Halls\AK Berlin Teldex_FC26480D.wem</Path>
+				</File>
+				<File Id="654850748" Language="SFX">
+					<ShortName>AK_Factory_IR\Halls\AK Berlin Teldex.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AK_Factory_IR\Halls\AK Berlin Teldex_C0D9797E.wem</Path>
+				</File>
+			</ExcludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
