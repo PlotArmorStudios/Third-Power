@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.Layouts;
 
-public class DisplayDeviceUI : MonoBehaviour
+public class SwitchDeviceUI : MonoBehaviour
 {
     [SerializeField] private GameObject _keyboardControls;
     [SerializeField] private GameObject _gamepadControls;
+    private InputDevice _lastInput;
     private void OnEnable()
     {
         InputSystem.onEvent +=
@@ -20,16 +22,23 @@ public class DisplayDeviceUI : MonoBehaviour
                 var gamepad = device as Gamepad;
                 var keyboard = device as Keyboard;
                 var mouse = device as Mouse;
-                if (gamepad != null)
+                
+                
+                if (gamepad != null && _lastInput == gamepad)
                 {
+                    print("gamepad");
+                    _lastInput = gamepad;
                     _keyboardControls.SetActive(false);
                     _gamepadControls.SetActive(true);
                 }
-                if (keyboard != null || mouse != null)
+                if ((keyboard != null || mouse != null) && (_lastInput == keyboard || _lastInput == mouse))
                 {
+                    print("keyboard and mouse");
+                    _lastInput = keyboard;
                     _gamepadControls.SetActive(false);
                     _keyboardControls.SetActive(true);
                 }
             };
     }
+    
 }
