@@ -5197,6 +5197,7 @@ MonoBehaviour:
   _pause: {fileID: -2258994543796745681, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _resume: {fileID: -1496532878206110886, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
+  _exitAltarPopup: {fileID: 0}
 --- !u!114 &2733317428347591421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5703,6 +5704,18 @@ PrefabInstance:
       propertyPath: _altar
       value: 
       objectReference: {fileID: 5585168205300159937}
+    - target: {fileID: 1854411513235108969, guid: 07b21d947c3cf4d458131b73ededcd2a,
+        type: 3}
+      propertyPath: _pause
+      value: 
+      objectReference: {fileID: -2258994543796745681, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+        type: 3}
+    - target: {fileID: 1854411513235108969, guid: 07b21d947c3cf4d458131b73ededcd2a,
+        type: 3}
+      propertyPath: _resume
+      value: 
+      objectReference: {fileID: -1496532878206110886, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+        type: 3}
     - target: {fileID: 8299755284783567123, guid: 07b21d947c3cf4d458131b73ededcd2a,
         type: 3}
       propertyPath: m_Pivot.x

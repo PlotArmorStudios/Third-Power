@@ -23,14 +23,28 @@ public class AltarInput : MonoBehaviour
     public InputActionReference Interact;
     [SerializeField] private InputActionReference _pause;
     [SerializeField] private InputActionReference _resume;
+    [SerializeField] private InputActionReference _exitAltarPopup;
 
     private RectTransform _altarRectTransform;
 
     private Camera _mainCamera;
 
+    private void OnEnable()
+    {
+        _exitAltarPopup.action.started += CloseAltarUI;
+    }
+
     private void OnDisable()
     {
         Interact.action.started -= OnInteract;
+        _exitAltarPopup.action.started -= CloseAltarUI;
+    }
+    private void CloseAltarUI(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            DeactivateAltarUi();
+        }
     }
 
     private void OnInteract(InputAction.CallbackContext obj)

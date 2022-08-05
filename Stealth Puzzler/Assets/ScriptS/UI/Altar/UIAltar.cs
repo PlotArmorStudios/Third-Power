@@ -21,8 +21,6 @@ public class UIAltar : MonoBehaviour
     {
         _altar.OnActivateUI -= HandleActivateCamera;
         _altar.OnDeactivateUI -= HandleDeactivateCamera;
-        _pause.action.Enable();
-        _resume.action.Enable();
     }
     
     private void HandleActivateCamera()
