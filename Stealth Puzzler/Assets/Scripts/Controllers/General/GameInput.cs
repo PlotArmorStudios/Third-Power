@@ -1197,6 +1197,17 @@ public partial class @GameInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""ed48c2a9-c784-4b24-9bbc-30c8a3baf032"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""a4376427-3e20-43c3-a831-17fb65c6a936"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
