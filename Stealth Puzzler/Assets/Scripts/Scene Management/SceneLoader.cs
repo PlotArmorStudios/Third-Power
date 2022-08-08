@@ -90,16 +90,14 @@ namespace Helpers
                 StartCoroutine(AsyncLoad(scene));
                 AkSoundEngine.PostEvent("stop_puzzle_time_running_out", gameObject);
             }
-            else if (!_useLoadingScreen)
-            {
-                SceneManager.LoadScene(scene);
-            }
+            // else if (!_useLoadingScreen)
+            // {
+            //     SceneManager.LoadScene(scene);
+            // }
         }
 
         private IEnumerator AsyncLoad(string scene)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
-            asyncLoad.allowSceneActivation = false;
 
             try
             {
@@ -116,6 +114,9 @@ namespace Helpers
 
             _loadScreenCanvas.gameObject.SetActive(true);
 
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+            asyncLoad.allowSceneActivation = false;
+            
             while (asyncLoad.progress < 0.9f)
             {
                 Debug.Log("Progress: " + asyncLoad.progress + " | Bar: " + _loadingBar.value);

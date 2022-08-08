@@ -418,8 +418,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Loading
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 69519d9deb3b95044b73aa5f3ed89e29, type: 2}
+  m_sharedMaterial: {fileID: -3682512977263458604, guid: 69519d9deb3b95044b73aa5f3ed89e29,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -969,6 +970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8100600449629436707}
   - component: {fileID: 8100600449629436704}
+  - component: {fileID: 286881351999482949}
   m_Layer: 0
   m_Name: Scene Loader
   m_TagString: Untagged
@@ -1012,6 +1014,36 @@ MonoBehaviour:
   _loadingBar: {fileID: 1750009267892379397}
   _loadScreenCanvas: {fileID: 2105812558757592594}
   _objectsToDisable: []
+--- !u!114 &286881351999482949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100600449629436705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 85ab1b8107a30ed47bca786984e2217c, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8100600449629436704}
+          m_TargetAssemblyTypeName: Helpers.SceneLoader, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: End Game UI Scene
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8100600450297970441
 GameObject:
   m_ObjectHideFlags: 0
