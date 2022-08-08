@@ -1825,15 +1825,20 @@ PrefabInstance:
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 8503215343022578605}
+    - target: {fileID: 6791301911024737410, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePauseMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
@@ -1849,7 +1854,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3026206245099696091, guid: d2a3b0a47e356ef4d9378b93b457bc94,
+        type: 3}
+    - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6961877492700581909}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -1859,7 +1870,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6961877492700581909}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1877,6 +1888,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayUIHoverSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Selected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Selected
       objectReference: {fileID: 0}
@@ -1887,7 +1908,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
         type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WwiseSfxManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ImageTween, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ImageTween, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ImageTween, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6791301911024737415, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,

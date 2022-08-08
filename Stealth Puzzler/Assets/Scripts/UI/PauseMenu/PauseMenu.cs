@@ -11,7 +11,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private InputActionReference _resume;
     [SerializeField] private InputActionReference _interact;
     public static PlayerInput PlayerInput;
-
     public static bool IsPaused { get; private set; }
 
     void Awake()
@@ -24,7 +23,6 @@ public class PauseMenu : MonoBehaviour
     {
         _pause.action.started += PauseGame;
         _resume.action.started += ResumeGame;
-        
     }
 
     private void OnDisable()
@@ -44,31 +42,35 @@ public class PauseMenu : MonoBehaviour
 
     private void PauseGame(InputAction.CallbackContext obj)
     {
-        if (obj.started)
+        if (obj.started && !IsPaused)
         {
-            Time.timeScale = 0;
-            _pauseMenu.SetActive(true);
-            PlayerInput.SwitchCurrentActionMap("UI");
-            IsPaused = true;
-            AkSoundEngine.SetState("Menu", "Menu_Active");
+            OpenPauseMenu();
         }
+    }
+
+    private void OpenPauseMenu()
+    {
+        Time.timeScale = 0;
+        _pauseMenu.SetActive(true);
+        PlayerInput.SwitchCurrentActionMap("UI");
+        IsPaused = true;
+        AkSoundEngine.SetState("Menu", "Menu_Active");
     }
 
     private void ResumeGame(InputAction.CallbackContext obj)
     {
-        if (obj.started)
+        if (obj.started && IsPaused)
         {
-            Resume();
+            ClosePauseMenu();
             AkSoundEngine.SetState("Menu", "Menu_Inactive");
         }
     }
 
-    public void Resume()
+    public void ClosePauseMenu()
     {
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
         PlayerInput.SwitchCurrentActionMap("Player");
-        _interact.action.Disable();
         IsPaused = false;
         AkSoundEngine.SetState("Menu", "Menu_Inactive");
         AkSoundEngine.PostEvent("Play_UI_NormalClick", gameObject);

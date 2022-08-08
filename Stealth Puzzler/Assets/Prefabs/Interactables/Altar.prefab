@@ -5181,7 +5181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _altarUIObject: {fileID: 8299755284783567151, guid: 07b21d947c3cf4d458131b73ededcd2a,
     type: 3}
-  _timeToActivateUI: 2.34
+  _timeToActivateUI: 2
   _timeToDeactivateUI: 2
   _altarUI: {fileID: 7679365271575183685}
   _altarTriggerBox: {fileID: 4555872939979106373}
@@ -5193,6 +5193,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 7536599
   Interact: {fileID: -6575133343087404151, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+    type: 3}
+  _pause: {fileID: -2258994543796745681, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
+  _resume: {fileID: -1496532878206110886, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+    type: 3}
+  _exitAltarPopup: {fileID: 100507535337746552, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
 --- !u!114 &2733317428347591421
 MonoBehaviour:
@@ -5410,6 +5415,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 101.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988993896610220037, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988993896610220037, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988993896610220037, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988993896610220037, guid: 043afca7a5454d34a89a39a6858e62cc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 199
       objectReference: {fileID: 0}
     - target: {fileID: 5010701895673693685, guid: 043afca7a5454d34a89a39a6858e62cc,
         type: 3}
@@ -5648,8 +5673,24 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 748539635, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 748539635, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748539635, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 748539635, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 748539635, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 2084986652, guid: 07b21d947c3cf4d458131b73ededcd2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5664,6 +5705,18 @@ PrefabInstance:
       propertyPath: _altar
       value: 
       objectReference: {fileID: 5585168205300159937}
+    - target: {fileID: 1854411513235108969, guid: 07b21d947c3cf4d458131b73ededcd2a,
+        type: 3}
+      propertyPath: _pause
+      value: 
+      objectReference: {fileID: -2258994543796745681, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+        type: 3}
+    - target: {fileID: 1854411513235108969, guid: 07b21d947c3cf4d458131b73ededcd2a,
+        type: 3}
+      propertyPath: _resume
+      value: 
+      objectReference: {fileID: -1496532878206110886, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
+        type: 3}
     - target: {fileID: 8299755284783567123, guid: 07b21d947c3cf4d458131b73ededcd2a,
         type: 3}
       propertyPath: m_Pivot.x
