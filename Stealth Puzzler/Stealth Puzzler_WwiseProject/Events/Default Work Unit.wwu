@@ -122,6 +122,10 @@
 				<Event Name="Play_FirePlace" ID="{DBFF8910-B0EC-49A9-8C8A-D9C3B9788001}">
 					<ChildrenList>
 						<Action Name="" ID="{0FA26EAB-27CC-4802-B50C-A46BF54CAACA}" ShortID="923057659">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="FirePlace" ID="{20EEEA35-F395-477B-94FC-00A8F9360236}" WorkUnitID="{43242100-92FF-438A-BFCD-EB2AD1C79A6B}"/>
@@ -134,7 +138,8 @@
 					<ChildrenList>
 						<Action Name="" ID="{864BF895-36C8-470A-A3DA-F76619A7CB58}" ShortID="736071220">
 							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -455,6 +460,9 @@
 				<Event Name="Play_Room_01" ID="{EDE6A12E-DB92-4E0C-A8E5-20CDA51504A6}">
 					<ChildrenList>
 						<Action Name="" ID="{A903FBD9-45BE-453B-8326-054EA5CCBFE2}" ShortID="325827676">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Room_01" ID="{2784822F-23F1-4811-8501-4D502819CC3B}" WorkUnitID="{25CE4200-0ED4-42ED-92F9-DFFC58912234}"/>
