@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 69fb655ec0cb8749945091a4dc13033b
     GuidInternal: 
-    m_lastTime: -8585457378000013406
+    m_lastTime: -8585462986054775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585425535243199923
+    m_lastTime: -8585425720874775808
     List:
     - name: 3D Objects
       guid: 30978c6d834b0846be523a5ae92a1c82
@@ -359,7 +359,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585418904434775808
+    m_lastTime: -8585415576614775808
     List:
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
@@ -410,8 +410,8 @@ MonoBehaviour:
         guid: 9322e58e8ae34740aff2cd36f6fbf622
       Path: Events\Default Work Unit\Play_Cannon
       maxAttenuation: 40
-      maxDuration: 2.118926
-      minDuration: 1.769764
+      maxDuration: 0.710856
+      minDuration: 0.55956
     - name: Play_Cannon_Idle_Steam
       guid: a2b0ac811307c343a0ff91ede832ec1c
       id: 112147695
@@ -841,8 +841,8 @@ MonoBehaviour:
         guid: 9afb7bd5f740c74183e7c1a4217f7176
       Path: Events\Default Work Unit\Play_Trap_Reload
       maxAttenuation: 40
-      maxDuration: 2
-      minDuration: 2
+      maxDuration: 2.03125
+      minDuration: 2.0215
     - name: Play_UI_Enemy_Alert
       guid: 43c02af5fc9a8a4f9017551c6d0aa47f
       id: 2281088486
@@ -1202,8 +1202,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585425535264681863
+    m_lastTime: -8585415538354775808
     List:
+    - name: ArrowTrapFiltering
+      guid: e276c543d6def541bcad542cd2b426a9
+      id: 2521717285
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8d7f87f94dbf14a978b4f7c63429dd2
+      - ElementName: ArrowTrapFiltering
+        ObjectType: 13
+        guid: e276c543d6def541bcad542cd2b426a9
+      Path: Game Parameters\Default Work Unit\ArrowTrapFiltering
     - name: Cutscene
       guid: ecee8695bea6d840acb31fb8dab249cb
       id: 1182958561
@@ -1350,7 +1364,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585425535264671865
+    m_lastTime: -8585429421354775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -1504,7 +1518,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6f7ac499df9b841b0b218b367cc7899
     GuidInternal: 
-    m_lastTime: -8585425535233232189
+    m_lastTime: -8585426847414775808
     List:
     - name: LevelState
       guid: 2ce81878e53c1c4195b49e4263974bf9
@@ -1666,7 +1680,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 492f89aa40d0a5488035723ae0d102a4
     GuidInternal: 
-    m_lastTime: -8585449785521945628
+    m_lastTime: -8585451761514775808
     List:
     - name: Material
       guid: 340561136601864ab21ef167063aa6d2
@@ -1762,7 +1776,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: edf5011ce171b447ab95b8288a826deb
     GuidInternal: 
-    m_lastTime: -8585428377747378189
+    m_lastTime: -8585431241094775808
     List: []
   - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
@@ -1778,7 +1792,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit\Music
     guid: b1023837791b2642bb361b46f9481008
     GuidInternal: 
-    m_lastTime: -8585428377747368202
+    m_lastTime: -8585431241094775808
     List:
     - name: Cymbal_Swell_to_Tension
       guid: 7b17dfd2d303d340a4d7d840a35548dd
@@ -1797,9 +1811,9 @@ MonoBehaviour:
         ObjectType: 14
         guid: 7b17dfd2d303d340a4d7d840a35548dd
       Path: Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension
-  ExpandedFileSystemItemIds: 010000000200000003000000040000002c000000
+  ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

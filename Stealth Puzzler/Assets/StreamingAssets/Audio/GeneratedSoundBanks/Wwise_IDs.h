@@ -105,6 +105,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID ARROWTRAPFILTERING = 2521717285U;
         static const AkUniqueID CUTSCENE = 1182958561U;
         static const AkUniqueID DANGERLEVEL = 1316067302U;
         static const AkUniqueID DEATHSOUND = 3742375894U;

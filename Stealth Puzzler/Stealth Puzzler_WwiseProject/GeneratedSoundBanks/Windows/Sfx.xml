@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="469415903">
+		<SoundBank Id="393239870" Language="SFX" Hash="475151573">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -29,23 +29,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="1.769764" DurationMax="2.118926">
+				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="0.55956" DurationMax="0.710856">
 					<IncludedMemoryFiles>
-						<File Id="144862520" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_02-1.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_02-1_10C4C929.wem</Path>
+						<File Id="647342616" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_01.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_01_10C4C929.wem</Path>
 						</File>
-						<File Id="487204440" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_01-1.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_01-1_10C4C929.wem</Path>
+						<File Id="741462922" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_03.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_03_10C4C929.wem</Path>
 						</File>
-						<File Id="916147779" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_04-1.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_04-1_10C4C929.wem</Path>
-						</File>
-						<File Id="1039901172" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_03-1.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_03-1_10C4C929.wem</Path>
+						<File Id="946342383" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_02.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -981,13 +977,24 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2." DurationMax="2.">
+				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.0215" DurationMax="2.03125">
 					<IncludedMemoryFiles>
+						<File Id="854608487" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_Reload_02.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_Reload_02_10C4C929.wem</Path>
+						</File>
 						<File Id="919698874" Language="SFX">
 							<ShortName>SFX_Objects_Cannon_Reload_01.wav</ShortName>
 							<Path>SFX\SFX_Objects_Cannon_Reload_01_10C4C929.wem</Path>
 						</File>
+						<File Id="923818333" Language="SFX">
+							<ShortName>SFX_Objects_Cannon_Reload_03.wav</ShortName>
+							<Path>SFX\SFX_Objects_Cannon_Reload_03_10C4C929.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2281088486" Name="Play_UI_Enemy_Alert" ObjectPath="\Events\Default Work Unit\Play_UI_Enemy_Alert" DurationType="Infinite"/>
 				<Event Id="1339559671" Name="Play_UI_Hover" ObjectPath="\Events\Default Work Unit\Play_UI_Hover" DurationType="OneShot" DurationMin="1.3125" DurationMax="1.367619">
@@ -1090,6 +1097,7 @@
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="1316067302" Name="DangerLevel" ObjectPath="\Game Parameters\Default Work Unit\DangerLevel"/>
+				<GameParameter Id="2521717285" Name="ArrowTrapFiltering" ObjectPath="\Game Parameters\Default Work Unit\ArrowTrapFiltering"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 			</GameParameters>
 			<StateGroups>
