@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
         var controllerManager = Instantiate(ControllerManager, defaultSpawn.position, defaultSpawn.rotation);
         var camRig = FindObjectOfType<CamRig>();
         controllerManager.InitializeControllers(Camera.main);
-        //camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
+        camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
     }
 
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Cam rig found: " + camRig);
         var controllerManager = Instantiate(ControllerManager, PlayerSpawnLocation, Quaternion.identity);
         controllerManager.InitializeControllers(Camera.main);
-        //camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
+        camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         yield return new WaitForSeconds(.2f);
         LoadedFromSave = false;
     }
