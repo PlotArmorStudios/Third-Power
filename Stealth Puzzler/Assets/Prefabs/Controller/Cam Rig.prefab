@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 1624826082}
   - component: {fileID: 1624826083}
   - component: {fileID: 1608758071}
+  - component: {fileID: 4122130115730729900}
   m_Layer: 23
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -535,6 +536,51 @@ MonoBehaviour:
   _cutsceneView:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &4122130115730729900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623622011667152610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 446287a59b3a79640b0a3e2510aa8eb5, type: 2}
+    - {fileID: 11400000, guid: 96fc32c210105f348a919f0892022bbe, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1608758071}
+          m_TargetAssemblyTypeName: ToggleUIView, Assembly-CSharp
+          m_MethodName: SwitchOnUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1608758071}
+          m_TargetAssemblyTypeName: ToggleUIView, Assembly-CSharp
+          m_MethodName: SwitchOffUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1965392499211164810
 GameObject:
   m_ObjectHideFlags: 3
