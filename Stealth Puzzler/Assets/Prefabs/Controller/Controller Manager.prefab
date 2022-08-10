@@ -171,6 +171,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 002bd664ae52e004b928e16c6db87f78, type: 2}
     - {fileID: 11400000, guid: 742ac5b9d3792e045b9f1f370809895a, type: 2}
     - {fileID: 11400000, guid: 1dada8ff5ca85704f83238aa2096eae0, type: 2}
+    - {fileID: 11400000, guid: cb98a7952a9de2445815c1a36a0dc9fc, type: 2}
+    - {fileID: 11400000, guid: 01f3df03dbdd2ac46a642586acf89659, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -277,6 +279,34 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0.7
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2397874377860063783}
+          m_TargetAssemblyTypeName: ControllerManager, Assembly-CSharp
+          m_MethodName: SetCubeRollDelay
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1.15
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2397874377860063783}
+          m_TargetAssemblyTypeName: ControllerManager, Assembly-CSharp
+          m_MethodName: SetCubeRollDelay
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.3
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
