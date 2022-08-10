@@ -46,10 +46,16 @@
 												<SegmentShape>Exp1</SegmentShape>
 											</Point>
 											<Point>
-												<XPos>29.82773</XPos>
-												<YPos>37</YPos>
+												<XPos>12.62475</XPos>
+												<YPos>28</YPos>
 												<Flags>0</Flags>
 												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>50.24753</XPos>
+												<YPos>51</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log2</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>100</XPos>
@@ -76,11 +82,6 @@
 						</Property>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="UserAuxSendVolume0" Type="Real64">
-							<ValueList>
-								<Value>-12</Value>
-							</ValueList>
-						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
