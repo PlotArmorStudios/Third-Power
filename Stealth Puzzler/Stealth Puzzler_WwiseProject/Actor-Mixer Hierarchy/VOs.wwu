@@ -95,52 +95,6 @@
 						<ActiveSource Name="TP_VO2_Creation" ID="{7469A240-7848-4519-BDDD-127D67476AE4}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="TP_VO3_Celebration_Delay" ID="{2E4FF93C-C9CF-422C-A523-7F27F9CB4323}" ShortID="64722481">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="TP_VO3_Celebration_Delay" ID="{8424B27D-DA3E-4482-BA35-475FF320905E}">
-							<Language>SFX</Language>
-							<AudioFile>TP_VO3_Celebration_Delay.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="358073372"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="TP_VO3_Celebration_Delay" ID="{8424B27D-DA3E-4482-BA35-475FF320905E}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="TP_VO3_Celebration" ID="{EB1E33E2-C1E9-42E0-BE83-F2ECB9C5D0F9}" ShortID="732454156">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="TP_VO3_Celebration" ID="{71CC9BFD-0C7F-4AEA-9537-F77D02F0AFBA}">
-							<Language>SFX</Language>
-							<AudioFile>TP_VO3_Celebration.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="532170727"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="TP_VO3_Celebration" ID="{71CC9BFD-0C7F-4AEA-9537-F77D02F0AFBA}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="TP_VO4_Consuming_Delay" ID="{A746CD2B-F50E-41D7-93FD-0DC7256A89F1}" ShortID="957941684">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -187,7 +141,7 @@
 						<ActiveSource Name="TP_VO4_Consuming" ID="{2C703519-30ED-4112-8CFA-9381AC617F09}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="TP_VO5_Imprisonment_Delay" ID="{DE41EA37-C3C6-4FC2-A607-E2B7DF7299A5}" ShortID="317911504">
+				<Sound Name="TP_VO3_Celebration_Edit" ID="{FA4B4006-3979-4AFC-AA1D-ED51E8B2E0C2}" ShortID="510198055">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -197,20 +151,20 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TP_VO5_Imprisonment_Delay" ID="{11600626-0CE7-4FCA-8BB2-CC9BEB30DB0B}">
+						<AudioFileSource Name="TP_VO3_Celebration_Edit" ID="{F031E99D-6944-4A3B-BE75-2CB1FEFE3B98}">
 							<Language>SFX</Language>
-							<AudioFile>TP_VO5_Imprisonment_Delay.wav</AudioFile>
+							<AudioFile>TP_VO3_Celebration_Edit.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="710998319"/>
+								<MediaID ID="622757520"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="TP_VO5_Imprisonment_Delay" ID="{11600626-0CE7-4FCA-8BB2-CC9BEB30DB0B}" Platform="Linked"/>
+						<ActiveSource Name="TP_VO3_Celebration_Edit" ID="{F031E99D-6944-4A3B-BE75-2CB1FEFE3B98}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="TP_VO5_Imprisonment" ID="{FDA5D846-98D2-4C9A-BF62-0A035DD6160E}" ShortID="733945944">
+				<Sound Name="TP_VO5_Imprisonment_Edit" ID="{AF73BB9B-F962-4551-A767-3CDC7E8955EB}" ShortID="705027317">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -220,20 +174,20 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TP_VO5_Imprisonment" ID="{AF42BE92-7892-4B6E-938C-6FE30EC9BC2E}">
+						<AudioFileSource Name="TP_VO5_Imprisonment_Edit" ID="{D96C2B5C-1E3C-4564-B027-0156EDFBC9E0}">
 							<Language>SFX</Language>
-							<AudioFile>TP_VO5_Imprisonment.wav</AudioFile>
+							<AudioFile>TP_VO5_Imprisonment_Edit.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="785956027"/>
+								<MediaID ID="448988"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="TP_VO5_Imprisonment" ID="{AF42BE92-7892-4B6E-938C-6FE30EC9BC2E}" Platform="Linked"/>
+						<ActiveSource Name="TP_VO5_Imprisonment_Edit" ID="{D96C2B5C-1E3C-4564-B027-0156EDFBC9E0}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="TP_VO6_FinalPlea_Delay" ID="{A07C4780-749D-4C80-A14B-C6B130C8DCCB}" ShortID="995381915">
+				<Sound Name="TP_VO6_Plea_Edit" ID="{72F6A979-78A8-4F72-B6F5-2605223AF625}" ShortID="296389844">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -243,20 +197,20 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TP_VO6_FinalPlea_Delay" ID="{8124245D-D33D-4F54-847B-D475842312BC}">
+						<AudioFileSource Name="TP_VO6_Plea_Edit" ID="{8B7C0FB2-2009-4756-866D-57FD8D4FF145}">
 							<Language>SFX</Language>
-							<AudioFile>TP_VO6_FinalPlea_Delay.wav</AudioFile>
+							<AudioFile>TP_VO6_Plea_Edit.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="258662766"/>
+								<MediaID ID="519326118"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="TP_VO6_FinalPlea_Delay" ID="{8124245D-D33D-4F54-847B-D475842312BC}" Platform="Linked"/>
+						<ActiveSource Name="TP_VO6_Plea_Edit" ID="{8B7C0FB2-2009-4756-866D-57FD8D4FF145}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="TP_VO6_FinalPlea" ID="{66A28A1A-2632-4CE9-8930-F707866F0D5D}" ShortID="788151164">
+				<Sound Name="TP_VO7_Plea2_Edit" ID="{AFE84EE5-ECE8-45F5-BD5D-AFEDC7667F09}" ShortID="413053280">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -266,17 +220,17 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TP_VO6_FinalPlea" ID="{079DAA03-BAEB-4D86-BAD3-B6AC6AB6F3D3}">
+						<AudioFileSource Name="TP_VO7_Plea2_Edit" ID="{20E1B7C3-4FA4-41C0-931F-BF94B1EED88F}">
 							<Language>SFX</Language>
-							<AudioFile>TP_VO6_FinalPlea.wav</AudioFile>
+							<AudioFile>TP_VO7_Plea2_Edit.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="925141646"/>
+								<MediaID ID="302010399"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="TP_VO6_FinalPlea" ID="{079DAA03-BAEB-4D86-BAD3-B6AC6AB6F3D3}" Platform="Linked"/>
+						<ActiveSource Name="TP_VO7_Plea2_Edit" ID="{20E1B7C3-4FA4-41C0-931F-BF94B1EED88F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

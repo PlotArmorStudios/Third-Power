@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/marksamani/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/Games/Jams/Stealth-Puzzler/Stealth Puzzler/Stealth Puzzler_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="543694047" Language="SFX" Hash="2513309807">
+		<SoundBank Id="543694047" Language="SFX" Hash="462391680">
 			<ObjectPath>\SoundBanks\Default Work Unit\VOs</ObjectPath>
 			<ShortName>VOs</ShortName>
 			<Path>VOs.bnk</Path>
@@ -17,11 +17,11 @@
 					<IncludedMemoryFiles>
 						<File Id="28476499" Language="SFX">
 							<ShortName>TP_VO1_You_Delay.wav</ShortName>
-							<Path>SFX\TP_VO1_You_Delay_10C4C929.wem</Path>
+							<Path>SFX/TP_VO1_You_Delay_10C4C929.wem</Path>
 						</File>
 						<File Id="1047047079" Language="SFX">
 							<ShortName>TP_VO1_You.wav</ShortName>
-							<Path>SFX\TP_VO1_You_10C4C929.wem</Path>
+							<Path>SFX/TP_VO1_You_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -29,23 +29,19 @@
 					<IncludedMemoryFiles>
 						<File Id="166642491" Language="SFX">
 							<ShortName>TP_VO2_Creation.wav</ShortName>
-							<Path>SFX\TP_VO2_Creation_10C4C929.wem</Path>
+							<Path>SFX/TP_VO2_Creation_10C4C929.wem</Path>
 						</File>
 						<File Id="972497923" Language="SFX">
 							<ShortName>TP_VO2_Creation_Delay.wav</ShortName>
-							<Path>SFX\TP_VO2_Creation_Delay_10C4C929.wem</Path>
+							<Path>SFX/TP_VO2_Creation_Delay_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="543693983" Name="VO3" ObjectPath="\Events\Default Work Unit\VOs\VO3" DurationType="OneShot" DurationMin="14.759048" DurationMax="14.759048">
 					<IncludedMemoryFiles>
-						<File Id="358073372" Language="SFX">
-							<ShortName>TP_VO3_Celebration_Delay.wav</ShortName>
-							<Path>SFX\TP_VO3_Celebration_Delay_10C4C929.wem</Path>
-						</File>
-						<File Id="532170727" Language="SFX">
-							<ShortName>TP_VO3_Celebration.wav</ShortName>
-							<Path>SFX\TP_VO3_Celebration_10C4C929.wem</Path>
+						<File Id="622757520" Language="SFX">
+							<ShortName>TP_VO3_Celebration_Edit.wav</ShortName>
+							<Path>SFX/TP_VO3_Celebration_Edit_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -53,38 +49,40 @@
 					<IncludedMemoryFiles>
 						<File Id="508635365" Language="SFX">
 							<ShortName>TP_VO4_Consuming_Delay.wav</ShortName>
-							<Path>SFX\TP_VO4_Consuming_Delay_10C4C929.wem</Path>
+							<Path>SFX/TP_VO4_Consuming_Delay_10C4C929.wem</Path>
 						</File>
 						<File Id="1016402175" Language="SFX">
 							<ShortName>TP_VO4_Consuming.wav</ShortName>
-							<Path>SFX\TP_VO4_Consuming_10C4C929.wem</Path>
+							<Path>SFX/TP_VO4_Consuming_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="543693977" Name="VO5" ObjectPath="\Events\Default Work Unit\VOs\VO5" DurationType="OneShot" DurationMin="45.966667" DurationMax="45.966667">
+				<Event Id="543693977" Name="VO5" ObjectPath="\Events\Default Work Unit\VOs\VO5" DurationType="OneShot" DurationMin="34.078049" DurationMax="34.078049">
 					<IncludedMemoryFiles>
-						<File Id="710998319" Language="SFX">
-							<ShortName>TP_VO5_Imprisonment_Delay.wav</ShortName>
-							<Path>SFX\TP_VO5_Imprisonment_Delay_10C4C929.wem</Path>
-						</File>
-						<File Id="785956027" Language="SFX">
-							<ShortName>TP_VO5_Imprisonment.wav</ShortName>
-							<Path>SFX\TP_VO5_Imprisonment_10C4C929.wem</Path>
+						<File Id="448988" Language="SFX">
+							<ShortName>TP_VO5_Imprisonment_Edit.wav</ShortName>
+							<Path>SFX/TP_VO5_Imprisonment_Edit_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="543693978" Name="VO6" ObjectPath="\Events\Default Work Unit\VOs\VO6" DurationType="OneShot" DurationMin="31.105896" DurationMax="31.105896">
+				<Event Id="543693978" Name="VO6" ObjectPath="\Events\Default Work Unit\VOs\VO6" DurationType="OneShot" DurationMin="7.328662" DurationMax="7.328662">
 					<IncludedMemoryFiles>
-						<File Id="258662766" Language="SFX">
-							<ShortName>TP_VO6_FinalPlea_Delay.wav</ShortName>
-							<Path>SFX\TP_VO6_FinalPlea_Delay_10C4C929.wem</Path>
-						</File>
-						<File Id="925141646" Language="SFX">
-							<ShortName>TP_VO6_FinalPlea.wav</ShortName>
-							<Path>SFX\TP_VO6_FinalPlea_10C4C929.wem</Path>
+						<File Id="519326118" Language="SFX">
+							<ShortName>TP_VO6_Plea_Edit.wav</ShortName>
+							<Path>SFX/TP_VO6_Plea_Edit_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="543693979" Name="VO7" ObjectPath="\Events\Default Work Unit\VOs\VO7" DurationType="OneShot" DurationMin="8.814739" DurationMax="8.814739">
+					<IncludedMemoryFiles>
+						<File Id="302010399" Language="SFX">
+							<ShortName>TP_VO7_Plea2_Edit.wav</ShortName>
+							<Path>SFX/TP_VO7_Plea2_Edit_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1073683347" Name="VO_Pause" ObjectPath="\Events\Default Work Unit\VOs\VO_Pause" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

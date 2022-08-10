@@ -55,6 +55,9 @@ namespace AK
         static const AkUniqueID VO4 = 543693976U;
         static const AkUniqueID VO5 = 543693977U;
         static const AkUniqueID VO6 = 543693978U;
+        static const AkUniqueID VO7 = 543693979U;
+        static const AkUniqueID VO_PAUSE = 1073683347U;
+        static const AkUniqueID VO_RESUME = 3057377370U;
     } // namespace EVENTS
 
     namespace STATES
