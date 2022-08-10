@@ -6,11 +6,15 @@ using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static event Action OnPause;
+    public static event Action OnResume;
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private InputActionReference _pause;
     [SerializeField] private InputActionReference _resume;
     [SerializeField] private InputActionReference _interact;
+    
     public static PlayerInput PlayerInput;
+    
     public static bool IsPaused { get; private set; }
 
     void Awake()
@@ -45,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         if (obj.started && !IsPaused)
         {
             OpenPauseMenu();
+            OnPause?.Invoke();
         }
     }
 
@@ -62,6 +67,7 @@ public class PauseMenu : MonoBehaviour
         if (obj.started && IsPaused)
         {
             ClosePauseMenu();
+            OnResume?.Invoke();
             AkSoundEngine.SetState("Menu", "Menu_Inactive");
         }
     }
