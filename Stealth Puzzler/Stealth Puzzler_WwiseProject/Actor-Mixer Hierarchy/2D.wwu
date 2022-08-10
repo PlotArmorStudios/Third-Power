@@ -702,6 +702,118 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</BlendContainer>
+				<RandomSequenceContainer Name="Rocks" ID="{4DE14BC5-4277-4E6E-9F2D-7AB283B4654F}" ShortID="6725143">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Rocks_0s" ID="{8E40D5E2-7957-49F0-AACF-5BCA0F7F85F4}" ShortID="460087526">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rocks_0s" ID="{3F8B9C17-9D13-42EA-9E6A-76CF7F7A209C}">
+									<Language>SFX</Language>
+									<AudioFile>Rocks_0s.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="581462823"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Rocks_0s" ID="{3F8B9C17-9D13-42EA-9E6A-76CF7F7A209C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Rocks_01" ID="{8BAC205B-41BD-4334-BFD2-7B8AD0FE8C43}" ShortID="955268538">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rocks_01" ID="{2E283604-837D-4298-AE6C-6DD0921E1F75}">
+									<Language>SFX</Language>
+									<AudioFile>Rocks_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="454097551"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Rocks_01" ID="{2E283604-837D-4298-AE6C-6DD0921E1F75}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Rocks_03" ID="{3DF9238C-4439-4957-89C9-340F02321A78}" ShortID="897715396">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rocks_03" ID="{9CA09F10-F6AB-40FF-B6F2-B76F3CD54BAD}">
+									<Language>SFX</Language>
+									<AudioFile>Rocks_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1034354633"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Rocks_03" ID="{9CA09F10-F6AB-40FF-B6F2-B76F3CD54BAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Rocks_04" ID="{826EA29A-B2F4-4887-A7B4-8FD108F07407}" ShortID="127783449">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rocks_04" ID="{5AE46AEB-4639-4534-B371-F8952DBFFA87}">
+									<Language>SFX</Language>
+									<AudioFile>Rocks_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="270963368"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Rocks_04" ID="{5AE46AEB-4639-4534-B371-F8952DBFFA87}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
