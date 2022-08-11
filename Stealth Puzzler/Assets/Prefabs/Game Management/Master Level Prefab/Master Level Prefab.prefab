@@ -857,6 +857,7 @@ GameObject:
   - component: {fileID: 996308577287259096}
   - component: {fileID: 8376473729247738376}
   - component: {fileID: 7972367803474987281}
+  - component: {fileID: 6996256112881202886}
   m_Layer: 5
   m_Name: UICubeCanvas
   m_TagString: Untagged
@@ -1003,6 +1004,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &6996256112881202886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648197065146108323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e696d59cc4452d44be25b1111aee950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toggleObject: {fileID: 4489789882763097487}
 --- !u!1 &7887199913072454220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1146,7 @@ GameObject:
   - component: {fileID: 7489958873258211604}
   - component: {fileID: 6981538469032607241}
   - component: {fileID: 2842174789389910782}
+  - component: {fileID: 7635559560160831515}
   m_Layer: 5
   m_Name: Level Number Canvas
   m_TagString: Untagged
@@ -1266,6 +1281,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+--- !u!114 &7635559560160831515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957155850531861713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e696d59cc4452d44be25b1111aee950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toggleObject: {fileID: 3501515511948233392}
 --- !u!1 &8060017095804065910
 GameObject:
   m_ObjectHideFlags: 0

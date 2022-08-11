@@ -12,6 +12,7 @@ public class ButtonLever : Obstacle
     
     private Animator _animator;
     private bool _isPressed;
+    private bool _buttonTriggered;
 
     private void Start()
     {
@@ -22,6 +23,11 @@ public class ButtonLever : Obstacle
             _isPressed = true;   
             _isActive = false;
         }
+    }
+
+    private void Update()
+    {
+        if (_buttonTriggered) return;
     }
 
     public void Activate()
@@ -39,7 +45,9 @@ public class ButtonLever : Obstacle
         var cube = other.GetComponentInChildren<CubeController>();
 
         if (!cube) return;
+        if (_buttonTriggered) return;
         _animator.SetBool("Pressed", true);
+        StartCoroutine(ResetButtonTrigger());
 
         if (!_isActive) return;
         _pressEvent?.Invoke();
@@ -47,8 +55,14 @@ public class ButtonLever : Obstacle
 
         if (GameManager.Instance.ObstacleBooleans.ContainsKey(_obstacleID)) return;
         GameManager.Instance.AddObstacleBoolean(_obstacleID, _isPressed);
-
         PlayButtonPressDownSound();
+    }
+
+    private IEnumerator ResetButtonTrigger()
+    {
+        _buttonTriggered = true;
+        yield return new WaitForSeconds(.3f);
+        _buttonTriggered = false;
     }
 
     private void PlayButtonPressDownSound()

@@ -76,6 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4555872940947155017}
   - component: {fileID: 6174623639868107126}
+  - component: {fileID: 2075560619629323988}
   m_Layer: 16
   m_Name: UI Tutorial Trigger Box
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keyboardControls: {fileID: 350761205136533300}
   _gamepadControls: {fileID: 5071770062654506335}
+--- !u!114 &2075560619629323988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555872940947155016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e696d59cc4452d44be25b1111aee950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toggleObject: {fileID: 6133286052320669433}
 --- !u!1 &5071770062654506335
 GameObject:
   m_ObjectHideFlags: 0
