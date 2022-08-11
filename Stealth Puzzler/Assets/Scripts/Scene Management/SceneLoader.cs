@@ -90,10 +90,10 @@ namespace Helpers
                 StartCoroutine(AsyncLoad(scene));
                 AkSoundEngine.PostEvent("stop_puzzle_time_running_out", gameObject);
             }
-            // else if (!_useLoadingScreen)
-            // {
-            //     SceneManager.LoadScene(scene);
-            // }
+            else if (!_useLoadingScreen)
+            {
+                SceneManager.LoadScene(scene);
+            }
         }
 
         private IEnumerator AsyncLoad(string scene)
