@@ -31,6 +31,8 @@ public class ControllerManager : MonoBehaviour
     private float _currentSwitchTime;
     public static event Action OnSwitchToCube;
     public static event Action OnSwitchToHuman;
+    public PlayerController PlayerController => _playerController;
+    public CubeController CubeController => _cubeController;
 
     private void Awake()
     {
