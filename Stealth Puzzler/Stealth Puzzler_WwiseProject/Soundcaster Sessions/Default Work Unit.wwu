@@ -124,6 +124,104 @@
 						<CurrentSwitchRef Name="Carpet" ID="{521D00FB-FCE5-47B8-9696-9C1CB9B32487}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="PuzzleSound" ID="{783325BB-E951-4511-92CF-D330ACE503B9}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Early_Music" ID="{61C396D6-43ED-45CF-A5AA-CC0CE8207BEF}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_puzzle_solved" ID="{BFCC3A02-69CC-4328-AB11-44AFB2638555}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Cutscene" ID="{9586EEEC-A6BE-40D8-ACB3-1FB8DAB249CB}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="LevelNumber" ID="{192FF86B-6E73-40F0-8A02-9997A2516EFD}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ArrowTrapFiltering" ID="{43C576E2-DED6-41F5-BCAD-542CD2B426A9}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Size" ID="{1329EBEF-A193-472E-A38C-64668B494879}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Storm" ID="{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MasterVolume" ID="{C1DBA47C-C7E4-478A-9499-81504BA3DF0A}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Presence" ID="{E3B7811A-7B2F-490F-B44F-5FE51B468041}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFXVolume" ID="{559E5BDE-CFCD-4D9C-9FD6-4832894D4F67}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DangerLevel" ID="{89080069-4778-4E1F-A22D-76AE8D345701}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{90E6524C-9FA5-4EB8-92A3-1625C9BD548E}"/>
+							<Value>75</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
+						<CurrentStateRef Name="Early" ID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}"/>
+						<CurrentStateRef Name="Deactivated" ID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Carpet" ID="{521D00FB-FCE5-47B8-9696-9C1CB9B32487}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

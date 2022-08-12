@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2460408373">
+		<SoundBank Id="393239870" Language="SFX" Hash="2926674824">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -929,14 +929,7 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="OneShot" DurationMin="7.484396" DurationMax="7.484396">
-					<IncludedMemoryFiles>
-						<File Id="374475058" Language="SFX">
-							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V06.wav</ShortName>
-							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V06_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4030910502" Name="Play_StalgaticPlatform_Idle" ObjectPath="\Events\Default Work Unit\Play_StalgaticPlatform_Idle" MaxAttenuation="20." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="176869898" Language="SFX">
@@ -1101,6 +1094,13 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="338315243" Name="Altar" ObjectPath="\States\Default Work Unit\Altar" GUID="{81953C79-D2ED-4535-86E4-5794ACCA1ED9}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Altar\None" GUID="{F2B5C5E2-A558-4E57-8EC5-4053B8943137}"/>
+						<State Id="2917726846" Name="Activated" ObjectPath="\States\Default Work Unit\Altar\Activated" GUID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+						<State Id="622383625" Name="Deactivated" ObjectPath="\States\Default Work Unit\Altar\Deactivated" GUID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Menu" GUID="{E620E139-FEB6-4099-9D6F-6BA9AFD0220E}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Menu\None" GUID="{38636424-86EF-4399-9EF0-D549C73B8327}"/>

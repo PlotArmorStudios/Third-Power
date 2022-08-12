@@ -82,6 +82,34 @@
 	<GameParameter Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}"/>
 </PluginData>
 				</Effect>
+				<Effect Name="New_Mastering_Suite" ID="{331E6B52-54A3-4F99-B073-57CD41DAC3BB}" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">
+					<PropertyList>
+						<Property Name="masterVolumeChannel1" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel10" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel11" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel12" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel2" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel3" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel4" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel5" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel6" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel7" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel8" Type="Real32" Value="-7"/>
+						<Property Name="masterVolumeChannel9" Type="Real32" Value="-7"/>
+						<Property Name="paramBand1Frequency" Type="Real32" Value="20"/>
+						<Property Name="paramBand1Gain" Type="Real32" Value="-0.5761317"/>
+						<Property Name="paramBand3Frequency" Type="Real32" Value="197.4295"/>
+						<Property Name="paramBand3Gain" Type="Real32" Value="0.08230453"/>
+					</PropertyList>
+					<PluginData/>
+				</Effect>
+				<Effect Name="New_Mastering_Suite_01" ID="{72AA7E5D-D8A2-48F4-98FB-1036078BE74B}" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">
+					<PropertyList>
+						<Property Name="paramBand4Frequency" Type="Real32" Value="20"/>
+						<Property Name="paramBand4Gain" Type="Real32" Value="-20"/>
+					</PropertyList>
+					<PluginData/>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

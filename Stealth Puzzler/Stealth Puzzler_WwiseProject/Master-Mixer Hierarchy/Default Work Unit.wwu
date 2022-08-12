@@ -35,7 +35,7 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
-						<Reference Name="AudioDevice">
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
 						</Reference>
 						<Reference Name="Effect0" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
@@ -45,6 +45,11 @@
 					<ChildrenList>
 						<Bus Name="Sfx" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
 							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>768</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{B8E68619-77A7-47E8-8B59-593369FA2FAF}" ShortID="200840543">
@@ -75,14 +80,6 @@
 								</Property>
 							</PropertyList>
 							<ChildrenList>
-								<Bus Name="Puzzle Sound" ID="{DB1B901B-D8B6-4D00-B859-F6875BB5E85A}">
-									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-											<ObjectRef Name="PuzzleSoundMeter" ID="{E338FBE9-4F62-4122-8633-C73A13FF3A4C}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
-										</Reference>
-									</ReferenceList>
-									<ObjectLists/>
-								</Bus>
 								<Bus Name="Ambience" ID="{A8016111-4CCC-4CB0-9345-944416169955}">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -206,8 +203,20 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="Menu" ID="{E620E139-FEB6-4099-9D6F-6BA9AFD0220E}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Altar" ID="{81953C79-D2ED-4535-86E4-5794ACCA1ED9}"/>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Activated" ID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+										<CustomState Name="" ID="{80CA7A01-7A21-47CF-B28E-D8FD4344DE4A}" ShortID="178793710">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-6"/>
+												<Property Name="Lowpass" Type="int16" Value="50"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
 									<CustomState>
 										<StateRef Name="New_State" ID="{0582C43D-B025-48DD-BE21-ADD0E5D344A7}"/>
 										<CustomState Name="" ID="{D5130BA0-D3A6-406B-83CA-AA8983C0BEFD}" ShortID="844537930"/>
@@ -226,12 +235,21 @@
 										<StateRef Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
 										<CustomState Name="" ID="{7AEEC3A4-2564-4E18-9E1A-37CE84F24BB9}" ShortID="68533996"/>
 									</CustomState>
+									<CustomState>
+										<StateRef Name="Deactivated" ID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+										<CustomState Name="" ID="{705744BE-C8C7-48B6-8BAC-B71BD98A23FF}" ShortID="679979364"/>
+									</CustomState>
 								</CustomStateList>
 							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Music" ID="{067CAF1B-46F1-465A-B403-B590DFA30A66}">
 							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3840</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{C245EC5A-8F5A-48F2-8C39-3FABC9BFFF1A}" ShortID="1067846142">
@@ -247,31 +265,25 @@
 												<PointList>
 													<Point>
 														<XPos>-48</XPos>
-														<YPos>-0.10279</YPos>
+														<YPos>-0</YPos>
 														<Flags>5</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-44.82988</XPos>
-														<YPos>0</YPos>
-														<Flags>0</Flags>
-														<SegmentShape>Log2</SegmentShape>
-													</Point>
-													<Point>
-														<XPos>-29.94059</XPos>
-														<YPos>-0.02168</YPos>
+														<XPos>-40.46189</XPos>
+														<YPos>-0.08585</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-25.0099</XPos>
-														<YPos>-5.91657</YPos>
+														<XPos>-29.93072</XPos>
+														<YPos>-5.12641</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-6.78589</YPos>
+														<YPos>-7.08306</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -352,8 +364,20 @@
 									<StateGroupInfo>
 										<StateGroupRef Name="Menu" ID="{E620E139-FEB6-4099-9D6F-6BA9AFD0220E}"/>
 									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Altar" ID="{81953C79-D2ED-4535-86E4-5794ACCA1ED9}"/>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Activated" ID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+										<CustomState Name="" ID="{5353EA57-C5AE-4847-AE89-9CE4A8477AA0}" ShortID="268868425">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-6"/>
+												<Property Name="Lowpass" Type="int16" Value="50"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
 									<CustomState>
 										<StateRef Name="New_State" ID="{0582C43D-B025-48DD-BE21-ADD0E5D344A7}"/>
 										<CustomState Name="" ID="{851FF54D-4935-43E9-9C73-50921F671565}" ShortID="341911871"/>
@@ -372,8 +396,27 @@
 										<StateRef Name="Menu_Inactive" ID="{A4D83BC6-FDBB-4D78-A8C3-66AB073EDA1F}"/>
 										<CustomState Name="" ID="{995DC047-DFB9-4A62-B68D-03410E8767C3}" ShortID="322863610"/>
 									</CustomState>
+									<CustomState>
+										<StateRef Name="Deactivated" ID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+										<CustomState Name="" ID="{0BBECE96-652F-414F-8A57-5364277AF03C}" ShortID="827411521"/>
+									</CustomState>
 								</CustomStateList>
 							</StateInfo>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Puzzle Sound" ID="{DB1B901B-D8B6-4D00-B859-F6875BB5E85A}">
+							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3840</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="PuzzleSoundMeter" ID="{E338FBE9-4F62-4122-8633-C73A13FF3A4C}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>
@@ -389,7 +432,7 @@
 				</Bus>
 				<Bus Name="Binaural_Bus" ID="{F59C3A80-8055-4F6C-8339-36A89FAD00F3}">
 					<ReferenceList>
-						<Reference Name="AudioDevice">
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
 						</Reference>
 					</ReferenceList>

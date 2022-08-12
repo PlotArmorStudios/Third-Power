@@ -32,6 +32,33 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="Altar" ID="{81953C79-D2ED-4535-86E4-5794ACCA1ED9}">
+					<ChildrenList>
+						<State Name="None" ID="{F2B5C5E2-A558-4E57-8EC5-4053B8943137}"/>
+						<State Name="Activated" ID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+						<State Name="Deactivated" ID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{F2B5C5E2-A558-4E57-8EC5-4053B8943137}"/>
+							<EndState Name="Activated" ID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Activated" ID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+							<EndState Name="Deactivated" ID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Deactivated" ID="{EC700BCF-D040-4FB0-B721-E003500A451C}"/>
+							<EndState Name="Activated" ID="{54EF1E49-8853-47C9-AC66-C1B9265C3B09}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

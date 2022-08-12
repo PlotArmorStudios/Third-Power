@@ -41,15 +41,20 @@ Switch	ID	Name	Switch Group			Notes
 	3725073853	Cement	Material			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	338315243	Altar			\Default Work Unit\Altar	
 	2607556080	Menu			\Default Work Unit\Menu	
 
 State	ID	Name	State Group			Notes
+	622383625	Deactivated	Altar			
+	748895195	None	Altar			
+	2917726846	Activated	Altar			
 	748895195	None	Menu			
 	2021425847	New_State	Menu			
 	3927860621	Menu_Active	Menu			
 	4115671616	Menu_Inactive	Menu			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	178793710	Activated	Altar	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx		
 	848240171	Menu_Active	Menu	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -140,7 +145,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	360357885	Player_Footsteps_Stone47	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\Player_Footsteps_Stone47_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone47		245416
 	360760542	Waterdrop_04	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\Waterdrop_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\3D\WaterDroplets\Waterdrop_04		84064
 	365444483	player_voice_death_08	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\player_voice_death_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_death\player_voice_death_08		96064
-	374475058	SFX_Cutscene_Arrow_Demonstartion_V06	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\SFX_Cutscene_Arrow_Demonstartion_V06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cutscenes\SFX_Cutscene_Arrow_Demonstartion_V06		1437068
 	379038102	Player_Footsteps_Stone07	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\Player_Footsteps_Stone07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone07		231040
 	387499734	player_voice_jump_06	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\player_voice_jump_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_jump\player_voice_jump_06		27064
 	391519029	puzzle_solved	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Mac\SFX\puzzle_solved_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle\puzzle_solved		1344064
