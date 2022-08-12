@@ -38,48 +38,21 @@
 				</Event>
 				<Event Name="Play_SFX_Cutscene_Arrow_Demonstartion" ID="{4A358F4B-048E-4AB2-8794-6D6646466544}">
 					<ChildrenList>
-						<Action Name="" ID="{A63F6FF9-8500-432A-B236-2A3474374A45}" ShortID="786280300">
+						<Action Name="" ID="{4A4B5ED4-1C81-47A7-88D3-9E0BD8317177}" ShortID="53205747">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="8"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
-							<ChildrenList>
-								<EventActionException Name="" ID="{0E1CD242-6F5E-4BA9-97F4-82713B13F5C4}"/>
-								<EventActionException Name="" ID="{EE9168C2-8845-48A6-9C8B-375306B2425B}">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MainGameplay" ID="{B0536FC0-6B04-4BAD-9BC1-7A8906C494A2}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
-										</Reference>
-									</ReferenceList>
-								</EventActionException>
-								<EventActionException Name="" ID="{6C86152D-B052-41A8-9DBE-CA4A963352C8}">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
-										</Reference>
-									</ReferenceList>
-								</EventActionException>
-							</ChildrenList>
 						</Action>
-						<Action Name="" ID="{5944A980-72C3-4CF4-AB54-CC6B17A5108C}" ShortID="95334480">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V06" ID="{97CEAD2F-A963-48DF-97FC-4CB4DDDD6BEB}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{F63D3CFD-ED3B-42B0-9AF8-1CD0C98A1CC7}" ShortID="551625307">
+						<Action Name="" ID="{6B3323AE-D69F-4861-BA6F-60519E59BF81}" ShortID="499655822">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+								<Property Name="Delay" Type="Real64" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cannon" ID="{A1118EA0-ECD3-49DD-9B71-2FF8F3004C14}" WorkUnitID="{DCE57691-448D-4D09-97FE-FCE5CC10EF58}"/>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

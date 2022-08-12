@@ -62,6 +62,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace ALTAR
+        {
+            static const AkUniqueID GROUP = 338315243U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ACTIVATED = 2917726846U;
+                static const AkUniqueID DEACTIVATED = 622383625U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace ALTAR
+
         namespace LEVELSTATE
         {
             static const AkUniqueID GROUP = 3473087568U;
@@ -168,6 +180,7 @@ namespace AK
     {
         static const AkUniqueID NO_OUTPUT = 2317455096U;
         static const AkUniqueID SYSTEM = 3859886410U;
+        static const AkUniqueID SYSTEM_01 = 2719312584U;
     } // namespace AUDIO_DEVICES
 
 }// namespace AK
