@@ -8,13 +8,17 @@ public class BlueEye : MonoBehaviour
 {
     [SerializeField] private bool _isActive = true;
     [SerializeField] private UnityEvent _collisionEvent;
+    
+    [Header("Emission Control")]
     [SerializeField] private Material _emissionMaterial;
-    [SerializeField] private float _period = 1f;
     [SerializeField] private float _litOnTime = 1f;
     [SerializeField] private float _emissionMax = 4f;
     [SerializeField] private float _emissionMin = 1.4f;
     [SerializeField] private float _frequency = 1f;
     [SerializeField] private float _lightingTime = 1f;
+    
+    [Header("Blue Eye Functionality")]
+    [SerializeField] private bool _deactivatesOnCollision = true;
     [SerializeField] private bool _useTimer = false;
 
     [SerializeField] private int _numberOfTriggers = 1;
@@ -72,12 +76,16 @@ public class BlueEye : MonoBehaviour
 #endif
             yield return null;
         }
+
         IsLit = false;
         Activate();
     }
+
     public IEnumerator OscillateEmission()
     {
-        Deactivate();
+        if (_deactivatesOnCollision)
+            Deactivate();
+
         float timeElasped = 0f;
         float currentEmission = _emissionMin;
 
@@ -131,7 +139,7 @@ public class BlueEye : MonoBehaviour
         var projectile = other.gameObject.GetComponent<Projectile>();
         if (!projectile) return;
         if (!_isActive) return;
-
+        Debug.Log("Collided with: " + other.gameObject.name);
         _collisionEvent?.Invoke();
         if (_useTimer)
         {
@@ -139,9 +147,10 @@ public class BlueEye : MonoBehaviour
         }
         else
         {
+            StopCoroutine(OscillateEmission());
             StartCoroutine(OscillateEmission());
         }
-        
+
         PlayEyeGlowSound();
 
         if (_playPuzzleSolveSound)

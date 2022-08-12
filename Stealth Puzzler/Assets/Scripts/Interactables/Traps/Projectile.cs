@@ -61,7 +61,6 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //Reflector reflector = other.gameObject.GetComponent<Faces>().GetReflector();
         Reflector reflector = other.gameObject.GetComponentInChildren<Reflector>();
         var enemy = other.gameObject.GetComponent<WolfAI>();
         var player = other.gameObject.GetComponent<PlayerController>();
@@ -71,8 +70,6 @@ public class Projectile : MonoBehaviour
             var directionToTarget = Vector3.Normalize(transform.position - reflector.transform.position);
             var dot = Vector3.Dot(reflector.transform.forward, directionToTarget);
         
-            Debug.Log("Detected reflector. Dot product: " + dot);
-            
             if (!(dot > _infrontValue))
             {
                 if (_timeActive < .3f) return;
@@ -101,6 +98,7 @@ public class Projectile : MonoBehaviour
         else
         {
             if (_timeActive < .3f) return;
+            Debug.Log("Arrow hit: " + other.gameObject.name);
             AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
             gameObject.SetActive(false);
         }

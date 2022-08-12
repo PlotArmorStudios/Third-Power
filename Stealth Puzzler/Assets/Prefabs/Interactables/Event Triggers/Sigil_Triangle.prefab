@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434635dcb373f6742a04cf0f94eef4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isActive: 1
   _collisionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -113,11 +114,16 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _emissionMaterial: {fileID: 2100000, guid: 190fcacc63903de409081294686bd199, type: 2}
-  _period: 1
+  _litOnTime: 1
   _emissionMax: 7
   _emissionMin: 1.4
   _frequency: 2
+  _lightingTime: 1
+  _deactivatesOnCollision: 1
+  _useTimer: 0
   _numberOfTriggers: 1
+  _playPuzzleSolveSound: 0
+  _puzzleSoundWaitTime: 0
 --- !u!64 &8152598499900897958
 MeshCollider:
   m_ObjectHideFlags: 0
