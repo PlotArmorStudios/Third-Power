@@ -48,9 +48,30 @@ public class PauseMenu : MonoBehaviour
     {
         if (obj.started && !IsPaused)
         {
-            OpenPauseMenu();
-            OnPause?.Invoke();
+            Pause();
         }
+    }
+
+    public void Pause()
+    {
+        OpenPauseMenu();
+        OnPause?.Invoke();
+    }
+
+
+    private void ResumeGame(InputAction.CallbackContext obj)
+    {
+        if (obj.started && IsPaused)
+        {
+            Resume();
+        }
+    }
+
+    public void Resume()
+    {
+        ClosePauseMenu();
+        OnResume?.Invoke();
+        AkSoundEngine.SetState("Menu", "Menu_Inactive");
     }
 
     private void OpenPauseMenu()
@@ -60,16 +81,6 @@ public class PauseMenu : MonoBehaviour
         PlayerInput.SwitchCurrentActionMap("UI");
         IsPaused = true;
         AkSoundEngine.SetState("Menu", "Menu_Active");
-    }
-
-    private void ResumeGame(InputAction.CallbackContext obj)
-    {
-        if (obj.started && IsPaused)
-        {
-            ClosePauseMenu();
-            OnResume?.Invoke();
-            AkSoundEngine.SetState("Menu", "Menu_Inactive");
-        }
     }
 
     public void ClosePauseMenu()
