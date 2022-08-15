@@ -8,6 +8,7 @@ public class UISubtitleCanvas : MonoBehaviour
 
     public void SetSubtitle(SubtitleObject subtitleObject)
     {
+        _subTitleText.fontStyle = subtitleObject.FontStyle;
         _subTitleText.text = subtitleObject.Subtitle;
     }
 

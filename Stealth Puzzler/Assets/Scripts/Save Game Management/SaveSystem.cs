@@ -11,20 +11,21 @@ public static class SaveSystem
     public static void SaveGame(GameManager gameManager)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/game.txt";
+        string path = Application.persistentDataPath + "/ThirdPowerD.txt";
 
         FileStream stream = new FileStream(path, FileMode.Create);
 
         GameData data = new GameData(gameManager);
 
         Debug.Log("Game saved. Path: " + path);
+        
         formatter.Serialize(stream, data);
         stream.Close();
     }
 
     public static GameData LoadGame()
     {
-        string path = Application.persistentDataPath + "/game.txt";
+        string path = Application.persistentDataPath + "/ThirdPowerD.txt";
 
         if (File.Exists((path)))
         {
@@ -46,7 +47,7 @@ public static class SaveSystem
 
     public static void DeleteSave()
     {
-        string path = Application.persistentDataPath + "/game.txt";
+        string path = Application.persistentDataPath + "/ThirdPowerD.txt";
             
         if (File.Exists((path)))
         {
@@ -62,6 +63,7 @@ public class GameData
 {
     public int CurrentLevel;
     public float[] CurrentPosition;
+    public float[] CurrentRotation;
 
     public Dictionary<string, bool> TrapBooleans;
 
@@ -69,6 +71,8 @@ public class GameData
     {
         CurrentLevel = gameManager.CurrentLevel;
         CurrentPosition = gameManager.CurrentPosition;
+        CurrentRotation = gameManager.CurrentRotation;
         TrapBooleans = gameManager.ObstacleBooleans;
+        Debug.Log("Saved position in file: " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
     }
 }
