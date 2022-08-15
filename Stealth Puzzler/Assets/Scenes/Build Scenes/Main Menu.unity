@@ -3349,6 +3349,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8334594583625431134, guid: 4dbd10ae94e93e54ab14f82e2a4e7c12,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dbd10ae94e93e54ab14f82e2a4e7c12, type: 3}
 --- !u!1 &339776680
@@ -5066,6 +5071,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2d5387d5fc881479244b21882ddf6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &552499999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2162326746315843817, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_Name
+      value: Game Manager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.992997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3896353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.69310594
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5be41f0221ddbcb45900f8a164319bfe, type: 3}
 --- !u!1 &576178107
 GameObject:
   m_ObjectHideFlags: 0
@@ -14576,18 +14650,6 @@ RectTransform:
   m_AnchoredPosition: {x: 869, y: 50}
   m_SizeDelta: {x: 39, y: 644.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1410310192 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2162326746315843816, guid: 5be41f0221ddbcb45900f8a164319bfe,
-    type: 3}
-  m_PrefabInstance: {fileID: 2162326746745448315}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb4dace8a3a44e894e6abc021753bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1426766666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17621,7 +17683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1410310192}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: DeleteSave
         m_Mode: 1
@@ -21155,7 +21217,7 @@ PrefabInstance:
     - target: {fileID: 2162326746315843817, guid: 5be41f0221ddbcb45900f8a164319bfe,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2162326746315843823, guid: 5be41f0221ddbcb45900f8a164319bfe,
         type: 3}
