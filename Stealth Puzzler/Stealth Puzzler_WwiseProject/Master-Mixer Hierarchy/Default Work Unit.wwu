@@ -45,11 +45,6 @@
 					<ChildrenList>
 						<Bus Name="Sfx" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
 							<PropertyList>
-								<Property Name="BusChannelConfig" Type="int32">
-									<ValueList>
-										<Value>768</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{B8E68619-77A7-47E8-8B59-593369FA2FAF}" ShortID="200840543">
@@ -225,7 +220,7 @@
 										<StateRef Name="Menu_Active" ID="{8BA13586-FAE0-4B08-BBB8-DB1758707077}"/>
 										<CustomState Name="" ID="{91751A28-39AF-46F4-AB29-682417599B9A}" ShortID="848240171">
 											<PropertyList>
-												<Property Name="BusVolume" Type="Real64" Value="-6"/>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
 												<Property Name="Highpass" Type="int16" Value="20"/>
 												<Property Name="Lowpass" Type="int16" Value="50"/>
 											</PropertyList>
@@ -265,7 +260,7 @@
 												<PointList>
 													<Point>
 														<XPos>-48</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>5</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
