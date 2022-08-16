@@ -54,20 +54,22 @@ public class WwiseMusic : MonoBehaviour
                     Play_Early_Music.Post(gameObject);
                     IsPlaying = true;
                 }
-                else if(GameManager.Instance.CurrentLevel >= 9)
+                else if(GameManager.Instance.CurrentLevel >= 9 && GameManager.Instance.CurrentLevel < 14)
                 {
                     Start_With_Later_Music.Post(gameObject);
                     IsPlaying = true;
                 }
+                //add final level music in if statement here
             if (IsPlaying == true)
                 {
-                    if (GameManager.Instance.CurrentLevel == 9 || GameManager.Instance.CurrentLevel > 9)
+                    if (GameManager.Instance.CurrentLevel >= 9 && GameManager.Instance.CurrentLevel < 14)
                     {
                         Play_Later_Music.Post(gameObject);
-                        //Debug.Log("Music transitioned.");
                     }
-                    //else
-                        //Debug.Log("Music didn't transition");
+                    else if(GameManager.Instance.CurrentLevel == 14)
+                    {
+                        Stop_Music.Post(gameObject);
+                    }
                 }
     }
 }
