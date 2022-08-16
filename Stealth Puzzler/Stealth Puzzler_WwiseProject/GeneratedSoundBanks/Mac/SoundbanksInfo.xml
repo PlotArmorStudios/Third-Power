@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2856834472">
+		<SoundBank Id="393239870" Language="SFX" Hash="1611201274">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -32,21 +32,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="0.55956" DurationMax="0.710856">
-					<IncludedMemoryFiles>
-						<File Id="647342616" Language="SFX">
-							<ShortName>StealthPuzzler_Cannon_01.wav</ShortName>
-							<Path>SFX\StealthPuzzler_Cannon_01_10C4C929.wem</Path>
-						</File>
-						<File Id="741462922" Language="SFX">
-							<ShortName>StealthPuzzler_Cannon_03.wav</ShortName>
-							<Path>SFX\StealthPuzzler_Cannon_03_10C4C929.wem</Path>
-						</File>
-						<File Id="946342383" Language="SFX">
-							<ShortName>StealthPuzzler_Cannon_02.wav</ShortName>
-							<Path>SFX\StealthPuzzler_Cannon_02_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
+				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<AuxBusSends>
 						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
 					</AuxBusSends>
@@ -973,19 +959,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.0215" DurationMax="2.03125">
+				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.833333" DurationMax="3.">
 					<IncludedMemoryFiles>
-						<File Id="854608487" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_Reload_02.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_02_10C4C929.wem</Path>
+						<File Id="647342616" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_01.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_01_10C4C929.wem</Path>
 						</File>
-						<File Id="919698874" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_Reload_01.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_01_10C4C929.wem</Path>
+						<File Id="741462922" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_03.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_03_10C4C929.wem</Path>
 						</File>
-						<File Id="923818333" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_Reload_03.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_03_10C4C929.wem</Path>
+						<File Id="847984542" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_04.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_04_10C4C929.wem</Path>
+						</File>
+						<File Id="946342383" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_02.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -1124,7 +1114,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="543694047" Language="SFX" Hash="4102024586">
+		<SoundBank Id="543694047" Language="SFX" Hash="3593488282">
 			<ObjectPath>\SoundBanks\Default Work Unit\VOs</ObjectPath>
 			<ShortName>VOs</ShortName>
 			<Path>VOs.bnk</Path>
@@ -1201,7 +1191,7 @@
 				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4050113977">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1200658459">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

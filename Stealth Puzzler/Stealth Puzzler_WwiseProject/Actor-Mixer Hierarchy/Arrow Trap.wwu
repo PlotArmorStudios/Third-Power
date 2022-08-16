@@ -102,91 +102,20 @@
 							<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
 					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="StealthPuzzler_Cannon_01" ID="{BAE32CC3-A8E0-4A71-ABC6-CD7C7DE15746}" ShortID="369499255">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="StealthPuzzler_Cannon_01" ID="{72015C51-4C8F-4904-B848-63A1C084DD61}">
-									<Language>SFX</Language>
-									<AudioFile>StealthPuzzler_Cannon_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="647342616"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="StealthPuzzler_Cannon_01" ID="{72015C51-4C8F-4904-B848-63A1C084DD61}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="StealthPuzzler_Cannon_02" ID="{D53DD17B-D96B-434A-BF0E-801B39758A96}" ShortID="754179377">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="StealthPuzzler_Cannon_02" ID="{365ABAB8-CEF5-4390-94A1-0CE09BADF29B}">
-									<Language>SFX</Language>
-									<AudioFile>StealthPuzzler_Cannon_02.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="946342383"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="StealthPuzzler_Cannon_02" ID="{365ABAB8-CEF5-4390-94A1-0CE09BADF29B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="StealthPuzzler_Cannon_03" ID="{FBA5EBC8-41BF-4943-A5FA-8B407808358E}" ShortID="661248545">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="StealthPuzzler_Cannon_03" ID="{7DEA03FA-5CA5-4FA5-A2A0-5B3059205C6D}">
-									<Language>SFX</Language>
-									<AudioFile>StealthPuzzler_Cannon_03.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="741462922"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="StealthPuzzler_Cannon_03" ID="{7DEA03FA-5CA5-4FA5-A2A0-5B3059205C6D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Trap_Reload" ID="{0C26BB6A-880E-42B5-8974-882DC1770882}" ShortID="1018380198">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="UserAuxSendVolume0" Type="Real64">
+						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>30</Value>
 							</ValueList>
 						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -205,7 +134,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="SFX_Objects_Cannon_Reload_01" ID="{3258058F-F016-4323-AA31-641EA5916421}" ShortID="849069653">
+						<Sound Name="StealthPuzzler_Cannon_01" ID="{1C7475BD-7BB9-4049-B9A1-06ADAF3DB6D7}" ShortID="964876916">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -215,20 +144,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_Reload_01" ID="{63ACC436-F1B3-4DBB-B590-71993002ABDF}">
+								<AudioFileSource Name="StealthPuzzler_Cannon_01" ID="{AF73C671-6C72-416B-BC5A-237E13D6FE62}">
 									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_Reload_01.wav</AudioFile>
+									<AudioFile>StealthPuzzler_Cannon_01.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="919698874"/>
+										<MediaID ID="647342616"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_Reload_01" ID="{63ACC436-F1B3-4DBB-B590-71993002ABDF}" Platform="Linked"/>
+								<ActiveSource Name="StealthPuzzler_Cannon_01" ID="{AF73C671-6C72-416B-BC5A-237E13D6FE62}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Objects_Cannon_Reload_02" ID="{C9237E1C-846D-440D-B6B3-B105FF15443A}" ShortID="347586554">
+						<Sound Name="StealthPuzzler_Cannon_02" ID="{957C4580-857E-45A2-8DED-F552D45A738E}" ShortID="317776491">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -238,20 +167,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_Reload_02" ID="{989B0A97-47FD-4E91-93FD-0D0655376862}">
+								<AudioFileSource Name="StealthPuzzler_Cannon_02" ID="{DB37B97C-D72B-47CC-BA01-599F598CF039}">
 									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_Reload_02.wav</AudioFile>
+									<AudioFile>StealthPuzzler_Cannon_02.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="854608487"/>
+										<MediaID ID="946342383"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_Reload_02" ID="{989B0A97-47FD-4E91-93FD-0D0655376862}" Platform="Linked"/>
+								<ActiveSource Name="StealthPuzzler_Cannon_02" ID="{DB37B97C-D72B-47CC-BA01-599F598CF039}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Objects_Cannon_Reload_03" ID="{B84D8CBF-B8FD-4DE2-BDA4-5E28360CA4C5}" ShortID="587454891">
+						<Sound Name="StealthPuzzler_Cannon_03" ID="{004DD474-C709-4F23-8C2E-C7A0BE4F2CEE}" ShortID="108317254">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -261,17 +190,40 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_Objects_Cannon_Reload_03" ID="{55CEF016-2221-41EF-9313-650671B1A61C}">
+								<AudioFileSource Name="StealthPuzzler_Cannon_03" ID="{A2646F51-D31E-4B9E-B3F4-6624E543454E}">
 									<Language>SFX</Language>
-									<AudioFile>SFX_Objects_Cannon_Reload_03.wav</AudioFile>
+									<AudioFile>StealthPuzzler_Cannon_03.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="923818333"/>
+										<MediaID ID="741462922"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_Objects_Cannon_Reload_03" ID="{55CEF016-2221-41EF-9313-650671B1A61C}" Platform="Linked"/>
+								<ActiveSource Name="StealthPuzzler_Cannon_03" ID="{A2646F51-D31E-4B9E-B3F4-6624E543454E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="StealthPuzzler_Cannon_04" ID="{B6128DDB-4FE6-4EC8-BA93-B43D0250EBD9}" ShortID="606137776">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="StealthPuzzler_Cannon_04" ID="{C510D529-4AF7-46EE-9F9B-6419097CC933}">
+									<Language>SFX</Language>
+									<AudioFile>StealthPuzzler_Cannon_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="847984542"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="StealthPuzzler_Cannon_04" ID="{C510D529-4AF7-46EE-9F9B-6419097CC933}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

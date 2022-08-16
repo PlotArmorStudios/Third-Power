@@ -22,14 +22,14 @@
 											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>4.97976</XPos>
-											<YPos>-12.11576</YPos>
+											<XPos>4.73685</XPos>
+											<YPos>-8.74914</YPos>
 											<Flags>0</Flags>
-											<SegmentShape>Exp2</SegmentShape>
+											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>26.66225</XPos>
-											<YPos>-16.90197</YPos>
+											<XPos>26.8242</XPos>
+											<YPos>-21.23614</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp2</SegmentShape>
 										</Point>
@@ -76,25 +76,25 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-5.50445</YPos>
 											<Flags>5</Flags>
 											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>6.74764</XPos>
-											<YPos>-6.0206</YPos>
+											<XPos>0.001</XPos>
+											<YPos>-5.58838</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>14.73684</XPos>
-											<YPos>-5.94285</YPos>
+											<XPos>14.62887</XPos>
+											<YPos>-10.01395</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
 											<XPos>40</XPos>
-											<YPos>-18.13637</YPos>
+											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>
@@ -108,7 +108,42 @@
 							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
 						</VolumeWetUserUsage>
 						<LowPassFilterUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="LowPassFilter" ID="{FF127BCF-C31D-440C-9F5B-3D20601BAF2A}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="65537"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>9.93252</XPos>
+											<YPos>24</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>Exp1</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>26.88259</XPos>
+											<YPos>36</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>Log1</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>39.999</XPos>
+											<YPos>47</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>40</XPos>
+											<YPos>50</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
 						</LowPassFilterUsage>
 						<HighPassFilterUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
@@ -135,7 +170,7 @@
 									<PointList>
 										<Point>
 											<XPos>0</XPos>
-											<YPos>0</YPos>
+											<YPos>-16.3027</YPos>
 											<Flags>5</Flags>
 											<SegmentShape>Log2</SegmentShape>
 										</Point>
@@ -152,8 +187,8 @@
 											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>5.10121</XPos>
-											<YPos>-30.37028</YPos>
+											<XPos>9.90553</XPos>
+											<YPos>-200</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp2</SegmentShape>
 										</Point>
@@ -258,14 +293,14 @@
 											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>2.42915</XPos>
-											<YPos>-8.47354</YPos>
+											<XPos>0.001</XPos>
+											<YPos>-12.99803</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>10.10121</XPos>
-											<YPos>-8.75225</YPos>
+											<XPos>8.8664</XPos>
+											<YPos>-13.06423</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Log1</SegmentShape>
 										</Point>
