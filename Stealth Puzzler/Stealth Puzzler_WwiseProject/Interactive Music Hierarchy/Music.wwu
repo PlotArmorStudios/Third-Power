@@ -1495,7 +1495,7 @@
 							<ChildrenList>
 								<MusicSegment Name="MainGameplay" ID="{9120ED51-9118-468E-A292-BD6F583C8C1D}" ShortID="527096842">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="57367.9379258944"/>
+										<Property Name="EndPosition" Type="Real64" Value="73286.8413461538"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>1</Value>
@@ -1886,13 +1886,6 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="SP_StringHarmonics_65" ID="{958C8D2A-C9F3-477C-A48B-85D91952E603}">
-													<Language>SFX</Language>
-													<AudioFile>SP_StringHarmonics_65.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="29585292"/>
-													</MediaIDList>
-												</AudioFileSource>
 												<AudioFileSource Name="SP_Glockenspiel_65" ID="{F812A5DD-2D92-4379-BBCE-CC58E38F9E56}">
 													<Language>SFX</Language>
 													<AudioFile>SP_Glockenspiel_65.wav</AudioFile>
@@ -1905,6 +1898,13 @@
 													<AudioFile>SP_Glock_Crystal_Only_65.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="261623985"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="SP_StringHarmonics_Edit_65" ID="{1FE7EDD7-7E18-4595-86A8-A7BD0A73329B}">
+													<Language>SFX</Language>
+													<AudioFile>SP_StringHarmonics_Edit_65.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="499498620"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -1925,14 +1925,14 @@
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="SP_StringHarmonics_65" ID="{927780C1-ACD5-4D7A-98D6-785DD16771E8}">
+																				<MusicClip Name="SP_StringHarmonics_Edit_65" ID="{E80C4BB4-EFB6-4146-9A1E-1AA6AAC29CCD}">
 																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="34075.3541666667"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="35440.6875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="923.076923076923"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="SP_StringHarmonics_65" ID="{958C8D2A-C9F3-477C-A48B-85D91952E603}"/>
+																					<AudioSourceRef Name="SP_StringHarmonics_Edit_65" ID="{1FE7EDD7-7E18-4595-86A8-A7BD0A73329B}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
