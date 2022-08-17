@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2856834472">
+		<SoundBank Id="393239870" Language="SFX" Hash="3384525154">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -29,21 +29,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="0.55956" DurationMax="0.710856">
-					<IncludedMemoryFiles>
-						<File Id="647342616" Language="SFX">
-							<ShortName>StealthPuzzler_Cannon_01.wav</ShortName>
-							<Path>SFX\StealthPuzzler_Cannon_01_10C4C929.wem</Path>
-						</File>
-						<File Id="741462922" Language="SFX">
-							<ShortName>StealthPuzzler_Cannon_03.wav</ShortName>
-							<Path>SFX\StealthPuzzler_Cannon_03_10C4C929.wem</Path>
-						</File>
-						<File Id="946342383" Language="SFX">
-							<ShortName>StealthPuzzler_Cannon_02.wav</ShortName>
-							<Path>SFX\StealthPuzzler_Cannon_02_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
+				<Event Id="712207333" Name="Play_Cannon" ObjectPath="\Events\Default Work Unit\Play_Cannon" MaxAttenuation="40." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<AuxBusSends>
 						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
 					</AuxBusSends>
@@ -858,19 +844,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="7." DurationMax="7.">
+				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="9.5" DurationMax="9.5">
 					<IncludedMemoryFiles>
-						<File Id="391519029" Language="SFX">
-							<ShortName>puzzle_solved.wav</ShortName>
-							<Path>SFX\puzzle_solved_10C4C929.wem</Path>
+						<File Id="148034120" Language="SFX">
+							<ShortName>puzzle_solved_V02.wav</ShortName>
+							<Path>SFX\puzzle_solved_V02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="Infinite">
+				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="OneShot" DurationMin="4.8" DurationMax="4.8">
 					<IncludedMemoryFiles>
-						<File Id="10604314" Language="SFX">
-							<ShortName>puzzle_time_running_out_clock.wav</ShortName>
-							<Path>SFX\puzzle_time_running_out_clock_D79FB2B7.wem</Path>
+						<File Id="498529227" Language="SFX">
+							<ShortName>puzzle_time_running_out_clock_V02.wav</ShortName>
+							<Path>SFX\puzzle_time_running_out_clock_V02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -970,19 +956,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.0215" DurationMax="2.03125">
+				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.833333" DurationMax="3.">
 					<IncludedMemoryFiles>
-						<File Id="854608487" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_Reload_02.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_02_10C4C929.wem</Path>
+						<File Id="647342616" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_01.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_01_10C4C929.wem</Path>
 						</File>
-						<File Id="919698874" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_Reload_01.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_01_10C4C929.wem</Path>
+						<File Id="741462922" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_03.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_03_10C4C929.wem</Path>
 						</File>
-						<File Id="923818333" Language="SFX">
-							<ShortName>SFX_Objects_Cannon_Reload_03.wav</ShortName>
-							<Path>SFX\SFX_Objects_Cannon_Reload_03_10C4C929.wem</Path>
+						<File Id="847984542" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_04.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_04_10C4C929.wem</Path>
+						</File>
+						<File Id="946342383" Language="SFX">
+							<ShortName>StealthPuzzler_Cannon_02.wav</ShortName>
+							<Path>SFX\StealthPuzzler_Cannon_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -1091,6 +1081,7 @@
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="1316067302" Name="DangerLevel" ObjectPath="\Game Parameters\Default Work Unit\DangerLevel"/>
 				<GameParameter Id="2521717285" Name="ArrowTrapFiltering" ObjectPath="\Game Parameters\Default Work Unit\ArrowTrapFiltering"/>
+				<GameParameter Id="2794761965" Name="puzzle_sound" ObjectPath="\Game Parameters\Default Work Unit\puzzle_sound"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 			</GameParameters>
 			<StateGroups>

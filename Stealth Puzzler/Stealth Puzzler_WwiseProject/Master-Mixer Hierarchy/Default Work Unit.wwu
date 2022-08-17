@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<RTPCList>
 								<RTPC Name="" ID="{1A58CA68-631A-4E60-861F-7923703B651F}" ShortID="73729020">
@@ -38,15 +43,53 @@
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{D434F74F-BAC6-41CB-B3FF-66DB4630721A}" WorkUnitID="{60FF6660-47E5-4CE2-B502-F3CF53394C34}"/>
 						</Reference>
-						<Reference Name="Effect0" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
-							<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Sfx" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}">
 							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3584</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
+										<RTPC Name="" ID="{D146EB00-E53E-409F-B84E-3EED05F7F5A7}" ShortID="438478002">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{22159850-8DB6-4D68-A9EA-2A6C681CF47C}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>-0.22562</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-47.92782</XPos>
+														<YPos>0.04466</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-25.04662</XPos>
+														<YPos>-5.46003</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-6.15527</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 										<RTPC Name="" ID="{B8E68619-77A7-47E8-8B59-593369FA2FAF}" ShortID="200840543">
 											<ReferenceList>
 												<Reference Name="ControlInput">
@@ -77,6 +120,11 @@
 							<ChildrenList>
 								<Bus Name="Ambience" ID="{A8016111-4CCC-4CB0-9345-944416169955}">
 									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>3584</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<RTPCList>
 												<RTPC Name="" ID="{21D1901F-2B85-4F19-9F1F-9184EDF7CF00}" ShortID="693018968">
@@ -245,6 +293,11 @@
 										<Value>3840</Value>
 									</ValueList>
 								</Property>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{C245EC5A-8F5A-48F2-8C39-3FABC9BFFF1A}" ShortID="1067846142">
@@ -265,20 +318,20 @@
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-40.46189</XPos>
-														<YPos>-0.08585</YPos>
+														<XPos>-47.999</XPos>
+														<YPos>0.00366</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-29.93072</XPos>
-														<YPos>-5.12641</YPos>
+														<XPos>-36.78786</XPos>
+														<YPos>-7.30764</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-7.08306</YPos>
+														<YPos>-7.92831</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -308,8 +361,8 @@
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-25.78217</XPos>
-														<YPos>-4.7856</YPos>
+														<XPos>-25.20473</XPos>
+														<YPos>-5.10035</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>

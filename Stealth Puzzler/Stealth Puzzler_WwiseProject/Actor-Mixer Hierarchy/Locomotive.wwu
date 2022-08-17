@@ -12,7 +12,7 @@
 									<Modifier Name="" ID="{93816F41-E8CC-4B03-B13A-CA3954FAB42B}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="13"/>
+											<Property Name="Max" Type="Real64" Value="30"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -32,13 +32,18 @@
 							</ModifierList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{BD51FF62-57F1-4D15-9FB3-914E16A31093}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Min" Type="Real64" Value="-3"/>
+											<Property Name="Min" Type="Real64" Value="-4"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -2677,7 +2682,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-15</Value>
+								<Value>-18</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>

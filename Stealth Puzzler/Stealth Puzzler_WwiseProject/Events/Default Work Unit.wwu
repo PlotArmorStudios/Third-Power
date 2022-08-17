@@ -359,13 +359,13 @@
 				</Event>
 				<Event Name="Play_puzzle_time_running_out" ID="{64768EC8-7872-4E4C-BEC7-4681B330B547}">
 					<ChildrenList>
-						<Action Name="" ID="{ED0C17F0-ADAB-46DB-9B09-2E10DB8BC5FB}" ShortID="393153675">
+						<Action Name="" ID="{C8BF062B-E8EA-4EAC-8C47-994A6C4240CF}" ShortID="500959992">
 							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="puzzle_time_running_out_clock" ID="{3CBF85C8-38EA-4D2B-AF36-4016E27C22DF}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
+									<ObjectRef Name="puzzle_time_running_out_clock_V02" ID="{1FE19549-2317-46B9-B553-8F88899CB3EA}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -373,14 +373,14 @@
 				</Event>
 				<Event Name="stop_puzzle_time_running_out" ID="{1A9C6C2A-AFB4-47FD-AECB-787429D79644}">
 					<ChildrenList>
-						<Action Name="" ID="{ADC80205-723A-4C5D-8E2B-7878EE1F26B1}" ShortID="828393719">
+						<Action Name="" ID="{62DFEEA5-AB49-44DF-9086-C45FE5F19B6C}" ShortID="13655567">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="puzzle_time_running_out_clock" ID="{3CBF85C8-38EA-4D2B-AF36-4016E27C22DF}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
+									<ObjectRef Name="puzzle_time_running_out_clock_V02" ID="{1FE19549-2317-46B9-B553-8F88899CB3EA}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -399,10 +399,10 @@
 				</Event>
 				<Event Name="Play_puzzle_solved" ID="{BFCC3A02-69CC-4328-AB11-44AFB2638555}">
 					<ChildrenList>
-						<Action Name="" ID="{20649631-BA3F-412C-9FA2-EC8A9FA14BC0}" ShortID="110402513">
+						<Action Name="" ID="{153E1608-F5EE-4B2F-BCD9-05E5E1138044}" ShortID="975281072">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="puzzle_solved" ID="{6F44975B-07E2-4C0B-96BE-E477F4A40758}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
+									<ObjectRef Name="puzzle_solved_V02" ID="{EC085385-4358-4192-8234-E5971A00A3C6}" WorkUnitID="{6403F0F0-BF10-4C40-9EBE-36F9272D35BD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
