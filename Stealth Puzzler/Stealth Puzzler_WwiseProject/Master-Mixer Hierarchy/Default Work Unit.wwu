@@ -54,6 +54,42 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
+										<RTPC Name="" ID="{D146EB00-E53E-409F-B84E-3EED05F7F5A7}" ShortID="438478002">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="puzzle_sound" ID="{F265EA32-7F01-4AB8-BBAC-D5060C62B706}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{22159850-8DB6-4D68-A9EA-2A6C681CF47C}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>-0.22562</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-47.92782</XPos>
+														<YPos>0.04466</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-25.04662</XPos>
+														<YPos>-5.46003</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-6.15527</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
 										<RTPC Name="" ID="{B8E68619-77A7-47E8-8B59-593369FA2FAF}" ShortID="200840543">
 											<ReferenceList>
 												<Reference Name="ControlInput">
@@ -257,6 +293,11 @@
 										<Value>3840</Value>
 									</ValueList>
 								</Property>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{C245EC5A-8F5A-48F2-8C39-3FABC9BFFF1A}" ShortID="1067846142">
@@ -277,20 +318,20 @@
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-40.46189</XPos>
-														<YPos>-0.08585</YPos>
+														<XPos>-47.999</XPos>
+														<YPos>0.00366</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-29.93072</XPos>
-														<YPos>-5.12641</YPos>
+														<XPos>-36.78786</XPos>
+														<YPos>-7.30764</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-7.08306</YPos>
+														<YPos>-7.92831</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -320,8 +361,8 @@
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>-25.78217</XPos>
-														<YPos>-4.7856</YPos>
+														<XPos>-25.20473</XPos>
+														<YPos>-5.10035</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>

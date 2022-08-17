@@ -61,6 +61,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	988953028	SFXVolume			\Default Work Unit\Volume\SFXVolume	
 	1316067302	DangerLevel			\Default Work Unit\DangerLevel	
 	2521717285	ArrowTrapFiltering			\Default Work Unit\ArrowTrapFiltering	
+	2794761965	puzzle_sound			\Default Work Unit\puzzle_sound	
 	2918011349	MasterVolume			\Default Work Unit\Volume\MasterVolume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
@@ -73,7 +74,6 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	361504441	Large_Bright_Space_Stereo	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 6ms
-	1198215643	Boomerang	Wwise Tremolo			
 	1232017842	LR_Slap_with_CrossFeed	Wwise Stereo Delay			
 	2607782584	Lecture_Hall_Stereo	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 6ms
 	3354577677	Fast_LF_Tremolo	Wwise Tremolo			
@@ -84,7 +84,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1728500	Player_Footsteps_Stone63	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone63_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone63		231040
 	3195471	Jelly_Impact_floor_03	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Jelly_Impact_floor_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Jelly\Jelly_Impact_Cube\Jelly_Impact_floor_03		288064
-	10604314	puzzle_time_running_out_clock	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\puzzle_time_running_out_clock_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle\puzzle_time_running_out_clock		921664
 	14735164	player_death_2D_01	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_death_2D_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\death\player_death_2D\player_death_2D_01		768064
 	18825730	Player_Footsteps_Stone51	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone51_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone51		231040
 	19793225	player_voice_death_06	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_voice_death_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_death\player_voice_death_06		144064
@@ -106,6 +105,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	133171936	Player_Footsteps_Stone65	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone65_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone65		231176
 	133207003	Player_Footsteps_Stone16	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone16		234536
 	136446839	Waterdrop_05	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Waterdrop_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\3D\WaterDroplets\Waterdrop_05		96064
+	148034120	puzzle_solved_V02	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\puzzle_solved_V02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle\puzzle_solved_V02		1824064
 	158392890	Player_Footsteps_Stone44	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone44_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone44		231040
 	176869898	VerticalCrushTrap_Idle_MagicLayer_03	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\VerticalCrushTrap_Idle_MagicLayer_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\StalgaticPlatform\Magic\VerticalCrushTrap_Idle_MagicLayer_03		613268
 	179283079	door_open_04	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\door_open_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\door_open\door_open_04		432064
@@ -146,7 +146,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	365444483	player_voice_death_08	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_voice_death_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_death\player_voice_death_08		96064
 	379038102	Player_Footsteps_Stone07	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone07		231040
 	387499734	player_voice_jump_06	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\player_voice_jump_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_voice\player_voice_jump\player_voice_jump_06		27064
-	391519029	puzzle_solved	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\puzzle_solved_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle\puzzle_solved		1344064
 	416225587	Cube_Movement_04	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Cube_Movement_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Cube Movement\Cube_Movement_04		96064
 	419690396	Eye_Impact_03	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Eye_Impact_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Eye\Eye_Impact\Eye_Impact_03		444064
 	427195042	Dunegon_01_Layer_03_03	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Dunegon_01_Layer_03_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\2D\Room_01\Dungeon_1_Layer_03\Dunegon_01_Layer_03_03		768064
@@ -166,6 +165,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	489123100	FS_Asphalt_03	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\FS_Asphalt_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Wood_\FS_Asphalt_03		25804
 	490479913	Player_Footsteps_Stone53	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone53_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone53		231040
 	496657611	Player_Footsteps_Stone67	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Stone67_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Cement\Player_Footsteps_Stone67		249236
+	498529227	puzzle_time_running_out_clock_V02	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\puzzle_time_running_out_clock_V02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle\puzzle_time_running_out_clock_V02		921664
 	515314100	SFX_Objects_ArrowInAir_03	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\SFX_Objects_ArrowInAir_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\Arrow_In_Air\SFX_Objects_ArrowInAir_03		177064
 	516576875	door_open_02	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\door_open_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Objects\door_open\door_open_02		432064
 	517099856	Player_Footsteps_Carpet_05	E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\.cache\Windows\SFX\Player_Footsteps_Carpet_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Locomotive\Footsteps\Footsteps_Carpet\Player_Footsteps_Carpet_05		96064

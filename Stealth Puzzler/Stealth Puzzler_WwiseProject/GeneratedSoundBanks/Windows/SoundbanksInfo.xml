@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1406207854">
+		<SoundBank Id="393239870" Language="SFX" Hash="2721972820">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -847,19 +847,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="7." DurationMax="7.">
+				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="9.5" DurationMax="9.5">
 					<IncludedMemoryFiles>
-						<File Id="391519029" Language="SFX">
-							<ShortName>puzzle_solved.wav</ShortName>
-							<Path>SFX\puzzle_solved_10C4C929.wem</Path>
+						<File Id="148034120" Language="SFX">
+							<ShortName>puzzle_solved_V02.wav</ShortName>
+							<Path>SFX\puzzle_solved_V02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="Infinite">
+				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="OneShot" DurationMin="4.8" DurationMax="4.8">
 					<IncludedMemoryFiles>
-						<File Id="10604314" Language="SFX">
-							<ShortName>puzzle_time_running_out_clock.wav</ShortName>
-							<Path>SFX\puzzle_time_running_out_clock_D79FB2B7.wem</Path>
+						<File Id="498529227" Language="SFX">
+							<ShortName>puzzle_time_running_out_clock_V02.wav</ShortName>
+							<Path>SFX\puzzle_time_running_out_clock_V02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1084,6 +1084,7 @@
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="1316067302" Name="DangerLevel" ObjectPath="\Game Parameters\Default Work Unit\DangerLevel"/>
 				<GameParameter Id="2521717285" Name="ArrowTrapFiltering" ObjectPath="\Game Parameters\Default Work Unit\ArrowTrapFiltering"/>
+				<GameParameter Id="2794761965" Name="puzzle_sound" ObjectPath="\Game Parameters\Default Work Unit\puzzle_sound"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 			</GameParameters>
 			<StateGroups>
@@ -1191,7 +1192,7 @@
 				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1139459085">
+		<SoundBank Id="1355168291" Language="SFX" Hash="955973972">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
