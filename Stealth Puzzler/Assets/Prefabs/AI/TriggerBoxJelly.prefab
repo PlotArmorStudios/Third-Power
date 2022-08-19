@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 6486048745067534998}
   - component: {fileID: 6486048745067534999}
   - component: {fileID: 6486048745067534997}
+  - component: {fileID: 7723386196531059602}
   m_Layer: 17
   m_Name: JellyController
   m_TagString: Untagged
@@ -95,7 +96,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!65 &6486048745067534999
 BoxCollider:
@@ -123,6 +124,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxNumberOfHits: 1
+--- !u!95 &7723386196531059602
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486048745067535006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bccee6ede14c4004197a996cc76c4c7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6486048745630651272
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,8 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jellyController: {fileID: 6486048745067535006}
-  _jellyScaleSize: 1.5
-  _jellyTimeOfExpansion: 3
+  _jellyAnimator: {fileID: 7723386196531059602}
   _move: {fileID: 8569720206534178987, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb, type: 3}
   _switchController: {fileID: -8671253035872491615, guid: 39f1b8a1e95ff07458ae17b95c1ee6bb,
     type: 3}
