@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +6,8 @@ using UnityEngine.InputSystem;
 public class JellyTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject _jellyController;
+    [SerializeField] private Animator _jellyAnimator;
     private bool _jellyCanExpand = true;
-    [SerializeField] private float _jellyScaleSize = 1.5f;
-    [SerializeField] private float _jellyTimeOfExpansion = 2f;
     [SerializeField] private InputActionReference _move;
     [SerializeField] private InputActionReference _switchController;
     private bool _isInvincible = false;
@@ -22,6 +20,9 @@ public class JellyTrigger : MonoBehaviour
 
     private void Start()
     {
+        
+        AnimatorStateInfo state = _jellyAnimator.GetCurrentAnimatorStateInfo(0);//could replace 0 by any other animation layer index
+        _jellyAnimator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
         _invicibilityTimeLeft = 0;
         print(_jellyInteractsWith.value);
     }
@@ -70,7 +71,7 @@ public class JellyTrigger : MonoBehaviour
         if (_jellyCanExpand)
         {
             _jellyCanExpand = false;
-            LeanTween.scale(_jellyController, Vector3.one * _jellyScaleSize, _jellyTimeOfExpansion).setEase(LeanTweenType.easeSpring);
+            _jellyAnimator.SetTrigger("Grow");
         }
     }
 

@@ -11,8 +11,11 @@ public class JellyTriggerBox : MonoBehaviour
     [SerializeField] private float _initialForceMultiplier;
     public static event Action OnJellyTriggerBoxEntered;
     [SerializeField] private float _flipTime = 0.75f;
+    private bool _flipped = false;
+
     private void OnTriggerEnter(Collider other)
     {
+        if (_flipped) return;
         if (other.gameObject.GetComponent<CubeController>())
         {
             _jellyRb.useGravity = true;
@@ -27,6 +30,7 @@ public class JellyTriggerBox : MonoBehaviour
             _jellyRb.AddForce(Vector3.down * _initialForceMultiplier);
             LeanTween.value(_jellyController, RotateCallback, 180f, 0f, _flipTime);
         }
+        _flipped = true;
     }
     private void RotateCallback(float c)
     {
