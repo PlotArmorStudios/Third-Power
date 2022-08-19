@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2721972820">
+		<SoundBank Id="393239870" Language="SFX" Hash="4067090000">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -997,9 +997,25 @@
 							<ShortName>UI_Hover2.wav</ShortName>
 							<Path>SFX\UI_Hover2_10C4C929.wem</Path>
 						</File>
+						<File Id="331044563" Language="SFX">
+							<ShortName>Cube_Movement_03.wav</ShortName>
+							<Path>SFX\Cube_Movement_03_10C4C929.wem</Path>
+						</File>
+						<File Id="337029874" Language="SFX">
+							<ShortName>Cube_Movement_02.wav</ShortName>
+							<Path>SFX\Cube_Movement_02_10C4C929.wem</Path>
+						</File>
+						<File Id="416225587" Language="SFX">
+							<ShortName>Cube_Movement_04.wav</ShortName>
+							<Path>SFX\Cube_Movement_04_10C4C929.wem</Path>
+						</File>
 						<File Id="695338816" Language="SFX">
 							<ShortName>UI_Hover1.wav</ShortName>
 							<Path>SFX\UI_Hover1_10C4C929.wem</Path>
+						</File>
+						<File Id="823154544" Language="SFX">
+							<ShortName>Cube_Movement_01.wav</ShortName>
+							<Path>SFX\Cube_Movement_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1236,7 +1252,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1546231383" Language="SFX" Hash="2108245588">
+		<SoundBank Id="1546231383" Language="SFX" Hash="1446199760">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_Bank</ObjectPath>
 			<ShortName>Music_Bank</ShortName>
 			<Path>Music_Bank.bnk</Path>
@@ -1246,10 +1262,6 @@
 						<File Id="4907375" Language="SFX">
 							<ShortName>SP_Tension_Trombone_solo_v1_65.wav</ShortName>
 							<Path>SFX\SP_Tension_Trombone_solo_v1_65_D79FB2B7.wem</Path>
-						</File>
-						<File Id="29585292" Language="SFX">
-							<ShortName>SP_StringHarmonics_65.wav</ShortName>
-							<Path>SFX\SP_StringHarmonics_65_D79FB2B7.wem</Path>
 						</File>
 						<File Id="115399189" Language="SFX">
 							<ShortName>SP_Ambience_65.wav</ShortName>
@@ -1278,6 +1290,10 @@
 						<File Id="446084114" Language="SFX">
 							<ShortName>SP_StringPlucks_65.wav</ShortName>
 							<Path>SFX\SP_StringPlucks_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="499498620" Language="SFX">
+							<ShortName>SP_StringHarmonics_Edit_65.wav</ShortName>
+							<Path>SFX\SP_StringHarmonics_Edit_65_D79FB2B7.wem</Path>
 						</File>
 						<File Id="506083832" Language="SFX">
 							<ShortName>SP_Tension_Trum_Tromb_v1_65.wav</ShortName>
@@ -1330,10 +1346,6 @@
 							<ShortName>SP_Tension_Trombone_solo_v1_65.wav</ShortName>
 							<Path>SFX\SP_Tension_Trombone_solo_v1_65_D79FB2B7.wem</Path>
 						</File>
-						<File Id="29585292" Language="SFX">
-							<ShortName>SP_StringHarmonics_65.wav</ShortName>
-							<Path>SFX\SP_StringHarmonics_65_D79FB2B7.wem</Path>
-						</File>
 						<File Id="115399189" Language="SFX">
 							<ShortName>SP_Ambience_65.wav</ShortName>
 							<Path>SFX\SP_Ambience_65_D79FB2B7.wem</Path>
@@ -1361,6 +1373,10 @@
 						<File Id="446084114" Language="SFX">
 							<ShortName>SP_StringPlucks_65.wav</ShortName>
 							<Path>SFX\SP_StringPlucks_65_D79FB2B7.wem</Path>
+						</File>
+						<File Id="499498620" Language="SFX">
+							<ShortName>SP_StringHarmonics_Edit_65.wav</ShortName>
+							<Path>SFX\SP_StringHarmonics_Edit_65_D79FB2B7.wem</Path>
 						</File>
 						<File Id="506083832" Language="SFX">
 							<ShortName>SP_Tension_Trum_Tromb_v1_65.wav</ShortName>
@@ -1398,12 +1414,12 @@
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}">
 							<Media>
-								<File Id="29585292"/>
 								<File Id="115399189"/>
 								<File Id="261623985"/>
 								<File Id="308425292"/>
 								<File Id="419687084"/>
 								<File Id="446084114"/>
+								<File Id="499498620"/>
 								<File Id="565349409"/>
 								<File Id="829363806"/>
 								<File Id="945880659"/>
@@ -1411,12 +1427,12 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{B5426414-98F3-4AD0-BB04-1953EC52FF52}">
 							<Media>
-								<File Id="29585292"/>
 								<File Id="115399189"/>
 								<File Id="261623985"/>
 								<File Id="308425292"/>
 								<File Id="419687084"/>
 								<File Id="446084114"/>
+								<File Id="499498620"/>
 								<File Id="565349409"/>
 								<File Id="829363806"/>
 								<File Id="945880659"/>
