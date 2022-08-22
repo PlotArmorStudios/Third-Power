@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="514892490">
+		<SoundBank Id="393239870" Language="SFX" Hash="1441026842">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -921,17 +921,33 @@
 				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4030910502" Name="Play_StalgaticPlatform_Idle" ObjectPath="\Events\Default Work Unit\Play_StalgaticPlatform_Idle" MaxAttenuation="20." DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="176869898" Language="SFX">
-							<ShortName>VerticalCrushTrap_Idle_MagicLayer_03.wav</ShortName>
-							<Path>SFX\VerticalCrushTrap_Idle_MagicLayer_03_10C4C929.wem</Path>
+						<File Id="24400539" Language="SFX">
+							<ShortName>RockHit_03.wav</ShortName>
+							<Path>SFX\RockHit_03_10C4C929.wem</Path>
 						</File>
-						<File Id="258246914" Language="SFX">
-							<ShortName>VerticalCrushTrap_Idle_MagicLayer_04.wav</ShortName>
-							<Path>SFX\VerticalCrushTrap_Idle_MagicLayer_04_10C4C929.wem</Path>
+						<File Id="35033122" Language="SFX">
+							<ShortName>RockHit_06.wav</ShortName>
+							<Path>SFX\RockHit_06_10C4C929.wem</Path>
 						</File>
-						<File Id="315772802" Language="SFX">
-							<ShortName>VerticalCrushTrap_Idle_MagicLayer_02.wav</ShortName>
-							<Path>SFX\VerticalCrushTrap_Idle_MagicLayer_02_10C4C929.wem</Path>
+						<File Id="256687692" Language="SFX">
+							<ShortName>RockHit_01.wav</ShortName>
+							<Path>SFX\RockHit_01_10C4C929.wem</Path>
+						</File>
+						<File Id="329443530" Language="SFX">
+							<ShortName>RockHit_05.wav</ShortName>
+							<Path>SFX\RockHit_05_10C4C929.wem</Path>
+						</File>
+						<File Id="365266017" Language="SFX">
+							<ShortName>RockHit_02.wav</ShortName>
+							<Path>SFX\RockHit_02_10C4C929.wem</Path>
+						</File>
+						<File Id="441326167" Language="SFX">
+							<ShortName>VerticalCrushTrap_Idle_01.wav</ShortName>
+							<Path>SFX\VerticalCrushTrap_Idle_01_10C4C929.wem</Path>
+						</File>
+						<File Id="449515192" Language="SFX">
+							<ShortName>RockHit_07.wav</ShortName>
+							<Path>SFX\RockHit_07_10C4C929.wem</Path>
 						</File>
 						<File Id="559953520" Language="SFX">
 							<ShortName>VerticalCrushTrap_Idle_02.wav</ShortName>
@@ -945,17 +961,13 @@
 							<ShortName>VerticalCrushTrap_Idle_05.wav</ShortName>
 							<Path>SFX\VerticalCrushTrap_Idle_05_10C4C929.wem</Path>
 						</File>
-						<File Id="734183772" Language="SFX">
-							<ShortName>VerticalCrushTrap_Idle.wav</ShortName>
-							<Path>SFX\VerticalCrushTrap_Idle_10C4C929.wem</Path>
-						</File>
 						<File Id="842859828" Language="SFX">
 							<ShortName>VerticalCrushTrap_Idle_04.wav</ShortName>
 							<Path>SFX\VerticalCrushTrap_Idle_04_10C4C929.wem</Path>
 						</File>
-						<File Id="1003651795" Language="SFX">
-							<ShortName>VerticalCrushTrap_Idle_MagicLayer_01.wav</ShortName>
-							<Path>SFX\VerticalCrushTrap_Idle_MagicLayer_01_10C4C929.wem</Path>
+						<File Id="928450904" Language="SFX">
+							<ShortName>RockHit_04.wav</ShortName>
+							<Path>SFX\RockHit_04_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1098,6 +1110,7 @@
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
+				<GameParameter Id="1255913415" Name="Rock_Hits" ObjectPath="\Game Parameters\Default Work Unit\Rock_Hits"/>
 				<GameParameter Id="1316067302" Name="DangerLevel" ObjectPath="\Game Parameters\Default Work Unit\DangerLevel"/>
 				<GameParameter Id="2521717285" Name="ArrowTrapFiltering" ObjectPath="\Game Parameters\Default Work Unit\ArrowTrapFiltering"/>
 				<GameParameter Id="2794761965" Name="puzzle_sound" ObjectPath="\Game Parameters\Default Work Unit\puzzle_sound"/>
@@ -1208,7 +1221,7 @@
 				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3190258874">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3811002270">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

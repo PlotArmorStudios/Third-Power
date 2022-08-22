@@ -6,9 +6,9 @@
 				<RandomSequenceContainer Name="Idle" ID="{61C82340-8479-402D-A329-4D74A63CBCE4}" ShortID="533740118">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Highpass" Type="int16">
+						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>20</Value>
+								<Value>30</Value>
 							</ValueList>
 						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -16,6 +16,202 @@
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{739CAB33-BE21-4B1D-AEEB-086154BA1E82}" ShortID="986003240">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Rock_Hits" ID="{05558EB3-05DC-441F-9973-110632C7CADC}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{E3D2E638-B6DE-4719-A749-DCED4B0A4BBD}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>-48</XPos>
+												<YPos>-0.11659</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>-39.80838</XPos>
+												<YPos>-0.06072</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>-14.94611</XPos>
+												<YPos>-6.05929</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="RockPlatform" ID="{732AEB75-94D0-44DD-86B7-A171C803766E}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="VerticalCrushTrap_Idle_01" ID="{92FAD23A-D703-4879-AE88-84E1B73AB1AA}" ShortID="227291951">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VerticalCrushTrap_Idle_01" ID="{19A89B74-75B0-4B5B-98F2-750E31550D2D}">
+									<Language>SFX</Language>
+									<AudioFile>VerticalCrushTrap_Idle_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="441326167"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VerticalCrushTrap_Idle_01" ID="{19A89B74-75B0-4B5B-98F2-750E31550D2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VerticalCrushTrap_Idle_02" ID="{D9935FD7-42D2-4082-AD66-F89F2131A145}" ShortID="490244474">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VerticalCrushTrap_Idle_02" ID="{F7130953-F0B7-4F55-9AC2-BC13E96747DC}">
+									<Language>SFX</Language>
+									<AudioFile>VerticalCrushTrap_Idle_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="559953520"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VerticalCrushTrap_Idle_02" ID="{F7130953-F0B7-4F55-9AC2-BC13E96747DC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VerticalCrushTrap_Idle_03" ID="{C1529974-9BFD-4EB1-A1BC-0358EACB4E89}" ShortID="308767335">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VerticalCrushTrap_Idle_03" ID="{4CCDF71A-A8D1-42C6-8945-57D289A6364F}">
+									<Language>SFX</Language>
+									<AudioFile>VerticalCrushTrap_Idle_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="652940982"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VerticalCrushTrap_Idle_03" ID="{4CCDF71A-A8D1-42C6-8945-57D289A6364F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VerticalCrushTrap_Idle_04" ID="{941DB2D0-15DC-47A8-996C-2DC41FF86AAF}" ShortID="490865521">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VerticalCrushTrap_Idle_04" ID="{C2186899-29C0-43DC-AEEB-A73E8983C5CA}">
+									<Language>SFX</Language>
+									<AudioFile>VerticalCrushTrap_Idle_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="842859828"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VerticalCrushTrap_Idle_04" ID="{C2186899-29C0-43DC-AEEB-A73E8983C5CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VerticalCrushTrap_Idle_05" ID="{5A84BEC6-DD76-40F6-84A6-8C74A66E4E03}" ShortID="568341941">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VerticalCrushTrap_Idle_05" ID="{237CA546-74FF-4146-8FA1-828B31367238}">
+									<Language>SFX</Language>
+									<AudioFile>VerticalCrushTrap_Idle_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="729473484"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VerticalCrushTrap_Idle_05" ID="{237CA546-74FF-4146-8FA1-828B31367238}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Rock Hits" ID="{0AA72254-937E-4C33-94A2-E69800D07C70}" ShortID="333351621">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{81A2E40D-9633-45F5-BF56-9A9B37F4A66D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-9</Value>
@@ -29,182 +225,15 @@
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
 						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="VerticalCrushTrap_Idle" ID="{7501F46F-C6A6-447B-9241-0942734C2AD9}" ShortID="26541901">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle" ID="{A5DB84F8-B027-4893-9F34-4CB722325146}">
-									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="734183772"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle" ID="{A5DB84F8-B027-4893-9F34-4CB722325146}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_02" ID="{C372C36D-BE99-4D42-BDEF-DB67778FB1D5}" ShortID="872323106">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_02" ID="{E8D95E63-1F5E-426C-B182-44C0B00EDD04}">
-									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_02.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="559953520"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_02" ID="{E8D95E63-1F5E-426C-B182-44C0B00EDD04}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_03" ID="{D9769B26-AEEC-47C8-8840-DFDC3C33A52B}" ShortID="131580418">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_03" ID="{C74EF09A-7481-4761-A17E-6C4B5F83D247}">
-									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_03.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="652940982"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_03" ID="{C74EF09A-7481-4761-A17E-6C4B5F83D247}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_04" ID="{C9F92975-84C9-4F05-9600-849357286BE7}" ShortID="359806511">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_04" ID="{B340C718-2B6A-4483-9E1E-7B45728C9374}">
-									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_04.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="842859828"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_04" ID="{B340C718-2B6A-4483-9E1E-7B45728C9374}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_05" ID="{FDF4FDE1-CC99-4AC5-8332-7F98EDDBF61D}" ShortID="413888312">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_05" ID="{08DAAE93-E910-43C0-8FEC-A8EF4FF7085A}">
-									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_05.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="729473484"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_05" ID="{08DAAE93-E910-43C0-8FEC-A8EF4FF7085A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-					<ObjectLists/>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="Magic" ID="{796F0F07-A61F-4E8E-BB77-31B9510E5A46}" ShortID="118238806">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Highpass" Type="int16">
-							<ValueList>
-								<Value>20</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Lowpass" Type="int16">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{27C8BD86-555C-4FF8-841F-21A66C877CE3}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="32"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
-						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-22</Value>
-							</ValueList>
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{8C64B220-342B-4570-A770-78C5C6DCF26C}">
-										<PropertyList>
-											<Property Name="Min" Type="Real64" Value="-6"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="RockPlatform" ID="{732AEB75-94D0-44DD-86B7-A171C803766E}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+							<ObjectRef Name="RockSounds" ID="{AE1735CB-4816-488A-A437-893D4F7662C6}" WorkUnitID="{889B4D38-1CFC-46DA-AA24-A8F879CAF578}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="VerticalCrushTrap_Idle_MagicLayer_01" ID="{E96ADDB9-B7D8-46C5-B6F7-C98777EAFA35}" ShortID="890738201">
+						<Sound Name="RockHit_01" ID="{EA15BC0C-0145-4C4B-B7C6-6AE88E9810FC}" ShortID="317660814">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -214,20 +243,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_MagicLayer_01" ID="{C66DC4A6-68C7-403E-B6B2-15B48FAEB386}">
+								<AudioFileSource Name="RockHit_01" ID="{BD8406BB-6C4E-4F05-AFB0-6E117EBE93E1}">
 									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_MagicLayer_01.wav</AudioFile>
+									<AudioFile>RockHit_01.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1003651795"/>
+										<MediaID ID="256687692"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_MagicLayer_01" ID="{C66DC4A6-68C7-403E-B6B2-15B48FAEB386}" Platform="Linked"/>
+								<ActiveSource Name="RockHit_01" ID="{BD8406BB-6C4E-4F05-AFB0-6E117EBE93E1}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_MagicLayer_02" ID="{4445A751-D07A-4E7B-A4F4-AEEDD5B364B7}" ShortID="25764276">
+						<Sound Name="RockHit_02" ID="{FD7646DF-99D8-47A4-8A34-365EF2024675}" ShortID="563349846">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -237,20 +266,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_MagicLayer_02" ID="{333DF2FA-0830-4380-9C4A-5D7DAD5330FB}">
+								<AudioFileSource Name="RockHit_02" ID="{4D0836C1-1B67-4F00-B537-9543FDC634D8}">
 									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_MagicLayer_02.wav</AudioFile>
+									<AudioFile>RockHit_02.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="315772802"/>
+										<MediaID ID="365266017"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_MagicLayer_02" ID="{333DF2FA-0830-4380-9C4A-5D7DAD5330FB}" Platform="Linked"/>
+								<ActiveSource Name="RockHit_02" ID="{4D0836C1-1B67-4F00-B537-9543FDC634D8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_MagicLayer_03" ID="{9DDB0FAB-C0BA-4BF6-8CD8-5DEBFC788B3A}" ShortID="754964211">
+						<Sound Name="RockHit_03" ID="{0D54FD60-66DE-4FCA-89FE-161C151700CA}" ShortID="46297248">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -260,20 +289,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_MagicLayer_03" ID="{DD4197B9-1DFB-44DF-AD5E-90A3E9101104}">
+								<AudioFileSource Name="RockHit_03" ID="{AD1D18EC-DEAB-4DEA-9178-B7A25D47F6E6}">
 									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_MagicLayer_03.wav</AudioFile>
+									<AudioFile>RockHit_03.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="176869898"/>
+										<MediaID ID="24400539"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_MagicLayer_03" ID="{DD4197B9-1DFB-44DF-AD5E-90A3E9101104}" Platform="Linked"/>
+								<ActiveSource Name="RockHit_03" ID="{AD1D18EC-DEAB-4DEA-9178-B7A25D47F6E6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="VerticalCrushTrap_Idle_MagicLayer_04" ID="{C052E249-98EE-4880-87E2-0B20F9013E8B}" ShortID="79180304">
+						<Sound Name="RockHit_04" ID="{2DDFA32D-6DCB-4BB6-8FD3-0F851E0063D1}" ShortID="870894789">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -283,17 +312,86 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="VerticalCrushTrap_Idle_MagicLayer_04" ID="{D59A7BB5-EADF-4660-8BB4-D4F57FEC67CA}">
+								<AudioFileSource Name="RockHit_04" ID="{AA8212C6-F9B2-4594-BBF9-02D397F993AB}">
 									<Language>SFX</Language>
-									<AudioFile>VerticalCrushTrap_Idle_MagicLayer_04.wav</AudioFile>
+									<AudioFile>RockHit_04.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="258246914"/>
+										<MediaID ID="928450904"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="VerticalCrushTrap_Idle_MagicLayer_04" ID="{D59A7BB5-EADF-4660-8BB4-D4F57FEC67CA}" Platform="Linked"/>
+								<ActiveSource Name="RockHit_04" ID="{AA8212C6-F9B2-4594-BBF9-02D397F993AB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RockHit_05" ID="{82318910-3D43-4E99-A30E-EB95CF9A0941}" ShortID="831621453">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RockHit_05" ID="{30979A3E-EE52-4C56-B3E4-5969D4FCC2F1}">
+									<Language>SFX</Language>
+									<AudioFile>RockHit_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="329443530"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RockHit_05" ID="{30979A3E-EE52-4C56-B3E4-5969D4FCC2F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RockHit_06" ID="{1A886BDA-AC43-4FFC-B840-95F29C707417}" ShortID="285884388">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RockHit_06" ID="{486225B3-04D5-43A5-B149-AE54AA190E3B}">
+									<Language>SFX</Language>
+									<AudioFile>RockHit_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="35033122"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RockHit_06" ID="{486225B3-04D5-43A5-B149-AE54AA190E3B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RockHit_07" ID="{9771A5C8-58E5-4DFE-87D1-04BF47CEE4A8}" ShortID="1030194900">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RockHit_07" ID="{4A5E02C5-FE3C-4DCD-B4BA-C097CA8B4757}">
+									<Language>SFX</Language>
+									<AudioFile>RockHit_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="449515192"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RockHit_07" ID="{4A5E02C5-FE3C-4DCD-B4BA-C097CA8B4757}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

@@ -110,6 +110,15 @@
 					</PropertyList>
 					<PluginData/>
 				</Effect>
+				<Effect Name="RockSounds" ID="{AE1735CB-4816-488A-A437-893D4F7662C6}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="MeterMode" Type="int32" Value="1"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="1"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="Rock_Hits" ID="{05558EB3-05DC-441F-9973-110632C7CADC}"/>
+</PluginData>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
