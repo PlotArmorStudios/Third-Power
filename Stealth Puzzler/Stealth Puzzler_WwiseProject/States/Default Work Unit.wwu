@@ -59,6 +59,22 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="Ambience" ID="{0F30E398-7B62-481D-841E-232FF7B80A00}">
+					<ChildrenList>
+						<State Name="None" ID="{B6707DC6-B15C-4D0A-A40F-4EAA8441D827}"/>
+						<State Name="Low" ID="{61A6A0EE-CB93-4949-A30B-B1619011DA18}"/>
+						<State Name="Mid" ID="{92D885F8-B649-425A-AAE7-B3942610623A}"/>
+						<State Name="High" ID="{E29093E9-0A1C-4692-9E85-5D507B6525D6}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{B6707DC6-B15C-4D0A-A40F-4EAA8441D827}"/>
+							<EndState Name="High" ID="{E29093E9-0A1C-4692-9E85-5D507B6525D6}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
