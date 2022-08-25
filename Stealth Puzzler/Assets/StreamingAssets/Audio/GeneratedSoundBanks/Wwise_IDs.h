@@ -74,6 +74,19 @@ namespace AK
             } // namespace STATE
         } // namespace ALTAR
 
+        namespace AMBIENCE
+        {
+            static const AkUniqueID GROUP = 85412153U;
+
+            namespace STATE
+            {
+                static const AkUniqueID HIGH = 3550808449U;
+                static const AkUniqueID LOW = 545371365U;
+                static const AkUniqueID MID = 1182670505U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace AMBIENCE
+
         namespace LEVELSTATE
         {
             static const AkUniqueID GROUP = 3473087568U;

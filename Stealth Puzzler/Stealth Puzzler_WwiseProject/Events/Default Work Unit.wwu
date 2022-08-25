@@ -41,9 +41,17 @@
 						<Action Name="" ID="{4A4B5ED4-1C81-47A7-88D3-9E0BD8317177}" ShortID="53205747">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{BF52B949-B084-4146-8CB6-E468A18DF6AB}" ShortID="827602886">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Cutscene_Arrow_Demonstartion_V07" ID="{CD795C4F-DD46-41E6-8AF4-C0D992F2F49E}" WorkUnitID="{0FC3A594-0700-4C99-904B-5BC9BCB05378}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{6B3323AE-D69F-4861-BA6F-60519E59BF81}" ShortID="499655822">
 							<PropertyList>
