@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIDeathScreen : MonoBehaviour
+public class UIDeathText : MonoBehaviour
 {
     [SerializeField] private RectTransform _UIDeathScreenCanvas;
     private float _tweenTime = 0.5f;
