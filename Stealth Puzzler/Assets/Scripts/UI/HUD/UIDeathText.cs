@@ -10,14 +10,14 @@ public class UIDeathText : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerHealth.OnPlayerDeath += FlashDeathScreen;
+        PlayerHealth.OnPlayerDie += FlashDeathScreen;
     }
 
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerDeath -= FlashDeathScreen;
+        PlayerHealth.OnPlayerDie -= FlashDeathScreen;
     }
-    private void FlashDeathScreen(float obj)
+    private void FlashDeathScreen()
     {
         LeanTween.alpha(_UIDeathScreenCanvas, 1f, _tweenTime).setFrom(0);
     }
