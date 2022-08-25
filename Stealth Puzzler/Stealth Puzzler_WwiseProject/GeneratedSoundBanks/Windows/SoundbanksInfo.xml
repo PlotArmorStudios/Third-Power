@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="626015385">
+		<SoundBank Id="393239870" Language="SFX" Hash="606197247">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -918,7 +918,14 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="OneShot" DurationMin="6.904812" DurationMax="6.904812">
+					<IncludedMemoryFiles>
+						<File Id="163621061" Language="SFX">
+							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V07.wav</ShortName>
+							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V07_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4030910502" Name="Play_StalgaticPlatform_Idle" ObjectPath="\Events\Default Work Unit\Play_StalgaticPlatform_Idle" MaxAttenuation="20." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="24400539" Language="SFX">
@@ -1221,7 +1228,7 @@
 				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3790942262">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2973032665">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1496,7 +1503,7 @@
 				<Trigger Id="1665629468" Name="Cymbal_Swell_to_Tension" ObjectPath="\Triggers\Default Work Unit\Music\Cymbal_Swell_to_Tension"/>
 			</Triggers>
 		</SoundBank>
-		<SoundBank Id="2005704188" Language="SFX" Hash="2162347984">
+		<SoundBank Id="2005704188" Language="SFX" Hash="2840044019">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Menu</ObjectPath>
 			<ShortName>Main_Menu</ShortName>
 			<Path>Main_Menu.bnk</Path>
