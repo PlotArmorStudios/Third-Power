@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1848609897">
+		<SoundBank Id="393239870" Language="SFX" Hash="3482340257">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -124,6 +124,9 @@
 							<Path>SFX\door_open_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2423728726" Name="Play_Eye_Impact" ObjectPath="\Events\Default Work Unit\Play_Eye_Impact" MaxAttenuation="30." DurationType="OneShot" DurationMin="2." DurationMax="2.75">
 					<IncludedMemoryFiles>
@@ -912,11 +915,11 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="OneShot" DurationMin="6.904812" DurationMax="6.904812">
+				<Event Id="2170308490" Name="Play_SFX_Cutscene_Arrow_Demonstartion" ObjectPath="\Events\Default Work Unit\Play_SFX_Cutscene_Arrow_Demonstartion" DurationType="OneShot" DurationMin="8.523146" DurationMax="8.523146">
 					<IncludedMemoryFiles>
-						<File Id="163621061" Language="SFX">
-							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V07.wav</ShortName>
-							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V07_10C4C929.wem</Path>
+						<File Id="227979822" Language="SFX">
+							<ShortName>SFX_Cutscene_Arrow_Demonstartion_V08.wav</ShortName>
+							<Path>SFX\SFX_Cutscene_Arrow_Demonstartion_V08_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

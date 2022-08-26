@@ -6,11 +6,6 @@
 				<RandomSequenceContainer Name="Arrow_In_Air" ID="{E37738A9-2D3F-47C2-A344-8F4C36BF5A5E}" ShortID="441926198">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="GameAuxSendVolume" Type="Real64">
-							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
-						</Property>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
@@ -268,6 +263,9 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="door_open_01" ID="{715E9717-9F2B-43AA-A7C6-E2DA8564D4B4}" ShortID="599260346">
@@ -374,6 +372,11 @@
 							</ValueList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
