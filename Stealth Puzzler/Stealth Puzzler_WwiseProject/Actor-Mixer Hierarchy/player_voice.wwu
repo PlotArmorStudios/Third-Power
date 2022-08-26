@@ -6,7 +6,17 @@
 				<RandomSequenceContainer Name="player_voice_death" ID="{C326FD1A-EE74-44A5-B0DF-B394296BB091}" ShortID="481802598">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -256,10 +266,15 @@
 				<RandomSequenceContainer Name="player_voice_jump" ID="{F44FB605-985B-4B9E-BC2B-19FFD064C19E}" ShortID="928550208">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

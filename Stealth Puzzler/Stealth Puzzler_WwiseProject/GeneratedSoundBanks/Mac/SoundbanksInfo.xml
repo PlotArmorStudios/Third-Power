@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="233633810">
+		<SoundBank Id="393239870" Language="SFX" Hash="737191495">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -108,7 +108,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1660008929" Name="Play_door_open" ObjectPath="\Events\Default Work Unit\Play_door_open" MaxAttenuation="30." DurationType="OneShot" DurationMin="2.25" DurationMax="2.25">
+				<Event Id="1660008929" Name="Play_door_open" ObjectPath="\Events\Default Work Unit\Play_door_open" MaxAttenuation="200." DurationType="OneShot" DurationMin="2.25" DurationMax="2.25">
 					<IncludedMemoryFiles>
 						<File Id="179283079" Language="SFX">
 							<ShortName>door_open_04.wav</ShortName>
@@ -691,9 +691,6 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
-					<AuxBusSends>
-						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="1035938309" Name="Play_Jelly_Impact_Cube" ObjectPath="\Events\Default Work Unit\Play_Jelly_Impact_Cube" MaxAttenuation="10." DurationType="OneShot" DurationMin="1.457298" DurationMax="1.849527">
 					<IncludedMemoryFiles>
@@ -711,7 +708,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" DurationType="OneShot" DurationMin="4." DurationMax="4.">
+				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" DurationType="OneShot" DurationMin="3.75" DurationMax="3.75">
 					<IncludedMemoryFiles>
 						<File Id="14735164" Language="SFX">
 							<ShortName>player_death_2D_01.wav</ShortName>
