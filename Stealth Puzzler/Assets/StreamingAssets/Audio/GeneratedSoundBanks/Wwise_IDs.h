@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID PLAY_CUBE_DEFLECT = 2012852765U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
+        static const AkUniqueID PLAY_DOOR_SHUT = 1008320775U;
         static const AkUniqueID PLAY_EARLY_MUSIC = 886887759U;
         static const AkUniqueID PLAY_EYE_IMPACT = 2423728726U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;

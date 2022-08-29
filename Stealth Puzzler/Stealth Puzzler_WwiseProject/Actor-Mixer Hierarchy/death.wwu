@@ -21,6 +21,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="player_death_3D" ID="{B9CB23D4-04E7-4686-B706-3854D4FA30C4}" ShortID="400302153">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
@@ -84,6 +91,52 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="player_death_2D_01" ID="{7740B6F9-7F8D-45D8-ABD6-D0D4556E2359}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_death_2D_02" ID="{991DD80E-7860-4360-9630-685FC481D66F}" ShortID="583576841">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="player_death_2D_02" ID="{B3B17BC9-CF2E-4781-B918-4A0D6A357370}">
+									<Language>SFX</Language>
+									<AudioFile>player_death_2D_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="900520912"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="player_death_2D_02" ID="{B3B17BC9-CF2E-4781-B918-4A0D6A357370}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_death_2D_03" ID="{C4B65FB8-B2BB-4B49-AAAB-34CA4C809ABC}" ShortID="162370100">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="player_death_2D_03" ID="{FBFD6563-69E1-4D1F-9783-4A6E25814E79}">
+									<Language>SFX</Language>
+									<AudioFile>player_death_2D_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="515055009"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="player_death_2D_03" ID="{FBFD6563-69E1-4D1F-9783-4A6E25814E79}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
