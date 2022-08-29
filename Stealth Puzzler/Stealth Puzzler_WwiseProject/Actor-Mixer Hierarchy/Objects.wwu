@@ -247,6 +247,11 @@
 						</Property>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-18</Value>
@@ -451,6 +456,49 @@
 					<ObjectLists/>
 				</ActorMixer>
 				<WorkUnit Name="StalgaticPlatform" ID="{5AEF7E10-E714-4615-9902-C999A9D21A09}" PersistMode="Reference"/>
+				<Sound Name="door_shut" ID="{3FB484AC-6E37-4018-94AA-6326A937C2EA}" ShortID="279781215">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Door" ID="{D66F756E-75FA-45C8-B035-9E43E76BC579}" WorkUnitID="{2D7308BA-07BA-4D21-8B6F-A934A3B4CFB4}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="3D Objects" ID="{6D8C9730-4B83-4608-BE52-3A5AE92A1C82}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="door_shut" ID="{318CFC25-3522-4741-B3EB-795533A26525}">
+							<Language>SFX</Language>
+							<AudioFile>door_shut.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="103340903"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="door_shut" ID="{318CFC25-3522-4741-B3EB-795533A26525}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

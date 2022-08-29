@@ -927,6 +927,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_door_shut" ID="{14B09EBE-24CC-49B9-8EBF-96CDDC9DAF9A}">
+					<ChildrenList>
+						<Action Name="" ID="{EBA5D249-A1CE-4A12-AF4A-2E1B124C990E}" ShortID="321766244">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="door_shut" ID="{3FB484AC-6E37-4018-94AA-6326A937C2EA}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

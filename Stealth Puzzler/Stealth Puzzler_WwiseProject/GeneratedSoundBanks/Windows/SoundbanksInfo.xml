@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3482340257">
+		<SoundBank Id="393239870" Language="SFX" Hash="1792844254">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -125,6 +125,17 @@
 						<File Id="902460954" Language="SFX">
 							<ShortName>door_open_01.wav</ShortName>
 							<Path>SFX\door_open_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="1008320775" Name="Play_door_shut" ObjectPath="\Events\Default Work Unit\Play_door_shut" MaxAttenuation="200." DurationType="OneShot" DurationMin="2.250021" DurationMax="2.250021">
+					<IncludedMemoryFiles>
+						<File Id="103340903" Language="SFX">
+							<ShortName>door_shut.wav</ShortName>
+							<Path>SFX\door_shut_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -469,10 +480,6 @@
 							<ShortName>Player_Footsteps_Stone48.wav</ShortName>
 							<Path>SFX\Player_Footsteps_Stone48_10C4C929.wem</Path>
 						</File>
-						<File Id="808939324" Language="SFX">
-							<ShortName>Player_Footsteps_Carpet_10.wav</ShortName>
-							<Path>SFX\Player_Footsteps_Carpet_10_10C4C929.wem</Path>
-						</File>
 						<File Id="821963603" Language="SFX">
 							<ShortName>Player_Footsteps_Carpet_01.wav</ShortName>
 							<Path>SFX\Player_Footsteps_Carpet_01_10C4C929.wem</Path>
@@ -574,7 +581,7 @@
 							<Path>SFX\Player_Footsteps_Stone13_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<DefaultSwitchValue>{02E275B7-15CD-4327-8B5A-9895E68E8ED9}</DefaultSwitchValue>
+					<DefaultSwitchValue>{521D00FB-FCE5-47B8-9696-9C1CB9B32487}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{02E275B7-15CD-4327-8B5A-9895E68E8ED9}">
 							<Media>
@@ -687,7 +694,6 @@
 								<File Id="517099856"/>
 								<File Id="579724359"/>
 								<File Id="776619155"/>
-								<File Id="808939324"/>
 								<File Id="821963603"/>
 								<File Id="825389961"/>
 								<File Id="940648715"/>
@@ -711,7 +717,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" DurationType="OneShot" DurationMin="3.75" DurationMax="3.75">
+				<Event Id="908551697" Name="Play_player_voice_death" ObjectPath="\Events\Default Work Unit\Play_player_voice_death" DurationType="OneShot" DurationMin="4." DurationMax="4.">
 					<IncludedMemoryFiles>
 						<File Id="14735164" Language="SFX">
 							<ShortName>player_death_2D_01.wav</ShortName>
@@ -737,6 +743,10 @@
 							<ShortName>player_voice_death_08.wav</ShortName>
 							<Path>SFX\player_voice_death_08_10C4C929.wem</Path>
 						</File>
+						<File Id="515055009" Language="SFX">
+							<ShortName>player_death_2D_03.wav</ShortName>
+							<Path>SFX\player_death_2D_03_10C4C929.wem</Path>
+						</File>
 						<File Id="660143082" Language="SFX">
 							<ShortName>player_voice_death_10.wav</ShortName>
 							<Path>SFX\player_voice_death_10_10C4C929.wem</Path>
@@ -748,6 +758,10 @@
 						<File Id="830924598" Language="SFX">
 							<ShortName>player_voice_death_07.wav</ShortName>
 							<Path>SFX\player_voice_death_07_10C4C929.wem</Path>
+						</File>
+						<File Id="900520912" Language="SFX">
+							<ShortName>player_death_2D_02.wav</ShortName>
+							<Path>SFX\player_death_2D_02_10C4C929.wem</Path>
 						</File>
 						<File Id="928353006" Language="SFX">
 							<ShortName>player_voice_death_09.wav</ShortName>
@@ -977,6 +991,9 @@
 							<Path>SFX\RockHit_04_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2607723329" Name="Play_Trap_Reload" ObjectPath="\Events\Default Work Unit\Play_Trap_Reload" MaxAttenuation="40." DurationType="OneShot" DurationMin="2.833333" DurationMax="3.">
 					<IncludedMemoryFiles>
@@ -1228,7 +1245,7 @@
 				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2973032665">
+		<SoundBank Id="1355168291" Language="SFX" Hash="327563299">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
