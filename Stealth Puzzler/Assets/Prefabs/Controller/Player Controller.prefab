@@ -473,6 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7433257804982204339}
   - component: {fileID: 1494250929547478914}
+  - component: {fileID: 3152053576233739068}
   m_Layer: 0
   m_Name: BlobShadow
   m_TagString: Untagged
@@ -514,10 +515,23 @@ MonoBehaviour:
   m_EndAngleFade: 180
   m_UVScale: {x: 1, y: 1}
   m_UVBias: {x: 0, y: 0}
-  m_ScaleMode: 0
+  m_ScaleMode: 1
   m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 1}
+  m_Size: {x: 2, y: 2, z: 0.1}
   m_FadeFactor: 1
+--- !u!114 &3152053576233739068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136007542252842397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16436623391ff5f48b8ffec1b95aa6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _groundDistanceScale: 1
 --- !u!1 &2857174331848323940
 GameObject:
   m_ObjectHideFlags: 0
