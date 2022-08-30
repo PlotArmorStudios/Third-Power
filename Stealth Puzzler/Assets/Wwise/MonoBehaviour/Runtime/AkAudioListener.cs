@@ -23,6 +23,10 @@ public class AkAudioListener : UnityEngine.MonoBehaviour
 
 	public bool isDefaultListener = true;
 
+	private static AkAudioListener Instance;
+
+	
+
 	public static DefaultListenerList DefaultListeners
 	{
 		get { return defaultListeners; }
@@ -55,6 +59,7 @@ public class AkAudioListener : UnityEngine.MonoBehaviour
 
 	private void Awake()
 	{
+	
 		var akGameObj = GetComponent<AkGameObj>();
 		UnityEngine.Debug.Assert(akGameObj != null);
 		if (akGameObj)

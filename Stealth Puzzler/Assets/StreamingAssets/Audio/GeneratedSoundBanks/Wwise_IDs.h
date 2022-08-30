@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID LANDSOUNBLEND = 77262682U;
+        static const AkUniqueID PAUSE_ALL = 3864097025U;
         static const AkUniqueID PLAY_ARROW_IN_AIR = 3919960416U;
         static const AkUniqueID PLAY_CANNON = 712207333U;
         static const AkUniqueID PLAY_CANNON_IDLE_STEAM = 112147695U;
@@ -46,6 +47,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_NORMALCLICK = 737378190U;
         static const AkUniqueID PLAY_UI_STARTGAME = 1473547871U;
         static const AkUniqueID PLAY_WATERDROPLETS = 2298613774U;
+        static const AkUniqueID RESUME_ALL = 3679762312U;
         static const AkUniqueID START_WITH_LATER_MUSIC = 1142029413U;
         static const AkUniqueID STOP_ARROW_IN_AIR = 1384937390U;
         static const AkUniqueID STOP_MAINMENU_AMBIENCE = 2582003065U;

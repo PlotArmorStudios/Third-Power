@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1979272374">
+		<SoundBank Id="393239870" Language="SFX" Hash="3028114566">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -356,6 +356,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3864097025" Name="Pause_All" ObjectPath="\Events\Default Work Unit\Pause_All" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3919960416" Name="Play_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Play_Arrow_In_Air" MaxAttenuation="30." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="316855928" Language="SFX">
@@ -1217,11 +1218,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="OneShot" DurationMin="4.8" DurationMax="4.8">
+				<Event Id="4219761939" Name="Play_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\Play_puzzle_time_running_out" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="498529227" Language="SFX">
 							<ShortName>puzzle_time_running_out_clock_V02.wav</ShortName>
-							<Path>SFX\puzzle_time_running_out_clock_V02_10C4C929.wem</Path>
+							<Path>SFX\puzzle_time_running_out_clock_V02_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1462,6 +1463,7 @@
 						<AuxBus Id="2580481396" Name="Reverb_Dungeon_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Dungeon_01"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="3679762312" Name="Resume_All" ObjectPath="\Events\Default Work Unit\Resume_All" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1384937390" Name="Stop_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Stop_Arrow_In_Air" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2582003065" Name="Stop_MainMenu_Ambience" ObjectPath="\Events\Default Work Unit\Stop_MainMenu_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="574883145" Name="stop_puzzle_time_running_out" ObjectPath="\Events\Default Work Unit\stop_puzzle_time_running_out" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -1593,7 +1595,7 @@
 				<Event Id="3057377370" Name="VO_Resume" ObjectPath="\Events\Default Work Unit\VOs\VO_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1702260236">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2684900625">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
