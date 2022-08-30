@@ -456,7 +456,7 @@
 					<ObjectLists/>
 				</ActorMixer>
 				<WorkUnit Name="StalgaticPlatform" ID="{5AEF7E10-E714-4615-9902-C999A9D21A09}" PersistMode="Reference"/>
-				<Sound Name="door_shut" ID="{3FB484AC-6E37-4018-94AA-6326A937C2EA}" ShortID="279781215">
+				<RandomSequenceContainer Name="door_close_" ID="{391B5B17-5368-4B9B-AA42-83B68B27D7A1}" ShortID="12045806">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="GameAuxSendVolume" Type="Real64">
@@ -464,7 +464,18 @@
 								<Value>12</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>35</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-18</Value>
@@ -486,19 +497,78 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="door_shut" ID="{318CFC25-3522-4741-B3EB-795533A26525}">
-							<Language>SFX</Language>
-							<AudioFile>door_shut.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="103340903"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<Sound Name="door_shut_01_Edited" ID="{7E5046BD-EB78-48BA-B907-90967EFA7772}" ShortID="660995557">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_shut_01_Edited" ID="{674AC7C5-CA44-4894-AD79-41E41544F520}">
+									<Language>SFX</Language>
+									<AudioFile>door_shut_01_Edited.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1016375335"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_shut_01_Edited" ID="{674AC7C5-CA44-4894-AD79-41E41544F520}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="door_shut_02_Edited" ID="{32CE2C13-E54C-4379-89F8-F71AF0B4E1DC}" ShortID="431943591">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_shut_02_Edited" ID="{45339B65-0D39-49A7-A902-23A7A9DF4C7D}">
+									<Language>SFX</Language>
+									<AudioFile>door_shut_02_Edited.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="754995909"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_shut_02_Edited" ID="{45339B65-0D39-49A7-A902-23A7A9DF4C7D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="door_shut_03_Edited" ID="{B95110D4-6707-423C-B1EF-8DDA9F91B1B8}" ShortID="611538226">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="door_shut_03_Edited" ID="{820871A7-6FE9-4CC8-9141-517B814DA91B}">
+									<Language>SFX</Language>
+									<AudioFile>door_shut_03_Edited.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="443609606"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="door_shut_03_Edited" ID="{820871A7-6FE9-4CC8-9141-517B814DA91B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="door_shut" ID="{318CFC25-3522-4741-B3EB-795533A26525}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

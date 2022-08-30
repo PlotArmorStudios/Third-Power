@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585403872774775808
+    m_lastTime: -8585397371374775808
     List:
     - name: 3D Objects
       guid: 30978c6d834b0846be523a5ae92a1c82
@@ -285,7 +285,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585398065274775808
+    m_lastTime: -8585397392754775808
     List:
     - name: Main_Menu
       guid: 84b50f8dc5262a42bafffebbb8edf5ad
@@ -355,8 +355,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585397945434775808
+    m_lastTime: -8585397386514775808
     List:
+    - name: LandSounBlend
+      guid: c0aeedede95a6c4ca718b1edf5903100
+      id: 77262682
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: LandSounBlend
+        ObjectType: 3
+        guid: c0aeedede95a6c4ca718b1edf5903100
+      Path: Events\Default Work Unit\LandSounBlend
+      maxAttenuation: 15
+      maxDuration: 1.688978
+      minDuration: 1.071751
     - name: Music
       guid: 35ccd29d7159574a8b372acbbd45da1a
       id: 3991942870
@@ -508,8 +525,8 @@ MonoBehaviour:
         guid: be9eb014cc24b9498ebf96cddc9daf9a
       Path: Events\Default Work Unit\Play_door_shut
       maxAttenuation: 200
-      maxDuration: 2.250021
-      minDuration: 2.250021
+      maxDuration: 1.968771
+      minDuration: 1.687521
     - name: Play_Dungeon_1
       guid: d94a981729de0544a0a4c564d086d246
       id: 1533459680
@@ -836,7 +853,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 43ff54e5221a6f488bed8fa4b1c9a00c
       Path: Events\Default Work Unit\Play_StalgaticPlatform_Idle
-      maxAttenuation: 20
+      maxAttenuation: 40
       maxDuration: -1
       minDuration: -1
     - name: Play_Trap_Reload
