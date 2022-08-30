@@ -204,6 +204,53 @@
 												<Value>3584</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{7A12DBEA-91E1-446F-9136-16D13674DE6F}" ShortID="732873170">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="deathSound" ID="{C4058163-6D54-4EAE-970F-D6C8E9910C52}" WorkUnitID="{7FF8D7C8-DB94-4AF1-978B-4F7C63429DD2}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{C04A0C5F-B2E0-404A-8891-36EADE8963C2}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0.10042</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-47.999</XPos>
+																<YPos>0.10042</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-47.998</XPos>
+																<YPos>0.20202</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-24.92736</XPos>
+																<YPos>-12.76979</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-12.76979</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 									</PropertyList>
 									<ObjectLists/>
 								</Bus>

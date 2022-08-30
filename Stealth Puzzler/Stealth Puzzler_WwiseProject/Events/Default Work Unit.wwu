@@ -929,10 +929,10 @@
 				</Folder>
 				<Event Name="Play_door_shut" ID="{14B09EBE-24CC-49B9-8EBF-96CDDC9DAF9A}">
 					<ChildrenList>
-						<Action Name="" ID="{EBA5D249-A1CE-4A12-AF4A-2E1B124C990E}" ShortID="321766244">
+						<Action Name="" ID="{E0229F48-26E2-4F90-ACB3-42C041503438}" ShortID="71569464">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="door_shut" ID="{3FB484AC-6E37-4018-94AA-6326A937C2EA}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
+									<ObjectRef Name="door_close_" ID="{391B5B17-5368-4B9B-AA42-83B68B27D7A1}" WorkUnitID="{86B47DEB-58CB-4828-8A9B-239302D175F4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -960,6 +960,37 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Rock Hits" ID="{0AA72254-937E-4C33-94A2-E69800D07C70}" WorkUnitID="{5AEF7E10-E714-4615-9902-C999A9D21A09}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="LandSounBlend" ID="{EDEDAEC0-5AE9-4C6C-A718-B1EDF5903100}">
+					<ChildrenList>
+						<Action Name="" ID="{3F3E7FCE-5F21-47BD-AA47-3357258B0226}" ShortID="633636271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Cement" ID="{2DDA805D-B6BD-4978-A546-D94A45211512}" WorkUnitID="{473B2D4F-8E5C-4034-8729-981913AE76C7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{45445B04-2CBB-4A65-B85E-8080444B14F1}" ShortID="844171213">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="20"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_voice_jump" ID="{F44FB605-985B-4B9E-BC2B-19FFD064C19E}" WorkUnitID="{11E5495F-FC89-4DEE-B0F6-B67CE688D8E9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B2E62BC4-6376-4510-86B6-CAA41157F77B}" ShortID="663359904">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Cement" ID="{2DDA805D-B6BD-4978-A546-D94A45211512}" WorkUnitID="{473B2D4F-8E5C-4034-8729-981913AE76C7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

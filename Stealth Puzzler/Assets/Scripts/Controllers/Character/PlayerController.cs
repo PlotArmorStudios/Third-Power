@@ -134,7 +134,7 @@ public class PlayerController : Controller
 
     private void PlayLandSound()
     {
-        //Implement land sound
+        AkSoundEngine.PostEvent("LandSounBlend", gameObject);
     }
 
     private void ApplyMovementInputToAnimator()

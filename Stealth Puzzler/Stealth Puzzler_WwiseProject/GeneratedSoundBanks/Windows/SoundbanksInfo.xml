@@ -11,11 +11,351 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="4023799887">
+		<SoundBank Id="393239870" Language="SFX" Hash="3430714744">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
 			<IncludedEvents>
+				<Event Id="77262682" Name="LandSounBlend" ObjectPath="\Events\Default Work Unit\LandSounBlend" MaxAttenuation="15." DurationType="OneShot" DurationMin="1.071751" DurationMax="1.688978">
+					<IncludedMemoryFiles>
+						<File Id="1728500" Language="SFX">
+							<ShortName>Player_Footsteps_Stone63.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone63_10C4C929.wem</Path>
+						</File>
+						<File Id="18825730" Language="SFX">
+							<ShortName>Player_Footsteps_Stone51.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone51_10C4C929.wem</Path>
+						</File>
+						<File Id="24630777" Language="SFX">
+							<ShortName>Player_Footsteps_Stone31.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone31_10C4C929.wem</Path>
+						</File>
+						<File Id="30094016" Language="SFX">
+							<ShortName>Player_Footsteps_Stone56.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone56_10C4C929.wem</Path>
+						</File>
+						<File Id="53300425" Language="SFX">
+							<ShortName>player_voice_jump_05.wav</ShortName>
+							<Path>SFX\player_voice_jump_05_10C4C929.wem</Path>
+						</File>
+						<File Id="63028733" Language="SFX">
+							<ShortName>Player_Footsteps_Stone40.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone40_10C4C929.wem</Path>
+						</File>
+						<File Id="87015438" Language="SFX">
+							<ShortName>Player_Footsteps_Stone17.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone17_10C4C929.wem</Path>
+						</File>
+						<File Id="87717528" Language="SFX">
+							<ShortName>Player_Footsteps_Stone58.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone58_10C4C929.wem</Path>
+						</File>
+						<File Id="94562239" Language="SFX">
+							<ShortName>Player_Footsteps_Stone54.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone54_10C4C929.wem</Path>
+						</File>
+						<File Id="120952880" Language="SFX">
+							<ShortName>Player_Footsteps_Stone24.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone24_10C4C929.wem</Path>
+						</File>
+						<File Id="124061724" Language="SFX">
+							<ShortName>Player_Footsteps_Stone22.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone22_10C4C929.wem</Path>
+						</File>
+						<File Id="133171936" Language="SFX">
+							<ShortName>Player_Footsteps_Stone65.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone65_10C4C929.wem</Path>
+						</File>
+						<File Id="133207003" Language="SFX">
+							<ShortName>Player_Footsteps_Stone16.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone16_10C4C929.wem</Path>
+						</File>
+						<File Id="158392890" Language="SFX">
+							<ShortName>Player_Footsteps_Stone44.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone44_10C4C929.wem</Path>
+						</File>
+						<File Id="180549212" Language="SFX">
+							<ShortName>Player_Footsteps_Stone61.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone61_10C4C929.wem</Path>
+						</File>
+						<File Id="208962673" Language="SFX">
+							<ShortName>Player_Footsteps_Stone02.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone02_10C4C929.wem</Path>
+						</File>
+						<File Id="212658823" Language="SFX">
+							<ShortName>Player_Footsteps_Stone57.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone57_10C4C929.wem</Path>
+						</File>
+						<File Id="232776546" Language="SFX">
+							<ShortName>player_voice_jump_11.wav</ShortName>
+							<Path>SFX\player_voice_jump_11_10C4C929.wem</Path>
+						</File>
+						<File Id="234528372" Language="SFX">
+							<ShortName>Player_Footsteps_Stone72.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone72_10C4C929.wem</Path>
+						</File>
+						<File Id="254502266" Language="SFX">
+							<ShortName>Player_Footsteps_Stone15.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone15_10C4C929.wem</Path>
+						</File>
+						<File Id="280651696" Language="SFX">
+							<ShortName>Player_Footsteps_Stone41.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone41_10C4C929.wem</Path>
+						</File>
+						<File Id="293192829" Language="SFX">
+							<ShortName>Player_Footsteps_Stone05.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone05_10C4C929.wem</Path>
+						</File>
+						<File Id="301300940" Language="SFX">
+							<ShortName>Player_Footsteps_Stone68.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone68_10C4C929.wem</Path>
+						</File>
+						<File Id="334094902" Language="SFX">
+							<ShortName>Player_Footsteps_Stone59.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone59_10C4C929.wem</Path>
+						</File>
+						<File Id="357243216" Language="SFX">
+							<ShortName>Player_Footsteps_Stone04.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone04_10C4C929.wem</Path>
+						</File>
+						<File Id="360357885" Language="SFX">
+							<ShortName>Player_Footsteps_Stone47.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone47_10C4C929.wem</Path>
+						</File>
+						<File Id="379038102" Language="SFX">
+							<ShortName>Player_Footsteps_Stone07.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone07_10C4C929.wem</Path>
+						</File>
+						<File Id="387499734" Language="SFX">
+							<ShortName>player_voice_jump_06.wav</ShortName>
+							<Path>SFX\player_voice_jump_06_10C4C929.wem</Path>
+						</File>
+						<File Id="433227977" Language="SFX">
+							<ShortName>Player_Footsteps_Stone73.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone73_10C4C929.wem</Path>
+						</File>
+						<File Id="446790239" Language="SFX">
+							<ShortName>player_voice_jump_01.wav</ShortName>
+							<Path>SFX\player_voice_jump_01_10C4C929.wem</Path>
+						</File>
+						<File Id="446905644" Language="SFX">
+							<ShortName>Player_Footsteps_Stone52.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone52_10C4C929.wem</Path>
+						</File>
+						<File Id="458056414" Language="SFX">
+							<ShortName>Player_Footsteps_Stone43.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone43_10C4C929.wem</Path>
+						</File>
+						<File Id="460989765" Language="SFX">
+							<ShortName>Player_Footsteps_Stone71.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone71_10C4C929.wem</Path>
+						</File>
+						<File Id="461545696" Language="SFX">
+							<ShortName>Player_Footsteps_Stone01.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone01_10C4C929.wem</Path>
+						</File>
+						<File Id="486232404" Language="SFX">
+							<ShortName>Player_Footsteps_Stone19.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone19_10C4C929.wem</Path>
+						</File>
+						<File Id="488041044" Language="SFX">
+							<ShortName>Player_Footsteps_Stone03.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone03_10C4C929.wem</Path>
+						</File>
+						<File Id="490479913" Language="SFX">
+							<ShortName>Player_Footsteps_Stone53.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone53_10C4C929.wem</Path>
+						</File>
+						<File Id="496657611" Language="SFX">
+							<ShortName>Player_Footsteps_Stone67.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone67_10C4C929.wem</Path>
+						</File>
+						<File Id="530283344" Language="SFX">
+							<ShortName>Player_Footsteps_Stone62.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone62_10C4C929.wem</Path>
+						</File>
+						<File Id="540466279" Language="SFX">
+							<ShortName>player_voice_jump_02.wav</ShortName>
+							<Path>SFX\player_voice_jump_02_10C4C929.wem</Path>
+						</File>
+						<File Id="549170739" Language="SFX">
+							<ShortName>player_voice_jump_12.wav</ShortName>
+							<Path>SFX\player_voice_jump_12_10C4C929.wem</Path>
+						</File>
+						<File Id="566045325" Language="SFX">
+							<ShortName>Player_Footsteps_Stone11.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone11_10C4C929.wem</Path>
+						</File>
+						<File Id="571417676" Language="SFX">
+							<ShortName>Player_Footsteps_Stone23.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone23_10C4C929.wem</Path>
+						</File>
+						<File Id="579475653" Language="SFX">
+							<ShortName>Player_Footsteps_Stone45.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone45_10C4C929.wem</Path>
+						</File>
+						<File Id="580515212" Language="SFX">
+							<ShortName>Player_Footsteps_Stone29.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone29_10C4C929.wem</Path>
+						</File>
+						<File Id="587711276" Language="SFX">
+							<ShortName>Player_Footsteps_Stone33.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone33_10C4C929.wem</Path>
+						</File>
+						<File Id="601513440" Language="SFX">
+							<ShortName>Player_Footsteps_Stone66.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone66_10C4C929.wem</Path>
+						</File>
+						<File Id="601946744" Language="SFX">
+							<ShortName>Player_Footsteps_Stone37.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone37_10C4C929.wem</Path>
+						</File>
+						<File Id="606046211" Language="SFX">
+							<ShortName>Player_Footsteps_Stone20.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone20_10C4C929.wem</Path>
+						</File>
+						<File Id="626361297" Language="SFX">
+							<ShortName>Player_Footsteps_Stone42.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone42_10C4C929.wem</Path>
+						</File>
+						<File Id="635728773" Language="SFX">
+							<ShortName>Player_Footsteps_Stone28.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone28_10C4C929.wem</Path>
+						</File>
+						<File Id="643471887" Language="SFX">
+							<ShortName>Player_Footsteps_Stone39.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone39_10C4C929.wem</Path>
+						</File>
+						<File Id="654512057" Language="SFX">
+							<ShortName>Player_Footsteps_Stone55.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone55_10C4C929.wem</Path>
+						</File>
+						<File Id="666976512" Language="SFX">
+							<ShortName>Player_Footsteps_Stone25.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone25_10C4C929.wem</Path>
+						</File>
+						<File Id="677016058" Language="SFX">
+							<ShortName>Player_Footsteps_Stone60.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone60_10C4C929.wem</Path>
+						</File>
+						<File Id="703080689" Language="SFX">
+							<ShortName>Player_Footsteps_Stone08.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone08_10C4C929.wem</Path>
+						</File>
+						<File Id="729745149" Language="SFX">
+							<ShortName>Player_Footsteps_Stone50.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone50_10C4C929.wem</Path>
+						</File>
+						<File Id="741855392" Language="SFX">
+							<ShortName>Player_Footsteps_Stone27.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone27_10C4C929.wem</Path>
+						</File>
+						<File Id="749801760" Language="SFX">
+							<ShortName>Player_Footsteps_Stone26.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone26_10C4C929.wem</Path>
+						</File>
+						<File Id="757827395" Language="SFX">
+							<ShortName>player_voice_jump_10.wav</ShortName>
+							<Path>SFX\player_voice_jump_10_10C4C929.wem</Path>
+						</File>
+						<File Id="770955665" Language="SFX">
+							<ShortName>Player_Footsteps_Stone10.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone10_10C4C929.wem</Path>
+						</File>
+						<File Id="783393927" Language="SFX">
+							<ShortName>Player_Footsteps_Stone38.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone38_10C4C929.wem</Path>
+						</File>
+						<File Id="784262404" Language="SFX">
+							<ShortName>Player_Footsteps_Stone69.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone69_10C4C929.wem</Path>
+						</File>
+						<File Id="789911959" Language="SFX">
+							<ShortName>Player_Footsteps_Stone48.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone48_10C4C929.wem</Path>
+						</File>
+						<File Id="793661109" Language="SFX">
+							<ShortName>player_voice_jump_04.wav</ShortName>
+							<Path>SFX\player_voice_jump_04_10C4C929.wem</Path>
+						</File>
+						<File Id="825338218" Language="SFX">
+							<ShortName>Player_Footsteps_Stone35.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone35_10C4C929.wem</Path>
+						</File>
+						<File Id="839719010" Language="SFX">
+							<ShortName>Player_Footsteps_Stone09.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone09_10C4C929.wem</Path>
+						</File>
+						<File Id="847646094" Language="SFX">
+							<ShortName>Player_Footsteps_Stone18.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone18_10C4C929.wem</Path>
+						</File>
+						<File Id="861802049" Language="SFX">
+							<ShortName>player_voice_jump_07.wav</ShortName>
+							<Path>SFX\player_voice_jump_07_10C4C929.wem</Path>
+						</File>
+						<File Id="861888064" Language="SFX">
+							<ShortName>Player_Footsteps_Stone14.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone14_10C4C929.wem</Path>
+						</File>
+						<File Id="884294791" Language="SFX">
+							<ShortName>Player_Footsteps_Stone46.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone46_10C4C929.wem</Path>
+						</File>
+						<File Id="884720056" Language="SFX">
+							<ShortName>Player_Footsteps_Stone49.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone49_10C4C929.wem</Path>
+						</File>
+						<File Id="885951590" Language="SFX">
+							<ShortName>Player_Footsteps_Stone64.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone64_10C4C929.wem</Path>
+						</File>
+						<File Id="891158307" Language="SFX">
+							<ShortName>Player_Footsteps_Stone36.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone36_10C4C929.wem</Path>
+						</File>
+						<File Id="944709620" Language="SFX">
+							<ShortName>player_voice_jump_08.wav</ShortName>
+							<Path>SFX\player_voice_jump_08_10C4C929.wem</Path>
+						</File>
+						<File Id="957702917" Language="SFX">
+							<ShortName>Player_Footsteps_Stone12.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone12_10C4C929.wem</Path>
+						</File>
+						<File Id="968910921" Language="SFX">
+							<ShortName>Player_Footsteps_Stone34.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone34_10C4C929.wem</Path>
+						</File>
+						<File Id="981757462" Language="SFX">
+							<ShortName>Player_Footsteps_Stone06.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone06_10C4C929.wem</Path>
+						</File>
+						<File Id="1002512268" Language="SFX">
+							<ShortName>Player_Footsteps_Stone30.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone30_10C4C929.wem</Path>
+						</File>
+						<File Id="1014817540" Language="SFX">
+							<ShortName>Player_Footsteps_Stone70.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone70_10C4C929.wem</Path>
+						</File>
+						<File Id="1029156666" Language="SFX">
+							<ShortName>Player_Footsteps_Stone21.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone21_10C4C929.wem</Path>
+						</File>
+						<File Id="1044904676" Language="SFX">
+							<ShortName>player_voice_jump_03.wav</ShortName>
+							<Path>SFX\player_voice_jump_03_10C4C929.wem</Path>
+						</File>
+						<File Id="1045180976" Language="SFX">
+							<ShortName>Player_Footsteps_Stone32.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone32_10C4C929.wem</Path>
+						</File>
+						<File Id="1048492397" Language="SFX">
+							<ShortName>Player_Footsteps_Stone13.wav</ShortName>
+							<Path>SFX\Player_Footsteps_Stone13_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3919960416" Name="Play_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Play_Arrow_In_Air" MaxAttenuation="30." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="316855928" Language="SFX">
@@ -131,11 +471,19 @@
 						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="1008320775" Name="Play_door_shut" ObjectPath="\Events\Default Work Unit\Play_door_shut" MaxAttenuation="200." DurationType="OneShot" DurationMin="2.250021" DurationMax="2.250021">
+				<Event Id="1008320775" Name="Play_door_shut" ObjectPath="\Events\Default Work Unit\Play_door_shut" MaxAttenuation="200." DurationType="OneShot" DurationMin="1.687521" DurationMax="1.968771">
 					<IncludedMemoryFiles>
-						<File Id="103340903" Language="SFX">
-							<ShortName>door_shut.wav</ShortName>
-							<Path>SFX\door_shut_10C4C929.wem</Path>
+						<File Id="443609606" Language="SFX">
+							<ShortName>door_shut_03_Edited.wav</ShortName>
+							<Path>SFX\door_shut_03_Edited_10C4C929.wem</Path>
+						</File>
+						<File Id="754995909" Language="SFX">
+							<ShortName>door_shut_02_Edited.wav</ShortName>
+							<Path>SFX\door_shut_02_Edited_10C4C929.wem</Path>
+						</File>
+						<File Id="1016375335" Language="SFX">
+							<ShortName>door_shut_01_Edited.wav</ShortName>
+							<Path>SFX\door_shut_01_Edited_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -940,7 +1288,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4030910502" Name="Play_StalgaticPlatform_Idle" ObjectPath="\Events\Default Work Unit\Play_StalgaticPlatform_Idle" MaxAttenuation="20." DurationType="Infinite">
+				<Event Id="4030910502" Name="Play_StalgaticPlatform_Idle" ObjectPath="\Events\Default Work Unit\Play_StalgaticPlatform_Idle" MaxAttenuation="40." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="24400539" Language="SFX">
 							<ShortName>RockHit_03.wav</ShortName>

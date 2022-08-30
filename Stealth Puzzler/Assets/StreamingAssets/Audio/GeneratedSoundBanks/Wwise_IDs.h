@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LANDSOUNBLEND = 77262682U;
         static const AkUniqueID PLAY_ARROW_IN_AIR = 3919960416U;
         static const AkUniqueID PLAY_CANNON = 712207333U;
         static const AkUniqueID PLAY_CANNON_IDLE_STEAM = 112147695U;
