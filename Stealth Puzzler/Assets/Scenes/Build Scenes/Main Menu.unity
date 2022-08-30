@@ -17515,6 +17515,7 @@ GameObject:
   - component: {fileID: 1702649212}
   - component: {fileID: 1702649211}
   - component: {fileID: 1702649216}
+  - component: {fileID: 1702649217}
   m_Layer: 5
   m_Name: Delete Save
   m_TagString: Untagged
@@ -17658,9 +17659,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: DeleteSave
+      - m_Target: {fileID: 1702649217}
+        m_TargetAssemblyTypeName: DeleteSave, Assembly-CSharp
+        m_MethodName: Delete
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17790,6 +17791,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1b47cfc1edac664fb66d1b19d4e2b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1702649217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702649209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2caa177a6984f16826e162d8c6e9c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1741655443
@@ -22009,6 +22022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7139015532568153036}
   - component: {fileID: 7139015532568153033}
+  - component: {fileID: 7139015532568153041}
   - component: {fileID: 7139015532568153038}
   - component: {fileID: 7139015532568153039}
   - component: {fileID: 7139015532568153035}
@@ -22204,3 +22218,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b47cfc1edac664fb66d1b19d4e2b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7139015532568153041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139015532568153037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8dc60ddc5726eb488a4a080a7d72eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadButton: {fileID: 7139015532568153039}

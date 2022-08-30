@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Helpers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Scene = UnityEngine.SceneManagement.Scene;
 
 
@@ -25,6 +26,11 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Vector3 PlayerSpawnLocation;
     [HideInInspector] public Quaternion PlayerRotation;
 
+    private VolumeSliders _volumeControl;
+    public float MasterVolume { get; private set; }
+    public float MusicVolume { get; private set; }
+    public float SFXVolume { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -36,6 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         ObstacleBooleans = new Dictionary<string, bool>();
+        _volumeControl = FindObjectOfType<VolumeSliders>(true);
     }
 
     public void SaveGame()
@@ -45,7 +52,12 @@ public class GameManager : MonoBehaviour
         var controllerRotation = controller.transform.rotation;
 
         CurrentPosition = new float[] {controllerPosition.x, controllerPosition.y, controllerPosition.z};
-        CurrentRotation = new float[] {controllerRotation.x, controllerRotation.y, controllerRotation.z, controllerRotation.w};
+        CurrentRotation = new float[]
+            {controllerRotation.x, controllerRotation.y, controllerRotation.z, controllerRotation.w};
+
+        MasterVolume = _volumeControl.GetRTPCVolume("MasterVolume");
+        MusicVolume = _volumeControl.GetRTPCVolume("MusicVolume");
+        SFXVolume = _volumeControl.GetRTPCVolume("SFXVolume");
 
 #if DebugLog
         Debug.Log("Saved position. " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
@@ -77,6 +89,10 @@ public class GameManager : MonoBehaviour
         PlayerRotation.y = CurrentRotation[1];
         PlayerRotation.z = CurrentRotation[2];
         PlayerRotation.w = CurrentRotation[3];
+        
+        MasterVolume = data.MasterVolume;
+        MusicVolume = data.MusicVolume;
+        SFXVolume = data.SFXVolume;
 
         WwiseMusic.MusicInstance.PlayMusic();
 #if DebugLog

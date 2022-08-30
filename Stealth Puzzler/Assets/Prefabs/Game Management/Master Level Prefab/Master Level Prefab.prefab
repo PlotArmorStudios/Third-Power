@@ -1889,12 +1889,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6666ee167a632fd4ba8da6ad3ba0cb58, type: 3}
+--- !u!114 &716762934535670488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 788766636672604132, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+    type: 3}
+  m_PrefabInstance: {fileID: 216233275933760828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4784587981087101374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4712579883604790402, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+    type: 3}
+  m_PrefabInstance: {fileID: 216233275933760828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6127451318700531513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6199525423387394565, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
     type: 3}
   m_PrefabInstance: {fileID: 216233275933760828}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7072967315727494147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7000860225670754623, guid: 6666ee167a632fd4ba8da6ad3ba0cb58,
+    type: 3}
+  m_PrefabInstance: {fileID: 216233275933760828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3102210324207982459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2106,6 +2142,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7901650368147148118}
     m_Modifications:
+    - target: {fileID: 2162326746315843816, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: _sfxSlider
+      value: 
+      objectReference: {fileID: 4784587981087101374}
+    - target: {fileID: 2162326746315843816, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: _musicSlider
+      value: 
+      objectReference: {fileID: 716762934535670488}
+    - target: {fileID: 2162326746315843816, guid: 5be41f0221ddbcb45900f8a164319bfe,
+        type: 3}
+      propertyPath: _masterSlider
+      value: 
+      objectReference: {fileID: 7072967315727494147}
     - target: {fileID: 2162326746315843817, guid: 5be41f0221ddbcb45900f8a164319bfe,
         type: 3}
       propertyPath: m_Name

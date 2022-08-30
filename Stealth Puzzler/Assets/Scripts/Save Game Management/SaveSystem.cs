@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ using UnityEngine.Rendering.Universal;
 
 public static class SaveSystem
 {
+    public static event Action OnDeleteSave;
     public static void SaveGame(GameManager gameManager)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -54,7 +56,10 @@ public static class SaveSystem
             Debug.Log("Game save deleted. Path: " + path);
             File.Delete((path));
         }
+        
+        OnDeleteSave?.Invoke();
     }
+
 }
 
 // A class must be serializable to be converted to and from JSON by JsonUtility.
@@ -65,6 +70,10 @@ public class GameData
     public float[] CurrentPosition;
     public float[] CurrentRotation;
 
+    public float MasterVolume;
+    public float MusicVolume;
+    public float SFXVolume;
+
     public Dictionary<string, bool> TrapBooleans;
 
     public GameData(GameManager gameManager)
@@ -73,6 +82,11 @@ public class GameData
         CurrentPosition = gameManager.CurrentPosition;
         CurrentRotation = gameManager.CurrentRotation;
         TrapBooleans = gameManager.ObstacleBooleans;
+
+        MasterVolume = gameManager.MasterVolume;
+        MusicVolume = gameManager.MusicVolume;
+        SFXVolume = gameManager.SFXVolume;
+        
         Debug.Log("Saved position in file: " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
     }
 }
