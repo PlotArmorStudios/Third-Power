@@ -168,6 +168,8 @@ public class GameManager : MonoBehaviour
         Instance.CurrentLevel = FindObjectOfType<LevelData>().LevelIndex;
         WwiseMusic.MusicInstance.PlayMusic();
         AkSoundEngine.SetRTPCValue("LevelNumber", Instance.CurrentLevel);
+
+        ListenerFollowCamera.Instance.SetCamera();
     }
 
     public void AddObstacleBoolean(string obstacleID, bool isOpen)

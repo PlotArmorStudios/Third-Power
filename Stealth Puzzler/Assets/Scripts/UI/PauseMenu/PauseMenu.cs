@@ -56,6 +56,7 @@ public class PauseMenu : MonoBehaviour
     {
         OpenPauseMenu();
         OnPause?.Invoke();
+        AkSoundEngine.PostEvent("Pause_All", gameObject);
     }
 
 
@@ -72,6 +73,7 @@ public class PauseMenu : MonoBehaviour
         ClosePauseMenu();
         OnResume?.Invoke();
         AkSoundEngine.SetState("Menu", "Menu_Inactive");
+        AkSoundEngine.PostEvent("Resume_All", gameObject);
     }
 
     private void OpenPauseMenu()

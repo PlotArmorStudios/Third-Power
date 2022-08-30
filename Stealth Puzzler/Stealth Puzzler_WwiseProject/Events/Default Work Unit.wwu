@@ -45,6 +45,15 @@
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{E579E520-39AC-48E8-8062-C364F685D7EA}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
 						</Action>
 						<Action Name="" ID="{BF52B949-B084-4146-8CB6-E468A18DF6AB}" ShortID="827602886">
 							<ReferenceList>
@@ -993,6 +1002,46 @@
 									<ObjectRef Name="Footsteps_Cement" ID="{2DDA805D-B6BD-4978-A546-D94A45211512}" WorkUnitID="{473B2D4F-8E5C-4034-8729-981913AE76C7}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_All" ID="{213F1715-DECE-492F-8C51-FF8971D4BB30}">
+					<ChildrenList>
+						<Action Name="" ID="{C377FCF5-E80E-458F-8C12-5613087FC325}" ShortID="657644332">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{A07AD11B-796E-4E8B-A29E-A4301860040E}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_All" ID="{752B3C42-883E-497A-8293-165A352CCC3D}">
+					<ChildrenList>
+						<Action Name="" ID="{CB286EB1-DD59-4C44-BFD6-985C4AB725D8}" ShortID="747670018">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{45265854-202F-4EC0-A195-DF19A81354E5}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay Music" ID="{CE75442F-2517-4219-AA45-31E5CD61C61F}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
 						</Action>
 					</ChildrenList>
 				</Event>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 69fb655ec0cb8749945091a4dc13033b
     GuidInternal: 
-    m_lastTime: -8585457378000013406
+    m_lastTime: -8585462986054775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: cc11e1e386d23441bf0fe5bdbe8bf4be
     GuidInternal: 
-    m_lastTime: -8585397359539340628
+    m_lastTime: -8585397370114775808
     List:
     - name: 3D Objects
       guid: 30978c6d834b0846be523a5ae92a1c82
@@ -285,7 +285,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0d9cc7fe7c781e418be540ee4599b958
     GuidInternal: 
-    m_lastTime: -8585397359538733469
+    m_lastTime: -8585397078154775808
     List:
     - name: Main_Menu
       guid: 84b50f8dc5262a42bafffebbb8edf5ad
@@ -355,7 +355,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: e94b8c03dd12ce469b8a11674a2856c6
     GuidInternal: 
-    m_lastTime: -8585397359549617713
+    m_lastTime: -8585397077014775808
     List:
     - name: LandSounBlend
       guid: c0aeedede95a6c4ca718b1edf5903100
@@ -391,6 +391,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Pause_All
+      guid: 15173f21cede2f498c51ff8971d4bb30
+      id: 3864097025
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Pause_All
+        ObjectType: 3
+        guid: 15173f21cede2f498c51ff8971d4bb30
+      Path: Events\Default Work Unit\Pause_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Arrow_In_Air
       guid: e26d892f796b3346b1350d0ad8901b39
       id: 3919960416
@@ -975,6 +992,23 @@ MonoBehaviour:
       maxAttenuation: 20
       maxDuration: 0.5
       minDuration: 0.4375
+    - name: Resume_All
+      guid: 423c2b753e887a498293165a352ccc3d
+      id: 3679762312
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e94b8c03dd12ce469b8a11674a2856c6
+      - ElementName: Resume_All
+        ObjectType: 3
+        guid: 423c2b753e887a498293165a352ccc3d
+      Path: Events\Default Work Unit\Resume_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Start_With_Later_Music
       guid: 7d1e79b69dcd7345898bf782d24b883d
       id: 1142029413
@@ -1309,7 +1343,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: c8d7f87f94dbf14a978b4f7c63429dd2
     GuidInternal: 
-    m_lastTime: -8585403304406833797
+    m_lastTime: -8585404149434775808
     List:
     - name: ArrowTrapFiltering
       guid: e276c543d6def541bcad542cd2b426a9
@@ -1485,7 +1519,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585425535264671865
+    m_lastTime: -8585429421354775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -1639,7 +1673,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d6f7ac499df9b841b0b218b367cc7899
     GuidInternal: 
-    m_lastTime: -8585403304393766224
+    m_lastTime: -8585403855134775808
     List:
     - name: Altar
       guid: 793c9581edd2354586e45794acca1ed9
@@ -1949,7 +1983,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 492f89aa40d0a5488035723ae0d102a4
     GuidInternal: 
-    m_lastTime: -8585449785521945628
+    m_lastTime: -8585451761514775808
     List:
     - name: Material
       guid: 340561136601864ab21ef167063aa6d2
@@ -2045,7 +2079,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: edf5011ce171b447ab95b8288a826deb
     GuidInternal: 
-    m_lastTime: -8585428377747378189
+    m_lastTime: -8585431241094775808
     List: []
   - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
@@ -2061,7 +2095,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit\Music
     guid: b1023837791b2642bb361b46f9481008
     GuidInternal: 
-    m_lastTime: -8585428377747368202
+    m_lastTime: -8585431241094775808
     List:
     - name: Cymbal_Swell_to_Tension
       guid: 7b17dfd2d303d340a4d7d840a35548dd
