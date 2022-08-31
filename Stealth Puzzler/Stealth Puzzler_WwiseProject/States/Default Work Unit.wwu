@@ -75,6 +75,13 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="PlayerSounds" ID="{7FB61FF7-C2D1-4A72-9B3D-1F0FA2E66CB6}">
+					<ChildrenList>
+						<State Name="None" ID="{3CD02F7A-DE24-4069-A9E3-C7082BBC7584}"/>
+						<State Name="Normal" ID="{4BCF63EA-3652-4FC8-9BD4-31452D5898E6}"/>
+						<State Name="Louder" ID="{BF5795C8-D057-4F7D-A6B7-CDA144E48E55}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

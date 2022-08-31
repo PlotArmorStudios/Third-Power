@@ -2653,6 +2653,27 @@
 							<ObjectLists/>
 						</RandomSequenceContainer>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerSounds" ID="{7FB61FF7-C2D1-4A72-9B3D-1F0FA2E66CB6}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Louder" ID="{BF5795C8-D057-4F7D-A6B7-CDA144E48E55}"/>
+								<CustomState Name="" ID="{31AE50EA-5D11-4DD1-974C-B62FA6974346}" ShortID="558572436">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="6"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Normal" ID="{4BCF63EA-3652-4FC8-9BD4-31452D5898E6}"/>
+								<CustomState Name="" ID="{25A5ADB6-D4AA-45C1-BD2E-089EF2A92795}" ShortID="29206918"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 					<GroupingInfo>
 						<GroupingBehaviorList>

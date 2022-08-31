@@ -544,6 +544,27 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerSounds" ID="{7FB61FF7-C2D1-4A72-9B3D-1F0FA2E66CB6}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Louder" ID="{BF5795C8-D057-4F7D-A6B7-CDA144E48E55}"/>
+								<CustomState Name="" ID="{939723DE-47F2-4F31-9D76-196727EA7C30}" ShortID="397115719">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="6"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Normal" ID="{4BCF63EA-3652-4FC8-9BD4-31452D5898E6}"/>
+								<CustomState Name="" ID="{E17B61D3-B2DE-414B-AB1C-BE5E14BF9E7A}" ShortID="160802164"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 				</RandomSequenceContainer>
 			</ChildrenList>

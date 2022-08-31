@@ -116,6 +116,18 @@ namespace AK
             } // namespace STATE
         } // namespace MENU
 
+        namespace PLAYERSOUNDS
+        {
+            static const AkUniqueID GROUP = 1327972334U;
+
+            namespace STATE
+            {
+                static const AkUniqueID LOUDER = 3159145200U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID NORMAL = 1160234136U;
+            } // namespace STATE
+        } // namespace PLAYERSOUNDS
+
     } // namespace STATES
 
     namespace SWITCHES

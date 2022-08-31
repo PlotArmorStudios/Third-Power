@@ -39,9 +39,9 @@
 				</Sound>
 				<Sound Name="puzzle_solved" ID="{6F44975B-07E2-4C0B-96BE-E477F4A40758}" ShortID="387036667">
 					<PropertyList>
-						<Property Name="Volume" Type="Real64">
+						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>50</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
