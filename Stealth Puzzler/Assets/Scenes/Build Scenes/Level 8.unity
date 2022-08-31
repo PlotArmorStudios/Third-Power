@@ -22323,6 +22323,7 @@ GameObject:
   - component: {fileID: 974249596}
   - component: {fileID: 974249595}
   - component: {fileID: 974249597}
+  - component: {fileID: 974249598}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -22396,6 +22397,31 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &974249598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974249594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c9232a960f19d4a8bf34b35c9dc19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c6ca1d04fc82d54b825435ef6ad775a,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1001 &977647494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37998,12 +38024,12 @@ PrefabInstance:
     - target: {fileID: 5725387084154673970, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7104837
+      value: -0.7104836
       objectReference: {fileID: 0}
     - target: {fileID: 5725387084154673970, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.038888406
+      value: -0.038888402
       objectReference: {fileID: 0}
     - target: {fileID: 5725387084154673970, guid: ae1a751119413714d908600118f61af1,
         type: 3}
@@ -38013,7 +38039,7 @@ PrefabInstance:
     - target: {fileID: 5725387084154673970, guid: ae1a751119413714d908600118f61af1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4259995
+      value: -0.42599946
       objectReference: {fileID: 0}
     - target: {fileID: 6804244632318347366, guid: ae1a751119413714d908600118f61af1,
         type: 3}

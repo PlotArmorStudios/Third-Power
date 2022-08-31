@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2605360032">
+		<SoundBank Id="393239870" Language="SFX" Hash="3300389606">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -508,7 +508,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1501216439" Name="Play_FirePlace" ObjectPath="\Events\Default Work Unit\Play_FirePlace" MaxAttenuation="20." DurationType="Infinite">
+				<Event Id="1501216439" Name="Play_FirePlace" ObjectPath="\Events\Default Work Unit\Play_FirePlace" MaxAttenuation="50." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="249206915" Language="SFX">
 							<ShortName>Ambiences_3D_FirePlace_03.wav</ShortName>
@@ -1207,11 +1207,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="9.5" DurationMax="9.5">
+				<Event Id="2759903158" Name="Play_puzzle_solved" ObjectPath="\Events\Default Work Unit\Play_puzzle_solved" DurationType="OneShot" DurationMin="5.5" DurationMax="5.5">
 					<IncludedMemoryFiles>
-						<File Id="148034120" Language="SFX">
-							<ShortName>puzzle_solved_V02.wav</ShortName>
-							<Path>SFX\puzzle_solved_V02_10C4C929.wem</Path>
+						<File Id="391519029" Language="SFX">
+							<ShortName>puzzle_solved.wav</ShortName>
+							<Path>SFX\puzzle_solved_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
