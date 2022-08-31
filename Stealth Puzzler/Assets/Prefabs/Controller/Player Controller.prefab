@@ -531,7 +531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16436623391ff5f48b8ffec1b95aa6e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _decal: {fileID: 0}
   _groundDistanceScale: 1
+  _feet: {fileID: 0}
 --- !u!1 &2857174331848323940
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +750,7 @@ GameObject:
   - component: {fileID: 4848464225406648936}
   - component: {fileID: 5190041942537794704}
   - component: {fileID: -5176216312413924621}
+  - component: {fileID: 573786036053490179}
   m_Layer: 7
   m_Name: Player Controller
   m_TagString: Player
@@ -1016,6 +1019,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Collider: {fileID: 0}
+--- !u!114 &573786036053490179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789406006588094453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16436623391ff5f48b8ffec1b95aa6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _decal: {fileID: 1494250929547478914}
+  _groundDistanceScale: 0.7
+  _feet: {fileID: 7789406006541125851}
 --- !u!1 &7789406006700636454
 GameObject:
   m_ObjectHideFlags: 0
