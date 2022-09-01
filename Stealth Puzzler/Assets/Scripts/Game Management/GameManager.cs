@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
         camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         FindObjectOfType<PlayerController>().transform.rotation = PlayerRotation;
         yield return new WaitForSeconds(.2f);
-        //LoadedFromSave = false;
+        LoadedFromSave = false;
     }
 
     private void OnEnable()
