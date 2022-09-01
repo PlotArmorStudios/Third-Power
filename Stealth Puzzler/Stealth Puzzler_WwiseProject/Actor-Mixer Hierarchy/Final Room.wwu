@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2B9D9C1C-E8BA-427B-AF3E-A591EE41370C}" SchemaVersion="103" RootDocumentID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" ParentDocumentID="{33B41D82-D3E5-4801-B003-B1D726BE6612}">
+	<AudioObjects>
+		<WorkUnit Name="Final Room" ID="{2B9D9C1C-E8BA-427B-AF3E-A591EE41370C}" OwnerID="{33B41D82-D3E5-4801-B003-B1D726BE6612}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Final Room Cymbals" ID="{3A98A64A-DEB9-4099-80E4-934DCB1484E6}" ShortID="340297565">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CFAE648A-3A20-451F-A021-977432D715A1}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="5"/>
+											<Property Name="Min" Type="Real64" Value="-5"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{067CAF1B-46F1-465A-B403-B590DFA30A66}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Samani_TP_FR_Cym1" ID="{680FDA28-F93A-40D5-AE17-7DDEFD3873A0}" ShortID="301566644">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym1" ID="{81077154-C272-4CF9-A442-267B5F054006}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="267631554"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym1" ID="{81077154-C272-4CF9-A442-267B5F054006}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym2" ID="{2C0409CF-1390-4163-ACFF-F0126B88A370}" ShortID="766844532">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym2" ID="{0A077189-716F-4ED9-A648-E0D96DED6A62}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="193416861"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym2" ID="{0A077189-716F-4ED9-A648-E0D96DED6A62}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym3" ID="{E275CB2F-5DBC-49BB-849C-D9B29935F1BB}" ShortID="619013520">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym3" ID="{5A66ACAC-0ED7-4D79-9231-66A98FBF3DCA}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="579126828"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym3" ID="{5A66ACAC-0ED7-4D79-9231-66A98FBF3DCA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym4" ID="{A19A48BB-09E0-4246-BE41-F17ABD9FB3E6}" ShortID="845163296">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym4" ID="{FA873C29-F044-4A5C-B2B0-05B8224C03EE}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="539684557"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym4" ID="{FA873C29-F044-4A5C-B2B0-05B8224C03EE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym5" ID="{9249255B-71A2-4B80-A8EE-9506E5F674AD}" ShortID="980453922">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym5" ID="{0A6A7877-4991-48AC-8A1E-99846CF178FC}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="285255153"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym5" ID="{0A6A7877-4991-48AC-8A1E-99846CF178FC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym6" ID="{EF436215-136A-4E30-A338-AE2E1E018D61}" ShortID="863604586">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym6" ID="{28CC6A8D-136A-4011-945B-305DFC89A155}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="85929522"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym6" ID="{28CC6A8D-136A-4011-945B-305DFC89A155}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym7" ID="{0EE808DF-024D-4057-A67A-44B93DA2802C}" ShortID="506999370">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym7" ID="{087F64DC-5934-43B8-A8CE-8EB832545A1C}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="350332503"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym7" ID="{087F64DC-5934-43B8-A8CE-8EB832545A1C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym8" ID="{812FB66E-81AE-48D8-BF5C-97035923475F}" ShortID="222622301">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym8" ID="{CB7CC51B-361A-4BC0-839F-C0D888E870F9}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym8.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="633458225"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym8" ID="{CB7CC51B-361A-4BC0-839F-C0D888E870F9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Samani_TP_FR_Cym9" ID="{DCE538E8-5524-4D21-BF0A-96A8069D4E77}" ShortID="771892870">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6070594D-87C2-4D31-953D-224F2E5D67DE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Samani_TP_FR_Cym9" ID="{726D3F42-438C-4128-BDFB-5090680A7159}">
+									<Language>SFX</Language>
+									<AudioFile>Samani_TP_FR_Cym9.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="515763887"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Samani_TP_FR_Cym9" ID="{726D3F42-438C-4128-BDFB-5090680A7159}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

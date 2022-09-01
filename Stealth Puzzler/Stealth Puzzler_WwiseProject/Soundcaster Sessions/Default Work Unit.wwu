@@ -26,6 +26,10 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Cutscene Music" ID="{975086A0-76D7-47BE-91A4-6C373C0C7F92}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Start_With_Later_Music" ID="{B6791E7D-CD9D-4573-898B-F782D24B883D}" WorkUnitID="{038C4BE9-12DD-46CE-9B8A-11674A2856C6}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -118,7 +122,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{38636424-86EF-4399-9EF0-D549C73B8327}"/>
-						<CurrentStateRef Name="Early" ID="{39F30699-2A7F-4AD0-A7AB-EEFFECD0B538}"/>
+						<CurrentStateRef Name="Later" ID="{7E769225-6F1C-4F9C-8AA1-8F262D3CD976}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Carpet" ID="{521D00FB-FCE5-47B8-9696-9C1CB9B32487}"/>
