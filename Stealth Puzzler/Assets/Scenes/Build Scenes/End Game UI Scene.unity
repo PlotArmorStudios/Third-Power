@@ -16555,6 +16555,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a4d8832f893c134e9577588f48fc608, type: 3}
+--- !u!1001 &1579566177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 80724118018434999, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_Name
+      value: AkListenerMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.40507
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.33868
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 28.803518
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80724118018435003, guid: 28c1295f42dae744cbb729f021ffd62b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28c1295f42dae744cbb729f021ffd62b, type: 3}
 --- !u!1001 &1580634499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17670,8 +17739,6 @@ GameObject:
   - component: {fileID: 1857307622}
   - component: {fileID: 1857307621}
   - component: {fileID: 1857307620}
-  - component: {fileID: 1857307625}
-  - component: {fileID: 1857307624}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -17778,42 +17845,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1857307624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857307619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e76c4760ebadb14796e36e6ec014911, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
---- !u!114 &1857307625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857307619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7866d64e74b07aa4e85333e13503402f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1001 &1891731832
 PrefabInstance:
   m_ObjectHideFlags: 0

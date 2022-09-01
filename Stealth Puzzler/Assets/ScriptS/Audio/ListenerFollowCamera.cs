@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ListenerFollowCamera : MonoBehaviour
 {
-    public static ListenerFollowCamera Instance { get; internal set; }
-
-    // Start is called before the first frame update
+    public static ListenerFollowCamera Instance;
 
     public void Awake()
     {
@@ -15,7 +13,10 @@ public class ListenerFollowCamera : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-      
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void SetCamera()
     {
