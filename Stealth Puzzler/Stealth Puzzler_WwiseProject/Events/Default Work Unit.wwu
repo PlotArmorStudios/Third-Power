@@ -303,6 +303,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Final_Room_Cymbals" ID="{57DB5410-DE11-4BE2-815C-E3F136339487}">
+							<ChildrenList>
+								<Action Name="" ID="{9840204E-6B94-479F-91E8-996E37E19F62}" ShortID="236313003">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Final Room Cymbals" ID="{3A98A64A-DEB9-4099-80E4-934DCB1484E6}" WorkUnitID="{2B9D9C1C-E8BA-427B-AF3E-A591EE41370C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cutscene_Music" ID="{CA39F4A7-AD25-475F-90A0-CC22A3F5007B}">
+							<ChildrenList>
+								<Action Name="" ID="{E1819878-6C5D-4E87-A3C2-6E7280AD0235}" ShortID="76549231">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Final Room Cymbals" ID="{3A98A64A-DEB9-4099-80E4-934DCB1484E6}" WorkUnitID="{2B9D9C1C-E8BA-427B-AF3E-A591EE41370C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4DC879D0-E8DD-46ED-8945-07804FE81CE2}" ShortID="817536199">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cutscene Music" ID="{975086A0-76D7-47BE-91A4-6C373C0C7F92}" WorkUnitID="{BCE007A7-B87F-4301-80A0-C2A385000336}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Play_puzzle_button_and_door_open" ID="{32307A18-2078-4D37-BB41-BFE43A952318}">

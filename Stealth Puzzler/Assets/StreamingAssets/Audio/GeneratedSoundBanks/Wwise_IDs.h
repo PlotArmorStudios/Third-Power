@@ -21,10 +21,12 @@ namespace AK
         static const AkUniqueID PLAY_CHARACTER_CUBE_TRANSFORM = 1769817372U;
         static const AkUniqueID PLAY_CUBE_DEFLECT = 2012852765U;
         static const AkUniqueID PLAY_CUBE_MOVEMENT = 2774595811U;
+        static const AkUniqueID PLAY_CUTSCENE_MUSIC = 3265505770U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
         static const AkUniqueID PLAY_DOOR_SHUT = 1008320775U;
         static const AkUniqueID PLAY_EARLY_MUSIC = 886887759U;
         static const AkUniqueID PLAY_EYE_IMPACT = 2423728726U;
+        static const AkUniqueID PLAY_FINAL_ROOM_CYMBALS = 408978228U;
         static const AkUniqueID PLAY_FIREPLACE = 1501216439U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JELLY_IMPACT_CUBE = 1035938309U;
@@ -179,6 +181,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID FINAL_LEVEL_MUSIC_BANK = 3361062181U;
         static const AkUniqueID MAIN_MENU = 2005704188U;
         static const AkUniqueID MUSIC_BANK = 1546231383U;
         static const AkUniqueID SFX = 393239870U;

@@ -168,6 +168,7 @@ public class GameManager : MonoBehaviour
         Instance.CurrentLevel = FindObjectOfType<LevelData>().LevelIndex;
         WwiseMusic.MusicInstance.PlayMusic();
         AkSoundEngine.SetRTPCValue("LevelNumber", Instance.CurrentLevel);
+        FinalRoomBankLoader.Instance.MainMenuCheck();
 
         ListenerFollowCamera.Instance.SetCamera();
     }
