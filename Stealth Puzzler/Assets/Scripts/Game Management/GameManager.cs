@@ -1,12 +1,10 @@
-using System;
+#define DebugLog
 using System.Collections;
 using System.Collections.Generic;
 using Helpers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using Scene = UnityEngine.SceneManagement.Scene;
-
 
 /// <summary>
 /// Should always be paired with a SceneLoader game object.
@@ -47,6 +45,9 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+            return;
+
         var controller = FindObjectOfType<Controller>();
         var controllerPosition = controller.transform.position;
         var controllerRotation = controller.transform.rotation;
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
         SFXVolume = _volumeControl.GetRTPCVolume("SFXVolume");
 
 #if DebugLog
-        Debug.Log("Saved position. " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
+        Debug.Log("Saved position. " + CurrentPosition[0] + ", " + CurrentPosition[1] + ", " + CurrentPosition[2]);
 #endif
         SaveSystem.SaveGame(this);
     }
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
         PlayerRotation.y = CurrentRotation[1];
         PlayerRotation.z = CurrentRotation[2];
         PlayerRotation.w = CurrentRotation[3];
-        
+
         MasterVolume = data.MasterVolume;
         MusicVolume = data.MusicVolume;
         SFXVolume = data.SFXVolume;
@@ -97,7 +98,7 @@ public class GameManager : MonoBehaviour
         WwiseMusic.MusicInstance.PlayMusic();
 #if DebugLog
         Debug.Log("Should Load Game. Level to load: " + CurrentLevel);
-        Debug.Log("Loaded position is: " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
+        Debug.Log("Loaded position is: " + CurrentPosition[0] + ", " + CurrentPosition[1] + ", " + CurrentPosition[2]);
 #endif
         SceneLoader.Instance.LoadScene("Level " + CurrentLevel);
     }
@@ -142,7 +143,7 @@ public class GameManager : MonoBehaviour
         camRig.GetComponentInChildren<FocalPointManager>().InitializeFocalPoints(controllerManager);
         FindObjectOfType<PlayerController>().transform.rotation = PlayerRotation;
         yield return new WaitForSeconds(.2f);
-        //LoadedFromSave = false;
+        LoadedFromSave = false;
     }
 
     private void OnEnable()
@@ -162,15 +163,23 @@ public class GameManager : MonoBehaviour
     /// <param name="mode"></param>
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-#if DebugLog
-        Debug.Log("OnSceneLoaded: " + scene.name);
-#endif
         Instance.CurrentLevel = FindObjectOfType<LevelData>().LevelIndex;
         WwiseMusic.MusicInstance.PlayMusic();
         AkSoundEngine.SetRTPCValue("LevelNumber", Instance.CurrentLevel);
-        FinalRoomBankLoader.Instance.MainMenuCheck();
+
+        if (FinalRoomBankLoader.Instance != null)
+            FinalRoomBankLoader.Instance.MainMenuCheck();
 
         ListenerFollowCamera.Instance.SetCamera();
+
+        Invoke("SaveGame", 1f);
+        
+        if (FindObjectOfType<UIOscillator>() != null && SceneManager.GetActiveScene().name != "Main Menu" && SceneManager.GetActiveScene().name != "End Game UI Scene")
+            FindObjectOfType<UIOscillator>().TriggerUI();
+
+#if DebugLog
+        Debug.Log("OnSceneLoaded: " + scene.name);
+#endif
     }
 
     public void AddObstacleBoolean(string obstacleID, bool isOpen)

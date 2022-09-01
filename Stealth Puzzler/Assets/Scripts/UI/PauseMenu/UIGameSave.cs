@@ -25,7 +25,6 @@ public class UIGameSave : MonoBehaviour
         while (alpha > .01f)
         {
             alpha -= Time.unscaledDeltaTime * _fadeSpeed;
-            Debug.Log("Fade text");
             _gameSavedImage.color = new Color(1, 1, 1, alpha);
             yield return null;
         }
