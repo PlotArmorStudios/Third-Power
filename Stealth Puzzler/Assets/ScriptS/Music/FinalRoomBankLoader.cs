@@ -10,7 +10,7 @@ public class FinalRoomBankLoader : MonoBehaviour
 
     void Awake()
     {
-        AkBankManager.LoadBank("Final_Level_Music_Bank", false, false);
+        AkBankManager.LoadBank("Final_Level_Music_Bank", false, true);
 
         if (Instance == null)
         {
@@ -25,6 +25,7 @@ public class FinalRoomBankLoader : MonoBehaviour
     private void Start()
     {
         Play_Cymbals.Post(gameObject);
+        AkSoundEngine.SetRTPCValue("LevelNumber", 1);
     }
 
     public void MainMenuCheck()
@@ -32,7 +33,13 @@ public class FinalRoomBankLoader : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
             Destroy(this.gameObject);
-            Debug.Log("Final Level Bank Destroyed");
+            Debug.Log("Final Level Bank Object Destroyed");
         }
+    }
+
+    private void OnDestroy()
+    {
+        AkBankManager.UnloadBank("Final_Level_Music_Bank");
+        Debug.Log("Final Level Bank Unloaded");
     }
 }
