@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>E:\Unity\Stealth-Puzzler\Stealth Puzzler\Stealth Puzzler_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3300389606">
+		<SoundBank Id="393239870" Language="SFX" Hash="2152174968">
 			<ObjectPath>\SoundBanks\Default Work Unit\Sfx</ObjectPath>
 			<ShortName>Sfx</ShortName>
 			<Path>Sfx.bnk</Path>
@@ -352,6 +352,9 @@
 							<Path>SFX\Player_Footsteps_Stone13_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3864097025" Name="Pause_All" ObjectPath="\Events\Default Work Unit\Pause_All" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3919960416" Name="Play_Arrow_In_Air" ObjectPath="\Events\Default Work Unit\Play_Arrow_In_Air" MaxAttenuation="30." DurationType="Infinite">
@@ -1046,6 +1049,9 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1035938309" Name="Play_Jelly_Impact_Cube" ObjectPath="\Events\Default Work Unit\Play_Jelly_Impact_Cube" MaxAttenuation="10." DurationType="OneShot" DurationMin="1.457298" DurationMax="1.849527">
 					<IncludedMemoryFiles>
@@ -1122,6 +1128,9 @@
 							<Path>SFX\player_death_3D_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="712660841" Name="Play_player_voice_jump" ObjectPath="\Events\Default Work Unit\Play_player_voice_jump" MaxAttenuation="15." DurationType="OneShot" DurationMin="0.25" DurationMax="0.40625">
 					<IncludedMemoryFiles>
@@ -1170,6 +1179,9 @@
 							<Path>SFX\player_voice_jump_03_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4182780889" Name="Reverb_Large_Hall" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sfx\Reverb_Large_Hall"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1424347858" Name="Play_Podium_Activate" ObjectPath="\Events\Default Work Unit\Play_Podium_Activate" DurationType="OneShot" DurationMin="5." DurationMax="5.">
 					<IncludedMemoryFiles>

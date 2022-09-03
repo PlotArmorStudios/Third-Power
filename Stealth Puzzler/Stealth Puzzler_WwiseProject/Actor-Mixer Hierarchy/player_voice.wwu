@@ -28,6 +28,9 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Sfx" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="player_voice_death_01" ID="{4C8C0684-A865-4AE0-9FFA-E341E4493CA1}" ShortID="63780041">
@@ -287,6 +290,9 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Sfx" ID="{C4DE8048-CA7F-4157-BE39-ADE2A5FB531D}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

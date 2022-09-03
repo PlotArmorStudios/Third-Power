@@ -44,7 +44,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>3</Value>
+								<Value>5</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -73,6 +73,9 @@
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="Material" ID="{13610534-0166-4A86-B21E-F167063AA6D2}" WorkUnitID="{AA892F49-D040-48A5-8035-723AE0D102A4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb_Large_Hall" ID="{92A2974F-FE68-436A-952F-BB87AA6DE4AF}" WorkUnitID="{E3E111CC-D286-4134-BF0F-E5BDBE8BF4BE}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
