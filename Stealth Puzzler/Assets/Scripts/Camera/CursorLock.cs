@@ -55,6 +55,9 @@ public class CursorLock : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Cursor.lockState = CursorLockMode.None;
         if (_cursorLock.action.triggered)
-            Cursor.lockState = CursorLockMode.Locked;
+        {
+            if (CursorToggler.Instance != null && CursorToggler.Instance.ToggleCursor)
+                Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }

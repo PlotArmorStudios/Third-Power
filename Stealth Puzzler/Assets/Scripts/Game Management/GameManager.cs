@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public float MasterVolume { get; private set; }
     public float MusicVolume { get; private set; }
     public float SFXVolume { get; private set; }
+    public bool CursorLockToggle { get; set; }
 
     private void Awake()
     {
@@ -59,6 +60,8 @@ public class GameManager : MonoBehaviour
         MasterVolume = _volumeControl.GetRTPCVolume("MasterVolume");
         MusicVolume = _volumeControl.GetRTPCVolume("MusicVolume");
         SFXVolume = _volumeControl.GetRTPCVolume("SFXVolume");
+
+        CursorLockToggle = CursorToggler.Instance.ToggleState.isOn;
 
 #if DebugLog
         Debug.Log("Saved position. " + CurrentPosition[0] + ", " + CurrentPosition[1] + ", " + CurrentPosition[2]);
@@ -94,6 +97,8 @@ public class GameManager : MonoBehaviour
         MasterVolume = data.MasterVolume;
         MusicVolume = data.MusicVolume;
         SFXVolume = data.SFXVolume;
+
+        CursorLockToggle = data.CursorLockToggle;
 
         WwiseMusic.MusicInstance.PlayMusic();
 #if DebugLog

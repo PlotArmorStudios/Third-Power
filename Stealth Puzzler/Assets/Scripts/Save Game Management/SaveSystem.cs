@@ -74,6 +74,8 @@ public class GameData
     public float MusicVolume;
     public float SFXVolume;
 
+    public bool CursorLockToggle;
+    
     public Dictionary<string, bool> TrapBooleans;
 
     public GameData(GameManager gameManager)
@@ -86,6 +88,8 @@ public class GameData
         MasterVolume = gameManager.MasterVolume;
         MusicVolume = gameManager.MusicVolume;
         SFXVolume = gameManager.SFXVolume;
+
+        CursorLockToggle = gameManager.CursorLockToggle;
         
         Debug.Log("Saved position in file: " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
     }
