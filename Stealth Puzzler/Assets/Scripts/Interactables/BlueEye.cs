@@ -139,7 +139,10 @@ public class BlueEye : MonoBehaviour
         var projectile = other.gameObject.GetComponent<Projectile>();
         if (!projectile) return;
         if (!_isActive) return;
+
+#if DebugLog
         Debug.Log("Collided with: " + other.gameObject.name);
+#endif
         _collisionEvent?.Invoke();
         if (_useTimer)
         {

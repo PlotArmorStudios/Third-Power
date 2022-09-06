@@ -90,7 +90,9 @@ public class GameData
         SFXVolume = gameManager.SFXVolume;
 
         CursorLockToggle = gameManager.CursorLockToggle;
-        
+
+#if DebugLog
         Debug.Log("Saved position in file: " + CurrentPosition[0] + ", "+ CurrentPosition[1] + ", "+ CurrentPosition[2]);
+#endif
     }
 }

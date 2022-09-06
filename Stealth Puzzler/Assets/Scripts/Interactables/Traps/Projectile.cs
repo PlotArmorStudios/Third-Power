@@ -72,12 +72,18 @@ public class Projectile : MonoBehaviour
         
             if (!(dot > _infrontValue))
             {
+                Debug.Log("Dot Product is: " + dot + "." +
+                          "Dot Product is NOT in the desired range for reflection.");
+                
                 if (_timeActive < .3f) return;
                 AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
                 gameObject.SetActive(false);
                 return;
             }
             
+            Debug.Log("Dot Product is: " + dot + "." +
+                      "Dot Product is in the desired range for reflection.");
+
             var wallNormal = other.contacts[0].normal;
             var bounceDirection = Vector3.Reflect(_inputDirection, wallNormal);
             _rigidbody.velocity = bounceDirection * Speed;
@@ -98,7 +104,10 @@ public class Projectile : MonoBehaviour
         else
         {
             if (_timeActive < .3f) return;
+
+#if DebugLog
             Debug.Log("Arrow hit: " + other.gameObject.name);
+#endif
             AkSoundEngine.PostEvent("Play_Eye_Impact", gameObject);
             gameObject.SetActive(false);
         }

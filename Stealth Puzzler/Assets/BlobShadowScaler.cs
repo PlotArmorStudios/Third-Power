@@ -20,13 +20,16 @@ public class BlobShadowScaler : MonoBehaviour
         var playerDistanceToGround = Vector3.Distance(_feet.position, _height);
         if (playerDistanceToGround < .1f)
             return;
-        
+#if DebugLog
         Debug.Log("Player distance to ground is: " + playerDistanceToGround);
+#endif
         if (playerDistanceToGround < .45f)
             playerDistanceToGround = .4f;
         
         var distanceScale = _groundDistanceScale / playerDistanceToGround;
+#if DebugLog
         Debug.Log("Distance scale is: " + distanceScale);
+#endif
         _decal.transform.localScale = new Vector3(distanceScale, distanceScale, distanceScale);
     }
 
