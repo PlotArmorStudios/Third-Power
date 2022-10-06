@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public float MasterVolume { get; private set; }
     public float MusicVolume { get; private set; }
     public float SFXVolume { get; private set; }
-    public bool CursorLockToggle { get; set; }
+    public bool CursorLockToggle = true;
 
     private void Awake()
     {
@@ -62,7 +62,6 @@ public class GameManager : MonoBehaviour
         SFXVolume = _volumeControl.GetRTPCVolume("SFXVolume");
 
         CursorLockToggle = CursorToggler.Instance.ToggleState.isOn;
-
 #if DebugLog
         Debug.Log("Saved position. " + CurrentPosition[0] + ", " + CurrentPosition[1] + ", " + CurrentPosition[2]);
 #endif
